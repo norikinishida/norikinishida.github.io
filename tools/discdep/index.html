@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Discourse Dependency Tree Annotate Tool</title>
+        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <script src="./bower_components/file-saver/FileSaver.min.js"></script>
+        <script src="./bower_components/angular/angular.min.js"></script>
+        <script src="./bower_components/underscore/underscore-min.js"></script>
+        <script src="./bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+        <script src="./bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="./bower_components/ngToast/dist/ngToast.min.js"></script>
+
+        <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
+        <link href="./bower_components/jquery-ui/themes/smoothness/theme.css" rel="stylesheet">
+        <link href="./bower_components/ngToast/dist/ngToast.min.css" rel="stylesheet">
+        <link href="./bower_components/ngToast/dist/ngToast-animations.min.css" rel="stylesheet">
+        <link href="./css/custom.css" rel="stylesheet">
+        <script src="./annotate.js"></script>
+    </head>
+
+    <body id="body" ng-app="DepAnnotate" ng-controller="EDUListController">
+        <canvas id="canvas" height="{{canvas_height}}" width="{{canvas_width}}">
+            The current version does not support HTML5 canvas API, please use a new version of chrome or firefox.
+        </canvas>
+        <toast></toast>
+
+        <!-- メニューバー -->
+        <div class="container menu-bar">
+            <div class="row">
+                <!-- ファイルアップロード -->
+                <div class="col-md-3">
+                    <input type="file" ngf-select="handleFileSelect($files)" name="files[]" multiple />
+                </div>
+                <!-- 保存 -->
+                <div class="col-md-2">
+                    <input type="button" class="btn btn-info" value="保存" style="background-color: #36C5F0" ng-click="saveToFile()" ng-show="!!inputFile">
+                </div>
+                <!-- undo -->
+                <div class="col-md-2">
+                    <input type="button" class="btn btn-info" value="undo" style="background-color: #36C5F0" ng-click="undo()" ng-show="!!inputFile" ng-disabled="operations.length === 0">
+                </div>
+                <!-- ノード解除 -->
+                <div class="col-md-2">
+                    <input type="button" class="btn btn-info" value="ノードを解除" style="background-color: #36C5F0" ng-click="clearNode()" ng-show="!!inputFile" ng-disabled="first === -1">
+                </div>
+                <!-- リンク削除 -->
+                <div class="col-md-2">
+                    <input type="button" class="btn btn-info" value="リンクを削除" style="background-color: #36C5F0" ng-click="deleteEdge()" ng-show="!!inputFile">
+                </div>
+
+                <!-- ラベル辞書に追加 -->
+                <!--
+                <div class="col-sm-1">
+                    <input type="button" class="btn btn-info" value="ラベル辞書に追加" ng-click="addLabel()" ng-show="!!inputFile">
+                </div>
+                -->
+
+                <!-- ラベル辞書から削除 -->
+                <!--
+                <div class="col-sm-1">
+                    <input type="button" class="btn btn-info" value="ラベル辞書から削除" ng-click="deleteLabel()" ng-show="!!inputFile">
+                </div>
+                -->
+
+                <!-- カスタム辞書 -->
+                <!--
+                <div class="col-sm-1">
+                    <input type="file" id="relation-file" ng-show="false" />
+                    <input type="button" class="btn btn-info" value="カスタム辞書"
+                           ng-click="handleBrowseClick()" ng-show="!!inputFile"/>
+                </div>
+                -->
+
+                <!-- スペース -->
+                <!-- <div class="col-sm-2"></div> -->
+
+                <!-- ヘルプ -->
+                <div class="col-md-1">
+                    <h5><a href="./doc/help.html" target="_blank">ヘルプ</a></h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- プログレスバー -->
+        <div class="container progress-bar-container" ng-if="!!inputFile">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar"
+                     aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                     ng-style="{'width': progress + '%'}">
+                </div>
+              </div>
+        </div>
+        <br>
+
+        <!-- EDUリスト -->
+        <div class="container edu-list" id="list">
+            <div ng-repeat="displayText in edus track by $index">
+                <div class="col-sm-12">
+                    <span class="label label-info" id="parent{{$index}}" style="background-color: #36C5F0">{{fa[$index] | TransformParent}}</span>
+                    <button id="edu{{$index}}" type="button" ng-click="highLight('edu' + ($index).toString())"
+                        ng-mouseover="mouseOverHandler($index)"
+                        ng-mouseleave="mouseOutHandler($index)"
+                        class="btn btn-default"
+                        ng-style="{'background-color': (first === $index) ? '#E01E5A' :
+                        ((mouseOverIndex >= 0 && fa[mouseOverIndex] >= 0 && ($index === mouseOverIndex || fa[mouseOverIndex] === $index)) ? blinkColor : 'white'),
+                        'color': (first === $index) ? 'white' : 'black'}"
+                        ng-disabled="(first >= 0) && (fa[$index] >= 0 || $index === first || $index === getParent(first) || $index === 0)">
+                    <h5>{{displayText | TailorString}}</h5>
+                    </button>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <br><br><br>
+        <div ng-include="'template/footer.html'"></div>
+
+        <!-- 談話関係ラベル選択ダイアログ (アノテーション) -->
+        <div id="dialog-form" title="ラベルを下記から選択してください" ng-show="showAddDialog">
+          <form>
+                 <select class="form-control" id="select" name="select" >
+                     <option ng-repeat="relation in relations">{{relation}}</option>
+                 </select>
+          </form>
+        </div>
+
+        <!-- 談話関係ラベル選択ダイアログ (辞書から削除) -->
+        <!--
+        <div id="new-relation-dialog" title="辞書から削除するラベルを選択してください">
+          <form>
+                 <ul class="list-group" ng-if="openDeleteDialog">
+                     <li class="list-group-item" ng-repeat="relation in relations track by $index" ng-click="removeRelation(relation)">
+                         {{relation}}
+                         <img src="./image/remove.jpeg" style="width:20px;height:20px;" align="right">
+                     </li>
+                </ul>
+          </form>
+        </div>
+        -->
+    </body>
+</html>
