@@ -1,0 +1,64 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 5,
+			"text": "Respiratory viral infections in infants and young children frequently cause illness",
+			"relation": "background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "that can easily progress to hospitalization and death .",
+			"relation": "elaboration"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "There are currently no licensed vaccines to prevent respiratory viral disease in children younger than 6 months ,",
+			"relation": "elaboration"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "reflecting safety concerns and the difficulty in inducing effective immune responses in infants .",
+			"relation": "elaboration"
+		},
+		{
+			"id": 5,
+			"parent": 0,
+			"text": "This review discusses vaccines",
+			"relation": "ROOT"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "that have been developed ,",
+			"relation": "elaboration"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "or are currently being developed ,",
+			"relation": "joint"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "against influenza and respiratory syncytial virus ,",
+			"relation": "same-unit"
+		},
+		{
+			"id": 9,
+			"parent": 5,
+			"text": "with a focus on studies performed to demonstrate their safety and efficacy , and the impact of immunologic immaturity and maternal antibodies on the infant response to vaccines .",
+			"relation": "elaboration"
+		}
+	]
+}
