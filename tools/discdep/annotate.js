@@ -156,7 +156,7 @@ app.controller('EDUListController',
     // メニューバー: 例示
     // $scope.samples = ["サンプル 01", "サンプル 02", "サンプル 03"];
     // $scope.selectedSample = null;
-    $scope.showSample = function () {
+    $scope.showSample1 = function () {
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
@@ -164,36 +164,107 @@ app.controller('EDUListController',
         $scope.first = second = -1;
 
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
                 if (xhr.status == 200) {
+                    // JSONオブジェクト
                     var obj = JSON.parse(xhr.responseText).root;
+                    // 親ノードの抽出
+                    $scope.fa = _.pluck(obj, 'parent');
+                    // 談話関係ラベルの抽出
+                    $scope.depRel = _.pluck(obj, 'relation');
+                    // EDUテキストの抽出
+                    $scope.edus = _.pluck(obj, 'text');
+                    //
+                    $scope.$apply();
+                    // エッジの描画
+                    for (var i = 0; i < $scope.fa.length; ++i) {
+                        if ($scope.fa[i] >= 0) {
+                            drawCurve('parent' + $scope.fa[i].toString(), 'parent' + i.toString(), CONSTANTS.NORMAL_EDGE_COLOR);
+                            addRelation('parent' + i.toString(), $scope.depRel[i]);
+                        }
+                    }
                 }
             }
         }
+        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
         xhr.send();
-
-        // JSONオブジェクト
-        // var obj = JSON.parse(xhr.responseText).root;
-        // 親ノードの抽出
-        $scope.fa = _.pluck(obj, 'parent');
-        // 談話関係ラベルの抽出
-        $scope.depRel = _.pluck(obj, 'relation');
-        // EDUテキストの抽出
-        $scope.edus = _.pluck(obj, 'text');
-        //
-        $scope.$apply();
-        // エッジの描画
-        for (var i = 0; i < $scope.fa.length; ++i) {
-            if ($scope.fa[i] >= 0) {
-                drawCurve('parent' + $scope.fa[i].toString(), 'parent' + i.toString(), CONSTANTS.NORMAL_EDGE_COLOR);
-                addRelation('parent' + i.toString(), $scope.depRel[i]);
-            }
-        }
-
+        console.log(xhr);
         $scope.inputFile = "1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep";
     };
+    $scope.showSample2 = function () {
+        var canvas = angular.element('#canvas')[0];
+        var ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
+        $scope.operations = [];
+        $scope.first = second = -1;
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    // JSONオブジェクト
+                    var obj = JSON.parse(xhr.responseText).root;
+                    // 親ノードの抽出
+                    $scope.fa = _.pluck(obj, 'parent');
+                    // 談話関係ラベルの抽出
+                    $scope.depRel = _.pluck(obj, 'relation');
+                    // EDUテキストの抽出
+                    $scope.edus = _.pluck(obj, 'text');
+                    //
+                    $scope.$apply();
+                    // エッジの描画
+                    for (var i = 0; i < $scope.fa.length; ++i) {
+                        if ($scope.fa[i] >= 0) {
+                            drawCurve('parent' + $scope.fa[i].toString(), 'parent' + i.toString(), CONSTANTS.NORMAL_EDGE_COLOR);
+                            addRelation('parent' + i.toString(), $scope.depRel[i]);
+                        }
+                    }
+                }
+            }
+        }
+        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
+        xhr.send();
+        console.log(xhr);
+        $scope.inputFile = "1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep";
+    };
+    $scope.showSample3 = function () {
+        var canvas = angular.element('#canvas')[0];
+        var ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
+        $scope.operations = [];
+        $scope.first = second = -1;
+
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    // JSONオブジェクト
+                    var obj = JSON.parse(xhr.responseText).root;
+                    // 親ノードの抽出
+                    $scope.fa = _.pluck(obj, 'parent');
+                    // 談話関係ラベルの抽出
+                    $scope.depRel = _.pluck(obj, 'relation');
+                    // EDUテキストの抽出
+                    $scope.edus = _.pluck(obj, 'text');
+                    //
+                    $scope.$apply();
+                    // エッジの描画
+                    for (var i = 0; i < $scope.fa.length; ++i) {
+                        if ($scope.fa[i] >= 0) {
+                            drawCurve('parent' + $scope.fa[i].toString(), 'parent' + i.toString(), CONSTANTS.NORMAL_EDGE_COLOR);
+                            addRelation('parent' + i.toString(), $scope.depRel[i]);
+                        }
+                    }
+                }
+            }
+        }
+        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
+        xhr.send();
+        console.log(xhr);
+        $scope.inputFile = "1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep";
+    };
+
 
     // メニューバー: 保存
     $scope.saveToFile = function() {

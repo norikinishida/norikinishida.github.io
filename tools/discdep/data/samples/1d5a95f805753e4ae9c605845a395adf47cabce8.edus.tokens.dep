@@ -1,0 +1,64 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 6,
+			"text": "Newcastle disease ( Paramyxoviridae ) is a highly infectious virus",
+			"relation": "background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "shed in the faeces of infected birds .",
+			"relation": "elaboration"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "Non - biting Muscid flies characteristically visit manure and decaying organic material to feed and oviposit ,",
+			"relation": "elaboration"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "and may contribute to disease transmission .",
+			"relation": "joint"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "The housefly , Musca domestica ( Linnaeus , 1758 ) ( Diptera : Muscidae ) , has been implicated as a mechanical vector of numerous pathogens .",
+			"relation": "elaboration"
+		},
+		{
+			"id": 6,
+			"parent": 0,
+			"text": "In this study 2000 aerial net - captured houseflies were examined for their ability to harbour Newcastle disease virus ( NDV ) .",
+			"relation": "ROOT"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "In an adjacent study , laboratory - reared flies were experimentally exposed to NDV La Sota strain .",
+			"relation": "elaboration"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "The virus was detected in the dissected gastrointestinal tract of laboratory - exposed flies for up to 72 h post - exposure ,",
+			"relation": "elaboration"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "whereas the untreated control flies were negative .",
+			"relation": "contrast"
+		}
+	]
+}
