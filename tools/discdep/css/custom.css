@@ -3,11 +3,12 @@
     left: 150px;
 }
 .progress-bar-container {
-    top: 110px;
+    top: 130px;
 }
 .menu-bar {
     top: 30px;
 }
 .edu-list {
-    top: 140px;
+    top: 160px;
+    bottom 30px;
 }

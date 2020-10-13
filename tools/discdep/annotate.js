@@ -190,7 +190,7 @@ app.controller('EDUListController',
         xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
         xhr.send();
         console.log(xhr);
-        $scope.inputFile = "1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep";
+        $scope.inputFile = "Sample 01";
     };
     $scope.showSample2 = function () {
         var canvas = angular.element('#canvas')[0];
@@ -223,10 +223,10 @@ app.controller('EDUListController',
                 }
             }
         }
-        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
+        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1d5a95f805753e4ae9c605845a395adf47cabce8.edus.tokens.dep");
         xhr.send();
         console.log(xhr);
-        $scope.inputFile = "1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep";
+        $scope.inputFile = "Sample 02";
     };
     $scope.showSample3 = function () {
         var canvas = angular.element('#canvas')[0];
@@ -259,12 +259,11 @@ app.controller('EDUListController',
                 }
             }
         }
-        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
+        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/8d0569b9fe93d0997ca38060117ffc6381122957.edus.tokens.dep");
         xhr.send();
         console.log(xhr);
-        $scope.inputFile = "1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep";
+        $scope.inputFile = "Sample 03";
     };
-
 
     // メニューバー: 保存
     $scope.saveToFile = function() {
