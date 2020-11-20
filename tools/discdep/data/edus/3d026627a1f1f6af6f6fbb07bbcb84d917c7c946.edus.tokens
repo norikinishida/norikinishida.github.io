@@ -10,4 +10,6 @@ In spite the latter exhibited unbiased manner , the produced sequences are not e
 In this paper , we present an algorithmic solution
 to produce coding sequences
 that follow exactly a primary amino acid sequence and a desired GC - content .
-The proposed tool , namely CodSeqGen , depends on random selection for smaller subsets to be traversed using the backtracking approach .
+The proposed tool , namely CodSeqGen , depends on random selection for smaller subsets
+to be traversed
+using the backtracking approach .

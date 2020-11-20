@@ -4,4 +4,5 @@ by applying a dynamic topic model to COVID-19 related tweets by U.S. Governors a
 We use a network Hawkes binomial topic model
 to track evolving sub - topics around risk , testing and treatment .
 We also construct influence networks amongst government officials
-using Granger causality inferred from the network Hawkes process .
+using Granger causality
+inferred from the network Hawkes process .

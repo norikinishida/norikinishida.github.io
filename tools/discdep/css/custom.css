@@ -1,14 +1,16 @@
-.progress-bar-container, .menu-bar, .edu-list {
+.menu-bar, .progress-bar-container, .edu-list {
     position: absolute;
-    left: 150px;
-}
-.progress-bar-container {
-    top: 130px;
+    left: 180px;
 }
 .menu-bar {
     top: 30px;
 }
+.progress-bar-container {
+    top: 130px;
+}
 .edu-list {
     top: 160px;
-    bottom 30px;
+}
+h5 {
+    display: inline-block;
 }

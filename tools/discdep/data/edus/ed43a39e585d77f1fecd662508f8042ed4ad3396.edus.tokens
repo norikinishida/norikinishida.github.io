@@ -6,9 +6,14 @@ In this study , we built a predictive model
 based on the cumulative trend of new cases and deaths for the top five provinces .
 We will also look at modeling the trends for confirmed cases , deaths and recovered for the whole country .
 Method :
-In this study , we have chosen to apply the exponential smoothing model to iteratively forecast future values of a regular time series from weighted averages of past daily values .
+In this study , we have chosen to apply the exponential smoothing model
+to iteratively forecast future values of a regular time series from weighted averages of past daily values .
 This method is exponential
-because the value of each level is influenced by every preceding actual value to an exponentially decreasing degree -more recent values are given greater weight .
-The available data is too small to identify seasonal patterns and make a predictable variation in value ,
-such as annual fluctuation in temperature related to the season .
+because the value of each level is influenced by every preceding actual value to an exponentially decreasing degree
+-more recent values are given greater weight .
+The available data is too small
+to identify seasonal patterns
+and make a predictable variation in value ,
+such as annual fluctuation in temperature
+related to the season .
 The trend is a tendency of the data to increase or decrease over time .

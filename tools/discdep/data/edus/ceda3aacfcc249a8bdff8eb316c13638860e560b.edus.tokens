@@ -1,4 +1,5 @@
-I use the COVID-19 death rate in South Korea and a method relating the ratio of death rates in a U.S. state to its share of cumulative positive tests
+I use the COVID-19 death rate in South Korea and a method
+relating the ratio of death rates in a U.S. state to its share of cumulative positive tests
 to estimate the total cases of COVID-19 in the U.S.
 and to estimate the extent of infection and the unidentified share of the infected population in each of the lower-48 states and in New York City in mid - April , 2020 .
 I identify a logarithmic relationship between the cumulative death rate in a state and its cumulative positive share of tests .
