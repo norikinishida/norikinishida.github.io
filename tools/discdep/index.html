@@ -56,8 +56,14 @@
                 <input type="button" class="btn btn-info" value="保存" style="background-color: #1EA362; border-color: #1EA362"
                     ng-click="saveToFile()" ng-show="!!inputFile" ng-disabled="progress !== 100">
 
-                    <input type="button" class="btn btn-info" value="サンプル03" style="background-color: #1EA362; border-color: #1EA362"
+                <!-- 例 -->
+                <input type="button" class="btn btn-info" value="サンプル1" style="background-color: #1EA362; border-color: #1EA362"
+                    ng-click="showSample1()">
+                <input type="button" class="btn btn-info" value="サンプル2" style="background-color: #1EA362; border-color: #1EA362"
+                    ng-click="showSample2()">
+                <input type="button" class="btn btn-info" value="サンプル3" style="background-color: #1EA362; border-color: #1EA362"
                     ng-click="showSample3()">
+
                 <!-- ヘルプ -->
                 <h5><a href="./doc/help.html" target="_blank" style="color: #1EA362">ヘルプ</a></h5>
             </div>
