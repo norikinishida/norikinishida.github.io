@@ -5,25 +5,55 @@ var app = angular.module('MyApp', ['ngFileUpload', 'ngToast']);
 // 定数
 app.constant('CONSTANTS', {
     // 談話関係クラス
-    relations: ['ROOT',
-                'attribution',
-                'background',
-                'cause',
-                'comparison',
-                'condition',
-                'contrast',
-                'elaboration',
-                'enablement',
-                'evaluation',
-                'explanation',
-                'joint',
-                'manner-means',
-                'summary',
-                'temporal',
-                'topic-change',
-                'topic-comment',
-                'same-unit',
-                'textual'],
+    relations: [
+        // 1
+        'ROOT',
+        // 2
+        'attribution',
+        // 3
+        //'background',
+        'bg-compare',
+        'bg-general',
+        'bg-goal',
+        // 4
+        //'cause-effect',
+        'cause',
+        'result',
+        // 5
+        'comparison',
+        // 6
+        'condition',
+        // 7
+        'contrast',
+        // 8
+        //'elaboration',
+        'elab-addition',
+        'elab-aspect',
+        'elab-definition',
+        'elab-enum_member',
+        'elab-example',
+        'elab-process_step',
+        // 9
+        'enablement',
+        // 10
+        'evaluation',
+        // 11
+        //'explanation',
+        'exp-evidence',
+        'exp-reason',
+        // 12
+        'joint',
+        // 13
+        'manner-means',
+        // 14
+        'progression',
+        // 15
+        'same-unit',
+        // 16
+        'summary',
+        // 17
+        'temporal'
+    ],
     // リンクの通常色
     NORMAL_LINK_COLOR: '#4A89F3',
     // リンクのハイライト色
@@ -34,7 +64,1058 @@ app.constant('CONSTANTS', {
     //MAX_N: 150,
     MAX_N: 500,
     //  全体の横幅
-    CANVAS_WIDTH: 1500  // canvas_height will be automatically set.
+    CANVAS_WIDTH: 1500, // canvas_height will be automatically set.
+    SAMPLE_FILES: [
+        'D14-1001.edu.txt.dep',
+        'D14-1002.edu.txt.dep',
+        'D14-1003.edu.txt.dep',
+        'D14-1004.edu.txt.dep',
+        'D14-1005.edu.txt.dep',
+        'D14-1006.edu.txt.dep',
+        'D14-1007.edu.txt.dep',
+        'D14-1008.edu.txt.dep',
+        'D14-1009.edu.txt.dep',
+        'D14-1010.edu.txt.dep',
+        'D14-1011.edu.txt.dep',
+        'D14-1012.edu.txt.dep',
+        'D14-1013.edu.txt.dep',
+        'D14-1014.edu.txt.dep',
+        'D14-1015.edu.txt.dep',
+        'D14-1016.edu.txt.dep',
+        'D14-1017.edu.txt.dep',
+        'D14-1018.edu.txt.dep',
+        'D14-1019.edu.txt.dep',
+        'D14-1020.edu.txt.dep',
+        'D14-1021.edu.txt.dep',
+        'D14-1022.edu.txt.dep',
+        'D14-1023.edu.txt.dep',
+        'D14-1024.edu.txt.dep',
+        'D14-1025.edu.txt.dep',
+        'D14-1026.edu.txt.dep',
+        'D14-1027.edu.txt.dep',
+        'D14-1028.edu.txt.dep',
+        'D14-1029.edu.txt.dep',
+        'D14-1030.edu.txt.dep',
+        'D14-1031.edu.txt.dep',
+        'D14-1032.edu.txt.dep',
+        'D14-1033.edu.txt.dep',
+        'D14-1034.edu.txt.dep',
+        'D14-1035.edu.txt.dep',
+        'D14-1036.edu.txt.dep',
+        'D14-1037.edu.txt.dep',
+        'D14-1038.edu.txt.dep',
+        'D14-1039.edu.txt.dep',
+        'D14-1040.edu.txt.dep',
+        'D14-1041.edu.txt.dep',
+        'D14-1042.edu.txt.dep',
+        'D14-1043.edu.txt.dep',
+        'D14-1044.edu.txt.dep',
+        'D14-1045.edu.txt.dep',
+        'D14-1046.edu.txt.dep',
+        'D14-1047.edu.txt.dep',
+        'D14-1048.edu.txt.dep',
+        'D14-1049.edu.txt.dep',
+        'D14-1050.edu.txt.dep',
+        'D14-1051.edu.txt.dep',
+        'D14-1052.edu.txt.dep',
+        'D14-1053.edu.txt.dep',
+        'D14-1054.edu.txt.dep',
+        'D14-1055.edu.txt.dep',
+        'D14-1056.edu.txt.dep',
+        'D14-1057.edu.txt.dep',
+        'D14-1058.edu.txt.dep',
+        'D14-1059.edu.txt.dep',
+        'D14-1060.edu.txt.dep',
+        'D14-1061.edu.txt.dep',
+        'D14-1062.edu.txt.dep',
+        'D14-1063.edu.txt.dep',
+        'D14-1064.edu.txt.dep',
+        'D14-1065.edu.txt.dep',
+        'D14-1066.edu.txt.dep',
+        'D14-1067.edu.txt.dep',
+        'D14-1068.edu.txt.dep',
+        'D14-1069.edu.txt.dep',
+        'D14-1070.edu.txt.dep',
+        'D14-1071.edu.txt.dep',
+        'D14-1072.edu.txt.dep',
+        'D14-1073.edu.txt.dep',
+        'D14-1074.edu.txt.dep',
+        'D14-1075.edu.txt.dep',
+        'D14-1076.edu.txt.dep',
+        'D14-1077.edu.txt.dep',
+        'D14-1078.edu.txt.dep',
+        'D14-1079.edu.txt.dep',
+        'D14-1080.edu.txt.dep',
+        'D14-1081.edu.txt.dep',
+        'D14-1082.edu.txt.dep',
+        'D14-1083.edu.txt.dep',
+        'D14-1084.edu.txt.dep',
+        'D14-1085.edu.txt.dep',
+        'D14-1086.edu.txt.dep',
+        'D14-1087.edu.txt.dep',
+        'D14-1088.edu.txt.dep',
+        'D14-1089.edu.txt.dep',
+        'D14-1090.edu.txt.dep',
+        'D14-1091.edu.txt.dep',
+        'D14-1092.edu.txt.dep',
+        'D14-1093.edu.txt.dep',
+        'D14-1094.edu.txt.dep',
+        'D14-1095.edu.txt.dep',
+        'D14-1096.edu.txt.dep',
+        'D14-1097.edu.txt.dep',
+        'D14-1098.edu.txt.dep',
+        'D14-1099.edu.txt.dep',
+        'D14-1100.edu.txt.dep',
+        'D14-1101.edu.txt.dep',
+        'D14-1102.edu.txt.dep',
+        'D14-1103.edu.txt.dep',
+        'D14-1104.edu.txt.dep',
+        'D14-1105.edu.txt.dep',
+        'D14-1106.edu.txt.dep',
+        'D14-1107.edu.txt.dep',
+        'D14-1108.edu.txt.dep',
+        'D14-1109.edu.txt.dep',
+        'D14-1110.edu.txt.dep',
+        'D14-1111.edu.txt.dep',
+        'D14-1112.edu.txt.dep',
+        'D14-1113.edu.txt.dep',
+        'D14-1114.edu.txt.dep',
+        'D14-1115.edu.txt.dep',
+        'D14-1116.edu.txt.dep',
+        'D14-1117.edu.txt.dep',
+        'D14-1118.edu.txt.dep',
+        'D14-1119.edu.txt.dep',
+        'D14-1120.edu.txt.dep',
+        'D14-1121.edu.txt.dep',
+        'D14-1122.edu.txt.dep',
+        'D14-1123.edu.txt.dep',
+        'D14-1124.edu.txt.dep',
+        'D14-1125.edu.txt.dep',
+        'D14-1126.edu.txt.dep',
+        'D14-1127.edu.txt.dep',
+        'D14-1128.edu.txt.dep',
+        'D14-1129.edu.txt.dep',
+        'D14-1130.edu.txt.dep',
+        'D14-1131.edu.txt.dep',
+        'D14-1132.edu.txt.dep',
+        'D14-1133.edu.txt.dep',
+        'D14-1134.edu.txt.dep',
+        'D14-1135.edu.txt.dep',
+        'D14-1136.edu.txt.dep',
+        'D14-1137.edu.txt.dep',
+        'D14-1138.edu.txt.dep',
+        'D14-1139.edu.txt.dep',
+        'D14-1140.edu.txt.dep',
+        'D14-1141.edu.txt.dep',
+        'D14-1142.edu.txt.dep',
+        'D14-1143.edu.txt.dep',
+        'D14-1144.edu.txt.dep',
+        'D14-1145.edu.txt.dep',
+        'D14-1146.edu.txt.dep',
+        'D14-1147.edu.txt.dep',
+        'D14-1148.edu.txt.dep',
+        'D14-1149.edu.txt.dep',
+        'D14-1150.edu.txt.dep',
+        'D14-1151.edu.txt.dep',
+        'D14-1152.edu.txt.dep',
+        'D14-1153.edu.txt.dep',
+        'D14-1154.edu.txt.dep',
+        'D14-1155.edu.txt.dep',
+        'D14-1156.edu.txt.dep',
+        'D14-1157.edu.txt.dep',
+        'D14-1158.edu.txt.dep',
+        'D14-1159.edu.txt.dep',
+        'D14-1160.edu.txt.dep',
+        'D14-1161.edu.txt.dep',
+        'D14-1162.edu.txt.dep',
+        'D14-1163.edu.txt.dep',
+        'D14-1164.edu.txt.dep',
+        'D14-1165.edu.txt.dep',
+        'D14-1166.edu.txt.dep',
+        'D14-1167.edu.txt.dep',
+        'D14-1168.edu.txt.dep',
+        'D14-1169.edu.txt.dep',
+        'D14-1170.edu.txt.dep',
+        'D14-1171.edu.txt.dep',
+        'D14-1172.edu.txt.dep',
+        'D14-1173.edu.txt.dep',
+        'D14-1174.edu.txt.dep',
+        'D14-1175.edu.txt.dep',
+        'D14-1176.edu.txt.dep',
+        'D14-1177.edu.txt.dep',
+        'D14-1178.edu.txt.dep',
+        'D14-1179.edu.txt.dep',
+        'D14-1180.edu.txt.dep',
+        'D14-1181.edu.txt.dep',
+        'D14-1182.edu.txt.dep',
+        'D14-1183.edu.txt.dep',
+        'D14-1184.edu.txt.dep',
+        'D14-1185.edu.txt.dep',
+        'D14-1186.edu.txt.dep',
+        'D14-1187.edu.txt.dep',
+        'D14-1188.edu.txt.dep',
+        'D14-1189.edu.txt.dep',
+        'D14-1190.edu.txt.dep',
+        'D14-1191.edu.txt.dep',
+        'D14-1192.edu.txt.dep',
+        'D14-1193.edu.txt.dep',
+        'D14-1194.edu.txt.dep',
+        'D14-1195.edu.txt.dep',
+        'D14-1196.edu.txt.dep',
+        'D14-1197.edu.txt.dep',
+        'D14-1198.edu.txt.dep',
+        'D14-1199.edu.txt.dep',
+        'D14-1200.edu.txt.dep',
+        'D14-1201.edu.txt.dep',
+        'D14-1202.edu.txt.dep',
+        'D14-1203.edu.txt.dep',
+        'D14-1204.edu.txt.dep',
+        'D14-1205.edu.txt.dep',
+        'D14-1206.edu.txt.dep',
+        'D14-1207.edu.txt.dep',
+        'D14-1208.edu.txt.dep',
+        'D14-1209.edu.txt.dep',
+        'D14-1210.edu.txt.dep',
+        'D14-1211.edu.txt.dep',
+        'D14-1212.edu.txt.dep',
+        'D14-1213.edu.txt.dep',
+        'D14-1214.edu.txt.dep',
+        'D14-1215.edu.txt.dep',
+        'D14-1216.edu.txt.dep',
+        'D14-1217.edu.txt.dep',
+        'D14-1218.edu.txt.dep',
+        'D14-1219.edu.txt.dep',
+        'D14-1220.edu.txt.dep',
+        'D14-1221.edu.txt.dep',
+        'D14-1222.edu.txt.dep',
+        'D14-1223.edu.txt.dep',
+        'D14-1224.edu.txt.dep',
+        'D14-1225.edu.txt.dep',
+        'D14-1226.edu.txt.dep',
+        'P06-1001.edu.txt.dep',
+        'P06-1002.edu.txt.dep',
+        'P06-1003.edu.txt.dep',
+        'P06-1004.edu.txt.dep',
+        'P06-1005.edu.txt.dep',
+        'P06-1006.edu.txt.dep',
+        'P06-1007.edu.txt.dep',
+        'P06-1008.edu.txt.dep',
+        'P06-1009.edu.txt.dep',
+        'P06-1010.edu.txt.dep',
+        'P06-1011.edu.txt.dep',
+        'P06-1012.edu.txt.dep',
+        'P06-1013.edu.txt.dep',
+        'P06-1014.edu.txt.dep',
+        'P06-1015.edu.txt.dep',
+        'P06-1016.edu.txt.dep',
+        'P06-1017.edu.txt.dep',
+        'P06-1018.edu.txt.dep',
+        'P06-1019.edu.txt.dep',
+        'P06-1020.edu.txt.dep',
+        'P06-1021.edu.txt.dep',
+        'P06-1022.edu.txt.dep',
+        'P06-1023.edu.txt.dep',
+        'P06-1024.edu.txt.dep',
+        'P06-1025.edu.txt.dep',
+        'P06-1026.edu.txt.dep',
+        'P06-1027.edu.txt.dep',
+        'P06-1028.edu.txt.dep',
+        'P06-1029.edu.txt.dep',
+        'P06-1030.edu.txt.dep',
+        'P06-1031.edu.txt.dep',
+        'P06-1032.edu.txt.dep',
+        'P06-1033.edu.txt.dep',
+        'P06-1034.edu.txt.dep',
+        'P06-1035.edu.txt.dep',
+        'P06-1036.edu.txt.dep',
+        'P06-1037.edu.txt.dep',
+        'P06-1038.edu.txt.dep',
+        'P06-1039.edu.txt.dep',
+        'P06-1040.edu.txt.dep',
+        'P06-1041.edu.txt.dep',
+        'P06-1042.edu.txt.dep',
+        'P06-1043.edu.txt.dep',
+        'P06-1044.edu.txt.dep',
+        'P06-1045.edu.txt.dep',
+        'P06-1046.edu.txt.dep',
+        'P06-1047.edu.txt.dep',
+        'P06-1048.edu.txt.dep',
+        'P06-1049.edu.txt.dep',
+        'P06-1050.edu.txt.dep',
+        'P06-1051.edu.txt.dep',
+        'P06-1052.edu.txt.dep',
+        'P06-1053.edu.txt.dep',
+        'P06-1054.edu.txt.dep',
+        'P06-1055.edu.txt.dep',
+        'P06-1056.edu.txt.dep',
+        'P06-1057.edu.txt.dep',
+        'P06-1058.edu.txt.dep',
+        'P06-1059.edu.txt.dep',
+        'P06-1060.edu.txt.dep',
+        'P06-1061.edu.txt.dep',
+        'P06-1062.edu.txt.dep',
+        'P06-1063.edu.txt.dep',
+        'P06-1064.edu.txt.dep',
+        'P06-1065.edu.txt.dep',
+        'P06-1066.edu.txt.dep',
+        'P06-1067.edu.txt.dep',
+        'P06-1068.edu.txt.dep',
+        'P06-1069.edu.txt.dep',
+        'P06-1070.edu.txt.dep',
+        'P06-1071.edu.txt.dep',
+        'P06-1072.edu.txt.dep',
+        'P06-1073.edu.txt.dep',
+        'P06-1074.edu.txt.dep',
+        'P06-1075.edu.txt.dep',
+        'P06-1076.edu.txt.dep',
+        'P06-1077.edu.txt.dep',
+        'P06-1078.edu.txt.dep',
+        'P06-1079.edu.txt.dep',
+        'P06-1080.edu.txt.dep',
+        'P06-1081.edu.txt.dep',
+        'P06-1082.edu.txt.dep',
+        'P06-1083.edu.txt.dep',
+        'P06-1084.edu.txt.dep',
+        'P06-1085.edu.txt.dep',
+        'P06-1086.edu.txt.dep',
+        'P06-1087.edu.txt.dep',
+        'P06-1088.edu.txt.dep',
+        'P06-1089.edu.txt.dep',
+        'P06-1090.edu.txt.dep',
+        'P06-1091.edu.txt.dep',
+        'P06-1092.edu.txt.dep',
+        'P06-1093.edu.txt.dep',
+        'P06-1094.edu.txt.dep',
+        'P06-1095.edu.txt.dep',
+        'P06-1096.edu.txt.dep',
+        'P06-1097.edu.txt.dep',
+        'P06-1098.edu.txt.dep',
+        'P06-1099.edu.txt.dep',
+        'P06-1100.edu.txt.dep',
+        'P06-1101.edu.txt.dep',
+        'P06-1102.edu.txt.dep',
+        'P06-1103.edu.txt.dep',
+        'P06-1104.edu.txt.dep',
+        'P06-1105.edu.txt.dep',
+        'P06-1106.edu.txt.dep',
+        'P06-1107.edu.txt.dep',
+        'P06-1108.edu.txt.dep',
+        'P06-1109.edu.txt.dep',
+        'P06-1110.edu.txt.dep',
+        'P06-1111.edu.txt.dep',
+        'P06-1112.edu.txt.dep',
+        'P06-1113.edu.txt.dep',
+        'P06-1114.edu.txt.dep',
+        'P06-1115.edu.txt.dep',
+        'P06-1116.edu.txt.dep',
+        'P06-1117.edu.txt.dep',
+        'P06-1118.edu.txt.dep',
+        'P06-1119.edu.txt.dep',
+        'P06-1120.edu.txt.dep',
+        'P06-1121.edu.txt.dep',
+        'P06-1122.edu.txt.dep',
+        'P06-1123.edu.txt.dep',
+        'P06-1124.edu.txt.dep',
+        'P06-1125.edu.txt.dep',
+        'P06-1126.edu.txt.dep',
+        'P06-1127.edu.txt.dep',
+        'P06-1128.edu.txt.dep',
+        'P06-1129.edu.txt.dep',
+        'P06-1130.edu.txt.dep',
+        'P06-1131.edu.txt.dep',
+        'P06-1132.edu.txt.dep',
+        'P06-1133.edu.txt.dep',
+        'P06-1134.edu.txt.dep',
+        'P06-1135.edu.txt.dep',
+        'P06-1136.edu.txt.dep',
+        'P06-1137.edu.txt.dep',
+        'P06-1138.edu.txt.dep',
+        'P06-1139.edu.txt.dep',
+        'P06-1140.edu.txt.dep',
+        'P06-1141.edu.txt.dep',
+        'P06-1142.edu.txt.dep',
+        'P06-1143.edu.txt.dep',
+        'P06-1144.edu.txt.dep',
+        'P06-1145.edu.txt.dep',
+        'P06-1146.edu.txt.dep',
+        'P06-1147.edu.txt.dep',
+        'P14-1000_anno1.edu.txt.dep',
+        'P14-1000_anno2.edu.txt.dep',
+        'P14-1000_anno3.edu.txt.dep',
+        'P14-1001_anno1.edu.txt.dep',
+        'P14-1001_anno2.edu.txt.dep',
+        'P14-1001_anno3.edu.txt.dep',
+        'P14-1002_anno1.edu.txt.dep',
+        'P14-1002_anno2.edu.txt.dep',
+        'P14-1002_anno3.edu.txt.dep',
+        'P14-1003_anno1.edu.txt.dep',
+        'P14-1003_anno2.edu.txt.dep',
+        'P14-1003_anno3.edu.txt.dep',
+        'P14-1004_anno1.edu.txt.dep',
+        'P14-1004_anno2.edu.txt.dep',
+        'P14-1004_anno3.edu.txt.dep',
+        'P14-1005_anno1.edu.txt.dep',
+        'P14-1005_anno2.edu.txt.dep',
+        'P14-1005_anno3.edu.txt.dep',
+        'P14-1006_anno1.edu.txt.dep',
+        'P14-1006_anno2.edu.txt.dep',
+        'P14-1006_anno3.edu.txt.dep',
+        'P14-1007_anno1.edu.txt.dep',
+        'P14-1007_anno2.edu.txt.dep',
+        'P14-1007_anno3.edu.txt.dep',
+        'P14-1008_anno1.edu.txt.dep',
+        'P14-1008_anno2.edu.txt.dep',
+        'P14-1008_anno3.edu.txt.dep',
+        'P14-1009_anno1.edu.txt.dep',
+        'P14-1009_anno2.edu.txt.dep',
+        'P14-1009_anno3.edu.txt.dep',
+        'P14-1010_anno1.edu.txt.dep',
+        'P14-1010_anno2.edu.txt.dep',
+        'P14-1010_anno3.edu.txt.dep',
+        'P14-1011_anno1.edu.txt.dep',
+        'P14-1011_anno2.edu.txt.dep',
+        'P14-1011_anno3.edu.txt.dep',
+        'P14-1012_anno1.edu.txt.dep',
+        'P14-1012_anno2.edu.txt.dep',
+        'P14-1012_anno3.edu.txt.dep',
+        'P14-1013_anno1.edu.txt.dep',
+        'P14-1013_anno2.edu.txt.dep',
+        'P14-1013_anno3.edu.txt.dep',
+        'P14-1014_anno1.edu.txt.dep',
+        'P14-1014_anno2.edu.txt.dep',
+        'P14-1014_anno3.edu.txt.dep',
+        'P14-1015_anno1.edu.txt.dep',
+        'P14-1015_anno2.edu.txt.dep',
+        'P14-1015_anno3.edu.txt.dep',
+        'P14-1016_anno1.edu.txt.dep',
+        'P14-1016_anno2.edu.txt.dep',
+        'P14-1016_anno3.edu.txt.dep',
+        'P14-1017_anno1.edu.txt.dep',
+        'P14-1017_anno2.edu.txt.dep',
+        'P14-1017_anno3.edu.txt.dep',
+        'P14-1018_anno1.edu.txt.dep',
+        'P14-1018_anno2.edu.txt.dep',
+        'P14-1018_anno3.edu.txt.dep',
+        'P14-1019_anno1.edu.txt.dep',
+        'P14-1019_anno2.edu.txt.dep',
+        'P14-1019_anno3.edu.txt.dep',
+        'P14-1020_anno1.edu.txt.dep',
+        'P14-1020_anno2.edu.txt.dep',
+        'P14-1020_anno3.edu.txt.dep',
+        'P14-1021_anno1.edu.txt.dep',
+        'P14-1021_anno2.edu.txt.dep',
+        'P14-1021_anno3.edu.txt.dep',
+        'P14-1022_anno1.edu.txt.dep',
+        'P14-1022_anno2.edu.txt.dep',
+        'P14-1022_anno3.edu.txt.dep',
+        'P14-1023_anno1.edu.txt.dep',
+        'P14-1023_anno2.edu.txt.dep',
+        'P14-1023_anno3.edu.txt.dep',
+        'P14-1024_anno1.edu.txt.dep',
+        'P14-1024_anno2.edu.txt.dep',
+        'P14-1024_anno3.edu.txt.dep',
+        'P14-1025_anno1.edu.txt.dep',
+        'P14-1025_anno2.edu.txt.dep',
+        'P14-1025_anno3.edu.txt.dep',
+        'P14-1026_anno1.edu.txt.dep',
+        'P14-1026_anno2.edu.txt.dep',
+        'P14-1026_anno3.edu.txt.dep',
+        'P14-1027_anno1.edu.txt.dep',
+        'P14-1027_anno2.edu.txt.dep',
+        'P14-1027_anno3.edu.txt.dep',
+        'P14-1028_anno1.edu.txt.dep',
+        'P14-1028_anno2.edu.txt.dep',
+        'P14-1028_anno3.edu.txt.dep',
+        'P14-1029_anno1.edu.txt.dep',
+        'P14-1029_anno2.edu.txt.dep',
+        'P14-1029_anno3.edu.txt.dep',
+        'P14-1030_anno1.edu.txt.dep',
+        'P14-1030_anno2.edu.txt.dep',
+        'P14-1030_anno3.edu.txt.dep',
+        'P14-1031_anno1.edu.txt.dep',
+        'P14-1031_anno2.edu.txt.dep',
+        'P14-1031_anno3.edu.txt.dep',
+        'P14-1032_anno1.edu.txt.dep',
+        'P14-1032_anno2.edu.txt.dep',
+        'P14-1032_anno3.edu.txt.dep',
+        'P14-1033_anno1.edu.txt.dep',
+        'P14-1033_anno2.edu.txt.dep',
+        'P14-1033_anno3.edu.txt.dep',
+        'P14-1034_anno1.edu.txt.dep',
+        'P14-1034_anno2.edu.txt.dep',
+        'P14-1034_anno3.edu.txt.dep',
+        'P14-1035_anno1.edu.txt.dep',
+        'P14-1035_anno2.edu.txt.dep',
+        'P14-1035_anno3.edu.txt.dep',
+        'P14-1036_anno1.edu.txt.dep',
+        'P14-1036_anno2.edu.txt.dep',
+        'P14-1036_anno3.edu.txt.dep',
+        'P14-1037_anno1.edu.txt.dep',
+        'P14-1037_anno2.edu.txt.dep',
+        'P14-1037_anno3.edu.txt.dep',
+        'P14-1038_anno1.edu.txt.dep',
+        'P14-1038_anno2.edu.txt.dep',
+        'P14-1038_anno3.edu.txt.dep',
+        'P14-1039_anno1.edu.txt.dep',
+        'P14-1039_anno2.edu.txt.dep',
+        'P14-1039_anno3.edu.txt.dep',
+        'P14-1040_anno1.edu.txt.dep',
+        'P14-1040_anno2.edu.txt.dep',
+        'P14-1040_anno3.edu.txt.dep',
+        'P14-1041_anno1.edu.txt.dep',
+        'P14-1041_anno2.edu.txt.dep',
+        'P14-1041_anno3.edu.txt.dep',
+        'P14-1042_anno1.edu.txt.dep',
+        'P14-1042_anno2.edu.txt.dep',
+        'P14-1042_anno3.edu.txt.dep',
+        'P14-1043_anno1.edu.txt.dep',
+        'P14-1043_anno2.edu.txt.dep',
+        'P14-1043_anno3.edu.txt.dep',
+        'P14-1044_anno1.edu.txt.dep',
+        'P14-1044_anno2.edu.txt.dep',
+        'P14-1044_anno3.edu.txt.dep',
+        'P14-1045_anno1.edu.txt.dep',
+        'P14-1045_anno2.edu.txt.dep',
+        'P14-1045_anno3.edu.txt.dep',
+        'P14-1046_anno1.edu.txt.dep',
+        'P14-1046_anno2.edu.txt.dep',
+        'P14-1046_anno3.edu.txt.dep',
+        'P14-1047_anno1.edu.txt.dep',
+        'P14-1047_anno2.edu.txt.dep',
+        'P14-1047_anno3.edu.txt.dep',
+        'P14-1048_anno1.edu.txt.dep',
+        'P14-1048_anno2.edu.txt.dep',
+        'P14-1048_anno3.edu.txt.dep',
+        'P14-1049_anno1.edu.txt.dep',
+        'P14-1049_anno2.edu.txt.dep',
+        'P14-1049_anno3.edu.txt.dep',
+        'P14-1050_anno1.edu.txt.dep',
+        'P14-1050_anno2.edu.txt.dep',
+        'P14-1050_anno3.edu.txt.dep',
+        'P14-1051_anno1.edu.txt.dep',
+        'P14-1051_anno2.edu.txt.dep',
+        'P14-1052_anno1.edu.txt.dep',
+        'P14-1052_anno2.edu.txt.dep',
+        'P14-1053_anno1.edu.txt.dep',
+        'P14-1053_anno2.edu.txt.dep',
+        'P14-1054_anno1.edu.txt.dep',
+        'P14-1054_anno2.edu.txt.dep',
+        'P14-1055_anno1.edu.txt.dep',
+        'P14-1055_anno2.edu.txt.dep',
+        'P14-1056_anno1.edu.txt.dep',
+        'P14-1056_anno2.edu.txt.dep',
+        'P14-1057_anno1.edu.txt.dep',
+        'P14-1057_anno2.edu.txt.dep',
+        'P14-1058_anno1.edu.txt.dep',
+        'P14-1058_anno2.edu.txt.dep',
+        'P14-1059_anno1.edu.txt.dep',
+        'P14-1059_anno2.edu.txt.dep',
+        'P14-1060_anno1.edu.txt.dep',
+        'P14-1060_anno2.edu.txt.dep',
+        'P14-1061_anno1.edu.txt.dep',
+        'P14-1061_anno2.edu.txt.dep',
+        'P14-1062_anno1.edu.txt.dep',
+        'P14-1062_anno2.edu.txt.dep',
+        'P14-1063_anno1.edu.txt.dep',
+        'P14-1063_anno2.edu.txt.dep',
+        'P14-1064_anno1.edu.txt.dep',
+        'P14-1064_anno2.edu.txt.dep',
+        'P14-1065_anno1.edu.txt.dep',
+        'P14-1065_anno2.edu.txt.dep',
+        'P14-1066_anno1.edu.txt.dep',
+        'P14-1066_anno2.edu.txt.dep',
+        'P14-1067_anno1.edu.txt.dep',
+        'P14-1067_anno2.edu.txt.dep',
+        'P14-1068_anno1.edu.txt.dep',
+        'P14-1068_anno2.edu.txt.dep',
+        'P14-1069_anno1.edu.txt.dep',
+        'P14-1069_anno2.edu.txt.dep',
+        'P14-1070_anno1.edu.txt.dep',
+        'P14-1070_anno2.edu.txt.dep',
+        'P14-1071_anno1.edu.txt.dep',
+        'P14-1071_anno2.edu.txt.dep',
+        'P14-1072_anno1.edu.txt.dep',
+        'P14-1072_anno2.edu.txt.dep',
+        'P14-1073_anno1.edu.txt.dep',
+        'P14-1073_anno2.edu.txt.dep',
+        'P14-1074_anno1.edu.txt.dep',
+        'P14-1074_anno2.edu.txt.dep',
+        'P14-1075_anno1.edu.txt.dep',
+        'P14-1075_anno2.edu.txt.dep',
+        'P14-1076_anno1.edu.txt.dep',
+        'P14-1076_anno2.edu.txt.dep',
+        'P14-1077_anno1.edu.txt.dep',
+        'P14-1077_anno2.edu.txt.dep',
+        'P14-1078_anno1.edu.txt.dep',
+        'P14-1078_anno2.edu.txt.dep',
+        'P14-1079_anno1.edu.txt.dep',
+        'P14-1079_anno2.edu.txt.dep',
+        'P14-1080_anno1.edu.txt.dep',
+        'P14-1080_anno2.edu.txt.dep',
+        'P14-1081_anno1.edu.txt.dep',
+        'P14-1081_anno2.edu.txt.dep',
+        'P14-1082_anno1.edu.txt.dep',
+        'P14-1082_anno2.edu.txt.dep',
+        'P14-1083_anno1.edu.txt.dep',
+        'P14-1083_anno2.edu.txt.dep',
+        'P14-1084_anno1.edu.txt.dep',
+        'P14-1084_anno2.edu.txt.dep',
+        'P14-1085_anno1.edu.txt.dep',
+        'P14-1085_anno2.edu.txt.dep',
+        'P14-1086_anno1.edu.txt.dep',
+        'P14-1086_anno2.edu.txt.dep',
+        'P14-1087_anno1.edu.txt.dep',
+        'P14-1087_anno2.edu.txt.dep',
+        'P14-1088_anno1.edu.txt.dep',
+        'P14-1088_anno2.edu.txt.dep',
+        'P14-1089_anno1.edu.txt.dep',
+        'P14-1089_anno2.edu.txt.dep',
+        'P14-1090_anno1.edu.txt.dep',
+        'P14-1090_anno2.edu.txt.dep',
+        'P14-1091_anno1.edu.txt.dep',
+        'P14-1091_anno2.edu.txt.dep',
+        'P14-1092_anno1.edu.txt.dep',
+        'P14-1092_anno2.edu.txt.dep',
+        'P14-1093_anno1.edu.txt.dep',
+        'P14-1093_anno2.edu.txt.dep',
+        'P14-1094_anno1.edu.txt.dep',
+        'P14-1094_anno2.edu.txt.dep',
+        'P14-1095_anno1.edu.txt.dep',
+        'P14-1095_anno2.edu.txt.dep',
+        'P14-1096_anno1.edu.txt.dep',
+        'P14-1096_anno2.edu.txt.dep',
+        'P14-1097_anno1.edu.txt.dep',
+        'P14-1097_anno2.edu.txt.dep',
+        'P14-1098_anno1.edu.txt.dep',
+        'P14-1098_anno2.edu.txt.dep',
+        'P14-1099_anno1.edu.txt.dep',
+        'P14-1099_anno2.edu.txt.dep',
+        'P14-1100_anno1.edu.txt.dep',
+        'P14-1100_anno2.edu.txt.dep',
+        'P14-1101.edu.txt.dep',
+        'P14-1102.edu.txt.dep',
+        'P14-1103.edu.txt.dep',
+        'P14-1104.edu.txt.dep',
+        'P14-1105.edu.txt.dep',
+        'P14-1106.edu.txt.dep',
+        'P14-1107.edu.txt.dep',
+        'P14-1108.edu.txt.dep',
+        'P14-1109.edu.txt.dep',
+        'P14-1110.edu.txt.dep',
+        'P14-1111.edu.txt.dep',
+        'P14-1112.edu.txt.dep',
+        'P14-1113.edu.txt.dep',
+        'P14-1114.edu.txt.dep',
+        'P14-1115.edu.txt.dep',
+        'P14-1116.edu.txt.dep',
+        'P14-1117.edu.txt.dep',
+        'P14-1118.edu.txt.dep',
+        'P14-1119.edu.txt.dep',
+        'P14-1120.edu.txt.dep',
+        'P14-1121.edu.txt.dep',
+        'P14-1122.edu.txt.dep',
+        'P14-1123.edu.txt.dep',
+        'P14-1124.edu.txt.dep',
+        'P14-1125.edu.txt.dep',
+        'P14-1126.edu.txt.dep',
+        'P14-1127.edu.txt.dep',
+        'P14-1128.edu.txt.dep',
+        'P14-1129.edu.txt.dep',
+        'P14-1130.edu.txt.dep',
+        'P14-1131.edu.txt.dep',
+        'P14-1132.edu.txt.dep',
+        'P14-1133.edu.txt.dep',
+        'P14-1134.edu.txt.dep',
+        'P14-1135.edu.txt.dep',
+        'P14-1136.edu.txt.dep',
+        'P14-1137.edu.txt.dep',
+        'P14-1138.edu.txt.dep',
+        'P14-1139.edu.txt.dep',
+        'P14-1140.edu.txt.dep',
+        'P14-1141.edu.txt.dep',
+        'P14-1142.edu.txt.dep',
+        'P14-1143.edu.txt.dep',
+        'P14-1144.edu.txt.dep',
+        'P14-1145.edu.txt.dep',
+        'P14-1146.edu.txt.dep',
+        'P14-1147.edu.txt.dep',
+        'P16-1001_anno1.edu.txt.dep',
+        'P16-1001_anno2.edu.txt.dep',
+        'P16-1002_anno1.edu.txt.dep',
+        'P16-1002_anno2.edu.txt.dep',
+        'P16-1003_anno1.edu.txt.dep',
+        'P16-1003_anno2.edu.txt.dep',
+        'P16-1004_anno1.edu.txt.dep',
+        'P16-1004_anno2.edu.txt.dep',
+        'P16-1005_anno1.edu.txt.dep',
+        'P16-1005_anno2.edu.txt.dep',
+        'P16-1006_anno1.edu.txt.dep',
+        'P16-1006_anno2.edu.txt.dep',
+        'P16-1007_anno1.edu.txt.dep',
+        'P16-1007_anno2.edu.txt.dep',
+        'P16-1008_anno1.edu.txt.dep',
+        'P16-1008_anno2.edu.txt.dep',
+        'P16-1009_anno1.edu.txt.dep',
+        'P16-1009_anno2.edu.txt.dep',
+        'P16-1010_anno1.edu.txt.dep',
+        'P16-1010_anno2.edu.txt.dep',
+        'P16-1011_anno1.edu.txt.dep',
+        'P16-1011_anno2.edu.txt.dep',
+        'P16-1012_anno1.edu.txt.dep',
+        'P16-1012_anno2.edu.txt.dep',
+        'P16-1013_anno1.edu.txt.dep',
+        'P16-1013_anno2.edu.txt.dep',
+        'P16-1014_anno1.edu.txt.dep',
+        'P16-1014_anno2.edu.txt.dep',
+        'P16-1015_anno1.edu.txt.dep',
+        'P16-1015_anno2.edu.txt.dep',
+        'P16-1016_anno1.edu.txt.dep',
+        'P16-1016_anno2.edu.txt.dep',
+        'P16-1017_anno1.edu.txt.dep',
+        'P16-1017_anno2.edu.txt.dep',
+        'P16-1018_anno1.edu.txt.dep',
+        'P16-1018_anno2.edu.txt.dep',
+        'P16-1019_anno1.edu.txt.dep',
+        'P16-1019_anno2.edu.txt.dep',
+        'P16-1020_anno1.edu.txt.dep',
+        'P16-1020_anno2.edu.txt.dep',
+        'P16-1021_anno1.edu.txt.dep',
+        'P16-1021_anno2.edu.txt.dep',
+        'P16-1022_anno1.edu.txt.dep',
+        'P16-1022_anno2.edu.txt.dep',
+        'P16-1023_anno1.edu.txt.dep',
+        'P16-1023_anno2.edu.txt.dep',
+        'P16-1024_anno1.edu.txt.dep',
+        'P16-1024_anno2.edu.txt.dep',
+        'P16-1025_anno1.edu.txt.dep',
+        'P16-1025_anno2.edu.txt.dep',
+        'P16-1026_anno1.edu.txt.dep',
+        'P16-1026_anno2.edu.txt.dep',
+        'P16-1027_anno1.edu.txt.dep',
+        'P16-1027_anno2.edu.txt.dep',
+        'P16-1028_anno1.edu.txt.dep',
+        'P16-1028_anno2.edu.txt.dep',
+        'P16-1029_anno1.edu.txt.dep',
+        'P16-1029_anno2.edu.txt.dep',
+        'P16-1030.edu.txt.dep',
+        'P16-1031_anno1.edu.txt.dep',
+        'P16-1031_anno2.edu.txt.dep',
+        'P16-1032_anno1.edu.txt.dep',
+        'P16-1032_anno2.edu.txt.dep',
+        'P16-1033_anno1.edu.txt.dep',
+        'P16-1033_anno2.edu.txt.dep',
+        'P16-1034_anno1.edu.txt.dep',
+        'P16-1034_anno2.edu.txt.dep',
+        'P16-1035_anno1.edu.txt.dep',
+        'P16-1035_anno2.edu.txt.dep',
+        'P16-1036_anno1.edu.txt.dep',
+        'P16-1036_anno2.edu.txt.dep',
+        'P16-1037_anno1.edu.txt.dep',
+        'P16-1037_anno2.edu.txt.dep',
+        'P16-1038_anno1.edu.txt.dep',
+        'P16-1038_anno2.edu.txt.dep',
+        'P16-1039_anno1.edu.txt.dep',
+        'P16-1039_anno2.edu.txt.dep',
+        'P16-1040_anno1.edu.txt.dep',
+        'P16-1040_anno2.edu.txt.dep',
+        'P16-1041_anno1.edu.txt.dep',
+        'P16-1041_anno2.edu.txt.dep',
+        'P16-1042_anno1.edu.txt.dep',
+        'P16-1042_anno2.edu.txt.dep',
+        'P16-1043_anno1.edu.txt.dep',
+        'P16-1043_anno2.edu.txt.dep',
+        'P16-1044_anno1.edu.txt.dep',
+        'P16-1044_anno2.edu.txt.dep',
+        'P16-1045_anno1.edu.txt.dep',
+        'P16-1045_anno2.edu.txt.dep',
+        'P16-1046_anno1.edu.txt.dep',
+        'P16-1046_anno2.edu.txt.dep',
+        'P16-1047_anno1.edu.txt.dep',
+        'P16-1047_anno2.edu.txt.dep',
+        'P16-1048_anno1.edu.txt.dep',
+        'P16-1048_anno2.edu.txt.dep',
+        'P16-1049_anno1.edu.txt.dep',
+        'P16-1049_anno2.edu.txt.dep',
+        'P16-1050_anno1.edu.txt.dep',
+        'P16-1050_anno2.edu.txt.dep',
+        'P16-1051_anno1.edu.txt.dep',
+        'P16-1051_anno2.edu.txt.dep',
+        'P16-1052_anno1.edu.txt.dep',
+        'P16-1052_anno2.edu.txt.dep',
+        'P16-1053_anno1.edu.txt.dep',
+        'P16-1053_anno2.edu.txt.dep',
+        'P16-1054_anno1.edu.txt.dep',
+        'P16-1054_anno2.edu.txt.dep',
+        'P16-1055_anno1.edu.txt.dep',
+        'P16-1055_anno2.edu.txt.dep',
+        'P16-1056_anno1.edu.txt.dep',
+        'P16-1056_anno2.edu.txt.dep',
+        'P16-1057_anno1.edu.txt.dep',
+        'P16-1057_anno2.edu.txt.dep',
+        'P16-1058_anno1.edu.txt.dep',
+        'P16-1058_anno2.edu.txt.dep',
+        'P16-1059_anno1.edu.txt.dep',
+        'P16-1059_anno2.edu.txt.dep',
+        'P16-1060_anno1.edu.txt.dep',
+        'P16-1060_anno2.edu.txt.dep',
+        'P16-1061_anno1.edu.txt.dep',
+        'P16-1061_anno2.edu.txt.dep',
+        'P16-1062_anno1.edu.txt.dep',
+        'P16-1062_anno2.edu.txt.dep',
+        'P16-1063_anno1.edu.txt.dep',
+        'P16-1063_anno2.edu.txt.dep',
+        'P16-1064_anno1.edu.txt.dep',
+        'P16-1064_anno2.edu.txt.dep',
+        'P16-1065_anno1.edu.txt.dep',
+        'P16-1065_anno2.edu.txt.dep',
+        'P16-1066_anno1.edu.txt.dep',
+        'P16-1066_anno2.edu.txt.dep',
+        'P16-1067_anno1.edu.txt.dep',
+        'P16-1067_anno2.edu.txt.dep',
+        'P16-1068_anno1.edu.txt.dep',
+        'P16-1068_anno2.edu.txt.dep',
+        'P16-1069_anno1.edu.txt.dep',
+        'P16-1069_anno2.edu.txt.dep',
+        'P16-1070_anno1.edu.txt.dep',
+        'P16-1070_anno2.edu.txt.dep',
+        'P16-1071_anno1.edu.txt.dep',
+        'P16-1071_anno2.edu.txt.dep',
+        'P16-1072_anno1.edu.txt.dep',
+        'P16-1072_anno2.edu.txt.dep',
+        'P16-1073_anno1.edu.txt.dep',
+        'P16-1073_anno2.edu.txt.dep',
+        'P16-1074_anno1.edu.txt.dep',
+        'P16-1074_anno2.edu.txt.dep',
+        'P16-1075_anno1.edu.txt.dep',
+        'P16-1075_anno2.edu.txt.dep',
+        'P16-1076_anno1.edu.txt.dep',
+        'P16-1076_anno2.edu.txt.dep',
+        'P16-1077_anno1.edu.txt.dep',
+        'P16-1077_anno2.edu.txt.dep',
+        'P16-1078_anno1.edu.txt.dep',
+        'P16-1078_anno2.edu.txt.dep',
+        'P16-1079_anno1.edu.txt.dep',
+        'P16-1079_anno2.edu.txt.dep',
+        'P16-1080_anno1.edu.txt.dep',
+        'P16-1080_anno2.edu.txt.dep',
+        'P16-1081_anno1.edu.txt.dep',
+        'P16-1081_anno2.edu.txt.dep',
+        'P16-1082_anno1.edu.txt.dep',
+        'P16-1082_anno2.edu.txt.dep',
+        'P16-1083_anno1.edu.txt.dep',
+        'P16-1083_anno2.edu.txt.dep',
+        'P16-1084_anno1.edu.txt.dep',
+        'P16-1084_anno2.edu.txt.dep',
+        'P16-1085_anno1.edu.txt.dep',
+        'P16-1085_anno2.edu.txt.dep',
+        'P16-1086_anno1.edu.txt.dep',
+        'P16-1086_anno2.edu.txt.dep',
+        'P16-1087_anno1.edu.txt.dep',
+        'P16-1087_anno2.edu.txt.dep',
+        'P16-1088_anno1.edu.txt.dep',
+        'P16-1088_anno2.edu.txt.dep',
+        'P16-1089_anno1.edu.txt.dep',
+        'P16-1089_anno2.edu.txt.dep',
+        'P16-1090_anno1.edu.txt.dep',
+        'P16-1090_anno2.edu.txt.dep',
+        'P16-1091_anno1.edu.txt.dep',
+        'P16-1091_anno2.edu.txt.dep',
+        'P16-1092_anno1.edu.txt.dep',
+        'P16-1092_anno2.edu.txt.dep',
+        'P16-1093_anno1.edu.txt.dep',
+        'P16-1093_anno2.edu.txt.dep',
+        'P16-1094_anno1.edu.txt.dep',
+        'P16-1094_anno2.edu.txt.dep',
+        'P16-1095_anno1.edu.txt.dep',
+        'P16-1095_anno2.edu.txt.dep',
+        'P16-1096_anno1.edu.txt.dep',
+        'P16-1096_anno2.edu.txt.dep',
+        'P16-1097_anno1.edu.txt.dep',
+        'P16-1097_anno2.edu.txt.dep',
+        'P16-1098_anno1.edu.txt.dep',
+        'P16-1098_anno2.edu.txt.dep',
+        'P16-1099_anno1.edu.txt.dep',
+        'P16-1099_anno2.edu.txt.dep',
+        'P16-1100_anno1.edu.txt.dep',
+        'P16-1100_anno2.edu.txt.dep',
+        'P16-1101.edu.txt.dep',
+        'P16-1102.edu.txt.dep',
+        'P16-1103.edu.txt.dep',
+        'P16-1104.edu.txt.dep',
+        'P16-1105.edu.txt.dep',
+        'P16-1106.edu.txt.dep',
+        'P16-1107.edu.txt.dep',
+        'P16-1108.edu.txt.dep',
+        'P16-1109.edu.txt.dep',
+        'P16-1110.edu.txt.dep',
+        'P16-1111.edu.txt.dep',
+        'P16-1112.edu.txt.dep',
+        'P16-1113.edu.txt.dep',
+        'P16-1114.edu.txt.dep',
+        'P16-1115.edu.txt.dep',
+        'P16-1116.edu.txt.dep',
+        'P16-1117.edu.txt.dep',
+        'P16-1118.edu.txt.dep',
+        'P16-1119.edu.txt.dep',
+        'P16-1120.edu.txt.dep',
+        'P16-1121.edu.txt.dep',
+        'P16-1122.edu.txt.dep',
+        'P16-1123.edu.txt.dep',
+        'P16-1124.edu.txt.dep',
+        'P16-1125.edu.txt.dep',
+        'P16-1126.edu.txt.dep',
+        'P16-1127.edu.txt.dep',
+        'P16-1128.edu.txt.dep',
+        'P16-1129.edu.txt.dep',
+        'P16-1130.edu.txt.dep',
+        'P16-1131.edu.txt.dep',
+        'P16-1132.edu.txt.dep',
+        'P16-1133.edu.txt.dep',
+        'P16-1134.edu.txt.dep',
+        'P16-1135.edu.txt.dep',
+        'P16-1136.edu.txt.dep',
+        'P16-1137.edu.txt.dep',
+        'P16-1138.edu.txt.dep',
+        'P16-1139.edu.txt.dep',
+        'P16-1140.edu.txt.dep',
+        'P16-1141.edu.txt.dep',
+        'P16-1142.edu.txt.dep',
+        'P16-1143.edu.txt.dep',
+        'P16-1144.edu.txt.dep',
+        'P16-1145.edu.txt.dep',
+        'P16-1146.edu.txt.dep',
+        'P16-1147.edu.txt.dep',
+        'P16-1148.edu.txt.dep',
+        'P16-1149.edu.txt.dep',
+        'P16-1150.edu.txt.dep',
+        'P16-1151.edu.txt.dep',
+        'P16-1152.edu.txt.dep',
+        'P16-1153.edu.txt.dep',
+        'P16-1154.edu.txt.dep',
+        'P16-1155.edu.txt.dep',
+        'P16-1156.edu.txt.dep',
+        'P16-1157.edu.txt.dep',
+        'P16-1158.edu.txt.dep',
+        'P16-1159.edu.txt.dep',
+        'P16-1160.edu.txt.dep',
+        'P16-1161.edu.txt.dep',
+        'P16-1162.edu.txt.dep',
+        'P16-1163.edu.txt.dep',
+        'P16-1164.edu.txt.dep',
+        'P16-1165.edu.txt.dep',
+        'P16-1166.edu.txt.dep',
+        'P16-1167.edu.txt.dep',
+        'P16-1168.edu.txt.dep',
+        'P16-1169.edu.txt.dep',
+        'P16-1170.edu.txt.dep',
+        'P16-1171.edu.txt.dep',
+        'P16-1172.edu.txt.dep',
+        'P16-1173.edu.txt.dep',
+        'P16-1174.edu.txt.dep',
+        'P16-1175.edu.txt.dep',
+        'P16-1176.edu.txt.dep',
+        'P16-1177.edu.txt.dep',
+        'P16-1178.edu.txt.dep',
+        'P16-1179.edu.txt.dep',
+        'P16-1180.edu.txt.dep',
+        'P16-1181.edu.txt.dep',
+        'P16-1182.edu.txt.dep',
+        'P16-1183.edu.txt.dep',
+        'P16-1184.edu.txt.dep',
+        'P16-1185.edu.txt.dep',
+        'P16-1186.edu.txt.dep',
+        'P16-1187.edu.txt.dep',
+        'P16-1188.edu.txt.dep',
+        'P16-1189.edu.txt.dep',
+        'P16-1190.edu.txt.dep',
+        'P16-1191.edu.txt.dep',
+        'P16-1192.edu.txt.dep',
+        'P16-1193.edu.txt.dep',
+        'P86-1003.edu.txt.dep',
+        'P86-1004.edu.txt.dep',
+        'P86-1005.edu.txt.dep',
+        'P86-1006.edu.txt.dep',
+        'P86-1008.edu.txt.dep',
+        'P86-1009.edu.txt.dep',
+        'P86-1010.edu.txt.dep',
+        'P86-1011.edu.txt.dep',
+        'P86-1012.edu.txt.dep',
+        'P86-1013.edu.txt.dep',
+        'P86-1014.edu.txt.dep',
+        'P86-1015.edu.txt.dep',
+        'P86-1016.edu.txt.dep',
+        'P86-1017.edu.txt.dep',
+        'P86-1018.edu.txt.dep',
+        'P86-1020.edu.txt.dep',
+        'P86-1021.edu.txt.dep',
+        'P86-1022.edu.txt.dep',
+        'P86-1024.edu.txt.dep',
+        'P86-1025.edu.txt.dep',
+        'P86-1029.edu.txt.dep',
+        'P86-1030.edu.txt.dep',
+        'P86-1031.edu.txt.dep',
+        'P86-1032.edu.txt.dep',
+        'P86-1033.edu.txt.dep',
+        'P86-1034.edu.txt.dep',
+        'P86-1036.edu.txt.dep',
+        'P86-1037.edu.txt.dep',
+        'P86-1038.edu.txt.dep',
+        'P96-1001.edu.txt.dep',
+        'P96-1002.edu.txt.dep',
+        'P96-1003.edu.txt.dep',
+        'P96-1004.edu.txt.dep',
+        'P96-1005.edu.txt.dep',
+        'P96-1006.edu.txt.dep',
+        'P96-1007.edu.txt.dep',
+        'P96-1008.edu.txt.dep',
+        'P96-1009.edu.txt.dep',
+        'P96-1010.edu.txt.dep',
+        'P96-1011.edu.txt.dep',
+        'P96-1012.edu.txt.dep',
+        'P96-1013.edu.txt.dep',
+        'P96-1014.edu.txt.dep',
+        'P96-1015.edu.txt.dep',
+        'P96-1016.edu.txt.dep',
+        'P96-1017.edu.txt.dep',
+        'P96-1018.edu.txt.dep',
+        'P96-1019.edu.txt.dep',
+        'P96-1020.edu.txt.dep',
+        'P96-1021.edu.txt.dep',
+        'P96-1022.edu.txt.dep',
+        'P96-1023.edu.txt.dep',
+        'P96-1024.edu.txt.dep',
+        'P96-1025.edu.txt.dep',
+        'P96-1027.edu.txt.dep',
+        'P96-1028.edu.txt.dep',
+        'P96-1029.edu.txt.dep',
+        'P96-1030.edu.txt.dep',
+        'P96-1031.edu.txt.dep',
+        'P96-1032.edu.txt.dep',
+        'P96-1033.edu.txt.dep',
+        'P96-1034.edu.txt.dep',
+        'P96-1035.edu.txt.dep',
+        'P96-1036.edu.txt.dep',
+        'P96-1037.edu.txt.dep',
+        'P96-1039.edu.txt.dep',
+        'P96-1041.edu.txt.dep',
+        'P96-1042.edu.txt.dep',
+        'P96-1043.edu.txt.dep',
+        'P96-1044.edu.txt.dep',
+        'P96-1045.edu.txt.dep',
+        'P96-1046.edu.txt.dep',
+        'P96-1047.edu.txt.dep',
+        'P96-1048.edu.txt.dep',
+        'P96-1049.edu.txt.dep',
+        'P96-1050.edu.txt.dep',
+        'P96-1051.edu.txt.dep',
+        'P96-1052.edu.txt.dep',
+        'P96-1053.edu.txt.dep',
+        'P96-1054.edu.txt.dep',
+        'P96-1055.edu.txt.dep',
+        'P96-1056.edu.txt.dep',
+        'P96-1057.edu.txt.dep',
+        'P96-1058.edu.txt.dep'
+    ],
 });
 
 // 引数が0未満なら"null"を返す
@@ -109,7 +1190,7 @@ app.controller('EDUListController',
     });
     $scope.canvas_width = CONSTANTS.CANVAS_WIDTH; // キャンバス横幅
 
-    // メニューバー: ファイルアップロード
+    // ファイルアップロード
     $scope.handleFileSelect = function ($files) {
         // チェック
         if (!$files || !$files[0]) {
@@ -188,179 +1269,13 @@ app.controller('EDUListController',
         }
     };
 
-    // メニューバー: 例示
-    // $scope.samples = ["サンプル 01", "サンプル 02", "サンプル 03"];
-    // $scope.selectedSample = null;
-    $scope.showSample1 = function () {
-        // キャンバス等の取得
-        var canvas = angular.element('#canvas')[0];
-        var ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
-
-        // 状態の初期化
-        $scope.operations = [];
-        $scope.first = second = -1;
-
-        // JSONファイルを読み込んで描画
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 200) {
-                    // JSONオブジェクト
-                    var obj = JSON.parse(xhr.responseText).root;
-                    // EDUテキストの抽出
-                    $scope.edus = _.pluck(obj, 'text');
-                    // headsの抽出
-                    $scope.heads = _.pluck(obj, 'parent');
-                    // 談話関係ラベルの抽出
-                    $scope.depRels = _.pluck(obj, 'relation');
-                    //
-                    $scope.$apply();
-                    // 描画
-                    for (var i = 0; i < $scope.heads.length; ++i) {
-                        if ($scope.heads[i] >= 0) {
-                            drawCurve('edu' + $scope.heads[i].toString(), 'edu' + i.toString(), CONSTANTS.NORMAL_LINK_COLOR);
-                            addRelation('edu' + i.toString(), $scope.depRels[i]);
-                        }
-                    }
-                }
-            }
-        }
-        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
-        xhr.send();
-        console.log(xhr);
-        $scope.inputFile = "Sample 01";
-    };
-    $scope.showSample2 = function () {
-        // キャンバス等の取得
-        var canvas = angular.element('#canvas')[0];
-        var ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
-
-        // 状態の初期化
-        $scope.operations = [];
-        $scope.first = second = -1;
-
-        // JSONファイルを読み込んで描画
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 200) {
-                    // JSONオブジェクト
-                    var obj = JSON.parse(xhr.responseText).root;
-                    // EDUテキストの抽出
-                    $scope.edus = _.pluck(obj, 'text');
-                    // headsの抽出
-                    $scope.heads = _.pluck(obj, 'parent');
-                    // 談話関係ラベルの抽出
-                    $scope.depRels = _.pluck(obj, 'relation');
-                    //
-                    $scope.$apply();
-                    // 描画
-                    for (var i = 0; i < $scope.heads.length; ++i) {
-                        if ($scope.heads[i] >= 0) {
-                            drawCurve('edu' + $scope.heads[i].toString(), 'edu' + i.toString(), CONSTANTS.NORMAL_LINK_COLOR);
-                            addRelation('edu' + i.toString(), $scope.depRels[i]);
-                        }
-                    }
-                }
-            }
-        }
-        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1d5a95f805753e4ae9c605845a395adf47cabce8.edus.tokens.dep");
-        xhr.send();
-        console.log(xhr);
-        $scope.inputFile = "Sample 02";
-    };
-    $scope.showSample3 = function () {
-        // キャンバス等の取得
-        var canvas = angular.element('#canvas')[0];
-        var ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
-
-        // 状態の初期化
-        $scope.operations = [];
-        $scope.first = second = -1;
-
-        // JSONファイルを読み込んで描画
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == 4) {
-                if (xhr.status == 200) {
-                    // JSONオブジェクト
-                    var obj = JSON.parse(xhr.responseText).root;
-                    // EDUテキストの抽出
-                    $scope.edus = _.pluck(obj, 'text');
-                    // headsの抽出
-                    $scope.heads = _.pluck(obj, 'parent');
-                    // 談話関係ラベルの抽出
-                    $scope.depRels = _.pluck(obj, 'relation');
-                    //
-                    $scope.$apply();
-                    // 描画
-                    for (var i = 0; i < $scope.heads.length; ++i) {
-                        if ($scope.heads[i] >= 0) {
-                            drawCurve('edu' + $scope.heads[i].toString(), 'edu' + i.toString(), CONSTANTS.NORMAL_LINK_COLOR);
-                            addRelation('edu' + i.toString(), $scope.depRels[i]);
-                        }
-                    }
-                }
-            }
-        }
-        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/8d0569b9fe93d0997ca38060117ffc6381122957.edus.tokens.dep");
-        xhr.send();
-        console.log(xhr);
-        $scope.inputFile = "Sample 03";
-    };
-
-    // メニューバー: 保存
-    $scope.saveToFile = function() {
-        // 辞書データの初期化
-        var data = {root: []};
-        // 辞書データ作成
-        for (var i = 0; i < $scope.heads.length; ++i) {
-            var cur = {id: i,
-                       parent: $scope.heads[i],
-                       text: $scope.edus[i],
-                       relation: $scope.depRels[i]};
-            data.root.push(cur);
-        }
-        // 出力ファイル名
-        var outFileName = $scope.inputFile.endsWith('.dep') ? $scope.inputFile : $scope.inputFile + '.dep';
-        // 出力ファイルオブジェクトの作成
-        var blob = new Blob([JSON.stringify(data, null, '\t')], {type: "text/plain;charset=utf-8"});
-        // 書き出し
-        saveAs(blob, outFileName);
-    };
-
-    // メニューバー: UNDO処理
-    $scope.undo = function() {
-        // 最終アクション
-        var op = _.last($scope.operations);
-        if (op.type === 'click') {
-            // もし最終アクションがhead選択なら、head解除
-            $scope.first = -1;
-        }
-        else if (op.type === 'connect') {
-            // もし最終アクションがmodifier選択なら、headとmodifierの結合をなくす
-            disconnect(op.id1, op.id2);
-        }
-        else if (op.type === 'delete') {
-            // もし最終アクションが結合の削除なら、結合を戻す
-            var id1 = op.id1, id2 = op.id2;
-            $scope.heads[id2] = id1;
-            $scope.depRels[id2] = op.relation;
-            connect(id1, id2, $scope.depRels[id2], CONSTANTS.NORMAL_LINK_COLOR);
-        }
-        $scope.operations.pop();
-    };
-
-    // メニューバー: head解除処理
+    // ノード解除処理
     $scope.clearNode = function() {
         $scope.first = -1;
         $scope.operations.pop();
     };
 
-    // メニューバー: リンク削除処理
+    // リンク削除処理
     $scope.deleteLink = function () {
         // チェック
         if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
@@ -386,86 +1301,95 @@ app.controller('EDUListController',
         $scope.operations.push(op);
     };
 
-    // メニューバー: ラベル辞書に追加
-    // $scope.addLabel = function() {
-    //     var label = prompt('ラベルを辞書に追加:').trim().toLowerCase();
-    //     if (!label) {
-    //         ngToast.danger({
-    //             content: 'エラー: 空文字はラベルとして不適です',
-    //             timeout: 2000
-    //         });
-    //         return;
-    //     }
-    //     if ($scope.relations.indexOf(label) > 0) {
-    //         ngToast.danger({
-    //             content: 'エラー: ラベル ' + label + ' は既に存在しています',
-    //             timeout: 2000
-    //         });
-    //         return;
-    //     }
-    //     $scope.relations.unshift(label);
-    //     ngToast.success({
-    //        content: 'ラベルを辞書に追加しました ' + label,
-    //         timeout: 2000
-    //     });
-    // };
+    // UNDO処理
+    $scope.undo = function() {
+        // 最終アクション
+        var op = _.last($scope.operations);
+        if (op.type === 'click') {
+            // もし最終アクションがhead選択なら、head解除
+            $scope.first = -1;
+        }
+        else if (op.type === 'connect') {
+            // もし最終アクションがmodifier選択なら、headとmodifierの結合をなくす
+            disconnect(op.id1, op.id2);
+        }
+        else if (op.type === 'delete') {
+            // もし最終アクションが結合の削除なら、結合を戻す
+            var id1 = op.id1, id2 = op.id2;
+            $scope.heads[id2] = id1;
+            $scope.depRels[id2] = op.relation;
+            connect(id1, id2, $scope.depRels[id2], CONSTANTS.NORMAL_LINK_COLOR);
+        }
+        $scope.operations.pop();
+    };
 
-    // メニューバー: ラベル辞書から削除
-    // $scope.openDeleteDialog = false;
-    // $scope.deleteLabel = function() {
-    //     var dialog = $('#new-relation-dialog').dialog({
-    //         autoOpen: false,
-    //         height: 600,
-    //         width: 350,
-    //         modal: true,
-    //         buttons: {
-    //             OK: function() {
-    //                 $scope.openDeleteDialog = false;
-    //                 $scope.$apply();
-    //                 dialog.dialog('close');
-    //             }
-    //         }
-    //     });
-    //     $scope.openDeleteDialog = true;
-    //     dialog.dialog('open');
-    // };
-    // $scope.removeRelation = function(relation) {
-    //     var pos = $scope.relations.indexOf(relation);
-    //     if (pos >= 0) {
-    //         $scope.relations.splice(pos, 1);
-    //         ngToast.info({
-    //             content: 'ラベルを辞書から削除しました ' + relation,
-    //             timeout: 2000
-    //         });
-    //     }
-    // };
+    // 保存
+    $scope.saveToFile = function() {
+        // 辞書データの初期化
+        var data = {root: []};
+        // 辞書データ作成
+        for (var i = 0; i < $scope.heads.length; ++i) {
+            var cur = {id: i,
+                       parent: $scope.heads[i],
+                       text: $scope.edus[i],
+                       relation: $scope.depRels[i]};
+            data.root.push(cur);
+        }
+        // 出力ファイル名
+        var outFileName = $scope.inputFile.endsWith('.dep') ? $scope.inputFile : $scope.inputFile + '.dep';
+        // 出力ファイルオブジェクトの作成
+        var blob = new Blob([JSON.stringify(data, null, '\t')], {type: "text/plain;charset=utf-8"});
+        // 書き出し
+        saveAs(blob, outFileName);
+    };
 
-    // メニューバー: カスタム辞書
-    // $scope.handleBrowseClick = function() {
-    //     var ctrl = angular.element('#relation-file');
-    //     ctrl.on('change', handleChange);
-    //     ctrl.click();
-    // };
-    // var handleChange = function(evt) {
-    //     var file = evt.target.files[0];
-    //     var reader = new FileReader();
-    //     reader.onload = function(e) {
-    //         var contents = e.target.result.split('\n');
-    //         $scope.relations = [];
-    //         for (var i = 0; i < contents.length; ++i) {
-    //             var r = contents[i].trim();
-    //             if (r.length > 0 && $scope.relations.indexOf(r) < 0) {
-    //                 $scope.relations.push(r);
-    //             }
-    //         }
-    //         ngToast.success({
-    //            content: 'SUCCESSFULLY load ' + $scope.relations.length.toString() + ' relations.',
-    //            timeout: 2000
-    //         });
-    //         $scope.$apply();
-    //     };
-    //     reader.readAsText(file);
-    // };
+    // 例示
+    // $scope.samples = ["サンプル 01", "サンプル 02", "サンプル 03"];
+    // $scope.selectedSample = null;
+    $scope.showRandomSample = function () {
+        // キャンバス等の取得
+        var canvas = angular.element('#canvas')[0];
+        var ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
+
+        // 状態の初期化
+        $scope.operations = [];
+        $scope.first = second = -1;
+
+        // JSONファイルを読み込んで描画
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    // JSONオブジェクト
+                    var obj = JSON.parse(xhr.responseText).root;
+                    // EDUテキストの抽出
+                    $scope.edus = _.pluck(obj, 'text');
+                    // headsの抽出
+                    $scope.heads = _.pluck(obj, 'parent');
+                    // 談話関係ラベルの抽出
+                    $scope.depRels = _.pluck(obj, 'relation');
+                    //
+                    $scope.$apply();
+                    // 描画
+                    for (var i = 0; i < $scope.heads.length; ++i) {
+                        if ($scope.heads[i] >= 0) {
+                            drawCurve('edu' + $scope.heads[i].toString(), 'edu' + i.toString(), CONSTANTS.NORMAL_LINK_COLOR);
+                            addRelation('edu' + i.toString(), $scope.depRels[i]);
+                        }
+                    }
+                }
+            }
+        }
+        var arrayIndex = Math.floor(Math.random() * 1049);
+        var sampleFile = CONSTANTS.SAMPLE_FILES[arrayIndex];
+        console.log(sampleFile)
+        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/scidtb/" + sampleFile);
+        // xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
+        xhr.send();
+        console.log(xhr);
+        $scope.inputFile = "random sample";
+    };
 
     // プログレスバー
     $scope.progress = 0;

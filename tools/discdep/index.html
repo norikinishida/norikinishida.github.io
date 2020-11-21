@@ -40,10 +40,6 @@
 
             <!-- メニューバー2行目 -->
             <div class="row">
-                <!-- undo -->
-                <input type="button" class="btn btn-info" value="undo" style="background-color: #1EA362; border-color: #1EA362"
-                    ng-click="undo()" ng-show="!!inputFile" ng-disabled="operations.length === 0">
-
                 <!-- ノード解除 -->
                 <input type="button" class="btn btn-info" value="選択解除" style="background-color: #1EA362; border-color: #1EA362"
                     ng-click="clearNode()" ng-show="!!inputFile" ng-disabled="first === -1">
@@ -52,17 +48,16 @@
                 <input type="button" class="btn btn-info" value="リンク削除" style="background-color: #1EA362; border-color: #1EA362"
                     ng-click="deleteLink()" ng-show="!!inputFile" ng-disabled="first === -1">
 
+                <!-- undo -->
+                <input type="button" class="btn btn-info" value="undo" style="background-color: #1EA362; border-color: #1EA362"
+                    ng-click="undo()" ng-show="!!inputFile" ng-disabled="operations.length === 0">
+
                 <!-- 保存 -->
                 <input type="button" class="btn btn-info" value="保存" style="background-color: #1EA362; border-color: #1EA362"
                     ng-click="saveToFile()" ng-show="!!inputFile" ng-disabled="progress !== 100">
 
                 <!-- 例 -->
-                <input type="button" class="btn btn-info" value="サンプル1" style="background-color: #1EA362; border-color: #1EA362"
-                    ng-click="showSample1()">
-                <input type="button" class="btn btn-info" value="サンプル2" style="background-color: #1EA362; border-color: #1EA362"
-                    ng-click="showSample2()">
-                <input type="button" class="btn btn-info" value="サンプル3" style="background-color: #1EA362; border-color: #1EA362"
-                    ng-click="showSample3()">
+                <input type="button" class="btn btn-info" value="ランダムサンプル" style="background-color: #1EA362; border-color: #1EA362" ng-click="showRandomSample()">
 
                 <!-- ヘルプ -->
                 <h5><a href="./doc/help.html" target="_blank" style="color: #1EA362">ヘルプ</a></h5>
