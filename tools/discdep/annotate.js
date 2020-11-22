@@ -1388,7 +1388,7 @@ app.controller('EDUListController',
         // xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
         xhr.send();
         console.log(xhr);
-        $scope.inputFile = "random sample";
+        $scope.inputFile = sampleFile;
     };
 
     // プログレスバー
