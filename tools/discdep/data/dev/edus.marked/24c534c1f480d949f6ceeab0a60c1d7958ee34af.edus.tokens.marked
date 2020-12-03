@@ -1,0 +1,27 @@
+Topic modeling is frequently employed
+for discovering structures ( or patterns ) in a corpus of documents . <S>
+Its utility in text - mining and document retrieval tasks in various fields of scientific research is rather well known . <S>
+An unsupervised machine learning approach , Latent Dirichlet Allocation ( LDA ) has particularly been utilized
+for identifying latent ( or hidden ) topics in document collections
+and for deciphering the words
+that define one or more topics
+using a generative statistical model . <S>
+Here we describe
+how SARS - CoV-2 genomic mutation profiles can be structured into a ' Bag of Words '
+to enable identification of signatures ( topics ) and their probabilistic distribution across various genomes
+using LDA . <S>
+Topic models were generated
+using ~47000 novel corona virus genomes
+( considered as documents ) ,
+leading to identification of 16 amino acid mutation signatures and 18 nucleotide mutation signatures
+( equivalent to topics )
+in the corpus of chosen genomes through coherence optimization . <S>
+The document assumption for genomes also helped in identification of contextual nucleotide mutation signatures in the form of conventional Ngrams
+( e.g. bi - grams and tri - grams ) . <S>
+We validated the signatures
+obtained
+using LDA driven method
+against the previously reported recurrent mutations and phylogenetic clades for genomes . <S> <P>
+Additionally , we report the geographical distribution of the identified mutation signatures in SARS - CoV-2 genomes on the global map . <S>
+Use of the non - phylogenetic albeit classical approaches like topic modeling and other data centric pattern mining algorithms is therefore proposed for supplementing the efforts
+towards understanding the genomic diversity of the evolving SARS - CoV-2 genomes ( and other pathogens / microbes ) . <S> <P>

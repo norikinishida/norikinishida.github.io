@@ -1,0 +1,23 @@
+The epidemic threshold of the susceptible - infected - recovered model is a boundary
+separating parameters
+that permit epidemics from those
+that do not . <S>
+This threshold corresponds to parameters
+where the system 's equilibrium becomes unstable . <S>
+Consequently , we use the average rate
+at which deviations from the equilibrium shrink
+to define a distance to this threshold . <S>
+However , the vital dynamics of the host population may occur slowly
+even when transmission is far from threshold levels . <S>
+Here , we show analytically
+how such slow dynamics can prevent estimation of the distance to the threshold from fluctuations in the susceptible population . <S>
+Although these results are exact only in the limit of long - term observation of a large system ,
+simulations show
+that they still provide useful insight into systems with a range of population sizes , environmental noise and observation schemes . <S>
+Having established some guidelines
+about when estimates are accurate ,
+we then illustrate
+how multiple distance estimates can be used
+to estimate the rate of approach to the threshold . <S>
+The estimation approach is general
+and may be applicable to zoonotic pathogens such as Middle East respiratory syndrome - related coronavirus ( MERS - CoV ) as well as vaccine - preventable diseases like measles . <S> <P>

@@ -1,0 +1,11 @@
+Data - centric models of COVID-19 have been tried ,
+but have certain limitations . <S>
+In this work , we propose an agent - based model of the epidemic in a confined space of agents representing humans . <S>
+An extension to the SEIR model allows us to consider the difference between the appearance ( black - box view ) of the spread of disease , and the real situation ( glass - box view ) . <S>
+Our model allows for simulations of lockdowns , social distancing , personal hygiene , quarantine , and hospitalization , with further considerations of different parameters such as the extent
+to which hygiene and social distancing are observed in a population . <S>
+Our results give qualitative indications of the effects of various policies and parameters ;
+for instance , that lockdowns by themselves are extremely unlikely to bring an end to an epidemic
+and may indeed make things worse ,
+that social distancing matters more than personal hygiene ,
+and that the growth of infection comes down significantly for moderately high levels of social distancing and hygiene , even in the absence of herd immunity . <S> <P>
