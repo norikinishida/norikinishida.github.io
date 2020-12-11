@@ -1627,6 +1627,7 @@ app.controller('EDUListController',
 
         // 調整
         centerZ.x -= canvasPos.x;
+        centerZ.x += 90;
         centerZ.y -= canvasPos.y;
         centerZ.y += 30;
 
@@ -1635,7 +1636,8 @@ app.controller('EDUListController',
         ctx.font = fontSize.toString() + "px Arial";
         // ctx.fillStyle = '#005AB5';
         ctx.fillStyle = CONSTANTS.LABEL_COLOR;
-        while (relation.length < 12) relation = ' ' + relation;
+        ctx.textAlign = "right";
+        // while (relation.length < 12) relation = ' ' + relation;
         ctx.fillText(relation, centerZ.x - fontSize * 7, centerZ.y);
     };
 
