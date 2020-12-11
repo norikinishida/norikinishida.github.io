@@ -1,0 +1,16 @@
+In late 2019 , the world encountered an unexpected new virus ,
+resulting in a highly challenging new pandemic . <S>
+The case presented here involves a 73-year - old man
+experiencing fever and respiratory distress ,
+who was ultimately diagnosed with COVID-19 . <S>
+During the course of his hospitalization , the patient developed acute respiratory distress syndrome ( ARDS ) ,
+followed by being intubated
+due to his breathing difficulties . <S>
+Because of variations in the patient 's clinical features ,
+we decided to perform hemoperfusion
+to remove cytokines . <S>
+Afterward , his clinical status improved significantly ,
+and he was discharged in stable condition . <S>
+However , 26 days later , fever and respiratory distress manifested again . <S>
+After evaluation , pulmonary thromboembolism was confirmed through computed tomography
+( ie , CT scan ) . <S> <P>

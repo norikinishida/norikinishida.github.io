@@ -1,0 +1,118 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 3,
+            "text": "State-of-art systems for grammar error correction often correct errors",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "based on word sequences or phrases . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 3,
+            "parent": 0,
+            "text": "In this paper , we describe a grammar error correction system ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "which corrects grammatical errors at tree level directly . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 3,
+            "text": "We cluster all error into two groups ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "and divide our system into two modules correspondingly : ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "the general module and the special module . <S>",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 8,
+            "parent": 5,
+            "text": "In the general module , we propose a TreeNode Language Model ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "to correct errors ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "related to verbs and nouns . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 8,
+            "text": "The TreeNode Language Model is easy to train ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "and the decoding is efficient . <S>",
+            "relation": "JOINT"
+        },
+        {
+            "id": 13,
+            "parent": 5,
+            "text": "In the special module , two extra classification models are trained ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "to correct errors ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "related to determiners and prepositions . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 16,
+            "parent": 17,
+            "text": "Experiments show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 17,
+            "parent": 3,
+            "text": "that our system outperforms the state-of-art systems ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 18,
+            "parent": 17,
+            "text": "and improves the F1 score . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}

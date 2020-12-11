@@ -1,0 +1,112 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 6,
+            "text": "Recently , syntactic information has helped significantly ",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "to improve statistical machine translation . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "However , the use of syntactic information may have a negative impact on the speed of translation ",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "because of the large number of rules , ",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 5,
+            "parent": 3,
+            "text": "especially when syntax labels are projected from a parser in syntax-augmented machine translation . <S>",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 6,
+            "parent": 0,
+            "text": "In this paper , we propose a syntax-label clustering method ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "that uses an exchange algorithm ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "in which syntax labels are clustered together ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "to reduce the number of rules . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 10,
+            "parent": 6,
+            "text": "The proposed method achieves clustering ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "by directly maximizing the likelihood of synchronous rules , ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "whereas previous work considered only the similarity of probabilistic distributions of labels . <S>",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 13,
+            "parent": 14,
+            "text": "We tested the proposed method on Japanese-English and Chinese-English translation tasks ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 14,
+            "parent": 6,
+            "text": "and found order-of-magnitude higher clustering speeds ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "for reducing labels ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 16,
+            "parent": 14,
+            "text": "and gains in translation quality ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "compared with previous clustering method . <S>",
+            "relation": "COMPARISON"
+        }
+    ]
+}

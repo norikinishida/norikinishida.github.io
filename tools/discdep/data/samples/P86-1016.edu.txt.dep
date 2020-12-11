@@ -1,0 +1,82 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 2,
+            "text": "As a user interacts with a database or expert system , ",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 2,
+            "parent": 4,
+            "text": "she / he may reveal a misconception about the objects ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "modeled by the system . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 0,
+            "text": "This paper discusses the ROMPER system ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "for responding to such misconceptions in a domain independent and context sensitive fashion . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 6,
+            "parent": 4,
+            "text": "ROMPER reasons about possible sources of the misconception . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 4,
+            "text": "It operates on a model of the user ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "and generates a cooperative response ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "based on this reasoning . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 4,
+            "text": "The process is made context sensitive ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "by augmenting the user model with a new notion of object perspective ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "which highlights certain aspects of the user model due to previous discourse . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 5,
+            "text": "Designing measures \r",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "that capture various aspects of language ability \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "is a central task in the design of systems for automatic scoring of spontaneous speech . <S>\r",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 4,
+            "parent": 1,
+            "text": "In this study , we address a key aspect of language proficiency assessment - syntactic complexity . <S>\r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 0,
+            "text": "We propose a novel measure of syntactic complexity for spontaneous speech \r",
+            "relation": "ROOT"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "that shows optimum empirical performance on real world data in multiple ways . <S>\r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 5,
+            "text": "First , it is both robust and reliable , \r",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "producing automatic scores \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "that agree well with human rating \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "compared to the state-of-the-art . <S>\r",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 11,
+            "parent": 5,
+            "text": "Second , the measure makes sense theoretically , both from algorithmic and native language acquisition points of view . <S>\r",
+            "relation": "EVALUATION"
+        }
+    ]
+}

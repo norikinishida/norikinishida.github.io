@@ -1,0 +1,130 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "We have developed an automated Japanese essay scoring system ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "called Jess . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "The system needs expert writings rather than expert raters ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "to build the evaluation model . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 5,
+            "parent": 7,
+            "text": "By detecting statistical outliers of predetermined aimed essay features ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "compared with many professional writings for each prompt , ",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 7,
+            "parent": 1,
+            "text": "our system can evaluate essays . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 1,
+            "text": "The following three features are examined : ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "( 1 ) rhetoric \u2014 syntactic variety , or the use of various structures in the arrangement of phases , clauses , and sentences , ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 10,
+            "parent": 8,
+            "text": "( 2 ) organization \u2014 characteristics ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "associated with the orderly presentation of ideas , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 10,
+            "text": "such as rhetorical features and linguistic cues , ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 13,
+            "parent": 8,
+            "text": "and ( 3 ) content \u2014 vocabulary ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "related to the topic , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 15,
+            "parent": 13,
+            "text": "such as relevant information and precise or specialized vocabulary . <S>",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 16,
+            "parent": 1,
+            "text": "The final evaluation score is calculated ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "by deducting from a perfect score ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 18,
+            "parent": 17,
+            "text": "assigned by a learning process ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 19,
+            "parent": 17,
+            "text": "using editorials and columns from the Mainichi Daily News newspaper . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 20,
+            "parent": 1,
+            "text": "A diagnosis for the essay is also given . <S>   ",
+            "relation": "ELABORATION"
+        }
+    ]
+}

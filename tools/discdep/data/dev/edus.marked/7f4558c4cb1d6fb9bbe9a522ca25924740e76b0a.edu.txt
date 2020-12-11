@@ -1,0 +1,21 @@
+SARS - CoV-2 is a new RNA virus
+affecting humans
+and spreads extensively through world populations since its first outbreak in late December , 2019 . <S>
+Whether the transmissibility and pathogenicity of SARS - CoV-2 is actively evolving , and driven by adaptation to the new host and environments is still unknown . <S>
+Understanding the evolutionary mechanism
+underlying epidemiological and pathological characteristics of COVID-19
+is essential for predicting the epidemic trend ,
+and providing guidance for disease control and treatments . <S>
+Interrogating 22,078 SARS - CoV-2 genome sequences of 84 countries ,
+we demonstrate with convincing evidence
+that ( i ) SARS - CoV-2 genomes are overall conserved under purifying selection . <S>
+( ii ) Ongoing positive selection is actively driving the evolution of specific genes . <S>
+Notably , genes
+related to coronavirus infection and host immune system defense
+are under adaptive evolution
+while genes
+related to viral RNA replication , transcription and translation
+are under purifying selection . <S>
+A spatial and temporal landscape of 54 critical mutants is constructed
+based on their divergence among viral haplotype clusters ,
+of which multiple mutants potentially conferring viral transmissibility , infectivity and virulence of SARS - CoV-2 are highlighted . <S> <P>

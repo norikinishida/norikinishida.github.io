@@ -1,0 +1,130 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "We examine communications in a social network ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "to study user emotional contrast - the propensity of users ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "to express different emotions than those ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "expressed by their neighbors . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 1,
+            "text": "Our analysis is based on a large Twitter dataset , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "consisting of the tweets of 123,513 users from the USA and Canada . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 8,
+            "text": "Focusing on Ekman 's basic emotions , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 1,
+            "text": "we analyze differences between the emotional tone ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "expressed by these users and their neighbors of different types , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 8,
+            "text": "and correlate these differences with perceived user demographics . <S>",
+            "relation": "JOINT"
+        },
+        {
+            "id": 11,
+            "parent": 12,
+            "text": "We demonstrate ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 12,
+            "parent": 10,
+            "text": "that many perceived demographic traits correlate with the emotional contrast between users and their neighbors . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 13,
+            "parent": 18,
+            "text": "Unlike other approaches ",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "on inferring user attributes ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "that rely solely on user communications , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 16,
+            "parent": 18,
+            "text": "we explore the network structure ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 17,
+            "parent": 18,
+            "text": "and show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 18,
+            "parent": 1,
+            "text": "that it is possible to accurately predict a range of perceived demographic traits ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 19,
+            "parent": 18,
+            "text": "based solely on the emotions ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 20,
+            "parent": 19,
+            "text": "emanating from users and their neighbors . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 6,
+            "text": "Distinct properties of translated text have been the subject of research in linguistics for many year ( Baker , 1993 ) . <S>",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "In recent years computational methods have been developed ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "to empirically verify the linguistic theories about translated text ( Baroni and Bernardini , 2006 ) . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 4,
+            "parent": 6,
+            "text": "While many characteristics of translated text are more apparent ",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "in comparison to the original text , ",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 6,
+            "parent": 7,
+            "text": "most of the prior research has focused on monolingual features of translated and original text . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 7,
+            "parent": 0,
+            "text": "The contribution of this work is introducing bilingual features ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "that are capable of explaining differences in translation direction ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "using localized linguistic phenomena at the phrase or sentence level , ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "rather than using monolingual statistics at the document level . <S>",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 11,
+            "parent": 12,
+            "text": "We show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 12,
+            "parent": 7,
+            "text": "that these bilingual features out-perform the monolingual features ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "used in prior work ( Kurokawa et al. , 2009 ) for the task ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "of classifying translation direction . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}

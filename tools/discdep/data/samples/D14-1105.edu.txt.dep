@@ -1,0 +1,64 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 3,
+            "text": "Code-mixing is frequently observed in user generated content on social media , especially from multilingual users . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "The linguistic complexity of such content is compounded by presence of spelling variations , transliteration and non-adherance to formal grammar . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 0,
+            "text": "We describe our initial efforts ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "to create a multi-level annotated corpus of Hindi-English code-mixed text ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "collated from Facebook forums , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 4,
+            "text": "and explore language identification , back-transliteration , normalization and POS tagging of this data . <S>",
+            "relation": "JOINT"
+        },
+        {
+            "id": 7,
+            "parent": 3,
+            "text": "Our results show ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "that language identification and transliteration for Hindi are two major challenges ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "that impact POS tagging accuracy . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}

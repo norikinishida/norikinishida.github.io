@@ -9,50 +9,33 @@ app.constant('CONSTANTS', {
         // 1
         'ROOT',
         // 2
-        'attribution',
+        'ATTRIBUTION',
         // 3
-        //'background',
-        'bg-compare',
-        'bg-general',
-        'bg-goal',
+        'BACKGROUND',
         // 4
-        //'cause-effect',
-        'cause',
-        'result',
+        'CAUSE-RESULT-REASON',
         // 5
-        'comparison',
+        'COMPARISON',
         // 6
-        'condition',
+        'CONDITION',
         // 7
-        'contrast',
+        'CONTRAST',
         // 8
-        //'elaboration',
-        'elab-addition',
-        'elab-aspect',
-        'elab-definition',
-        'elab-enum_member',
-        'elab-example',
-        'elab-process_step',
+        'DEFINITION',
         // 9
-        'enablement',
+        'ELABORATION',
         // 10
-        'evaluation',
+        'ENABLEMENT',
         // 11
-        //'explanation',
-        'exp-evidence',
-        'exp-reason',
+        'EVALUATION',
         // 12
-        'joint',
+        'EXEMPLIFICATION',
         // 13
-        'manner-means',
+        'JOINT',
         // 14
-        'progression',
+        'MANNER-MEANS',
         // 15
-        'same-unit',
-        // 16
-        'summary',
-        // 17
-        'temporal'
+        'SAME-UNIT'
     ],
     // リンクの通常色
     NORMAL_LINK_COLOR: '#4A89F3',
@@ -1384,7 +1367,7 @@ app.controller('EDUListController',
         var arrayIndex = Math.floor(Math.random() * 1049);
         var sampleFile = CONSTANTS.SAMPLE_FILES[arrayIndex];
         console.log(sampleFile)
-        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/scidtb/" + sampleFile);
+        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/" + sampleFile);
         // xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
         xhr.send();
         console.log(xhr);

@@ -1,0 +1,118 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 4,
+            "text": "Passage-level question answer matching is a challenging task ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "since it requires effective representations ",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "that capture the complex semantic relations between questions and answers . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 0,
+            "text": "In this work , we propose a series of deep learning models ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "to address passage answer selection . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 6,
+            "parent": 10,
+            "text": "To match passage answers to questions ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "accommodating their complex semantic relations , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 10,
+            "text": "unlike most previous work ",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "that utilizes a single deep learning structure , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 4,
+            "text": "we develop hybrid models ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "that process the text ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "using both convolutional and recurrent neural networks , ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "combining the merits on extracting linguistic information from both structures . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 4,
+            "text": "Additionally , we also develop a simple but effective attention mechanism ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "for the purpose of constructing better answer representations according to the input question , ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 16,
+            "parent": 15,
+            "text": "which is imperative for better modeling long answer sequences . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 17,
+            "parent": 18,
+            "text": "The results on two public benchmark datasets , InsuranceQA and TREC-QA , show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 18,
+            "parent": 4,
+            "text": "that our proposed models outperform a variety of strong baselines . <S> ",
+            "relation": "EVALUATION"
+        }
+    ]
+}

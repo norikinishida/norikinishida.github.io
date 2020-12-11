@@ -1,0 +1,154 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 5,
+            "text": "It has previously been assumed in the psycholinguistic literature ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "that finite-state models of language are crucially limited in their explanatory power by the locality of the probability distribution and the narrow scope of information ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "used by the model . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 5,
+            "text": "We show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 5,
+            "parent": 0,
+            "text": "that a simple computational model ( a bigram part-of-speech tagger ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "based on the design ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "used by Corley and Crocker ( 2000 ) ) ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 5,
+            "text": "makes correct predictions on processing difficulty ",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "observed in a wide range of empirical sentence processing data . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 5,
+            "text": "We use two modes of evaluation : ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "one ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "that relies on comparison with a control sentence , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "paralleling practice in human studies ; ",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 14,
+            "parent": 10,
+            "text": "another ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "that measures probability drop in the disambiguating region of the sentence . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 16,
+            "parent": 10,
+            "text": "Both are surprisingly good indicators of the processing difficulty of garden-path sentences . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 17,
+            "parent": 5,
+            "text": "The sentences tested are drawn from published sources ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 18,
+            "parent": 17,
+            "text": "and systematically explore five different types of ambiguity : ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 19,
+            "parent": 17,
+            "text": "previous studies have been narrower in scope ",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 20,
+            "parent": 19,
+            "text": "and smaller in scale . <S>",
+            "relation": "JOINT"
+        },
+        {
+            "id": 21,
+            "parent": 24,
+            "text": "We do not deny the limitations of finite-state models , ",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 22,
+            "parent": 23,
+            "text": "but argue ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 23,
+            "parent": 24,
+            "text": "that our results show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 24,
+            "parent": 5,
+            "text": "that their usefulness has been underestimated . <S>",
+            "relation": "EVALUATION"
+        }
+    ]
+}

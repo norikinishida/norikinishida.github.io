@@ -1,0 +1,136 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 6,
+            "text": "Recently , work in NLP was initiated on a type of opinion inference ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "that arises ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "when opinions are expressed toward events ",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "which have positive or negative effects on entities ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "( +/-effect events ) . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 0,
+            "text": "This paper addresses methods ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "for creating a lexicon of such events , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 6,
+            "text": "to support such work on opinion inference . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 9,
+            "parent": 6,
+            "text": "Due to significant sense ambiguity , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "our goal is to develop a sense-level rather than word-level lexicon . <S>",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 11,
+            "parent": 12,
+            "text": "To maximize the effectiveness of different types of information , ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 12,
+            "parent": 6,
+            "text": "we combine a graph-based method ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "using WordNet1 relations ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "and a standard classifier ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "using gloss information . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 16,
+            "parent": 6,
+            "text": "A hybrid between the two gives the best results . <S>",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "Further , we provide evidence ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 18,
+            "parent": 17,
+            "text": "that the model is an effective way ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 19,
+            "parent": 18,
+            "text": "to guide manual annotation ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 20,
+            "parent": 19,
+            "text": "to find +/-effect senses ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 21,
+            "parent": 20,
+            "text": "that are not in the seed set . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}

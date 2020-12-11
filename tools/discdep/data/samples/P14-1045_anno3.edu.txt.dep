@@ -1,0 +1,136 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 3,
+            "text": "Using distributional analysis methods to compute semantic proximity links between words has become commonplace in NLP . <S>\r",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "The resulting relations are often noisy or difficult to interpret in general. <S>\r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 0,
+            "text": "This paper focuses on the issues \r",
+            "relation": "ROOT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "of evaluating a distributional resource \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "and filtering the relations \r",
+            "relation": "JOINT"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "it contains , \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 8,
+            "text": "but instead of considering it in abstract , \r",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 8,
+            "parent": 3,
+            "text": "we focus on pairs of words in context . <S>\r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 3,
+            "text": "In a discourse , we are interested in knowing if the semantic link between two items is a by-product of textual coherence or is irrelevant . <S>\r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "We first set up a human annotation of semantic links \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "with or without contextual information \r",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 12,
+            "parent": 10,
+            "text": "to show the importance of the textual context \r",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "in evaluating the relevance of semantic similarity , \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "and to assess the prevalence of actual semantic relations between word tokens . <S>\r",
+            "relation": "JOINT"
+        },
+        {
+            "id": 15,
+            "parent": 9,
+            "text": "We then built an experiment \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 16,
+            "parent": 15,
+            "text": "to automatically predict this relevance , \r",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "evaluated on the reliable reference data set \r",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 18,
+            "parent": 17,
+            "text": "which was the outcome of the first annotation . <S>\r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 19,
+            "parent": 20,
+            "text": "We show \r",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 20,
+            "parent": 15,
+            "text": "that in-document information greatly improve the prediction \r",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 21,
+            "parent": 20,
+            "text": "made by the similarity level alone . <S>\r",
+            "relation": "ELABORATION"
+        }
+    ]
+}

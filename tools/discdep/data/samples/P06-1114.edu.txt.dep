@@ -1,0 +1,88 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 2,
+            "text": "Work on the semantics of questions has argued ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 2,
+            "parent": 4,
+            "text": "that the relation between a question and its answer ( s ) can be cast in terms of logical entailment . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 3,
+            "parent": 4,
+            "text": "In this paper , we demonstrate ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 4,
+            "parent": 0,
+            "text": "how computational systems ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "designed to recognize textual entailment ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 4,
+            "text": "can be used ",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "to enhance the accuracy of current open-domain automatic question answering ( Q/A ) systems . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 8,
+            "parent": 13,
+            "text": "In our experiments , we show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 9,
+            "parent": 13,
+            "text": "that when textual entailment information is used to ",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "either filter ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "or rank answers ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "returned by a Q/A system , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 13,
+            "parent": 4,
+            "text": "accuracy can be increased by as much as 20 % overall . <S>",
+            "relation": "EVALUATION"
+        }
+    ]
+}

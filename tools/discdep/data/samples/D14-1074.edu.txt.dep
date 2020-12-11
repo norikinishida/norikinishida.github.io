@@ -1,0 +1,106 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "We propose a model for Chinese poem generation ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "based on recurrent neural networks ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "which we argue is ideally suited to capturing poetic content and form . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 1,
+            "text": "Our generator jointly performs content selection ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "( \"what to say\" ) ",
+            "relation": "DEFINITION"
+        },
+        {
+            "id": 6,
+            "parent": 4,
+            "text": "and surface realization ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "( \"how to say\" ) ",
+            "relation": "DEFINITION"
+        },
+        {
+            "id": 8,
+            "parent": 6,
+            "text": "by learning representations of individual characters , and their combinations into one or more lines as well as how these mutually reinforce and constrain each other . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 9,
+            "parent": 1,
+            "text": "Poem lines are generated incrementally ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "by taking into account the entire history ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "of what has been generated so far ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 10,
+            "text": "rather than the limited horizon ",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "imposed by the previous line or lexical n-grams . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 15,
+            "text": "Experimental results show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 15,
+            "parent": 1,
+            "text": "that our model outperforms competitive Chinese poetry generation systems ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 16,
+            "parent": 15,
+            "text": "using both automatic and manual evaluation methods . <S>",
+            "relation": "MANNER-MEANS"
+        }
+    ]
+}

@@ -1,0 +1,130 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 6,
+            "text": "Vector space models ( VSMs ) represent word meanings as points in a high dimensional space . <S>\r",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 6,
+            "text": "VSMs are typically created \r",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "using a large text corpora , \r",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "and so represent word semantics \r",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "as observed in text . <S>\r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 0,
+            "text": "We present a new algorithm ( JNNSE ) \r",
+            "relation": "ROOT"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "that can incorporate a measure of semantics \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "not previously used \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 7,
+            "text": "to create VSMs : \r",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 10,
+            "parent": 7,
+            "text": "brain activation data recorded \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "while people read words . <S>\r",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 12,
+            "parent": 6,
+            "text": "The resulting model takes advantage of the complementary strengths and weaknesses of corpus and brain activation data \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "to give a more complete representation of semantics . <S>\r",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 14,
+            "parent": 15,
+            "text": "Evaluations show \r",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 15,
+            "parent": 6,
+            "text": "that the model 1 ) matches a behavioral measure of semantics more closely , \r",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 16,
+            "parent": 15,
+            "text": "2 ) can be used to predict corpus data for unseen words \r",
+            "relation": "JOINT"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "and 3 ) has predictive power \r",
+            "relation": "JOINT"
+        },
+        {
+            "id": 18,
+            "parent": 17,
+            "text": "that generalizes across brain imaging technologies and across subjects . <S>\r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 19,
+            "parent": 20,
+            "text": "We believe \r",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 20,
+            "parent": 6,
+            "text": "that the model is thus a more faithful representation of mental vocabularies . <S>\r",
+            "relation": "EVALUATION"
+        }
+    ]
+}

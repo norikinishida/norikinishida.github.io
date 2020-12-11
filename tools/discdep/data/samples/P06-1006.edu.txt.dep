@@ -1,0 +1,88 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 4,
+            "text": "Syntactic knowledge is important for pronoun resolution . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 4,
+            "text": "Traditionally , the syntactic information for pronoun resolution is represented in terms of features ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "that have to be selected and defined heuristically . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 0,
+            "text": "In the paper , we propose a kernel-based method ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "that can automatically mine the syntactic information from the parse trees for pronoun resolution . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 7,
+            "text": "Specifically , we utilize the parse trees directly as a structured feature ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 4,
+            "text": "and apply kernel functions to this feature , as well as other normal features , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "to learn the resolution classifier . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 9,
+            "parent": 7,
+            "text": "In this way , our approach avoids the efforts ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "of decoding the parse trees into the set of flat syntactic features . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 12,
+            "text": "The experimental results show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 12,
+            "parent": 4,
+            "text": "that our approach can bring significant performance improvement ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "and is reliably effective for the pronoun resolution task . <S> ",
+            "relation": "JOINT"
+        }
+    ]
+}

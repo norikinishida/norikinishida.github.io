@@ -1,0 +1,148 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 5,
+            "text": "Japanese case markers , ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "which indicate the grammatical relation of the complement NP to the predicate , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "often pose challenges to the generation of Japanese text , ",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "be it done by a foreign language learner , or by a machine translation ( MT ) system . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 0,
+            "text": "In this paper , we describe the task ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "of predicting Japanese case markers ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "and propose machine learning methods ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "for solving it in two settings : ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "( i ) monolingual , when given information only from the Japanese sentence ; ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 8,
+            "text": "and ( ii ) bilingual , when also given information from a corresponding English source sentence in an MT context . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 8,
+            "text": "We formulate the task after the well-studied task of English semantic role labelling , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "and explore features from a syntactic dependency structure of the sentence . <S>",
+            "relation": "JOINT"
+        },
+        {
+            "id": 13,
+            "parent": 8,
+            "text": "For the monolingual task , we evaluated our models on the Kyoto Corpus ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "and achieved over 84 % accuracy ",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "in assigning correct case markers for each phrase . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 16,
+            "parent": 8,
+            "text": "For the bilingual task , we achieved an accuracy of 92 % per phrase ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "using a bilingual dataset from a technical domain . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 18,
+            "parent": 19,
+            "text": "We show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 19,
+            "parent": 5,
+            "text": "that in both settings , features ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 20,
+            "parent": 19,
+            "text": "that exploit dependency information , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 21,
+            "parent": 20,
+            "text": "whether derived from gold-standard annotations ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 22,
+            "parent": 21,
+            "text": "or automatically assigned , ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 23,
+            "parent": 19,
+            "text": "contribute significantly to the prediction of case markers . <S>",
+            "relation": "SAME-UNIT"
+        }
+    ]
+}

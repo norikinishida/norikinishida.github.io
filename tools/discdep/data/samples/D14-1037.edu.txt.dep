@@ -1,0 +1,160 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 3,
+            "text": "The informal nature of social media text renders it very difficult to be automatically processed ",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "by natural language processing tools . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 3,
+            "parent": 6,
+            "text": "Text normalization , ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "which corresponds to restoring the non-standard words to their canonical forms , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 3,
+            "text": "provides a solution to this challenge . <S>",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 6,
+            "parent": 0,
+            "text": "We introduce an unsupervised text normalization approach ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "that utilizes not only lexical , but also contextual and grammatical features of social text . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 6,
+            "text": "The contextual and grammatical features are extracted from a word association graph ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "built by using a large unlabeled social media text corpus . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 8,
+            "text": "The graph encodes the relative positions of the words with respect to each other , as well as their part-of-speech tags . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 6,
+            "text": "The lexical features are obtained ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "by using the longest common subsequence ratio ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 13,
+            "parent": 11,
+            "text": "and edit distance measures ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "to encode the surface similarity among words , ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 15,
+            "parent": 12,
+            "text": "and the double metaphone algorithm ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 16,
+            "parent": 15,
+            "text": "to represent the phonetic similarity . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 17,
+            "parent": 19,
+            "text": "Unlike most of the recent approaches ",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 18,
+            "parent": 17,
+            "text": "that are based on generating normalization dictionaries , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 19,
+            "parent": 6,
+            "text": "the proposed approach performs normalization ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 20,
+            "parent": 19,
+            "text": "by considering the context of the non-standard words in the input text . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 21,
+            "parent": 22,
+            "text": "Our results show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 22,
+            "parent": 6,
+            "text": "that it achieves state-of-the-art F-score performance on standard datasets . <S>",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 23,
+            "parent": 22,
+            "text": "In addition , the system can be tuned ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 24,
+            "parent": 23,
+            "text": "to achieve very high precision ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 25,
+            "parent": 24,
+            "text": "without sacrificing much from recall . <S>",
+            "relation": "CONDITION"
+        }
+    ]
+}

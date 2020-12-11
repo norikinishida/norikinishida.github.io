@@ -1,0 +1,100 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 3,
+            "text": "Automatically identifying related specialist terms is a difficult and important task ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "required to understand the lexical structure of language . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 0,
+            "text": "This paper develops a corpus-based method of extracting coherent clusters of satellite terminology\u2014 terms on the edge of the lexicon \u2014 ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "using co-occurrence networks of unstructured text . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 5,
+            "parent": 3,
+            "text": "Term clusters are identified ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "by extracting communities in the co-occurrence graph , ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "after which the largest is discarded ",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "and the remaining words are ranked by centrality within a community . <S>",
+            "relation": "JOINT"
+        },
+        {
+            "id": 9,
+            "parent": 5,
+            "text": "The method is tractable on large corpora , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "requires no document structure and minimal normalization . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 3,
+            "text": "The results suggest ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "that the model is able to extract coherent groups of satellite terms in corpora with varying size , content and structure . <S>",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 13,
+            "parent": 11,
+            "text": "The findings also confirm ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "that language consists of a densely connected core ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "( observed in dictionaries ) and systematic , semantically coherent groups of terms at the edges of the lexicon . <S>",
+            "relation": "JOINT"
+        }
+    ]
+}

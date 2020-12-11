@@ -1,0 +1,22 @@
+The 2019-nCoV outbreak has raised concern of global spread . <S>
+While person - to - person transmission within the Wuhan district has led to a large outbreak ,
+the transmission potential outside of the region remains unclear . <S>
+Here we present a simple approach
+for determining
+whether the upper limit of the confidence interval for the reproduction number exceeds one for transmission in the United States ,
+which would allow endemic transmission . <S>
+As of February 7 , 2020 , the number of cases in the United states support subcritical transmission , rather than ongoing transmission . <S>
+However , this conclusion can change
+if pre - symptomatic cases
+resulting from human - to - human transmission
+have not yet been identified . <S> <P>
+The 2019-nCoV outbreak is a global health risk ,
+especially considering the number of patients
+who have already died
+after becoming infected in Wuhan , China . <S>
+Many initial characterizations of the virus have focused on the basic reproduction number , R ,
+which reflects the average number of infections
+that each new infection causes in a susceptible population . <S>
+Whenever R is greater than one ,
+epidemic transition becomes possible
+and within the Wuhan province , R has been estimated as high as 4.1 1 - 3 . <S> <P>

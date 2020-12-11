@@ -1,0 +1,112 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 6,
+            "text": "Natural language understanding often requires deep semantic knowledge . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 4,
+            "text": "Expanding on previous proposals , ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 3,
+            "parent": 4,
+            "text": "we suggest ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 4,
+            "parent": 1,
+            "text": "that some important aspects of semantic knowledge can be modeled as a language model ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "if done at an appropriate level of abstraction . <S>",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 6,
+            "parent": 0,
+            "text": "We develop two distinct models ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "that capture semantic frame chains and discourse information ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "while abstracting over the specific mentions of predicates and entities . <S>",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 9,
+            "parent": 6,
+            "text": "For each model , we investigate four implementations : ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "a `` standard '' N-gram language model and three discriminatively trained `` neural '' language models ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "that generate embeddings for semantic frames . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 6,
+            "text": "The quality of the semantic language models ( SemLM ) is evaluated both intrinsically , ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "using perplexity and a narrative cloze test ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 14,
+            "parent": 12,
+            "text": "and extrinsically - ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 15,
+            "parent": 16,
+            "text": "we show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 16,
+            "parent": 14,
+            "text": "that our SemLM helps improve performance on semantic natural language processing tasks ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "such as co-reference resolution and discourse parsing . <S>",
+            "relation": "EXEMPLIFICATION"
+        }
+    ]
+}

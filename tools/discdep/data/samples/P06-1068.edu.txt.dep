@@ -1,0 +1,106 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "This paper presents a study on ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "if and how automatically extracted keywords can be used ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "to improve text categorization . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 4,
+            "parent": 5,
+            "text": "In summary we show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 5,
+            "parent": 1,
+            "text": "that a higher performance ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "\u2014 as measured by micro-averaged F-measure on a standard text categorization collection \u2014 ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 5,
+            "text": "is achieved ",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 8,
+            "parent": 5,
+            "text": "when the full-text representation is combined with the automatically extracted keywords . <S>",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "The combination is obtained ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "by giving higher weights to words in the full-texts ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "that are also extracted as keywords . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 15,
+            "text": "We also present results for experiments ",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "in which the keywords are the only input to the categorizer , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "either represented as unigrams or intact . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 15,
+            "parent": 1,
+            "text": "Of these two experiments , the unigrams have the best performance , ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 16,
+            "parent": 15,
+            "text": "although neither performs as well as headlines only . <S>",
+            "relation": "CONTRAST"
+        }
+    ]
+}

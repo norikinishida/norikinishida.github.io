@@ -1,0 +1,76 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 6,
+            "text": "Recent years have seen a surge of interest in stance classification in online debates . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "Oftentimes , however , it is important to determine not only the stance ",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "expressed by an author in her debate posts , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 2,
+            "text": "but also the reasons ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "behind her supporting or opposing the issue under debate . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 0,
+            "text": "We therefore examine the new task of reason classification in this paper . <S>",
+            "relation": "ROOT"
+        },
+        {
+            "id": 7,
+            "parent": 8,
+            "text": "Given the close in-terplay between stance classification and reason classification , ",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 8,
+            "parent": 6,
+            "text": "we design computational models ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "for examining how automatically computed stance information can be profitably exploited for reason classification . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 10,
+            "parent": 11,
+            "text": "Experiments on our reason-annotated corpus of ideological debate posts from four domains demonstrate ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 11,
+            "parent": 6,
+            "text": "that sophisticated models of stances and reasons can indeed yield more accurate reason and stance classification results than their simpler counterparts . <S>",
+            "relation": "EVALUATION"
+        }
+    ]
+}

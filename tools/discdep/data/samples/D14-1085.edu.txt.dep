@@ -1,0 +1,94 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "We present sentence enhancement as a novel technique for text-to-text generation in abstractive summarization . <S>",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 3,
+            "text": "Compared to extraction or previous approaches to sentence fusion , ",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "sentence enhancement increases the range of possible summary sentences ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "by allowing the combination of dependency subtrees from any sentence from the source text . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 5,
+            "parent": 6,
+            "text": "Our experiments indicate ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 6,
+            "parent": 1,
+            "text": "that our approach yields summary sentences ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "that are competitive with a sentence fusion baseline in terms of content quality , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "but better in terms of grammaticality , ",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "and that the benefit of sentence enhancement relies crucially on an event coreference resolution algorithm ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "using distributional semantics . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 11,
+            "parent": 12,
+            "text": "We also consider ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 12,
+            "parent": 1,
+            "text": "how text-to-text generation approaches to summarization can be extended beyond the source text",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 13,
+            "parent": 14,
+            "text": "by examining ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 14,
+            "parent": 12,
+            "text": "how human summary writers incorporate source-text-external elements into their summary sentences . <S>",
+            "relation": "MANNER-MEANS"
+        }
+    ]
+}

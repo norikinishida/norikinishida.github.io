@@ -1,0 +1,76 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 3,
+            "text": "Conjunctions have always been a source of problems for natural language parsers . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 3,
+            "text": "This paper shows ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 3,
+            "parent": 0,
+            "text": "how these problems may be circumvented ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "using a rule based , walt-and-see parsing strategy . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 5,
+            "parent": 3,
+            "text": "A parser is presented ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "which analyzes conjunction structures deterministically , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 5,
+            "text": "and the specific rules ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "it uses ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 7,
+            "text": "are described and illustrated . <S>",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 10,
+            "parent": 3,
+            "text": "This parser appears to be faster for conjunctions than other parsers in the literature ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "and some comparative timings are given . <S>",
+            "relation": "JOINT"
+        }
+    ]
+}

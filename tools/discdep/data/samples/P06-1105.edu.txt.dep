@@ -1,0 +1,94 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "In this paper , we present a method ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "that improves Japanese dependency parsing ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "by using large-scale statistical information . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 4,
+            "parent": 1,
+            "text": "It takes into account two kinds of information ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "not considered in previous statistical ( machine learning based ) parsing methods : ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "information about dependency relations among the case elements of a verb , and information about co-occurrence relations between a verb and its case element . <S>",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 7,
+            "parent": 4,
+            "text": "This information can be collected from the results of automatic dependency parsing of large-scale corpora . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 13,
+            "text": "The results of an experiment ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "in which our method was used ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "to rerank the results ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "obtained using an existing machine learning based parsing method ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 8,
+            "text": "showed ",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 13,
+            "parent": 1,
+            "text": "that our method can improve the accuracy of the results ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "obtained using the existing method . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}

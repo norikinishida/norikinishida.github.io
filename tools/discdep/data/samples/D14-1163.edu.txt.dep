@@ -1,0 +1,106 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "We introduce a novel compositional language model ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "that works on Predicate-Argument Structures ( PASs ) . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "Our model jointly learns word representations and their composition functions ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "using bag-of-words and dependency-based contexts . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 5,
+            "parent": 6,
+            "text": "Unlike previous word-sequence-based models , ",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 6,
+            "parent": 1,
+            "text": "our PAS-based model composes arguments into predicates ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "by using the category information from the PAS . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 8,
+            "parent": 6,
+            "text": "This enables our model to capture longrange dependencies between words ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "and to better handle constructs such as verb-object and subject-verb-object relations . <S>",
+            "relation": "JOINT"
+        },
+        {
+            "id": 10,
+            "parent": 1,
+            "text": "We verify this experimentally ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "using two phrase similarity datasets ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 12,
+            "parent": 10,
+            "text": "and achieve results comparable to or higher than the previous best results . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 13,
+            "parent": 10,
+            "text": "Our system achieves these results ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "without the need for pre-trained word vectors ",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "and using a much smaller training corpus ; ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 16,
+            "parent": 13,
+            "text": "despite this , for the subject-verb-object dataset our model improves upon the state of the art by as much as \u223c10 % in relative performance . <S>",
+            "relation": "JOINT"
+        }
+    ]
+}

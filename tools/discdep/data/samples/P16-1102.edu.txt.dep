@@ -1,0 +1,160 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 3,
+            "text": "Automatic spoken language assessment systems are becoming increasingly important ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "to meet the demand for English second language learning . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 5,
+            "text": "This is a challenging task ",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "due to the high error rates of , even state-of-the-art , non-native speech recognition . <S>",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 5,
+            "parent": 6,
+            "text": "Consequently current systems primarily assess fluency and pronunciation . <S>",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 6,
+            "parent": 13,
+            "text": "However , content assessment is essential for full automation . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 7,
+            "parent": 11,
+            "text": "As a first stage it is important to judge ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "whether the speaker responds on topic ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "to test questions ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "designed to elicit spontaneous speech . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 13,
+            "text": "Standard approaches to off-topic response detection assess similarity between the response and question ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "based on bag-of-words representations . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 13,
+            "parent": 0,
+            "text": "An alternative framework ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "based on Recurrent Neural Network Language Models ( RNNLM ) ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 15,
+            "parent": 13,
+            "text": "is proposed in this paper . <S>",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 16,
+            "parent": 13,
+            "text": "The RNNLM is adapted to the topic of each test question . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "It learns to associate example responses to questions with points in a topic space ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 18,
+            "parent": 17,
+            "text": "constructed using these example responses . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 19,
+            "parent": 16,
+            "text": "Classification is done ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 20,
+            "parent": 19,
+            "text": "by ranking the topic-conditional posterior probabilities of a response . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 21,
+            "parent": 16,
+            "text": "The RNNLMs associate a broad range of responses with each topic , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 22,
+            "parent": 21,
+            "text": "incorporate sequence information and scale better with additional training data , unlike standard methods . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 23,
+            "parent": 25,
+            "text": "On experiments ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 24,
+            "parent": 23,
+            "text": "conducted on data from the Business Language Testing Service ( BULATS ) ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 25,
+            "parent": 13,
+            "text": "this approach outperforms standard approaches . <S>",
+            "relation": "EVALUATION"
+        }
+    ]
+}

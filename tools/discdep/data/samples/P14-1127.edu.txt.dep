@@ -1,0 +1,82 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "We present a novel way \r",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "of generating unseen words , \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "which is useful for certain applications such as automatic speech recognition or optical character recognition in low-resource languages . <S>\r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 1,
+            "text": "We test our vocabulary generator on seven low-resource languages \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "by measuring the decrease in out-of-vocabulary word rate on a held-out test set . <S>\r",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 6,
+            "parent": 0,
+            "text": "The languages \r",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "we study \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 6,
+            "text": "have very different morphological properties ; \r",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 9,
+            "parent": 10,
+            "text": "we show \r",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 10,
+            "parent": 6,
+            "text": "how our results differ \r",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "depending on the morphological complexity of the language . <S>\r",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 12,
+            "parent": 10,
+            "text": "In our best result ( on Assamese ) , our approach can predict 29 % of the token-based out-of-vocabulary with a small amount of unlabeled training data . <S>\r",
+            "relation": "ELABORATION"
+        }
+    ]
+}

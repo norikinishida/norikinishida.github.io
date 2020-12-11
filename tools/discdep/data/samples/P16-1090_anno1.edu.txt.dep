@@ -1,0 +1,100 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 5,
+            "text": "Can we train a system ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "that , on any new input , either says `` do n't know '' ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "or makes a prediction ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "that is guaranteed to be correct ? <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 0,
+            "text": "We answer the question in the affirmative ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "provided our model family is wellspecified . <S>",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 7,
+            "parent": 5,
+            "text": "Specifically , we introduce the unanimity principle ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": ": only predict when all models consistent with the training data predict the same output . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 7,
+            "text": "We operationalize this principle for semantic parsing , the task of mapping utterances to logical forms . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 5,
+            "text": "We develop a simple , efficient method ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "that reasons over the infinite set of all consistent models ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "by only checking two of the models . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 13,
+            "parent": 14,
+            "text": "We prove ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 14,
+            "parent": 5,
+            "text": "that our method obtains 100 % precision even with a modest amount of training data from a possibly adversarial distribution . <S>",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 15,
+            "parent": 5,
+            "text": "Empirically , we demonstrate the effectiveness of our approach on the standard GeoQuery dataset . <S>",
+            "relation": "EVALUATION"
+        }
+    ]
+}

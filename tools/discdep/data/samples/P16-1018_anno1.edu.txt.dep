@@ -1,0 +1,82 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 4,
+            "text": "Metaphorical expressions are pervasive in natural language ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "and pose a substantial challenge for computational semantics . <S>",
+            "relation": "JOINT"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "The inherent compositionality of metaphor makes it an important test case for compositional distributional semantic models ( CDSMs ) . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 0,
+            "text": "This paper is the first ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 5,
+            "parent": 6,
+            "text": "to investigate ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 6,
+            "parent": 4,
+            "text": "whether metaphorical composition warrants a distinct treatment in the CDSM framework . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 4,
+            "text": "We propose a method ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "to learn metaphors as linear transformations in a vector space ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 10,
+            "text": "and find ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 10,
+            "parent": 7,
+            "text": "that , across a variety of semantic domains , explicitly modeling metaphor improves the resulting semantic representations . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 11,
+            "parent": 4,
+            "text": "We then use these representations in a metaphor identification task , ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "achieving a high performance of 0.82 in terms of F-score . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}

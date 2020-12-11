@@ -1,0 +1,52 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "This paper presents a quantitative evaluation of the portability to the stock market domain of the revision rule hierarchy ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "used by the system STREAK ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "to incrementally generate newswire sports summaries . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 4,
+            "parent": 7,
+            "text": "The evaluation consists of searching a test corpus of stock market reports for sentence pairs ",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "whose ( semantic and syntactic ) structures respectively match the triggering condition and application result of each revision rule . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 7,
+            "text": "The results show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 7,
+            "parent": 1,
+            "text": "that at least 59 % of all rule classes are fully portable , with at least another 7 % partially portable . <S>   ",
+            "relation": "EVALUATION"
+        }
+    ]
+}

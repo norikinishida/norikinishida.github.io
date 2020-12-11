@@ -1,0 +1,70 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 5,
+            "text": "We revisit Levin 's theory about the correspondence of verb meaning and syntax ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "and infer semantic classes from a large syntactic classification of more than 600 German verbs ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "taking clausal and non-finite arguments . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 5,
+            "text": "Grasping the meaning components of Levin-classes is known to be hard . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 0,
+            "text": "We address this challenge ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "by setting up a multi-perspective semantic characterization of the inferred classes . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 7,
+            "parent": 5,
+            "text": "To this end , we link the inferred classes and their English translation to independently constructed semantic classes in three different lexicons ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "- the German wordnet GermaNet , VerbNet and FrameNet - ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 9,
+            "parent": 7,
+            "text": "and perform a detailed analysis and evaluation of the resulting German-English classification ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "( available at www.ukp.tu-darmstadt.de/modality-verbclasses/ ) . <S>        ",
+            "relation": "ELABORATION"
+        }
+    ]
+}

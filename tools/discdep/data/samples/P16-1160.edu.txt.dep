@@ -1,0 +1,88 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 3,
+            "text": "The existing machine translation systems , ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "whether phrase-based or neural , have relied almost exclusively on word-level modelling with explicit segmentation . <S>",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 3,
+            "parent": 0,
+            "text": "In this paper , we ask a fundamental question : ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "can neural machine translation generate a character sequence ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "without any explicit segmentation ? <S>",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 6,
+            "parent": 7,
+            "text": "To answer this question , ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 7,
+            "parent": 3,
+            "text": "we evaluate an attention-based encoder-decoder with a subword-level encoder and a character-level decoder on four language pairs",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "-En-Cs , En-De , En-Ru and En-Fi-",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 9,
+            "parent": 7,
+            "text": "using the parallel corpora from WMT '15 . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 10,
+            "parent": 11,
+            "text": "Our experiments show ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 11,
+            "parent": 3,
+            "text": "that the models with a character-level decoder outperform the ones with a subword-level decoder on all of the four language pairs . <S>",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 12,
+            "parent": 3,
+            "text": "Furthermore , the ensembles of neural models with a character-level decoder outperform the state-of-the-art non-neural machine translation systems on En-Cs , En-De and En-Fi ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "and perform comparably on En-Ru . <S> ",
+            "relation": "JOINT"
+        }
+    ]
+}

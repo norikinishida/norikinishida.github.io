@@ -1,0 +1,76 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 3,
+            "text": "A query speller is crucial to search engine ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "in improving web search relevance . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 0,
+            "text": "This paper describes novel methods for use of distributional similarity ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "estimated from query logs ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "in learning improved query spelling correction models . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 3,
+            "text": "The key to our methods is the property of distributional similarity between two terms : ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "it is high between a frequently occurring misspelling and its correction , and low between two irrelevant terms only with similar spellings . <S>",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 8,
+            "parent": 3,
+            "text": "We present two models ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "that are able to take advantage of this property . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 11,
+            "text": "Experimental results demonstrate ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 11,
+            "parent": 3,
+            "text": "that the distributional similarity based models can significantly outperform their baseline systems in the web query spelling correction task . <S>",
+            "relation": "EVALUATION"
+        }
+    ]
+}

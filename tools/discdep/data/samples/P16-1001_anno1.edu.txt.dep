@@ -1,0 +1,154 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 14,
+            "text": "Semantic parsers map natural language statements into meaning representations , ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "and must abstract over syntactic phenomena , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "resolve anaphora , ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 4,
+            "parent": 2,
+            "text": "and identify word senses ",
+            "relation": "JOINT"
+        },
+        {
+            "id": 5,
+            "parent": 2,
+            "text": "to eliminate ambiguous interpretations . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 6,
+            "parent": 1,
+            "text": "Abstract meaning representation ( AMR ) is a recent example of one such semantic formalism ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "which , similar to a dependency parse , utilizes a graph ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "to represent relationships between concepts ( Banarescu et al. , 2013 ) . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 9,
+            "parent": 10,
+            "text": "As with dependency parsing , ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 10,
+            "parent": 11,
+            "text": "transition-based approaches are a common approach to this problem . <S>",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 11,
+            "parent": 12,
+            "text": "However , when trained in the traditional manner ",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 12,
+            "parent": 14,
+            "text": "these systems are susceptible to the accumulation of errors ",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "when they find undesirable states during greedy decoding . <S>",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 14,
+            "parent": 0,
+            "text": "Imitation learning algorithms have been shown ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "to help these systems recover from such errors . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 16,
+            "parent": 17,
+            "text": "To effectively use these methods for AMR parsing ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 17,
+            "parent": 14,
+            "text": "we find it highly beneficial to introduce two novel extensions : ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 18,
+            "parent": 17,
+            "text": "noise reduction and targeted exploration . <S>",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 19,
+            "parent": 18,
+            "text": "The former mitigates the noise in the feature representation , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 20,
+            "parent": 19,
+            "text": "a result of the complexity of the task . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 21,
+            "parent": 18,
+            "text": "The latter targets the exploration steps of imitation learning towards areas ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 22,
+            "parent": 21,
+            "text": "which are likely to provide the most information in the context of a large action-space . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 23,
+            "parent": 14,
+            "text": "We achieve state-ofthe art results , ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 24,
+            "parent": 23,
+            "text": "and improve upon standard transition-based parsing by 4.7 F1 points . <S>",
+            "relation": "JOINT"
+        }
+    ]
+}

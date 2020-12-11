@@ -1,0 +1,106 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "In this paper we investigate ChineseEnglish name transliteration ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "using comparable corpora , corpora ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "where texts in the two languages deal in some of the same topics \u2014 ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "and therefore share references to named entities \u2014 ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "but are not translations of each other . <S>",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 6,
+            "parent": 1,
+            "text": "We present two distinct methods for transliteration , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "one approach ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "using phonetic transliteration , ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 9,
+            "parent": 6,
+            "text": "and the second ",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "using the temporal distribution of candidate pairs . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 11,
+            "parent": 13,
+            "text": "Each of these approaches works quite well , ",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 12,
+            "parent": 13,
+            "text": "but by combining the approaches ",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 13,
+            "parent": 6,
+            "text": "one can achieve even better results . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 16,
+            "text": "We then propose a novel score propagation method ",
+            "relation": "CAUSE-RESULT-REASON"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "that utilizes the co-occurrence of transliteration pairs within document pairs . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 16,
+            "parent": 1,
+            "text": "This propagation method achieves further improvement over the best results from the previous step . <S>",
+            "relation": "EVALUATION"
+        }
+    ]
+}

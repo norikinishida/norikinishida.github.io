@@ -1,0 +1,76 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "This paper describes a study of the patterns of translational equivalence ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "exhibited by a variety of bitexts . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 4,
+            "text": "The study found ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 4,
+            "parent": 1,
+            "text": "that the complexity of these patterns in every bitext was higher ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "than suggested in the literature . <S>",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 6,
+            "parent": 1,
+            "text": "These findings shed new light on why \" syntactic \" constraints have not helped to improve statistical translation models , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "including finitestate phrase-based models , tree-to-string models , and tree-to-tree models . <S>",
+            "relation": "EXEMPLIFICATION"
+        },
+        {
+            "id": 8,
+            "parent": 1,
+            "text": "The paper also presents evidence ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "that inversion transduction grammars cannot generate some translational equivalence relations , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "even in relatively simple real bitexts in syntactically similar languages with rigid word order . <S>",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 11,
+            "parent": 1,
+            "text": "Instructions for replicating our experiments are at http : //nlp.cs.nyu.edu/GenPar/ACL06 <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 3,
+            "text": "Machine reading calls for programs ",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "that read and understand text , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 4,
+            "text": "but most current work only attempts to extract facts from redundant web-scale corpora . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 4,
+            "parent": 0,
+            "text": "In this paper , we focus on a new reading comprehension task ",
+            "relation": "ROOT"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "that requires complex reasoning over a single document . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 6,
+            "parent": 4,
+            "text": "The input is a paragraph ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "describing a biological process , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 6,
+            "text": "and the goal is to answer questions ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "that require an understanding of the relations between entities and events in the process . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 11,
+            "text": "To answer the questions , ",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 11,
+            "parent": 8,
+            "text": "we first predict a rich structure ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "representing the process in the paragraph . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 13,
+            "parent": 8,
+            "text": "Then , we map the question to a formal query , ",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "which is executed against the predicted structure . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 15,
+            "parent": 16,
+            "text": "We demonstrate ",
+            "relation": "ATTRIBUTION"
+        },
+        {
+            "id": 16,
+            "parent": 4,
+            "text": "that answering questions via predicted structures substantially improves accuracy over baselines ",
+            "relation": "EVALUATION"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "that use shallower representations . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}
