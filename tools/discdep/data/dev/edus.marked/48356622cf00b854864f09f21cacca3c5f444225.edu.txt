@@ -1,6 +1,0 @@
-The novel coronavirus disease-2019 ,
-caused by severe acute respiratory syndrome coronavirus-2 ,
-has spread worldwide from China . <S>
-There are no case reports from Asia of COVID-19 with facial paralysis and olfactory disturbance . <S>
-We herein report a case of COVID-19 pneumonia in a Japanese woman
-who showed facial nerve palsy and olfactory disturbance . <S> <P>
