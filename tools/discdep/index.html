@@ -90,10 +90,6 @@
             </div>
         </div>
 
-        <!-- フッター -->
-        <!-- <br><br><br> -->
-        <!-- <div ng-include="'template/footer.html'"></div> -->
-
         <!-- 談話関係ラベル選択ダイアログ (アノテーション) -->
         <div id="dialog-form" title="ラベルを下記から選択してください"
         ng-show="showAddDialog">
@@ -104,18 +100,5 @@
           </form>
         </div>
 
-        <!-- 談話関係ラベル選択ダイアログ (辞書から削除) -->
-        <!--
-        <div id="new-relation-dialog" title="辞書から削除するラベルを選択してください">
-          <form>
-                 <ul class="list-group" ng-if="openDeleteDialog">
-                     <li class="list-group-item" ng-repeat="relation in relations track by $index" ng-click="removeRelation(relation)">
-                         {{relation}}
-                         <img src="./image/remove.jpeg" style="width:20px;height:20px;" align="right">
-                     </li>
-                </ul>
-          </form>
-        </div>
-        -->
     </body>
 </html>

@@ -1327,8 +1327,6 @@ app.controller('EDUListController',
     };
 
     // 例示
-    // $scope.samples = ["サンプル 01", "サンプル 02", "サンプル 03"];
-    // $scope.selectedSample = null;
     $scope.showRandomSample = function () {
         // キャンバス等の取得
         var canvas = angular.element('#canvas')[0];
@@ -1368,7 +1366,6 @@ app.controller('EDUListController',
         var sampleFile = CONSTANTS.SAMPLE_FILES[arrayIndex];
         console.log(sampleFile)
         xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/" + sampleFile);
-        // xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/1dc818a92b31dc871d7020ec659faaeb38e519c6.edus.tokens.dep");
         xhr.send();
         console.log(xhr);
         $scope.inputFile = sampleFile;
