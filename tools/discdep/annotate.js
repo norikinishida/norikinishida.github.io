@@ -1528,10 +1528,8 @@ app.controller('EDUListController',
         centerT.x += angular.element('#' + id2)[0].style.width;
         centerT.y += angular.element('#' + id2)[0].style.height;
 
-        // なんだこれ
-        var canvasPos = Utils.findPos(angular.element('canvas')[0]);
-
         // 調整
+        var canvasPos = Utils.findPos(angular.element('canvas')[0]);
         centerS.x -= canvasPos.x;
         centerS.y -= canvasPos.y;
         centerT.x -= canvasPos.x;
@@ -1546,7 +1544,6 @@ app.controller('EDUListController',
         }
         centerT.y += 25;
 
-        // なんだこれ
         var width = Utils.findPos(angular.element('#' + id1)[0]).x;
 
         // 距離 (比率)
@@ -1619,10 +1616,8 @@ app.controller('EDUListController',
         centerZ.x += angular.element('#' + id2)[0].style.width;
         centerZ.y += angular.element('#' + id2)[0].style.height;
 
-        // なんだこれ
-        var canvasPos = Utils.findPos(angular.element('#canvas')[0]);
-
         // 調整
+        var canvasPos = Utils.findPos(angular.element('#canvas')[0]);
         centerZ.x -= canvasPos.x;
         centerZ.x += 90;
         centerZ.y -= canvasPos.y;
