@@ -38,11 +38,14 @@ app.constant('CONSTANTS', {
         'SAME-UNIT'
     ],
     // リンクの通常色
-    NORMAL_LINK_COLOR: '#4A89F3',
-    // リンクのハイライト色
-    BLINK_LINK_COLOR: '#FFE047',
+    // NORMAL_LINK_COLOR: '#4A89F3',
+    NORMAL_LINK_COLOR: '#4486F4',
     // 談話関係ラベルの色
-    LABEL_COLOR: '#DD4B3E',
+    // NORMAL_LABEL_COLOR: '#DD4B3E',
+    NORMAL_LABEL_COLOR: '#DA483B',
+    // ハイライト色
+    // BLINK_COLOR: '#FFE047',
+    BLINK_COLOR: '#FF9E0F',
     // ?
     //MAX_N: 150,
     MAX_N: 500,
@@ -1164,7 +1167,7 @@ app.controller('EDUListController',
 
     $scope.operations = []; // アクション履歴
 
-    $scope.blinkColor = CONSTANTS.BLINK_LINK_COLOR; // リンクのハイライト色
+    $scope.blinkColor = CONSTANTS.BLINK_COLOR; // リンクのハイライト色
     $scope.canvas_height = 700; // キャンバス縦幅 (デフォルト値)
     // "edus"の長さ(=edus.length)が変わったら、キャンバスの縦幅を更新
     $scope.$watch('edus.length', function() {
@@ -1225,7 +1228,7 @@ app.controller('EDUListController',
                 // リンクの描画
                 drawCurve('edu' + $scope.heads[i].toString(), 'edu' + i.toString(), CONSTANTS.NORMAL_LINK_COLOR);
                 // 談話関係ラベルの描画
-                addRelation('edu' + i.toString(), $scope.depRels[i]);
+                addRelation('edu' + i.toString(), $scope.depRels[i], CONSTANTS.NORMAL_LABEL_COLOR);
             }
         }
     };
@@ -1247,7 +1250,7 @@ app.controller('EDUListController',
                 // リンクの描画
                 drawCurve('edu' + $scope.heads[i].toString(), 'edu' + i.toString(), CONSTANTS.NORMAL_LINK_COLOR);
                 // 談話関係ラベルの描画
-                addRelation('edu' + i.toString(), $scope.depRels[i]);
+                addRelation('edu' + i.toString(), $scope.depRels[i], CONSTANTS.NORMAL_LABEL_COLOR);
             }
         }
     };
@@ -1301,7 +1304,7 @@ app.controller('EDUListController',
             var id1 = op.id1, id2 = op.id2;
             $scope.heads[id2] = id1;
             $scope.depRels[id2] = op.relation;
-            connect(id1, id2, $scope.depRels[id2], CONSTANTS.NORMAL_LINK_COLOR);
+            connect(id1, id2, $scope.depRels[id2], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
         }
         $scope.operations.pop();
     };
@@ -1356,7 +1359,7 @@ app.controller('EDUListController',
                     for (var i = 0; i < $scope.heads.length; ++i) {
                         if ($scope.heads[i] >= 0) {
                             drawCurve('edu' + $scope.heads[i].toString(), 'edu' + i.toString(), CONSTANTS.NORMAL_LINK_COLOR);
-                            addRelation('edu' + i.toString(), $scope.depRels[i]);
+                            addRelation('edu' + i.toString(), $scope.depRels[i], CONSTANTS.NORMAL_LABEL_COLOR);
                         }
                     }
                 }
@@ -1399,10 +1402,10 @@ app.controller('EDUListController',
         // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
             if (i === pos && $scope.heads[i] >= 0) {
-                connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.BLINK_LINK_COLOR, 25);
+                connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.BLINK_COLOR, CONSTANTS.BLINK_COLOR);
             }
             else if ($scope.heads[i] >= 0) {
-                connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.NORMAL_LINK_COLOR);
+                connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
             }
         }
     };
@@ -1425,7 +1428,7 @@ app.controller('EDUListController',
         // 描画
         _.each($scope.heads, function(v, i) {
             if (v >= 0) {
-                connect(v, i, $scope.depRels[i], CONSTANTS.NORMAL_LINK_COLOR);
+                connect(v, i, $scope.depRels[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
             }
         });
     };
@@ -1466,7 +1469,7 @@ app.controller('EDUListController',
             var id1 = 'edu' + $scope.first.toString();
             var id2 = 'edu' + second.toString();
             drawCurve(id1, id2, CONSTANTS.NORMAL_LINK_COLOR);
-            addRelation(id2, rel);
+            addRelation(id2, rel, CONSTANTS.NORMAL_LABEL_COLOR);
 
             // 履歴追加
             var op = {type: 'connect', id1: $scope.first.toString(), id2: second.toString()};
@@ -1577,9 +1580,9 @@ app.controller('EDUListController',
         ctx.fill();
     };
 
-    var connect = function(id1, id2, rel, color, fontSize) {
-        drawCurve('edu' + id1, 'edu' + id2, color);
-        addRelation('edu' + id2, rel, fontSize);
+    var connect = function(id1, id2, rel, link_color, label_color, fontSize) {
+        drawCurve('edu' + id1, 'edu' + id2, link_color);
+        addRelation('edu' + id2, rel, label_color, fontSize);
     };
 
     var disconnect = function(id1, id2) {
@@ -1595,13 +1598,13 @@ app.controller('EDUListController',
         // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
             if ($scope.heads[i] >= 0) {
-                connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.NORMAL_LINK_COLOR);
+                connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
             }
         }
     };
 
     // 談話関係ラベルの描画
-    var addRelation = function(id2, relation, fontSize) {
+    var addRelation = function(id2, relation, color, fontSize) {
         if (!relation) {
             ngToast.danger({
                 content: 'Invalid relation',
@@ -1627,7 +1630,8 @@ app.controller('EDUListController',
         var ctx = angular.element('#canvas')[0].getContext('2d');
         ctx.font = fontSize.toString() + "px Arial";
         // ctx.fillStyle = '#005AB5';
-        ctx.fillStyle = CONSTANTS.LABEL_COLOR;
+        // ctx.fillStyle = CONSTANTS.NORMAL_LABEL_COLOR;
+        ctx.fillStyle = color;
         ctx.textAlign = "right";
         // while (relation.length < 12) relation = ' ' + relation;
         ctx.fillText(relation, centerZ.x - fontSize * 7, centerZ.y);
