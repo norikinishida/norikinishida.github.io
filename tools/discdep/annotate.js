@@ -35,7 +35,9 @@ app.constant('CONSTANTS', {
         // 14
         'MANNER-MEANS',
         // 15
-        'SAME-UNIT'
+        'SAME-UNIT',
+        // Special relations
+        'FIXME',
     ],
     // リンクの通常色
     // NORMAL_LINK_COLOR: '#4A89F3',
