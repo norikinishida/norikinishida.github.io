@@ -36,6 +36,8 @@ app.constant('CONSTANTS', {
         'MANNER-MEANS',
         // 15
         'SAME-UNIT',
+        // 16
+        'TITLE',
         // Special relations
         'FIXME',
     ],
