@@ -37,9 +37,9 @@ app.constant('CONSTANTS', {
         // 15
         'SAME-UNIT',
         // 16
-        'TITLE',
+        'TEXTUAL-ORGANIZATION',
         // Special relations
-        'FIXME',
+        // 'FIXME',
     ],
     // リンクの通常色
     // NORMAL_LINK_COLOR: '#4A89F3',
