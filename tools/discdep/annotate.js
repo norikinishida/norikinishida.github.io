@@ -6,37 +6,22 @@ var app = angular.module('MyApp', ['ngFileUpload', 'ngToast']);
 app.constant('CONSTANTS', {
     // 談話関係クラス
     relations: [
-        // 1
         'ROOT',
-        // 2
         'ATTRIBUTION',
-        // 3
         'BACKGROUND',
-        // 4
         'CAUSE-RESULT-REASON',
-        // 5
         'COMPARISON',
-        // 6
+        'CONCLUSION',
         'CONDITION',
-        // 7
         'CONTRAST',
-        // 8
         'DEFINITION',
-        // 9
         'ELABORATION',
-        // 10
         'ENABLEMENT',
-        // 11
         'EVALUATION',
-        // 12
         'EXEMPLIFICATION',
-        // 13
         'JOINT',
-        // 14
         'MANNER-MEANS',
-        // 15
         'SAME-UNIT',
-        // 16
         'TEXTUAL-ORGANIZATION',
         // Special relations
         // 'FIXME',
