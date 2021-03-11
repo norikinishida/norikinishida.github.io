@@ -404,7 +404,7 @@ app.controller('EDUListController',
                 }
             }
         }
-        var arrayIndex = Math.floor(Math.random() * 1049);
+        var arrayIndex = Math.floor(Math.random() * 100);
         var sampleFile = CONSTANTS.SAMPLE_FILES[arrayIndex];
         console.log(sampleFile)
         xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/" + sampleFile);
