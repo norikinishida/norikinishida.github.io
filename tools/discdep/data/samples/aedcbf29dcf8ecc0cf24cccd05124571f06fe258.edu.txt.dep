@@ -1,0 +1,112 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "The entry of two dengue virus ( DENV ) serotypes into Vero cells was analysed",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "using biochemical inhibitors , dominant negative mutants of cellular proteins",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "involved in endocytic pathways ,",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 4,
+            "parent": 2,
+            "text": "fluorescence microscopy and infectivity determinations . <S>",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 5,
+            "parent": 6,
+            "text": "By treatment with dansylcadaverine and chlorpromazine and overexpression of a dominant negative form of the Eps15 protein ,",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 6,
+            "parent": 1,
+            "text": "a clathrin - mediated endocytosis for productive DENV-1 internalization into Vero cells was demonstrated",
+            "relation": "EVALUATION-CONCLUSION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "whereas the infectious entry of DENV-2 in the same cell system was independent of clathrin . <S>",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 8,
+            "parent": 6,
+            "text": "Treatment with the inhibitors nystatin and methyl - b - cyclodextrin , as well as transfection of Vero cells with dominant negative caveolin-1 , had no effect on DENV-2 virus infection . <S>",
+            "relation": "JOINT"
+        },
+        {
+            "id": 9,
+            "parent": 6,
+            "text": "It was also shown ,",
+            "relation": "JOINT"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "by using the K44A mutant and the inhibitor dynasore ,",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 11,
+            "parent": 9,
+            "text": "that dynamin was required for DENV-2 entry . <S>",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 12,
+            "parent": 6,
+            "text": "Consequently , the infectious entry of DENV-2 into Vero cells occurs by a non - classical endocytic pathway",
+            "relation": "JOINT"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "independent of clathrin , caveolae and lipid rafts ,",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "but dependent on dynamin . <S>",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 15,
+            "parent": 12,
+            "text": "By contrast , DENV-2 entry into A549 cells was clathrin - dependent ,",
+            "relation": "CONTRAST"
+        },
+        {
+            "id": 16,
+            "parent": 15,
+            "text": "as previously reported in HeLa , C6/36 and BS - C-1 cells . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 17,
+            "parent": 1,
+            "text": "Our results conclusively show , for the first time , a differential mode of infective entry for DENV-1 and DENV-2 into a common host cell , Vero cells , as well as alternative entry pathways for a given serotype , DENV-2 , into different types of cells . <S> <P>",
+            "relation": "EVALUATION-CONCLUSION"
+        }
+    ]
+}
