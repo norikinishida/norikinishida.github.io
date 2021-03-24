@@ -23,6 +23,7 @@ app.constant('CONSTANTS', {
         'SAME-UNIT',
         'TEXTUAL-ORGANIZATION',
         // Special relations
+        'SEGMENTATION-ERROR',
         // 'FIXME',
     ],
     // リンクの通常色
