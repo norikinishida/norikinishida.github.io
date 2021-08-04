@@ -41,27 +41,27 @@
             <!-- メニューバー2行目 -->
             <div class="row">
                 <!-- ノード解除 -->
-                <input type="button" class="btn btn-info" value="選択解除" style="background-color: #1CA45C; border-color: #1CA45C"
+                <input type="button" class="btn btn-info" value="選択解除" style="background-color: #20854E; border-color: #20854E"
                     ng-click="clearNode()" ng-show="!!inputFile" ng-disabled="first === -1">
 
                 <!-- リンク削除 -->
-                <input type="button" class="btn btn-info" value="リンク削除" style="background-color: #1CA45C; border-color: #1CA45C"
+                <input type="button" class="btn btn-info" value="リンク削除" style="background-color: #20854E; border-color: #20854E"
                     ng-click="deleteLink()" ng-show="!!inputFile" ng-disabled="first === -1">
 
                 <!-- undo -->
-                <input type="button" class="btn btn-info" value="undo" style="background-color: #1CA45C; border-color: #1CA45C"
+                <input type="button" class="btn btn-info" value="undo" style="background-color: #20854E; border-color: #20854E"
                     ng-click="undo()" ng-show="!!inputFile" ng-disabled="operations.length === 0">
 
                 <!-- 保存 -->
-                <input type="button" class="btn btn-info" value="保存" style="background-color: #1CA45C; border-color: #1CA45C"
+                <input type="button" class="btn btn-info" value="保存" style="background-color: #20854E; border-color: #20854E"
                     ng-click="saveToFile()" ng-show="!!inputFile" ng-disabled="progress !== 100">
 
                 <!-- 例 -->
-                <input type="button" class="btn btn-info" value="ランダムサンプル" style="background-color: #1CA45C; border-color: #1CA45C"
+                <input type="button" class="btn btn-info" value="ランダムサンプル" style="background-color: #20854E; border-color: #20854E"
                     ng-click="showRandomSample()">
 
                 <!-- ガイドライン (pdf) -->
-                <h5><a href="./COVID19_DT_annotation_guideline.pdf" target="_blank" style="color: #1CA45C">ガイドライン</a></h5>
+                <h5><a href="./COVID19_DT_annotation_guideline.pdf" target="_blank" style="color: #20854E">ガイドライン</a></h5>
             </div>
         </div>
 
@@ -70,7 +70,7 @@
               <div class="progress">
                 <div class="progress-bar" role="progressbar"
                      aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                     ng-style="{'width': progress + '%', 'background-color': '1CA45C'}">
+                     ng-style="{'width': progress + '%', 'background-color': '20854E'}">
                 </div>
               </div>
         </div>
@@ -80,11 +80,11 @@
         <div class="container edu-list" id="list">
             <div ng-repeat="displayText in edus track by $index">
                 <!-- 1EDU -->
-                <button id="edu{{$index}}" type="button" class="btn btn-default active" style="background-color: #36C5F0"
+                <button id="edu{{$index}}" type="button" class="btn btn-default active"
                     ng-click="highLight('edu' + ($index).toString())"
                     ng-mouseover="mouseOverHandler($index)"
                     ng-mouseleave="mouseOutHandler($index)"
-                    ng-style="{'background-color': (first === $index) ? '#FF9E0F' : ((mouseOverIndex >= 0 && heads[mouseOverIndex] >= 0 && ($index === mouseOverIndex || heads[mouseOverIndex] === $index)) ? blinkColor : 'white'), 'color': (first === $index) ? 'black' : 'black'}"
+                    ng-style="{'background-color': (first === $index) ? blinkLabelColor : ((mouseOverIndex >= 0 && heads[mouseOverIndex] >= 0 && ($index === mouseOverIndex || heads[mouseOverIndex] === $index)) ? blinkLabelColor : 'white'), 'color': (first === $index) ? 'black' : 'black'}"
                     ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
                     <h5>{{displayText | TailorString}}</h5>
                 </button>
@@ -94,11 +94,11 @@
         <!-- 談話関係ラベル選択ダイアログ (アノテーション) -->
         <div id="dialog-form" title="ラベルを下記から選択してください"
         ng-show="showAddDialog">
-          <form>
+            <form>
                  <select class="form-control" id="select" name="select" >
                      <option ng-repeat="relation in relations">{{relation}}</option>
                  </select>
-          </form>
+            </form>
         </div>
 
     </body>

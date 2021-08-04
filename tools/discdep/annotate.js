@@ -11,11 +11,11 @@ app.constant('CONSTANTS', {
         'ELABORATION',
         'EXEMPLIFICATION',
         'DEFINITION',
-        'JOINT',
         'CONTRAST',
         'COMPARISON',
         'CAUSE-RESULT-REASON',
         'CONDITION',
+        'JOINT',
         'BACKGROUND',
         'ENABLEMENT',
         'MANNER-MEANS',
@@ -25,11 +25,11 @@ app.constant('CONSTANTS', {
         'TEXTUAL-ORGANIZATION',
         // GENIA
         // "Root",
-        // "Expand-Subord",
-        // "Expand-Coord",
+        // "Elaboration",
         // "Contrast-Comparison",
         // "Cause-Reason-Result",
         // "Condition-Temporal",
+        // "Joint",
         // "Background",
         // "Enablement",
         // "Manner-Means",
@@ -41,16 +41,13 @@ app.constant('CONSTANTS', {
         'SEGMENTATION-ERROR',
         // 'FIXME',
     ],
-    // リンクの通常色
-    // NORMAL_LINK_COLOR: '#4A89F3',
-    NORMAL_LINK_COLOR: '#4486F4',
-    // 談話関係ラベルの色
-    // NORMAL_LABEL_COLOR: '#DD4B3E',
-    NORMAL_LABEL_COLOR: '#DA483B',
+    // Colors are set according to the palette of The New England Journal of Medicine
+    // 通常色
+    NORMAL_LINK_COLOR: '#0072B5', // Blue
+    NORMAL_LABEL_COLOR: '#BC3C29', // Red
     // ハイライト色
-    // BLINK_COLOR: '#FFE047',
-    BLINK_COLOR: '#FF9E0F',
-    // ?
+    BLINK_LINK_COLOR: '#E18727', // Yellow
+    BLINK_LABEL_COLOR: '#E18727', // Yellow
     //MAX_N: 150,
     MAX_N: 500,
     //  全体の横幅
@@ -222,7 +219,8 @@ app.controller('EDUListController',
 
     $scope.operations = []; // アクション履歴
 
-    $scope.blinkColor = CONSTANTS.BLINK_COLOR; // リンクのハイライト色
+    $scope.blinkLinkColor = CONSTANTS.BLINK_LINK_COLOR; // リンクのハイライト色
+    $scope.blinkLabelColor = CONSTANTS.BLINK_LABEL_COLOR;
     $scope.canvas_height = 700; // キャンバス縦幅 (デフォルト値)
     // "edus"の長さ(=edus.length)が変わったら、キャンバスの縦幅を更新
     $scope.$watch('edus.length', function() {
@@ -457,7 +455,7 @@ app.controller('EDUListController',
         // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
             if (i === pos && $scope.heads[i] >= 0) {
-                connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.BLINK_COLOR, CONSTANTS.BLINK_COLOR);
+                connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.BLINK_LINK_COLOR, CONSTANTS.BLINK_LABEL_COLOR);
             }
             else if ($scope.heads[i] >= 0) {
                 connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
@@ -551,6 +549,11 @@ app.controller('EDUListController',
             modal: true,
             buttons: {
                 OK: relationCallback
+            },
+            position: {
+                my: 'left top',
+                at: 'left+10% top+10%',
+                of: window
             }
         });
 
