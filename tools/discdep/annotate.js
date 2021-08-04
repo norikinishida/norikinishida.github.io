@@ -2,7 +2,6 @@
 
 var app = angular.module('MyApp', ['ngFileUpload', 'ngToast']);
 
-// 定数
 app.constant('CONSTANTS', {
     // 談話関係クラス
     relations: [
@@ -206,6 +205,10 @@ app.controller('EDUListController',
                     ['$scope', 'Upload', 'CONSTANTS', 'Utils', 'ngToast',
                     function($scope, Upload, CONSTANTS, Utils, ngToast) {
 
+    /************************************************/
+    // 変数など
+    /************************************************/
+
     $scope.first = -1; // 選択されたheadノード
     var second = -1; // 選択されたmodifierノード
     var rel = ''; // 選択された談話関係ラベル
@@ -229,6 +232,10 @@ app.controller('EDUListController',
     });
     $scope.canvas_width = CONSTANTS.CANVAS_WIDTH; // キャンバス横幅
 
+    /************************************************/
+    // IO
+    /************************************************/
+
     // ファイルアップロード
     $scope.handleFileSelect = function ($files) {
         // チェック
@@ -236,7 +243,7 @@ app.controller('EDUListController',
             return;
         }
 
-        // キャンバス等の取得
+        // クリア
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
@@ -275,7 +282,7 @@ app.controller('EDUListController',
         $scope.depRels = _.range($scope.edus.length).map(function() { return 'null'; });
         //
         $scope.$apply();
-        // 描画 (不要のはず)
+        // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
             if ($scope.heads[i] >= 0) {
                 // リンクの描画
@@ -308,10 +315,48 @@ app.controller('EDUListController',
         }
     };
 
+    /************************************************/
+    // 上部のボタンを押したときの処理 + プログレスバー
+    /************************************************/
+
     // ノード解除処理
     $scope.clearNode = function() {
         $scope.first = -1;
+        // 履歴
         $scope.operations.pop();
+        console.log("clearNode popped:");
+        console.log($scope.operations);
+    };
+
+    // ラベル変更処理
+    $scope.changeLabel = function () {
+        // チェック
+        if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
+            ngToast.danger({
+                content: 'エラー: ノードが選択されていません！',
+                timeout: 2000
+            });
+            return;
+        }
+        if ($scope.heads[$scope.first] < 0) {
+            ngToast.danger({
+                content: 'エラー: 選択されたノードには親ノードがありません！',
+                timeout: 2000
+            });
+            return;
+        }
+        // 関係の選択
+        var id1 = $scope.heads[$scope.first], id2 = $scope.first;
+        var op = {type: 'change', id1: id1, id2: id2, changed_relation: $scope.depRels[id2]};
+        $scope.first = id1;
+        second = id2;
+        popRelation("change");
+        // 描画
+        drawAll();
+        // 履歴
+        $scope.operations.push(op);
+        console.log("changeLabel pushed:");
+        console.log($scope.operations);
     };
 
     // リンク削除処理
@@ -333,33 +378,54 @@ app.controller('EDUListController',
         }
         // 削除処理
         var id1 = $scope.heads[$scope.first], id2 = $scope.first;
-        var op = {type: 'delete', id1: id1, id2: id2, relation: $scope.depRels[id2]};
+        var op = {type: 'delete', id1: id1, id2: id2, deleted_relation: $scope.depRels[id2]};
+        $scope.heads[id2] = -1;
+        $scope.depRels[id2] = 'null';
+        // 描画
+        drawAll();
         $scope.first = -1;
-        disconnect(id1, id2);
-        // 履歴に追加
+        // 履歴
         $scope.operations.push(op);
+        console.log("deleteLink: pushed");
+        console.log($scope.operations);
     };
 
     // UNDO処理
     $scope.undo = function() {
         // 最終アクション
         var op = _.last($scope.operations);
+        console.log("undo top:");
+        console.log(op);
         if (op.type === 'click') {
             // もし最終アクションがhead選択なら、head解除
             $scope.first = -1;
         }
         else if (op.type === 'connect') {
             // もし最終アクションがmodifier選択なら、headとmodifierの結合をなくす
-            disconnect(op.id1, op.id2);
+            $scope.heads[op.id2] = -1;
+            $scope.depRels[op.id2] = 'null';
+            // 描画
+            drawAll();
+        }
+        else if (op.type == "change") {
+            // もし最終アクションがラベルの変更なら、ラベルを戻す
+            var id1 = op.id1, id2 = op.id2, rel = op.changed_relation;;
+            $scope.heads[id2] = id1;
+            $scope.depRels[id2] = rel;
+            // 描画
+            drawAll();
         }
         else if (op.type === 'delete') {
             // もし最終アクションが結合の削除なら、結合を戻す
-            var id1 = op.id1, id2 = op.id2;
+            var id1 = op.id1, id2 = op.id2, rel = op.deleted_relation;
             $scope.heads[id2] = id1;
-            $scope.depRels[id2] = op.relation;
-            connect(id1, id2, $scope.depRels[id2], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
+            $scope.depRels[id2] = rel;
+            // 描画
+            drawAll();
         }
         $scope.operations.pop();
+        console.log("undo popped:");
+        console.log($scope.operations);
     };
 
     // 保存
@@ -384,7 +450,7 @@ app.controller('EDUListController',
 
     // 例示
     $scope.showRandomSample = function () {
-        // キャンバス等の取得
+        // クリア
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
@@ -436,6 +502,10 @@ app.controller('EDUListController',
         $scope.progress = labeled * 100 / total;
     });
 
+    /************************************************/
+    // マウスがEDUと重なった時・外れたときの処理
+    /************************************************/
+
     // マウスカーソルが乗っかったときの処理
     $scope.mouseOverIndex = -1;
     $scope.mouseOverHandler = function(pos) {
@@ -447,12 +517,10 @@ app.controller('EDUListController',
         // マウスが乗っかったEDUのindex
         $scope.mouseOverIndex = pos;
 
-        // キャンバス等の取得
+        // 描画 (強調つき)
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
-
-        // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
             if (i === pos && $scope.heads[i] >= 0) {
                 connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.BLINK_LINK_COLOR, CONSTANTS.BLINK_LABEL_COLOR);
@@ -473,18 +541,13 @@ app.controller('EDUListController',
         // マウスが乗っかったEDUのindexの初期化
         $scope.mouseOverIndex = -1;
 
-        // canvas等の取得
-        var canvas = angular.element('#canvas')[0];
-        var ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
-
-        // 描画
-        _.each($scope.heads, function(v, i) {
-            if (v >= 0) {
-                connect(v, i, $scope.depRels[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
-            }
-        });
+        // 描画 (強調なし)
+        drawAll();
     };
+
+    /************************************************/
+    // EDUをクリックしたときの処理
+    /************************************************/
 
     // リンク追加処理 (EDUのクリック)
     $scope.highLight = function(id) {
@@ -500,6 +563,8 @@ app.controller('EDUListController',
             // 履歴追加
             var op = {type: 'click', index: index};
             $scope.operations.push(op);
+            console.log("highLight pushed:");
+            console.log($scope.operations);
         }
         else {
             // modifierセット
@@ -511,25 +576,25 @@ app.controller('EDUListController',
 
     // 談話関係ラベル選択
     $scope.showAddDialog = false;
-    var popRelation = function() {
+    var popRelation = function(mode) {
         var dialog;
 
         function relationCallback() {
+            // 依存関係のセット
             rel = angular.element('#select')[0].options[select.selectedIndex].text;
             $scope.heads[second] = $scope.first;
+            $scope.depRels[second] = rel;
 
             // 描画
-            var id1 = 'edu' + $scope.first.toString();
-            var id2 = 'edu' + second.toString();
-            drawCurve(id1, id2, CONSTANTS.NORMAL_LINK_COLOR);
-            addRelation(id2, rel, CONSTANTS.NORMAL_LABEL_COLOR);
+            drawAll();
 
             // 履歴追加
-            var op = {type: 'connect', id1: $scope.first.toString(), id2: second.toString()};
-            $scope.operations.push(op);
-
-            // 談話関係ラベルセット
-            $scope.depRels[second] = rel;
+            if (mode != "change") {
+                var op = {type: 'connect', id1: $scope.first.toString(), id2: second.toString()};
+                $scope.operations.push(op);
+                console.log("popRelation pushed:");
+                console.log($scope.operations);
+            }
 
             // 状態の初期化
             $scope.first = -1; second = -1;
@@ -571,6 +636,28 @@ app.controller('EDUListController',
             return idx;
         }
         return $scope.getHead($scope.heads[idx]);
+    };
+
+    /************************************************/
+    // 描画処理
+    /************************************************/
+
+    // クリアして描画
+    var drawAll = function() {
+        var canvas = angular.element('#canvas')[0];
+        var ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
+        for (var i = 0; i < $scope.heads.length; ++i) {
+            if ($scope.heads[i] >= 0) {
+                connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
+            }
+        }
+
+    };
+
+    var connect = function(id1, id2, rel, link_color, label_color, fontSize) {
+        drawCurve('edu' + id1, 'edu' + id2, link_color);
+        addRelation('edu' + id2, rel, label_color, fontSize);
     };
 
     // リンクの描画
@@ -638,32 +725,11 @@ app.controller('EDUListController',
         ctx.fill();
     };
 
-    var connect = function(id1, id2, rel, link_color, label_color, fontSize) {
-        drawCurve('edu' + id1, 'edu' + id2, link_color);
-        addRelation('edu' + id2, rel, label_color, fontSize);
-    };
-
-    var disconnect = function(id1, id2) {
-        // 該当要素の削除
-        $scope.heads[id2] = -1;
-        $scope.depRels[id2] = 'null';
-
-        // キャンバス等の取得
-        var canvas = angular.element('#canvas')[0];
-        var ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
-
-        // 描画
-        for (var i = 0; i < $scope.heads.length; ++i) {
-            if ($scope.heads[i] >= 0) {
-                connect($scope.heads[i], i, $scope.depRels[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
-            }
-        }
-    };
-
     // 談話関係ラベルの描画
     var addRelation = function(id2, relation, color, fontSize) {
         if (!relation) {
+            console.log("addRelation:")
+            console.log(relation);
             ngToast.danger({
                 content: 'Invalid relation',
                 timeout: 2000

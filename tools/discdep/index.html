@@ -40,9 +40,13 @@
 
             <!-- メニューバー2行目 -->
             <div class="row">
-                <!-- ノード解除 -->
+                <!-- 選択解除 -->
                 <input type="button" class="btn btn-info" value="選択解除" style="background-color: #20854E; border-color: #20854E"
                     ng-click="clearNode()" ng-show="!!inputFile" ng-disabled="first === -1">
+
+                <!-- ラベル変更 -->
+                <input type="button" class="btn btn-info" value="ラベル変更" style="background-color: #20854E; border-color: #20854E"
+                    ng-click="changeLabel()" ng-show="!!inputFile" ng-disabled="first === -1">
 
                 <!-- リンク削除 -->
                 <input type="button" class="btn btn-info" value="リンク削除" style="background-color: #20854E; border-color: #20854E"
