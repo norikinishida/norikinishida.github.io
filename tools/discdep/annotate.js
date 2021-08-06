@@ -41,12 +41,13 @@ app.constant('CONSTANTS', {
         // 'FIXME',
     ],
     // Colors are set according to the palette of The New England Journal of Medicine
-    // 通常色
-    NORMAL_LINK_COLOR: '#0072B5', // Blue
-    NORMAL_LABEL_COLOR: '#BC3C29', // Red
-    // ハイライト色
-    BLINK_LINK_COLOR: '#E18727', // Yellow
-    BLINK_LABEL_COLOR: '#E18727', // Yellow
+    // 色
+    NORMAL_LINK_COLOR: '#0072B5',
+    NORMAL_LABEL_COLOR: '#BC3C29',
+    BLINK_LINK_COLOR: '#E18727',
+    BLINK_LABEL_COLOR: '#E18727',
+    BUTTON_COLOR: '#20854E',
+    BAR_COLOR: '#20854E',
     //MAX_N: 150,
     MAX_N: 500,
     //  全体の横幅
