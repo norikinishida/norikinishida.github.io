@@ -449,6 +449,28 @@ app.controller('EDUListController',
         saveAs(blob, outFileName);
     };
 
+    // 保存
+    $scope.saveToFileMobile = function() {
+        // 辞書データの初期化
+        var data = {root: []};
+        // 辞書データ作成
+        for (var i = 0; i < $scope.heads.length; ++i) {
+            var cur = {id: i,
+                       parent: $scope.heads[i],
+                       text: $scope.edus[i],
+                       relation: $scope.depRels[i]};
+            data.root.push(cur);
+        }
+        // 出力ファイル名
+        var outFileName = $scope.inputFile.endsWith('.dep') ? $scope.inputFile : $scope.inputFile + '.dep';
+        // 出力ファイルオブジェクトの作成
+        var blob = new Blob([JSON.stringify(data, null, '\t')], {type: "text/plain;charset=utf-8"});
+        // 書き出し
+        // saveAs(blob, outFileName);
+        $scope.outFileName = outFileName;
+        document.getElementById("download").href = window.URL.createObjectURL(blob);
+    };
+
     // 例示
     $scope.showRandomSample = function () {
         // クリア
