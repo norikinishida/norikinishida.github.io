@@ -71,12 +71,13 @@
 
         <!-- プログレスバー -->
         <div class="container progress-bar-container" ng-if="!!inputFile">
-              <div class="progress">
+            <div class="progress">
                 <div class="progress-bar" role="progressbar"
-                     aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                     ng-style="{'width': progress + '%', 'background-color': '#20854E'}">
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                    ng-style="{'width': progress + '%', 'background-color': '#20854E'}">
+                <span>{{progressDetail}}</span>
                 </div>
-              </div>
+            </div>
         </div>
         <br>
 
@@ -88,7 +89,7 @@
                     ng-click="highLight('edu' + ($index).toString())"
                     ng-mouseover="mouseOverHandler($index)"
                     ng-mouseleave="mouseOutHandler($index)"
-                    ng-style="{'background-color': (first === $index) ? blinkLabelColor : ((mouseOverIndex >= 0 && heads[mouseOverIndex] >= 0 && ($index === mouseOverIndex || heads[mouseOverIndex] === $index)) ? blinkLabelColor : '#EEEEEE'), 'color': (first === $index) ? 'black' : 'black'}"
+                    ng-style="{'background-color': (first === $index) ? blinkLinkColor : ((mouseOverIndex >= 0 && heads[mouseOverIndex] >= 0 && ($index === mouseOverIndex || heads[mouseOverIndex] === $index)) ? blinkLinkColor : '#EEEEEE'), 'color': (first === $index) ? 'black' : 'black'}"
                     ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
                     <h5>{{displayText | TailorString}}</h5>
                 </button>

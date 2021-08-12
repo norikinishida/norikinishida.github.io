@@ -496,11 +496,13 @@ app.controller('EDUListController',
 
     // プログレスバー
     $scope.progress = 0;
+    $scope.progressDetail = "0";
     $scope.$watchCollection('heads', function() {
         var total = _.size($scope.heads) - 1;
         if (total <= 0) return;
         var labeled = (_.filter($scope.heads.slice(1), function(e) { return e >= 0; })).length;
         $scope.progress = labeled * 100 / total;
+        $scope.progressDetail = String(labeled) + "/" + String(total);
     });
 
     /************************************************/

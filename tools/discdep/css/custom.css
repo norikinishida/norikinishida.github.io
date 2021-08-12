@@ -1,12 +1,13 @@
 .menu-bar, .progress-bar-container, .edu-list {
     position: absolute;
-    left: 180px;
 }
 .menu-bar {
     top: 30px;
+    left: 180px;
 }
 .progress-bar-container {
     top: 130px;
+    left: 170px;
 }
 .edu-list {
     top: 160px;
@@ -14,4 +15,6 @@
 }
 h5 {
     display: inline-block;
+    text-align: left;
+    white-space: normal;
 }
