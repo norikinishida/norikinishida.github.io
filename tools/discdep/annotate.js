@@ -429,6 +429,26 @@ app.controller('EDUListController',
         console.log($scope.operations);
     };
 
+    // クリップボードにコピー
+    $scope.copyToClipboard = function() {
+        var text = $scope.edus[$scope.first];
+        var textBox = document.createElement("textarea");
+        textBox.setAttribute("id", "target");
+        textBox.setAttribute("type", "hidden");
+        textBox.textContent = text;
+        document.body.appendChild(textBox);
+        textBox.select();
+        document.execCommand("copy");
+        document.body.removeChild(textBox);
+        console.log("Copied " + text);
+
+        $scope.first = -1;
+        // 履歴
+        $scope.operations.pop();
+        console.log("clearNode popped:");
+        console.log($scope.operations);
+    };
+
     // 保存
     $scope.saveToFile = function() {
         // 辞書データの初期化

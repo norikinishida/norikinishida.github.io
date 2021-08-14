@@ -11,7 +11,6 @@
         <script src="./bower_components/ng-file-upload/ng-file-upload.min.js"></script>
         <script src="./bower_components/angular-sanitize/angular-sanitize.min.js"></script>
         <script src="./bower_components/ngToast/dist/ngToast.min.js"></script>
-        <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
 
         <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="./bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
@@ -57,6 +56,10 @@
                 <input type="button" class="btn btn-info" value="undo" style="background-color: #20854E; border-color: #20854E"
                     ng-click="undo()" ng-show="!!inputFile" ng-disabled="operations.length === 0">
 
+                <!-- コピー -->
+                <input type="button" class="btn btn-info" value="クリップボードにコピー" style="background-color: #20854E; border-color: #20854E"
+                    ng-click="copyToClipboard()" ng-show="!!inputFile" ng-disabled="first === -1">
+
                 <!-- 保存 -->
                 <input type="button" class="btn btn-info" value="保存" style="background-color: #20854E; border-color: #20854E"
                     ng-click="saveToFile()" ng-show="!!inputFile" ng-disabled="progress !== 100">
@@ -91,8 +94,7 @@
                     ng-mouseover="mouseOverHandler($index)"
                     ng-mouseleave="mouseOutHandler($index)"
                     ng-style="{'background-color': (first === $index) ? blinkLinkColor : ((mouseOverIndex >= 0 && heads[mouseOverIndex] >= 0 && ($index === mouseOverIndex || heads[mouseOverIndex] === $index)) ? blinkLinkColor : '#EEEEEE'), 'color': (first === $index) ? 'black' : 'black'}"
-                    ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)"
-                    data-clipboard-text="{{displayText | TailorString}}">
+                    ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
                     <h5>{{displayText | TailorString}}</h5>
                 </button>
             </div>
@@ -107,9 +109,6 @@
                  </select>
             </form>
         </div>
-
-        <!-- コピペ -->
-        <script src="./clipboard.js"></script>
 
     </body>
 </html>
