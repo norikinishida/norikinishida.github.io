@@ -15,27 +15,29 @@ app.constant('CONSTANTS', {
         'CAUSE-RESULT-REASON',
         'CONDITION',
         'JOINT',
-        'BACKGROUND',
         'ENABLEMENT',
         'MANNER-MEANS',
-        'EVALUATION-CONCLUSION',
         'ATTRIBUTION',
-        'SAME-UNIT',
+        'BACKGROUND',
+        'EVALUATION-CONCLUSION',
         'TEXTUAL-ORGANIZATION',
+        'SAME-UNIT',
         // GENIA
         // "Root",
         // "Elaboration",
         // "Contrast-Comparison",
-        // "Cause-Reason-Result",
-        // "Condition-Temporal",
+        // "Cause-Result",
+        // "Condition",
+        // "Temporal",
         // "Joint",
-        // "Background",
         // "Enablement",
         // "Manner-Means",
-        // "Evaluation-Conclusion",
         // "Attribution",
-        // "Same-Unit",
+        // "Background",
+        // "Evaluation",
+        // "Conclusion",
         // "Textual-Organization",
+        // "Same-Unit",
         // Special relations
         'SEGMENTATION-ERROR',
         // 'FIXME',
@@ -46,6 +48,8 @@ app.constant('CONSTANTS', {
     NORMAL_LABEL_COLOR: '#BC3C29',
     BLINK_LINK_COLOR: '#E18727',
     BLINK_LABEL_COLOR: '#E18727',
+    BLINK_NODE_COLOR1: '#E18727',
+    BLINK_NODE_COLOR2: '#FFDC91',
     BUTTON_COLOR: '#20854E',
     BAR_COLOR: '#20854E',
     //MAX_N: 150,
@@ -223,8 +227,8 @@ app.controller('EDUListController',
 
     $scope.operations = []; // アクション履歴
 
-    $scope.blinkLinkColor = CONSTANTS.BLINK_LINK_COLOR; // リンクのハイライト色
-    $scope.blinkLabelColor = CONSTANTS.BLINK_LABEL_COLOR;
+    $scope.blinkNodeColor1 = CONSTANTS.BLINK_NODE_COLOR1;
+    $scope.blinkNodeColor2 = CONSTANTS.BLINK_NODE_COLOR2;
     $scope.canvas_height = 700; // キャンバス縦幅 (デフォルト値)
     // "edus"の長さ(=edus.length)が変わったら、キャンバスの縦幅を更新
     $scope.$watch('edus.length', function() {

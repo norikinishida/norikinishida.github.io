@@ -93,7 +93,14 @@
                     ng-click="highLight('edu' + ($index).toString())"
                     ng-mouseover="mouseOverHandler($index)"
                     ng-mouseleave="mouseOutHandler($index)"
-                    ng-style="{'background-color': (first === $index) ? blinkLinkColor : ((mouseOverIndex >= 0 && heads[mouseOverIndex] >= 0 && ($index === mouseOverIndex || heads[mouseOverIndex] === $index)) ? blinkLinkColor : '#EEEEEE'), 'color': (first === $index) ? 'black' : 'black'}"
+                    ng-style="{'background-color': (first === $index) ?
+                                        blinkNodeColor1 :
+                                        ((mouseOverIndex >= 0 && $index === mouseOverIndex) ?
+                                            blinkNodeColor1 :
+                                            ((mouseOverIndex >= 0 && (heads[mouseOverIndex] == $index || heads[$index] == mouseOverIndex)) ?
+                                                blinkNodeColor2 :
+                                                '#EEEEEE')),
+                                'color': (first === $index) ? 'black' : 'black'}"
                     ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
                     <h5>{{displayText | TailorString}}</h5>
                 </button>
