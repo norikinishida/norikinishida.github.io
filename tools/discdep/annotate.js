@@ -8,7 +8,7 @@ app.constant('CONSTANTS', {
         "ROOT",
         // Basic
         "ELABORATION",
-        "CONTRAST-COMPARISON",
+        "CONTRAST",
         "CAUSE-RESULT",
         "CONDITION",
         "TEMPORAL",
