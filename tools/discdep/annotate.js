@@ -5,42 +5,26 @@ var app = angular.module('MyApp', ['ngFileUpload', 'ngToast']);
 app.constant('CONSTANTS', {
     // 談話関係クラス
     relations: [
-        // COVID19-DT
-        'ROOT',
-        'ELABORATION',
-        'EXEMPLIFICATION',
-        'DEFINITION',
-        'CONTRAST',
-        'COMPARISON',
-        'CAUSE-RESULT-REASON',
-        'CONDITION',
-        'JOINT',
-        'ENABLEMENT',
-        'MANNER-MEANS',
-        'ATTRIBUTION',
-        'BACKGROUND',
-        'EVALUATION-CONCLUSION',
-        'TEXTUAL-ORGANIZATION',
-        'SAME-UNIT',
-        // GENIA
-        // "Root",
-        // "Elaboration",
-        // "Contrast-Comparison",
-        // "Cause-Result",
-        // "Condition",
-        // "Temporal",
-        // "Joint",
-        // "Enablement",
-        // "Manner-Means",
-        // "Attribution",
-        // "Background",
-        // "Evaluation",
-        // "Conclusion",
-        // "Textual-Organization",
-        // "Same-Unit",
-        // Special relations
-        'SEGMENTATION-ERROR',
-        // 'FIXME',
+        "ROOT",
+        // Basic
+        "ELABORATION",
+        "CONTRAST-COMPARISON",
+        "CAUSE-RESULT",
+        "CONDITION",
+        "TEMPORAL",
+        "JOINT",
+        "ENABLEMENT",
+        "MANNER-MEANS",
+        "ATTRIBUTION",
+        // Meta
+        "BACKGROUND",
+        "EVALUATION",
+        "CONCLUSION",
+        // Functional
+        "TEXTUAL-ORGANIZATION",
+        "SAME-UNIT",
+        // Special
+        "SEGMENTATION-ERROR",
     ],
     // Colors are set according to the palette of The New England Journal of Medicine
     // 色
