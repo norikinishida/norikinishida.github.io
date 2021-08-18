@@ -56,108 +56,6 @@ app.constant('CONSTANTS', {
     MAX_N: 500,
     //  全体の横幅
     CANVAS_WIDTH: 1500, // canvas_height will be automatically set.
-    SAMPLE_FILES: [
-        '00c862a6402381a8541bcffe843696e059095300.edu.txt.dep',
-        '0146a0b36f80ebcb868c7e16fb60c1a9d2afbf83.edu.txt.dep',
-        '0b362bc7e9278b56c2740ab7bc10e91c036f835a.edu.txt.dep',
-        '0b7581ab8ae5da78a11692b4c7d9399ec6dea283.edu.txt.dep',
-        '0c44f901baca3850ff6e79e5f26ee898faa9b68d.edu.txt.dep',
-        '1399e34d62b515e482ccde6c4cae500b19546909.edu.txt.dep',
-        '13e4291652008b528006f89f67d55955c2aac729.edu.txt.dep',
-        '1723e7c27aadbc83619fd69629fcc089e700418b.edu.txt.dep',
-        '17c5d5036721bc5935b23a9e23f69fde366ecc20.edu.txt.dep',
-        '1ca87acde2d673e129b4360d84dce19f2555438b.edu.txt.dep',
-        '1d5a95f805753e4ae9c605845a395adf47cabce8.edu.txt.dep',
-        '1dc818a92b31dc871d7020ec659faaeb38e519c6.edu.txt.dep',
-        '2074781d7ca96edc1ef37f4cc7196856653a14e0.edu.txt.dep',
-        '20ec367d459abe3e88b7db18a359f087c37bd90e.edu.txt.dep',
-        '2134f97f11e3c3aee6903f4971a2d1195f9620b0.edu.txt.dep',
-        '21a551af356295ada6e657054646444bca9d202b.edu.txt.dep',
-        '21a572a6c0f75baa745480e28b596d73d4492cc8.edu.txt.dep',
-        '23d06bd7a12e6e729f5b2b06bbe825eb9a91270e.edu.txt.dep',
-        '25aad84c22269cf7221d0c22737e2e01a36ec51b.edu.txt.dep',
-        '2bc85cf8715cbd57eb454b5a0d8966c787aca1e5.edu.txt.dep',
-        '2c798963aaa2245c095624af78d5638bebf60c2f.edu.txt.dep',
-        '2cd74646ef69d8ea8f04a046a88eb22dc7187dab.edu.txt.dep',
-        '2cfc9d870895fa21b90e90ab86d1343b0da35457.edu.txt.dep',
-        '2ebd4ba5ce0c32a5c7ef6396e35262bd667f1dcc.edu.txt.dep',
-        '2f6efc4edc0c9fffd3acc810efd8616e7772b28a.edu.txt.dep',
-        '2f8012db8f2100bb1876e19722d6c131849e2315.edu.txt.dep',
-        '31fae2807695521804442fedcd3f7b9f17d0f9ea.edu.txt.dep',
-        '338d45deb88de8cc7f4cf5158c4752fb3533a0b7.edu.txt.dep',
-        '34694791cd158e785ad16404d5d34ad8559792c0.edu.txt.dep',
-        '352657225f9b69e4693a466de17c2a4d55ccc1d3.edu.txt.dep',
-        '36f9ee4d21bf47a3f9f504f7fca3a1db625899d2.edu.txt.dep',
-        '3b2db322b3470bdbc2145b4b348b1dc2c8e054ec.edu.txt.dep',
-        '3d026627a1f1f6af6f6fbb07bbcb84d917c7c946.edu.txt.dep',
-        '3e8d0363f49f83917e0ddddf7b4322186da47dbc.edu.txt.dep',
-        '3f8d61cff42f5714412479237e85de075e817fae.edu.txt.dep',
-        '414d4a7cbe08a1904b9b3c2716562f40983f1087.edu.txt.dep',
-        '422787d1a8391db8a23e809e861e477df0753c99.edu.txt.dep',
-        '43568a4ba8221af0f87a1c7d1ddbd2a48eb27e79.edu.txt.dep',
-        '4467298e39f2e2c43a48135ce26a887ea78b5706.edu.txt.dep',
-        '492a1c000e859332a6e5d333aef1d74c4147b4e1.edu.txt.dep',
-        '4c76e1e9a4f5afc01accd2dbbd43f0463744e8d2.edu.txt.dep',
-        '4cace95b9b4e1f4af324d1fa278274c53c2b00af.edu.txt.dep',
-        '5405330f85660bb35ec960a144e904c54c4c67a7.edu.txt.dep',
-        '5c2bd95f80ed7229802a7fd01731a2586702f8b3.edu.txt.dep',
-        '6197b0f53a6a883f99c2602a89309b8b2f27da92.edu.txt.dep',
-        '628c524b306aaaa50ae9b6a7017423445fd97c44.edu.txt.dep',
-        '6b72cc2cfb96b6ed68bbf031175f2ff18ac80d2c.edu.txt.dep',
-        '6e704c9d3e78ca76678b668e56990e6a02c0e966.edu.txt.dep',
-        '74c27dd895ee9f14d0b9584b8a3551a0600f05e2.edu.txt.dep',
-        '762f9b6467251b8e21ad0a838c12a2c6c5ab9a10.edu.txt.dep',
-        '79fa8fdc827ebf13a568461671621f811d9af7f5.edu.txt.dep',
-        '80bd28c8ba829f2173211a2fad8f98657676e0a6.edu.txt.dep',
-        '8d0569b9fe93d0997ca38060117ffc6381122957.edu.txt.dep',
-        '90662d7dc7b09e018829ae2bc13e167b218931d8.edu.txt.dep',
-        '909b7a89053c834c12a9d4348e977e66c6116d42.edu.txt.dep',
-        '97adff711db916914190dd5fde9ec4923a13f46d.edu.txt.dep',
-        '998006100007fee546077ce3c05ded0d35d08ff8.edu.txt.dep',
-        '9f75a36d8f57e382a717ee506b636cbdb355802a.edu.txt.dep',
-        'a64f73ac0e74f9eca66d9c4876006757c8399e49.edu.txt.dep',
-        'a6f51bc35967b5ec3948012d00a543a9f51b450f.edu.txt.dep',
-        'a7ba852208db4acf89b85705dd9a04d667da521c.edu.txt.dep',
-        'a924e53c9e50e932f6d0b3938b5bdf284e1736a7.edu.txt.dep',
-        'a987e584291a44e8bbab14f9909629b8bba57853.edu.txt.dep',
-        'ab47b7fee600cd540e17d363002a05a3bdfdd306.edu.txt.dep',
-        'ac51af9995edb441f0ce4fdc384908daa6e83675.edu.txt.dep',
-        'ad147a4279222c5e480a5636fb879540eded760e.edu.txt.dep',
-        'aedcbf29dcf8ecc0cf24cccd05124571f06fe258.edu.txt.dep',
-        'b25406fedda8c98e076135cef12df228ca6fd4f1.edu.txt.dep',
-        'b61d4d87ea3b4fa2ff058ee867bdac4f15c0cf11.edu.txt.dep',
-        'ba3522d00ecebd159c5b5dc90119df8642993c49.edu.txt.dep',
-        'ba755009e5f7330a8344f1b2dd8e65d54b8488e8.edu.txt.dep',
-        'bcbee2c092b43738b2504034db8246acb059d4c5.edu.txt.dep',
-        'be7c8e5eb861bc4ef5334a348c6741638ffef108.edu.txt.dep',
-        'c0e6a4d852babb843d63198cc1e16146efc108b1.edu.txt.dep',
-        'c280d46d6fa7e2c2938a5c09bd6b092e1058a9b0.edu.txt.dep',
-        'c4aa9bb066a64db00b8bdd44d5c021c5603a09a2.edu.txt.dep',
-        'c526fbee33eed355a7c7437950603c4835418b0e.edu.txt.dep',
-        'c90121a3f539b59d4b528f3a1dd172b75533c0cc.edu.txt.dep',
-        'ca2a4dbdc3d133ac018b4427e143e1a5ca45d1eb.edu.txt.dep',
-        'cb6074cfc9898c507ee6f98f9888fb652b409069.edu.txt.dep',
-        'ceda3aacfcc249a8bdff8eb316c13638860e560b.edu.txt.dep',
-        'd125abb6f1e1cb460e9dd29bf71df2895151761d.edu.txt.dep',
-        'd1bc51c207da125a38e3ab23f94966c37bf6bf8f.edu.txt.dep',
-        'd1ce2321a8a67ec9c9823cb9c15543fce565ed85.edu.txt.dep',
-        'd2bf31d4a63b71e7b5bb16f4375134d4ef881d25.edu.txt.dep',
-        'd7e5ba009aed400fac0a223f7fe364b16ac84ae6.edu.txt.dep',
-        'd87f44c7d76e4c51ed8e72103669c275e2db3e71.edu.txt.dep',
-        'db9cea6a24f86d7bc1250050693fd459e3de6e2b.edu.txt.dep',
-        'e296fa71274bad6cabcf683a2ba47e58b1326877.edu.txt.dep',
-        'e29e17f37924d1d14edf56276a5dcca87851e62f.edu.txt.dep',
-        'e6aaada1af8e6361fefb6307231035a4da1c6141.edu.txt.dep',
-        'e767d7dc7a215fc7e1eed093425089a179eba77a.edu.txt.dep',
-        'e8c619b901c3fd4c2e830df5c471e7b7d204be6b.edu.txt.dep',
-        'eb68173ed9ade0c27573673e9a45ef1be8191edc.edu.txt.dep',
-        'ed43a39e585d77f1fecd662508f8042ed4ad3396.edu.txt.dep',
-        'ee370aa6a34ccb5c96e1a213dbed64a2fe4af89f.edu.txt.dep',
-        'eeb7b153d2cd9b4aa3ce620bb2f1e538596a9309.edu.txt.dep',
-        'f7185938312bfa794681998fe0bff4e2697c053d.edu.txt.dep',
-        'f729e0e5f3472840a5f1be47d12b29c83d1c4879.edu.txt.dep',
-        'faffbac0e2a22d215556feec30516c1a6ccdb283.edu.txt.dep',
-    ],
 });
 
 // 引数が0未満なら"null"を返す
@@ -236,6 +134,19 @@ app.controller('EDUListController',
         $scope.canvas_height = ($scope.edus.length === 0) ? 700 : ($scope.edus.length / 75 * 4500 + 200);
     });
     $scope.canvas_width = CONSTANTS.CANVAS_WIDTH; // キャンバス横幅
+
+    // サンプルファイルのファイル名リスト (samples.txt) を読み込んで描画、ファイル名の配列を作成
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                $scope.sampleFileList = xhr.responseText.split("\n");
+            }
+        }
+    }
+    xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples.txt");
+    xhr.send();
+    console.log(xhr);
 
     /************************************************/
     // IO
@@ -509,8 +420,8 @@ app.controller('EDUListController',
                 }
             }
         }
-        var arrayIndex = Math.floor(Math.random() * 100);
-        var sampleFile = CONSTANTS.SAMPLE_FILES[arrayIndex];
+        var arrayIndex = Math.floor(Math.random() * $scope.sampleFileList.length);
+        var sampleFile = $scope.sampleFileList[arrayIndex];
         console.log(sampleFile)
         xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/" + sampleFile);
         xhr.send();
