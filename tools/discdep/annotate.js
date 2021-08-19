@@ -18,8 +18,7 @@ app.constant('CONSTANTS', {
         "ATTRIBUTION",
         // Meta
         "BACKGROUND",
-        "EVALUATION",
-        "CONCLUSION",
+        "FINDINGS",
         // Functional
         "TEXTUAL-ORGANIZATION",
         "SAME-UNIT",
