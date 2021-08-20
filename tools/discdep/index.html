@@ -41,35 +41,62 @@
             <!-- メニューバー2行目 -->
             <div class="row">
                 <!-- 選択解除 -->
-                <input type="button" class="btn btn-info" value="選択解除" style="background-color: #20854E; border-color: #20854E"
-                    ng-click="clearNode()" ng-show="!!inputFile" ng-disabled="first === -1">
+                <input type="button" class="btn btn-info"
+                    style="background-color: #20854E; border-color: #20854E"
+                    value="選択解除"
+                    ng-click="clearNode()"
+                    ng-show="!!inputFile" ng-disabled="first === -1">
 
                 <!-- ラベル変更 -->
-                <input type="button" class="btn btn-info" value="ラベル変更" style="background-color: #20854E; border-color: #20854E"
-                    ng-click="changeLabel()" ng-show="!!inputFile" ng-disabled="first === -1">
+                <input type="button" class="btn btn-info"
+                    style="background-color: #20854E; border-color: #20854E"
+                    value="ラベル変更"
+                    ng-click="changeLabel()"
+                    ng-show="!!inputFile" ng-disabled="first === -1">
 
                 <!-- リンク削除 -->
-                <input type="button" class="btn btn-info" value="リンク削除" style="background-color: #20854E; border-color: #20854E"
-                    ng-click="deleteLink()" ng-show="!!inputFile" ng-disabled="first === -1">
+                <input type="button" class="btn btn-info"
+                    style="background-color: #20854E; border-color: #20854E"
+                    value="リンク削除"
+                    ng-click="deleteLink()"
+                    ng-show="!!inputFile" ng-disabled="first === -1">
 
                 <!-- undo -->
-                <input type="button" class="btn btn-info" value="undo" style="background-color: #20854E; border-color: #20854E"
-                    ng-click="undo()" ng-show="!!inputFile" ng-disabled="operations.length === 0">
+                <input type="button" class="btn btn-info"
+                    style="background-color: #20854E; border-color: #20854E"
+                    value="undo"
+                    ng-click="undo()"
+                    ng-show="!!inputFile" ng-disabled="operations.length === 0">
 
                 <!-- コピー -->
-                <input type="button" class="btn btn-info" value="クリップボードにコピー" style="background-color: #20854E; border-color: #20854E"
-                    ng-click="copyToClipboard()" ng-show="!!inputFile" ng-disabled="first === -1">
+                <input type="button" class="btn btn-info"
+                    style="background-color: #20854E; border-color: #20854E"
+                    value="クリップボードにコピー"
+                    ng-click="copyToClipboard()"
+                    ng-show="!!inputFile" ng-disabled="first === -1">
 
                 <!-- 保存 -->
-                <input type="button" class="btn btn-info" value="保存" style="background-color: #20854E; border-color: #20854E"
-                    ng-click="saveToFile()" ng-show="!!inputFile" ng-disabled="progress !== 100">
+                <input type="button" class="btn btn-info"
+                    style="background-color: #20854E; border-color: #20854E"
+                    value="保存"
+                    ng-click="saveToFile()"
+                    ng-show="!!inputFile" ng-disabled="progress !== 100">
 
                 <!-- 例 -->
-                <input type="button" class="btn btn-info" value="ランダムサンプル" style="background-color: #20854E; border-color: #20854E"
+                <input type="button" class="btn btn-info"
+                    style="background-color: #20854E; border-color: #20854E"
+                    value="ランダムサンプル"
                     ng-click="showRandomSample()">
 
                 <!-- ガイドライン (pdf) -->
                 <h5><a href="./COVID19_DT_annotation_guideline.pdf" target="_blank" style="color: #20854E">ガイドライン</a></h5>
+
+                <!-- EDU分割ツール -->
+                <input type="button" class="btn btn-info"
+                    style="background-color: #6F99AD; border-color: #6F99AD; color: black"
+                    value="EDU分割"
+                    onClick="location.href='https://norikinishida.github.io/tools/discdep/segmentation.html'">
+
             </div>
         </div>
 
@@ -89,7 +116,8 @@
         <div class="container edu-list" id="list">
             <div ng-repeat="displayText in edus track by $index">
                 <!-- 1EDU -->
-                <button id="edu{{$index}}" type="button" class="btn btn-default active"
+                <button id="edu{{$index}}"
+                    type="button" class="btn btn-default active"
                     ng-click="highLight('edu' + ($index).toString())"
                     ng-mouseover="mouseOverHandler($index)"
                     ng-mouseleave="mouseOutHandler($index)"

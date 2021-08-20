@@ -1,4 +1,4 @@
-.menu-bar, .progress-bar-container, .edu-list {
+.menu-bar, .progress-bar-container, .edu-list, .edu-list-for-seg {
     position: absolute;
 }
 .menu-bar {
@@ -12,6 +12,10 @@
 .edu-list {
     top: 160px;
     left: 250px;
+}
+.edu-list-for-seg {
+    top: 130px;
+    left: 180px;
 }
 h5 {
     display: inline-block;

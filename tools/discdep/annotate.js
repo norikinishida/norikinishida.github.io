@@ -131,6 +131,9 @@ app.controller('EDUListController',
     xhr.send();
     console.log(xhr);
 
+    // EDU分割用
+    $scope.eduBegins = [];
+
     /************************************************/
     // IO
     /************************************************/
@@ -157,9 +160,11 @@ app.controller('EDUListController',
         // ファイル読み込み
         var reader = new FileReader();
         if ($scope.inputFile.name.endsWith('.dep')) {
+            // from xxxx.dep
             reader.onload = $scope.loadJsonData;
         }
         else {
+            // from xxxx.edu.txt
             reader.onload = $scope.loadTextData;
         }
         reader.readAsText($scope.inputFile);
@@ -172,8 +177,9 @@ app.controller('EDUListController',
     $scope.loadTextData = function(e) {
         // 改行区切り
         var contents = e.target.result.split('\n');
-        // edusのセット (空行はスキップ) とROOTの追加
+        // edusのセット (空行はスキップ)
         $scope.edus = _.filter(contents, function(s) { return s.length > 0} );
+        // ROOTの追加
         $scope.edus.unshift('ROOT');
         // headsの初期化
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
@@ -360,7 +366,18 @@ app.controller('EDUListController',
             data.root.push(cur);
         }
         // 出力ファイル名
-        var outFileName = $scope.inputFile.endsWith('.dep') ? $scope.inputFile : $scope.inputFile + '.dep';
+        if ($scope.inputFile.endsWith(".dep")) {
+            // Overwrite
+            var outFileName = $scope.inputFileName;
+        }
+        else if ($scope.inputFile.endsWith(".edu.txt")) {
+            // xxxx.edu.txt -> xxxx.dep
+            var outFileName = $scope.inputFileName.replace(".edu.txt", ".dep");
+        }
+        else {
+            // xxxx.yyyy -> xxxx.yyyy.dep
+            var outFileName = $scope.inputFileName + ".dep";
+        }
         // 出力ファイルオブジェクトの作成
         var blob = new Blob([JSON.stringify(data, null, '\t')], {type: "text/plain;charset=utf-8"});
         // 書き出し
@@ -387,6 +404,9 @@ app.controller('EDUListController',
                     var obj = JSON.parse(xhr.responseText).root;
                     // EDUテキストの抽出
                     $scope.edus = _.pluck(obj, 'text');
+                    for (var i = 0; i < $scope.edus.length; i++) {
+                        $scope.edus[i] = $scope.edus[i].split(" ");
+                    }
                     // headsの抽出
                     $scope.heads = _.pluck(obj, 'parent');
                     // 談話関係ラベルの抽出
@@ -431,12 +451,14 @@ app.controller('EDUListController',
     $scope.mouseOverIndex = -1;
     $scope.mouseOverHandler = function(pos) {
         // チェック
-        if (pos < 0 || pos >= $scope.heads.length || $scope.heads[pos] < 0) {
+        // if (pos < 0 || pos >= $scope.heads.length || $scope.heads[pos] < 0) {
+        if (pos < 0 || pos >= $scope.heads.length) {
             return;
         }
 
         // マウスが乗っかったEDUのindex
         $scope.mouseOverIndex = pos;
+        // console.log($scope.mouseOverIndex);
 
         // 描画 (強調つき)
         var canvas = angular.element('#canvas')[0];
@@ -455,7 +477,8 @@ app.controller('EDUListController',
     // マウスカーソルが外れたときの処理
     $scope.mouseOutHandler = function(pos) {
         // チェック
-        if (pos < 0 || pos >= $scope.heads.length || $scope.heads[pos] < 0) {
+        // if (pos < 0 || pos >= $scope.heads.length || $scope.heads[pos] < 0) {
+        if (pos < 0 || pos >= $scope.heads.length) {
             return;
         }
 
@@ -681,5 +704,218 @@ app.controller('EDUListController',
         // while (relation.length < 12) relation = ' ' + relation;
         ctx.fillText(relation, centerZ.x - fontSize * 7, centerZ.y);
     };
+
+    /************************************************/
+    // EDU分割用
+    /************************************************/
+
+    // ファイルアップロード
+    $scope.handleFileSelectForSeg = function ($files) {
+        // チェック
+        if (!$files || !$files[0]) {
+            return;
+        }
+
+        // クリア
+        var canvas = angular.element('#canvas')[0];
+        var ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
+
+        // 状態の初期化
+        $scope.operations = [];
+        $scope.first = second = -1;
+
+        // 入力ファイルの設定
+        $scope.inputFile = $files[0];
+
+        // ファイル読み込み
+        var reader = new FileReader();
+        if ($scope.inputFile.name.endsWith('.dep')) {
+            // from xxxx.dep
+            reader.onload = $scope.loadJsonDataForSeg;
+        }
+        else {
+            // from xxxx.edu.txt or xxxx.sent.txt
+            reader.onload = $scope.loadTextDataForSeg;
+        }
+        reader.readAsText($scope.inputFile);
+
+        // 文字列に変換(?)
+        $scope.inputFile = $scope.inputFile.name;
+    };
+
+    // テキストデータの読み込み (1行1EDU)
+    $scope.loadTextDataForSeg = function(e) {
+        // 改行区切り
+        var contents = e.target.result.split('\n');
+        // edusのセット (空行はスキップ)
+        $scope.edus = _.filter(contents, function(s) { return s.length > 0} );
+        // 各EDUを単語分割
+        var accum = 0;
+        for (var i = 0; i < $scope.edus.length; i++) {
+            $scope.edus[i] = $scope.edus[i].split(" ");
+            $scope.eduBegins[i] = accum;
+            accum = accum + $scope.edus[i].length;
+        }
+        // headsの初期化
+        $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
+        // 談話関係ラベルの初期化
+        $scope.depRels = _.range($scope.edus.length).map(function() { return 'null'; });
+        //
+        $scope.$apply();
+    };
+
+    $scope.loadJsonDataForSeg = function(e) {
+        // JSONオブジェクト
+        var obj = JSON.parse(e.target.result).root;
+        // EDUテキストの抽出
+        $scope.edus = _.pluck(obj, 'text');
+        // ROOTの除去
+        $scope.edus = $scope.edus.slice(1, $scope.edus.length);
+        // 各EDUの単語分割
+        var accum = 0;
+        for (var i = 0; i < $scope.edus.length; i++) {
+            $scope.edus[i] = $scope.edus[i].split(" ");
+            $scope.eduBegins[i] = accum;
+            accum = accum + $scope.edus[i].length;
+        }
+        // headsの抽出
+        $scope.heads = _.pluck(obj, 'parent');
+        // 談話関係ラベルの抽出
+        $scope.depRels = _.pluck(obj, 'relation');
+        //
+        $scope.$apply();
+    };
+
+    // 保存
+    $scope.saveToFileForSeg = function() {
+        let lines = [];
+        for (var i = 0; i < $scope.edus.length; ++i) {
+            const line = $scope.edus[i].join(" ") + "\n"
+            lines.push(line);
+        }
+        // 出力ファイル名
+        if ($scope.inputFile.endsWith(".edu.txt")) {
+            // Overwrite
+            var outFileName = $scope.inputFile;
+        }
+        else if ($scope.inputFile.endsWith(".sent.txt")) {
+            // xxxx.sent.txt -> xxxx.edu.txt
+            var outFileName = $scope.inputFile.replace(".sent.txt", ".edu.txt");
+        }
+        else {
+            // xxxx.yyyy -> xxxx.yyyy.edu.txt
+            var outFileName = $scope.inputFile + ".edu.txt";
+        }
+        // 出力ファイルオブジェクトの作成
+        var blob = new Blob(lines, {type: "text/plain;charset=utf-8"});
+        // 書き出し
+        saveAs(blob, outFileName);
+    };
+
+    // マウスカーソルが乗っかったときの処理
+    $scope.mouseOverIndexForSegE = -1;
+    $scope.mouseOverindexForSegT = -1;
+    $scope.mouseOverHandlerForSeg = function(eduIndex, tokenIndex) {
+        // チェック
+        // if (pos < 0 || pos >= $scope.heads.length || $scope.heads[pos] < 0) {
+        if (eduIndex < 0 || eduIndex >= $scope.edus.length) {
+            return;
+        }
+
+        // マウスが乗っかったEDUのindex
+        $scope.mouseOverIndexForSegE = eduIndex;
+        $scope.mouseOverIndexForSegT = tokenIndex;
+        // console.log($scope.mouseOverIndexForSegE);
+        // console.log($scope.mouseOverIndexForSegT);
+    };
+
+    // マウスカーソルが外れたときの処理
+    $scope.mouseOutHandlerForSeg = function(eduIndex, tokenIndex) {
+        // チェック
+        // if (pos < 0 || pos >= $scope.heads.length || $scope.heads[pos] < 0) {
+        if (eduIndex < 0 || eduIndex >= $scope.edus.length) {
+            return;
+        }
+
+        // マウスが乗っかったEDUのindexの初期化
+        $scope.mouseOverIndexForSegE = -1;
+        $scope.mouseOverIndexForSegT = -1;
+    };
+
+
+    // EDU分割・マージ処理
+    $scope.segment = function(eduIndex, tokenIndex) {
+        if (eduIndex === 0 && tokenIndex === 0) {
+            console.log("No upper segment! Skipped.");
+        }
+        else if (tokenIndex > 0) {
+            // 分割処理
+            $scope.segmentEDUs(eduIndex, tokenIndex);
+        }
+        else {
+            // マージ処理
+            $scope.mergeEDUs(eduIndex, tokenIndex);
+        }
+    };
+
+    $scope.segmentEDUs = function(eduIndex, tokenIndex) {
+        let newEdus = [];
+        // eduIndex番目まではそのまま
+        for (var i = 0; i < eduIndex; i++) {
+            newEdus.push($scope.edus[i]);
+        }
+        // eduIndex番目のEDUは二つに分割
+        const left = $scope.edus[eduIndex].slice(0, tokenIndex);
+        const right = $scope.edus[eduIndex].slice(tokenIndex);
+        newEdus.push(left);
+        newEdus.push(right);
+        // eduIndex+1番目以降はそのまま
+        for (var i = eduIndex + 1; i < $scope.edus.length; i++) {
+            newEdus.push($scope.edus[i]);
+        }
+        // 再設定
+        $scope.edus = newEdus;
+        $scope.eduBegins = [];
+        $scope.heads = [];
+        $scope.depRels = [];
+        var accum = 0;
+        for (var i = 0; i < $scope.edus.length; i++) {
+            $scope.eduBegins[i] = accum;
+            accum = accum + $scope.edus[i].length;
+        }
+        $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
+        $scope.depRels = _.range($scope.edus.length).map(function() { return 'null'; });
+    };
+
+    $scope.mergeEDUs = function(eduIndex, tokenIndex) {
+        let newEdus = [];
+        // eduIndex-1番目まではそのまま
+        for (var i = 0; i < eduIndex - 1; i++) {
+            newEdus.push($scope.edus[i]);
+        }
+        // eduIndex番目はeduIndex-1番目のEDUとマージ
+        const left = $scope.edus[eduIndex - 1];
+        const right = $scope.edus[eduIndex];
+        const merged = left.concat(right);
+        newEdus.push(merged);
+        // eduIndex+1番目以降はそのまま
+        for (var i = eduIndex + 1; i < $scope.edus.length; i++) {
+            newEdus.push($scope.edus[i]);
+        }
+        // 再設定
+        $scope.edus = newEdus;
+        $scope.eduBegins = [];
+        $scope.heads = [];
+        $scope.depRels = [];
+        var accum = 0;
+        for (var i = 0; i < $scope.edus.length; i++) {
+            $scope.eduBegins[i] = accum;
+            accum = accum + $scope.edus[i].length;
+        }
+        $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
+        $scope.depRels = _.range($scope.edus.length).map(function() { return 'null'; });
+    };
+
 
 }]); // /EDUListController
