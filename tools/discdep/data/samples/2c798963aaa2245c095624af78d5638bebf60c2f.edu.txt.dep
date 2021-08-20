@@ -16,7 +16,7 @@
 			"id": 2,
 			"parent": 1,
 			"text": "as there is no consensus",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 3,
@@ -28,7 +28,7 @@
 			"id": 4,
 			"parent": 3,
 			"text": "( staff , patients , or visitors )",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 5,
@@ -76,7 +76,7 @@
 			"id": 12,
 			"parent": 15,
 			"text": "Despite multiple air samples",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 13,
@@ -94,7 +94,7 @@
 			"id": 15,
 			"parent": 6,
 			"text": "none of the air samples contained any detectable adenovirus DNA",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 16,
@@ -106,7 +106,7 @@
 			"id": 17,
 			"parent": 19,
 			"text": "Although highly sensitive , in - house PCR assays have been developed",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 18,
@@ -142,7 +142,7 @@
 			"id": 23,
 			"parent": 22,
 			"text": "when they entered the child 's room . <S>",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 24,

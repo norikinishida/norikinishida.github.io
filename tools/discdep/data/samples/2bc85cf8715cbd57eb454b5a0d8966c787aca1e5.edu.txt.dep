@@ -16,7 +16,7 @@
 			"id": 2,
 			"parent": 1,
 			"text": "when social and political institutions are in flux . <S>",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 3,
@@ -40,7 +40,7 @@
 			"id": 6,
 			"parent": 5,
 			"text": "as people struggle to maintain or recreate a sense of normalcy . <S>",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 7,
@@ -52,7 +52,7 @@
 			"id": 8,
 			"parent": 7,
 			"text": "including China , Russia , the UK , and USA ,",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 9,
@@ -76,7 +76,7 @@
 			"id": 12,
 			"parent": 9,
 			"text": "performing national solidarities and exclusions",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 13,
@@ -100,7 +100,7 @@
 			"id": 16,
 			"parent": 9,
 			"text": "This analysis thus breaks with existing works on everyday nationalism and banal nationalism",
-			"relation": "ELABORATION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 17,

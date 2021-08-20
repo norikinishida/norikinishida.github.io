@@ -22,7 +22,7 @@
 			"id": 3,
 			"parent": 2,
 			"text": "such as enkephalins , angiotensins , neurokinins , and cytokines . <S>",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 4,
@@ -34,7 +34,7 @@
 			"id": 5,
 			"parent": 4,
 			"text": "such as immune response , cellular growth , and blood pressure control . <S>",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 6,
@@ -64,13 +64,13 @@
 			"id": 10,
 			"parent": 9,
 			"text": "when substitution of any of these six cysteines caused complete loss of surface expression and enzymatic activity . <S>",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 11,
 			"parent": 8,
 			"text": "In contrast , the transmembrane Cys24 appears to have no similar function . <S>",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 12,
@@ -130,7 +130,7 @@
 			"id": 21,
 			"parent": 20,
 			"text": "such as inflammation or malignant transformation . <S> <P>",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		}
 	]
 }

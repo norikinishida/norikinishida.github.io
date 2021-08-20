@@ -34,7 +34,7 @@
 			"id": 5,
 			"parent": 1,
 			"text": "The major contributions of this article are :",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 6,
@@ -46,7 +46,7 @@
 			"id": 7,
 			"parent": 6,
 			"text": "i.e. for no second wave of infection to form ;",
-			"relation": "DEFINITION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 8,
@@ -58,7 +58,7 @@
 			"id": 9,
 			"parent": 8,
 			"text": "when such conditions are not met ;",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 10,
@@ -94,7 +94,7 @@
 			"id": 15,
 			"parent": 1,
 			"text": "As in any compartmental model , the goal of this article is to provide qualitative understanding rather than exact quantitative predictions . <S> <P>",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		}
 	]
 }

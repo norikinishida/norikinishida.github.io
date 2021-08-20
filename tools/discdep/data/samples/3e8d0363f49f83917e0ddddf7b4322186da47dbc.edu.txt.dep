@@ -34,7 +34,7 @@
 			"id": 5,
 			"parent": 6,
 			"text": "Mostly used in a research setting ,",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 6,
@@ -52,7 +52,7 @@
 			"id": 8,
 			"parent": 7,
 			"text": "thereby calling for quality control and the implementation of ring trials ( RT )",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 9,
@@ -118,7 +118,7 @@
 			"id": 19,
 			"parent": 15,
 			"text": "compared to the bioinformatics parts of the laboratory pipeline . <S>",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 20,
@@ -172,7 +172,7 @@
 			"id": 28,
 			"parent": 11,
 			"text": "that the algorithms had a stronger impact on the overall performance than the choice of the reference database . <S>",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 29,
@@ -202,7 +202,7 @@
 			"id": 33,
 			"parent": 32,
 			"text": "such as the percent of coverage . <S>",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 34,
@@ -214,13 +214,13 @@
 			"id": 35,
 			"parent": 34,
 			"text": "when increasing the number of viruses per sample . <S>",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 36,
 			"parent": 11,
 			"text": "The lessons",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 37,

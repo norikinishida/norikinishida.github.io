@@ -22,7 +22,7 @@
 			"id": 3,
 			"parent": 2,
 			"text": "following pathogen infection . <S>",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 4,
@@ -46,7 +46,7 @@
 			"id": 7,
 			"parent": 6,
 			"text": "that cause differential disease responses . <S>",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 8,
@@ -76,13 +76,13 @@
 			"id": 12,
 			"parent": 13,
 			"text": "Although the focus of this chapter is on viral pathogenesis ,",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 13,
 			"parent": 8,
 			"text": "many of the methods",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 14,

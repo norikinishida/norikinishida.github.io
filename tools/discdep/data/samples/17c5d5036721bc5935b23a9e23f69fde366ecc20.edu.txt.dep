@@ -94,19 +94,19 @@
 			"id": 15,
 			"parent": 1,
 			"text": "that during the lock - down , Red and Blue states both displayed strong positive correlations between their travel patterns and infection rates . <S>",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 16,
 			"parent": 15,
 			"text": "However ,",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 17,
 			"parent": 19,
 			"text": "after states reopened",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 18,
@@ -142,7 +142,7 @@
 			"id": 23,
 			"parent": 21,
 			"text": "that , on average , the residents in Red states might be mobilizing less safely than the residents in Blue states . <S>",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 24,

@@ -34,7 +34,7 @@
 			"id": 5,
 			"parent": 7,
 			"text": "Due to the importance of chest x - ray data",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 6,
@@ -52,7 +52,7 @@
 			"id": 8,
 			"parent": 7,
 			"text": "before obtaining mask annotations about this sort of dataset . <S>",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 9,
@@ -94,19 +94,19 @@
 			"id": 15,
 			"parent": 14,
 			"text": "including the Chest X - ray . <S>",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 16,
 			"parent": 13,
 			"text": "However , most of variant U - Net mainly focus on extraction of contextual information and dense skip connection . <S>",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 17,
 			"parent": 16,
 			"text": "There is still a large space",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 18,
@@ -130,7 +130,7 @@
 			"id": 21,
 			"parent": 19,
 			"text": "which is named DEFU - Net . <S>",
-			"relation": "DEFINITION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 22,
@@ -184,13 +184,13 @@
 			"id": 30,
 			"parent": 29,
 			"text": "( Montgomery and Shenzhen hospital ) . <S>",
-			"relation": "DEFINITION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 31,
 			"parent": 19,
 			"text": "The DEFU - Net achieves the better performance than basic U - Net , residual U - Net , BCDU - Net , modified R2U - Net and modified attention R2U - Net . <S>",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 32,

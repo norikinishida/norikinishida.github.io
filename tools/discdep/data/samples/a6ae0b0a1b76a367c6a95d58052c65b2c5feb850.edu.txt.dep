@@ -58,7 +58,7 @@
 			"id": 9,
 			"parent": 8,
 			"text": "although most evidence supports the hypothesis",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 10,
@@ -76,7 +76,7 @@
 			"id": 12,
 			"parent": 11,
 			"text": "such as viruses ,",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 13,
@@ -100,13 +100,13 @@
 			"id": 16,
 			"parent": 15,
 			"text": "when T cells specific for peptide epitopes derived from pathogens cross - react with selfepitopes ,",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 17,
-			"parent": 16,
+			"parent": 15,
 			"text": "leading to autoimmune tissue destruction . <S>",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 18,

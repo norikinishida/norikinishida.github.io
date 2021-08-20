@@ -34,7 +34,7 @@
 			"id": 5,
 			"parent": 4,
 			"text": "and , therefore , will not be diagnosed as a CLI . <S>",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 6,
@@ -64,7 +64,7 @@
 			"id": 10,
 			"parent": 6,
 			"text": "Thus , risk factors for CLI can modulate either the vURTI risk",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 11,
@@ -100,7 +100,7 @@
 			"id": 16,
 			"parent": 14,
 			"text": "that climate , crowding and perhaps female gender can affect the probability of exposure to vURTI viruses ,",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 17,
@@ -136,7 +136,7 @@
 			"id": 22,
 			"parent": 21,
 			"text": "( exercise , tobacco and alcohol consumption , sleep efficiency )",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 23,
@@ -160,7 +160,7 @@
 			"id": 26,
 			"parent": 25,
 			"text": "such as pollution , home environment and certain personality traits",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 27,

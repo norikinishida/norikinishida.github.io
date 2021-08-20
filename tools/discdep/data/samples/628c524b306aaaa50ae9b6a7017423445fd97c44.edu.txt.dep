@@ -22,7 +22,7 @@
 			"id": 3,
 			"parent": 2,
 			"text": "following infection with common respiratory viruses with neurotropic potential",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 4,
@@ -34,7 +34,7 @@
 			"id": 5,
 			"parent": 2,
 			"text": "Nevertheless , systematic studies on the association between these viruses and mood disorders are lacking . <S>",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 6,
@@ -76,7 +76,7 @@
 			"id": 12,
 			"parent": 7,
 			"text": "Seropositivity for influenza A",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 13,
@@ -148,7 +148,7 @@
 			"id": 24,
 			"parent": 7,
 			"text": "The design was cross - sectional . <S>",
-			"relation": "ELABORATION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 25,
@@ -166,7 +166,7 @@
 			"id": 27,
 			"parent": 7,
 			"text": "The association of seropositivity for influenza and coronaviruses with a history of mood disorders , and influenza B with suicidal behavior require replication in larger longitudinal samples . <S>",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 28,

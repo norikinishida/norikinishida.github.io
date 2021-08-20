@@ -40,19 +40,19 @@
 			"id": 6,
 			"parent": 5,
 			"text": "including ICU solicitation , cumulated death counts , etc … <S>",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 7,
 			"parent": 2,
 			"text": "The corresponding data analyses however , mostly rely on restricted ( openly available ) data sources ,",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 8,
 			"parent": 7,
 			"text": "which typically include daily death rates and confirmed COVID cases time series . <S>",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 9,
@@ -64,7 +64,7 @@
 			"id": 10,
 			"parent": 9,
 			"text": "before the peak of the outbreak has been observed yet",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 11,
@@ -88,7 +88,7 @@
 			"id": 14,
 			"parent": 15,
 			"text": "Although we focus on a recent model of the COVID pandemics ,",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 15,
@@ -106,7 +106,7 @@
 			"id": 17,
 			"parent": 13,
 			"text": "Our results highlight the need",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 18,
@@ -136,7 +136,7 @@
 			"id": 22,
 			"parent": 21,
 			"text": "( e.g. , ICU occupancy , negative test rates , social distancing commitment reports , etc ) . <S> <P>",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		}
 	]
 }

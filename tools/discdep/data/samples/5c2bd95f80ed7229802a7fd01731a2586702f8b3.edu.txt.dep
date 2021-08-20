@@ -76,7 +76,7 @@
 			"id": 12,
 			"parent": 13,
 			"text": "When exposed to human whole blood ,",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 13,

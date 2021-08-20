@@ -22,7 +22,7 @@
 			"id": 3,
 			"parent": 2,
 			"text": "generated as a result of the immune response",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 4,
@@ -58,7 +58,7 @@
 			"id": 9,
 			"parent": 8,
 			"text": "( e.g. HCMV hyperimmune globulins or antivirals )",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 10,
@@ -70,7 +70,7 @@
 			"id": 11,
 			"parent": 8,
 			"text": "therefore , neutralizing human mAb may be a decisive alternative in the prevention of primary and re - activated HCMV infections in these patients . <S> <P>",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 12,
@@ -106,7 +106,7 @@
 			"id": 17,
 			"parent": 18,
 			"text": "after both additives are removed ,",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 18,
@@ -148,7 +148,7 @@
 			"id": 24,
 			"parent": 12,
 			"text": "All of the mAbs neutralize the infection in different combinations of HCMV strains and target cells , with a potency ~20 fold higher than that of the HCMV hyperimmune globulins ,",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 25,
@@ -166,7 +166,7 @@
 			"id": 27,
 			"parent": 12,
 			"text": "The technology described has proven to be more reproducible , efficient and rapid than previously reported techniques ,",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		},
 		{
 			"id": 28,

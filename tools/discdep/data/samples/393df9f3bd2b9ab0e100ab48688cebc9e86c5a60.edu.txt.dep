@@ -16,7 +16,7 @@
 			"id": 2,
 			"parent": 1,
 			"text": "causing loss of life ,",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 3,
@@ -46,7 +46,7 @@
 			"id": 7,
 			"parent": 6,
 			"text": "One can not estimate mortality rates",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 8,
@@ -82,7 +82,7 @@
 			"id": 13,
 			"parent": 6,
 			"text": "However , accurate estimation of the infection rate , locally , geographically and nationally is important independently . <S>",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 14,
@@ -184,13 +184,13 @@
 			"id": 30,
 			"parent": 31,
 			"text": "As we prepare for the second wave of the pandemic",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 31,
 			"parent": 23,
 			"text": "this line of work may provide new solutions for both the biomedical community and policy makers at all levels . <S> <P>",
-			"relation": "EVALUATION-CONCLUSION"
+			"relation": "FINDINGS"
 		}
 	]
 }

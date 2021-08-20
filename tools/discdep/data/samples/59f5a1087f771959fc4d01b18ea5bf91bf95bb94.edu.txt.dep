@@ -16,7 +16,7 @@
 			"id": 2,
 			"parent": 1,
 			"text": "caused by severe acute respiratory syndrome coronavirus 2",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 3,
@@ -34,7 +34,7 @@
 			"id": 5,
 			"parent": 4,
 			"text": "such as ischemic stroke . <S>",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 6,
@@ -64,7 +64,7 @@
 			"id": 10,
 			"parent": 9,
 			"text": "when determining eligibility for mechanical thrombectomy ( MT ) . <S>",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 11,
@@ -76,7 +76,7 @@
 			"id": 12,
 			"parent": 11,
 			"text": "including age , laboratory , and imaging findings",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 13,

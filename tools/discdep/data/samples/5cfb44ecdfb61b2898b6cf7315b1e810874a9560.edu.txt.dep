@@ -16,7 +16,7 @@
 			"id": 2,
 			"parent": 3,
 			"text": "While person - to - person transmission within the Wuhan district has led to a large outbreak ,",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 3,
@@ -52,7 +52,7 @@
 			"id": 8,
 			"parent": 7,
 			"text": "However , this conclusion can change",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 9,
@@ -64,7 +64,7 @@
 			"id": 10,
 			"parent": 9,
 			"text": "resulting from human - to - human transmission",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 11,
@@ -94,7 +94,7 @@
 			"id": 15,
 			"parent": 14,
 			"text": "after becoming infected in Wuhan , China . <S>",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 16,
@@ -130,7 +130,7 @@
 			"id": 21,
 			"parent": 20,
 			"text": "and within the Wuhan province , R has been estimated as high as 4.1 1 - 3 . <S> <P>",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		}
 	]
 }

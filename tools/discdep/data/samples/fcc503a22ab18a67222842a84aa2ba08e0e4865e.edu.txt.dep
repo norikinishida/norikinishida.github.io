@@ -46,7 +46,7 @@
 			"id": 7,
 			"parent": 5,
 			"text": "Hence in every stage of dissection room activity precious human body needs to be handled in an ethical manner",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 8,
@@ -88,7 +88,7 @@
 			"id": 14,
 			"parent": 13,
 			"text": "while receiving the human body of a donor and during preservation of the same . <S>",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 15,

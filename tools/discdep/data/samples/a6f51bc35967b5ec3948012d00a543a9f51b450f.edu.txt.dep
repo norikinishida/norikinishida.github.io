@@ -34,19 +34,19 @@
 			"id": 5,
 			"parent": 4,
 			"text": "to accommodate large cargo",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "ENABLEMENT"
 		},
 		{
 			"id": 6,
 			"parent": 5,
 			"text": "as it traffics through the organelle . <S>",
-			"relation": "CONDITION"
+			"relation": "TEMPORAL"
 		},
 		{
 			"id": 7,
 			"parent": 4,
 			"text": "The mechanism",
-			"relation": "CONTRAST"
+			"relation": "COMPARISON"
 		},
 		{
 			"id": 8,
@@ -70,13 +70,13 @@
 			"id": 11,
 			"parent": 10,
 			"text": "including collagen and lipoprotein secretion ,",
-			"relation": "EXEMPLIFICATION"
+			"relation": "ELABORATION"
 		},
 		{
 			"id": 12,
 			"parent": 10,
 			"text": "and defects in the process lead to disease . <S>",
-			"relation": "CAUSE-RESULT-REASON"
+			"relation": "CAUSE-RESULT"
 		},
 		{
 			"id": 13,
