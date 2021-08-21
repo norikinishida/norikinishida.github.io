@@ -405,7 +405,7 @@ app.controller('EDUListController',
                     // EDUテキストの抽出
                     $scope.edus = _.pluck(obj, 'text');
                     for (var i = 0; i < $scope.edus.length; i++) {
-                        $scope.edus[i] = $scope.edus[i].split(" ");
+                        $scope.edus[i] = $scope.edus[i];
                     }
                     // headsの抽出
                     $scope.heads = _.pluck(obj, 'parent');

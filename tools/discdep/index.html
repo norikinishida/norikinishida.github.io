@@ -131,7 +131,7 @@
                                             blinkNodeColor1 :
                                             ((mouseOverIndex >= 0 && (heads[mouseOverIndex] == $index || heads[$index] == mouseOverIndex)) ?
                                                 blinkNodeColor2 :
-                                                '#EEEEEE')),
+                                                'white')),
                                 'color': (first === $index) ? 'black' : 'black'}"
                     ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
                     <h5>{{displayText | TailorString}}</h5>
