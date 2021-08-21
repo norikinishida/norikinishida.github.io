@@ -368,15 +368,15 @@ app.controller('EDUListController',
         // 出力ファイル名
         if ($scope.inputFile.endsWith(".dep")) {
             // Overwrite
-            var outFileName = $scope.inputFileName;
+            var outFileName = $scope.inputFile;
         }
         else if ($scope.inputFile.endsWith(".edu.txt")) {
             // xxxx.edu.txt -> xxxx.dep
-            var outFileName = $scope.inputFileName.replace(".edu.txt", ".dep");
+            var outFileName = $scope.inputFile.replace(".edu.txt", ".dep");
         }
         else {
             // xxxx.yyyy -> xxxx.yyyy.dep
-            var outFileName = $scope.inputFileName + ".dep";
+            var outFileName = $scope.inputFile + ".dep";
         }
         // 出力ファイルオブジェクトの作成
         var blob = new Blob([JSON.stringify(data, null, '\t')], {type: "text/plain;charset=utf-8"});
