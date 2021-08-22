@@ -4,18 +4,22 @@
 .menu-bar {
     top: 30px;
     left: 200px;
+    width: 1000px;
 }
 .progress-bar-container {
     top: 130px;
-    left: 200px;
+    left: 190px;
+    width: 1000px;
 }
 .edu-list {
     top: 160px;
-    left: 200px;
+    left: 190px;
+    width: 1000px;
 }
 .edu-list-for-seg {
     top: 130px;
-    left: 200px;
+    left: 190px;
+    width: 1000px;
 }
 h5 {
     display: inline-block;

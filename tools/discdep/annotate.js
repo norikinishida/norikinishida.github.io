@@ -404,9 +404,6 @@ app.controller('EDUListController',
                     var obj = JSON.parse(xhr.responseText).root;
                     // EDUテキストの抽出
                     $scope.edus = _.pluck(obj, 'text');
-                    for (var i = 0; i < $scope.edus.length; i++) {
-                        $scope.edus[i] = $scope.edus[i];
-                    }
                     // headsの抽出
                     $scope.heads = _.pluck(obj, 'parent');
                     // 談話関係ラベルの抽出
@@ -811,6 +808,44 @@ app.controller('EDUListController',
         var blob = new Blob(lines, {type: "text/plain;charset=utf-8"});
         // 書き出し
         saveAs(blob, outFileName);
+    };
+
+    // 例示
+    $scope.showRandomSampleForSeg = function () {
+        // JSONファイルを読み込んで描画
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    // JSONオブジェクト
+                    var obj = JSON.parse(xhr.responseText).root;
+                    // EDUテキストの抽出
+                    $scope.edus = _.pluck(obj, 'text');
+                    // ROOTの除去
+                    $scope.edus = $scope.edus.slice(1, $scope.edus.length);
+                    // 各EDUの単語分割
+                    var accum = 0;
+                    for (var i = 0; i < $scope.edus.length; i++) {
+                        $scope.edus[i] = $scope.edus[i].split(" ");
+                        $scope.eduBegins[i] = accum;
+                        accum = accum + $scope.edus[i].length;
+                    }
+                    // headsの抽出
+                    $scope.heads = _.pluck(obj, 'parent');
+                    // 談話関係ラベルの抽出
+                    $scope.depRels = _.pluck(obj, 'relation');
+                    //
+                    $scope.$apply();
+                }
+            }
+        }
+        var arrayIndex = Math.floor(Math.random() * $scope.sampleFileList.length);
+        var sampleFile = $scope.sampleFileList[arrayIndex];
+        console.log(sampleFile)
+        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/" + sampleFile);
+        xhr.send();
+        console.log(xhr);
+        $scope.inputFile = sampleFile;
     };
 
     // マウスカーソルが乗っかったときの処理
