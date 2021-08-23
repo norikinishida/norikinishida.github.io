@@ -50,7 +50,7 @@
         },
         {
             "id": 8,
-            "parent": 4,
+            "parent": 1,
             "text": "Are emerging infections a new phenomenon",
             "relation": "ELABORATION"
         },
@@ -100,7 +100,7 @@
             "id": 16,
             "parent": 15,
             "text": "similar in their novelty , impact , and elicitation of control responses ,",
-            "relation": "ELABORATION"
+            "relation": "COMPARISON"
         },
         {
             "id": 17,

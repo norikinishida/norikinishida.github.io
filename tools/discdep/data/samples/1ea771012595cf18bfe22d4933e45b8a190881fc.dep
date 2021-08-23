@@ -32,7 +32,7 @@
         },
         {
             "id": 5,
-            "parent": 1,
+            "parent": 2,
             "text": "that network structure and human mobility greatly influence the dynamics of epidemic spreading . <S>",
             "relation": "ELABORATION"
         },

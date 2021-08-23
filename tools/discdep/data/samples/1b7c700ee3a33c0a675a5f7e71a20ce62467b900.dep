@@ -22,7 +22,7 @@
             "id": 3,
             "parent": 2,
             "text": "The high prevalence of HIV-1 subtype C in southern Africa necessitates the development of cheap , effective vaccines . <S>",
-            "relation": "ELABORATION"
+            "relation": "CAUSE-RESULT"
         },
         {
             "id": 4,
@@ -152,7 +152,7 @@
         },
         {
             "id": 25,
-            "parent": 20,
+            "parent": 22,
             "text": "The p17 / p24 protein effectively boosted T cell and humoral responses in mice",
             "relation": "ELABORATION"
         },
