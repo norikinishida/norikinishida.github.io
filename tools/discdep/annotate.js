@@ -7,7 +7,8 @@ app.constant('CONSTANTS', {
     relations: [
         "ROOT",
         // Basic
-        "ELABORATION",
+        "ELABORATION-H",
+        "ELABORATION-V",
         "COMPARISON",
         "CAUSE-RESULT",
         "CONDITION",
