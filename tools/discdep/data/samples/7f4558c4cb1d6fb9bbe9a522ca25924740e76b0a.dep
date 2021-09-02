@@ -70,7 +70,7 @@
             "id": 11,
             "parent": 0,
             "text": "that ( i ) SARS - CoV-2 genomes are overall conserved under purifying selection . <S>",
-            "relation": "ELABORATION"
+            "relation": "ROOT"
         },
         {
             "id": 12,
