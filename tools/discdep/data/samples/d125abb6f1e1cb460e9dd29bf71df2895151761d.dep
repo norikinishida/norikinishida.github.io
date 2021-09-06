@@ -75,30 +75,24 @@
         {
             "id": 12,
             "parent": 11,
-            "text": "aimed to prevent acts of domestic violence",
+            "text": "aimed to prevent acts of domestic violence and to achieve accurate assessment of multiple domains of abuse",
             "relation": "ENABLEMENT"
         },
         {
             "id": 13,
             "parent": 12,
-            "text": "and to achieve accurate assessment of multiple domains of abuse",
-            "relation": "JOINT"
-        },
-        {
-            "id": 14,
-            "parent": 13,
             "text": "( psychological , physical , sexual )",
             "relation": "ELABORATION"
         },
         {
-            "id": 15,
+            "id": 14,
             "parent": 11,
             "text": "provided by trained multidisciplinary staffs",
             "relation": "ELABORATION"
         },
         {
-            "id": 16,
-            "parent": 15,
+            "id": 15,
+            "parent": 14,
             "text": "( including psychiatrists , psychologists , social and legal services ) . <S> <P>",
             "relation": "ELABORATION"
         }

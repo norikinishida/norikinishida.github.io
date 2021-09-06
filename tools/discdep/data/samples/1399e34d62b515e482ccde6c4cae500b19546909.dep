@@ -21,11 +21,17 @@
         {
             "id": 3,
             "parent": 2,
-            "text": "including the ability to cross species barriers and geographic boundaries ,",
+            "text": "including the ability",
             "relation": "ELABORATION"
         },
         {
             "id": 4,
+            "parent": 3,
+            "text": "to cross species barriers and geographic boundaries ,",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
             "parent": 2,
             "text": "and implications to animal and human health . <S> <P>",
             "relation": "SAME-UNIT"
