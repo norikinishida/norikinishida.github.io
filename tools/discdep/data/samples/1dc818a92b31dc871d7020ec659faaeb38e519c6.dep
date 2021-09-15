@@ -28,7 +28,7 @@
             "id": 4,
             "parent": 3,
             "text": "to prevent respiratory viral disease in children younger than 6 months ,",
-            "relation": "ELABORATION"
+            "relation": "ENABLEMENT"
         },
         {
             "id": 5,

@@ -70,7 +70,7 @@
             "id": 11,
             "parent": 10,
             "text": "to improve the infection control and prevention practices of healthcare workers in departments of radiology . <S> <P>",
-            "relation": "ELABORATION"
+            "relation": "ENABLEMENT"
         }
     ]
 }

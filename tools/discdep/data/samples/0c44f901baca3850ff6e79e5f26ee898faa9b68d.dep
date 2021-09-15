@@ -80,7 +80,7 @@
         },
         {
             "id": 13,
-            "parent": 14,
+            "parent": 15,
             "text": "By examining a number of historically notable epidemics ,",
             "relation": "MANNER-MEANS"
         },

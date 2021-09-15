@@ -80,7 +80,7 @@
         },
         {
             "id": 13,
-            "parent": 10,
+            "parent": 5,
             "text": "Cloned piglets were produced via somatic cell nuclear transfer",
             "relation": "ELABORATION"
         },
@@ -88,7 +88,7 @@
             "id": 14,
             "parent": 13,
             "text": "and correct insertion of pbd-2 genes was confirmed by PCR and Southern blot . <S>",
-            "relation": "ELABORATION"
+            "relation": "JOINT"
         },
         {
             "id": 15,

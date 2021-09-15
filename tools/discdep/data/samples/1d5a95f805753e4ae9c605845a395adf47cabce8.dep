@@ -58,7 +58,7 @@
             "id": 9,
             "parent": 8,
             "text": "to harbour Newcastle disease virus ( NDV ) . <S>",
-            "relation": "ELABORATION"
+            "relation": "ENABLEMENT"
         },
         {
             "id": 10,

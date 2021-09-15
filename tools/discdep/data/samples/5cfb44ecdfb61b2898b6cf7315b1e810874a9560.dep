@@ -82,7 +82,7 @@
             "id": 13,
             "parent": 12,
             "text": "especially considering the number of patients",
-            "relation": "ELABORATION"
+            "relation": "CONDITION"
         },
         {
             "id": 14,
