@@ -6,15 +6,15 @@ app.constant('CONSTANTS', {
     // 談話関係クラス
     relations: [
         "ROOT",
-        // Basic
-        "ELABORATION",
-        "CONJUNCTION",
-        // "COMPARISON",
-        "CONCESSION",
-        "CONTRAST",
+        // General
+        "ELABORATION-SUBORD",
+        "ELABORATION-COORD",
+        "CONTRAST-CONCESSION",
+        "COMPARISON",
         "CAUSE-RESULT",
         "CONDITION",
         "TEMPORAL",
+        // Specific
         // "JOINT",
         "ENABLEMENT",
         "MANNER-MEANS",
