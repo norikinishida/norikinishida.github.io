@@ -7,18 +7,15 @@ app.constant('CONSTANTS', {
     relations: [
         "ROOT",
         // General
-        "ELABORATION-SUBORD",
-        "ELABORATION-COORD",
-        "CONTRAST-CONCESSION",
+        "ELABORATION",
+        "ADDITION",
         "COMPARISON",
         "CAUSE-RESULT",
         "CONDITION",
         "TEMPORAL",
         // Specific
-        // "JOINT",
         "ENABLEMENT",
         "MANNER-MEANS",
-        "ATTRIBUTION",
         // Meta
         "BACKGROUND",
         "FINDINGS",
