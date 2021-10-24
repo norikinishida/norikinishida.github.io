@@ -154,7 +154,7 @@ app.controller('EDUListController',
     console.log(xhr2);
 
     // EDU分割用
-    $scope.eduBegins = [];
+    // $scope.eduBegins = [];
 
     /************************************************/
     // IO
@@ -380,7 +380,13 @@ app.controller('EDUListController',
         var text = "";
         for (var i = 1; i < $scope.edus.length; i++) {
             text = text + $scope.edus[i].replace("<S>", "").replace("<P>", "");
-            if (i != $scope.edus.length - 1) {
+            if (i == $scope.edus.length - 1) {
+                text = text; // Do nothing
+            }
+            else if ($scope.edus[i].includes("<S>")) {
+                text = text + "\n";
+            }
+            else {
                 text = text + " ";
             }
         }
@@ -814,11 +820,11 @@ app.controller('EDUListController',
         // edusのセット (空行はスキップ)
         $scope.edus = _.filter(contents, function(s) { return s.length > 0} );
         // 各EDUを単語分割
-        var accum = 0;
+        // var accum = 0;
         for (var i = 0; i < $scope.edus.length; i++) {
             $scope.edus[i] = $scope.edus[i].split(" ");
-            $scope.eduBegins[i] = accum;
-            accum = accum + $scope.edus[i].length;
+            // $scope.eduBegins[i] = accum;
+            // accum = accum + $scope.edus[i].length;
         }
         // headsの初期化
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
@@ -836,11 +842,11 @@ app.controller('EDUListController',
         // ROOTの除去
         $scope.edus = $scope.edus.slice(1, $scope.edus.length);
         // 各EDUの単語分割
-        var accum = 0;
+        // var accum = 0;
         for (var i = 0; i < $scope.edus.length; i++) {
             $scope.edus[i] = $scope.edus[i].split(" ");
-            $scope.eduBegins[i] = accum;
-            accum = accum + $scope.edus[i].length;
+            // $scope.eduBegins[i] = accum;
+            // accum = accum + $scope.edus[i].length;
         }
         // headsの抽出
         $scope.heads = _.pluck(obj, 'parent');
@@ -848,6 +854,32 @@ app.controller('EDUListController',
         $scope.depRels = _.pluck(obj, 'relation');
         //
         $scope.$apply();
+    };
+
+    // クリップボードにコピー
+    $scope.copyToClipboardForSeg = function() {
+        var text = "";
+        for (var i = 0; i < $scope.edus.length; i++) {
+            for (var j = 0; j < $scope.edus[i].length; j++) {
+                text = text + $scope.edus[i][j].replace("<S>", "").replace("<P>", "")
+                if ($scope.edus[i][j] === "<S>") {
+                    text = text + "\n";
+                }
+                else {
+                    text = text + " ";
+                }
+            }
+        }
+        var textBox = document.createElement("textarea");
+        textBox.setAttribute("id", "target");
+        textBox.setAttribute("type", "hidden");
+        textBox.textContent = text;
+        document.body.appendChild(textBox);
+        textBox.select();
+        document.execCommand("copy");
+        document.body.removeChild(textBox);
+        console.log("Copied:");
+        console.log(text);
     };
 
     // 保存
@@ -890,11 +922,11 @@ app.controller('EDUListController',
                     // ROOTの除去
                     $scope.edus = $scope.edus.slice(1, $scope.edus.length);
                     // 各EDUの単語分割
-                    var accum = 0;
+                    // var accum = 0;
                     for (var i = 0; i < $scope.edus.length; i++) {
                         $scope.edus[i] = $scope.edus[i].split(" ");
-                        $scope.eduBegins[i] = accum;
-                        accum = accum + $scope.edus[i].length;
+                        // $scope.eduBegins[i] = accum;
+                        // accum = accum + $scope.edus[i].length;
                     }
                     // headsの抽出
                     $scope.heads = _.pluck(obj, 'parent');
@@ -975,14 +1007,14 @@ app.controller('EDUListController',
         }
         // 再設定
         $scope.edus = newEdus;
-        $scope.eduBegins = [];
+        // $scope.eduBegins = [];
         $scope.heads = [];
         $scope.depRels = [];
-        var accum = 0;
-        for (var i = 0; i < $scope.edus.length; i++) {
-            $scope.eduBegins[i] = accum;
-            accum = accum + $scope.edus[i].length;
-        }
+        // var accum = 0;
+        // for (var i = 0; i < $scope.edus.length; i++) {
+        //     $scope.eduBegins[i] = accum;
+        //     accum = accum + $scope.edus[i].length;
+        // }
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
         $scope.depRels = _.range($scope.edus.length).map(function() { return 'null'; });
     };
@@ -1004,14 +1036,14 @@ app.controller('EDUListController',
         }
         // 再設定
         $scope.edus = newEdus;
-        $scope.eduBegins = [];
+        // $scope.eduBegins = [];
         $scope.heads = [];
         $scope.depRels = [];
-        var accum = 0;
-        for (var i = 0; i < $scope.edus.length; i++) {
-            $scope.eduBegins[i] = accum;
-            accum = accum + $scope.edus[i].length;
-        }
+        // var accum = 0;
+        // for (var i = 0; i < $scope.edus.length; i++) {
+        //     $scope.eduBegins[i] = accum;
+        //     accum = accum + $scope.edus[i].length;
+        // }
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
         $scope.depRels = _.range($scope.edus.length).map(function() { return 'null'; });
     };

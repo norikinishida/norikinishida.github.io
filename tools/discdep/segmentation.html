@@ -41,6 +41,13 @@
 
             <!-- メニューバー2行目 -->
             <div class="row">
+                <!-- コピー -->
+                <input type="button" class="btn btn-info"
+                    style="background-color: #20854E; border-color: #20854E"
+                    value="全文をコピー"
+                    ng-click="copyToClipboardForSeg()"
+                    ng-show="!!inputFile">
+
                 <!-- 保存 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E"
