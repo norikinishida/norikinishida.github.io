@@ -96,7 +96,7 @@
                         <li><a class="dropdown-item" ng-click="showRandomSample('ADDITION')">Addition</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('COMPARISON')">Comparison</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('CAUSE-RESULT')">Cause-Result</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('COMPARISON')">Condition</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('CONDITION')">Condition</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('TEMPORAL')">Temporal</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('ENABLEMENT')">Enablement</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('MANNER-MEANS')">Manner-Means</a></li>
@@ -137,14 +137,16 @@
         <!-- EDUリスト (メイン部分) -->
         <div class="container edu-list" id="list">
             <div ng-repeat="displayText in edus track by $index">
-                <!-- 1EDU -->
+                <!-- Each EDU -->
                 <div class="edu">
+                    <!-- EDU content -->
                     <button id="edu{{$index}}"
                         type="button" class="btn btn-default active"
                         ng-click="highLight('edu' + ($index).toString())"
                         ng-mouseover="mouseOverHandler($index)"
                         ng-mouseleave="mouseOutHandler($index)"
-                        ng-style="{'background-color': (first === $index) ?
+                        ng-style="{'background-color':
+                                        (first === $index) ?
                                             blinkNodeColor1 :
                                             ((mouseOverIndex >= 0 && $index === mouseOverIndex) ?
                                                 blinkNodeColor1 :
@@ -159,6 +161,7 @@
                         ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
                         <h5>{{displayText | TailorString}}</h5>
                     </button>
+                    <!-- EDU index -->
                     <span class="edu-index">{{$index}}</span>
                 </div>
             </div>

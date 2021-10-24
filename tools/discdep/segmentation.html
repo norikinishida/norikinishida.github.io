@@ -58,13 +58,13 @@
                 <input type="button" class="btn btn-info"
                     style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
                     value="ガイドライン"
-                    onClick="location.href='https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf'">
+                    onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
 
                 <!-- EDU分割ツール -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
                     value="談話構造アノテーションに切替"
-                    onClick="location.href='https://norikinishida.github.io/tools/discdep/index.html'">
+                    onClick="window.open('https://norikinishida.github.io/tools/discdep/index.html')">
 
             </div>
         </div>
@@ -72,22 +72,24 @@
         <!-- EDUリスト (メイン部分) -->
         <div class="container edu-list-for-seg" id="list">
             <div ng-repeat="edu in edus track by $index">
-                <div class="edu-for-seg">
+                <!-- Each EDU -->
+                    <!-- EDU index -->
                     <span style="font-size: 14px">{{$index}}</span>
+                    <!-- EDU content -->
                     <button type="button" class="btn btn-default"
                         ng-click="segment($parent.$index, $index)"
                         ng-mouseover="mouseOverHandlerForSeg($parent.$index, $index)"
                         ng-mouseleave="mouseOutHandlerForSeg($parent.$index, $index)"
-                        ng-style="{'background-color': (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
-                                        blinkNodeColor1 :
-                                        'white',
+                        ng-style="{'background-color':
+                                        (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
+                                            blinkNodeColor1 :
+                                            'white',
                                     'font-size': '18px'}"
                         style="outline: none"
                         ng-repeat="tokenText in edu track by $index"
                         ng-disabled="$parent.$index == 0 && $index == 0">
                         {{tokenText}}
                     </button>
-                </div>
             </div>
         </div>
 

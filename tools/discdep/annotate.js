@@ -559,6 +559,13 @@ app.controller('EDUListController',
             console.log("highLight pushed:");
             console.log($scope.operations);
         }
+        else if ($scope.depRels[$scope.first] === "SAME-UNIT") {
+            ngToast.danger({
+                content: 'エラー: Same-Unitチェインの始点と接続してください！',
+                timeout: 2000
+            });
+            $scope.first = -1;
+        }
         else {
             // modifierセット
             second = index;
@@ -935,7 +942,6 @@ app.controller('EDUListController',
         $scope.mouseOverIndexForSegE = -1;
         $scope.mouseOverIndexForSegT = -1;
     };
-
 
     // EDU分割・マージ処理
     $scope.segment = function(eduIndex, tokenIndex) {
