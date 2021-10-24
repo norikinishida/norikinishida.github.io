@@ -1,0 +1,100 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 5,
+			"text": "Human T-cell leukemia virus type 1 ( HTLV-1 ) is the etiologic agent of adult T-cell leukemia . <S>",
+			"relation": "BACKGROUND"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Tax , the viral protein , is thought to be crucial in the development of the disease ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "since it transforms healthy T cells in vitro",
+			"relation": "CAUSE-RESULT"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "and induces tumors in transgenic animals . <S>",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 5,
+			"parent": 0,
+			"text": "We examined the effect of Tax activity on the growth of the interleukin-2 ( IL-2 ) -dependent T-cell line CTLL-2 . <S>",
+			"relation": "ROOT"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "Stable expression of Tax in CTLL-2 transformed cell growth from being IL-2 dependent to IL-2 independent . <S>",
+			"relation": "FINDINGS"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "Tax stimulated transcription through NF-kappaB and the cyclic AMP-responsive element-like sequence in the HTLV-1 promoter . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "The finding of Tax mutants",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "segregating these two pathways",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 10,
+			"parent": 8,
+			"text": "suggested that the NF-kappaB pathway was essential for IL-2-independent growth of CTLL-2 cells",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 11,
+			"parent": 8,
+			"text": "while the CRE pathway was unnecessary . <S>",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 12,
+			"parent": 8,
+			"text": "However , both pathways were necessary for another transformation-related activity ( colony formation in soft agar ) of CTLL-2/Tax . <S>",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 13,
+			"parent": 5,
+			"text": "Our results show that Tax has at least two distinct activities on T cells ,",
+			"relation": "FINDINGS"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "and suggest that Tax plays a crucial role in IL-2-independent T-cell transformation",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "induced by HTLV-1 , in addition to its well-known IL-2-dependent cell transformation . <S>",
+			"relation": "ELABORATION"
+		}
+	]
+}

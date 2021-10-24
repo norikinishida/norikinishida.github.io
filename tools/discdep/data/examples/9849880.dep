@@ -1,0 +1,58 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "The bipartite human interleukin-4 ( IL-4 ) receptor was functionally expressed in murine pro-B cells",
+			"relation": "ROOT"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "and activated by human IL-4",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "to evoke intracellular signaling . <S>",
+			"relation": "CAUSE-RESULT"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "Mutual association of signal transducing proteins within the receptor complex was then studied in dependence of ligand stimulation . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "Besides ligand-induced receptor heterodimerization and contacts of the two IL-4 receptor subunits alpha and gamma with Janus kinases JAK1 and JAK3 a prominent constitutive binding between JAK1 and signal transducer and activator of transcription STAT5 was detected . <S>",
+			"relation": "FINDINGS"
+		},
+		{
+			"id": 6,
+			"parent": 7,
+			"text": "Since both these proteins become phosphorylated in response to IL-4 receptor stimulation ,",
+			"relation": "CAUSE-RESULT"
+		},
+		{
+			"id": 7,
+			"parent": 4,
+			"text": "the influence of tyrosine phosphorylation on their mutual contact was analyzed . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "Association of JAK1 and STAT5 was found to occur exclusively between unphosphorylated proteins . <S>",
+			"relation": "FINDINGS"
+		}
+	]
+}

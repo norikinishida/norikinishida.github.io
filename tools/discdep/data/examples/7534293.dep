@@ -1,0 +1,76 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "The cell cycle-dependent transcription factor , E2F-1 , regulates the cyclin-like species of the DNA repair enzyme uracil-DNA glycosylase ( UDG ) gene in human osteosarcoma ( Saos-2 ) cells . <S>",
+			"relation": "BACKGROUND"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "We demonstrate , through the deletion of the human UDG promoter sequences , that expression of E2F-1 activates the UDG promoter through several E2F sites . <S>",
+			"relation": "ROOT"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "The major putative downstream site for E2F ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "located in the first exon ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "serves as a target for E2F-1/DP1 complex binding in vitro . <S>",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 6,
+			"parent": 2,
+			"text": "We also provide evidence for the functional relationship between the cyclin-like UDG gene product and E2F . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "High levels of UDG expression in a transient transfection assay result in the down-regulation of transcriptional activity through elements specific for E2F-mediated transcription . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "Overexpression of UDG in Saos 2 cells was observed to delay growth late in G1 phase",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "and transiently arrest these cells from progressing into the S phase . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 10,
+			"parent": 2,
+			"text": "This hypothetical model integrates one mechanism of DNA repair with the cell cycle control of gene transcription , likely through E2F . <S>",
+			"relation": "FINDINGS"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "This implicates E2F as a multifunctional target for proteins and enzymes , possibly , responsive to DNA damage through the negative effect of UDG on E2F-mediated transcriptional activity . <S>",
+			"relation": "CAUSE-RESULT"
+		}
+	]
+}

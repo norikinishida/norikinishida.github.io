@@ -1,0 +1,82 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 7,
+            "text": "Apoptosis is responsible for the removal of potentially autoreactive or useless T cells during thymic selection and activated T cells in the periphery . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "Specific families of receptors , kinases , transcription factors , and cysteine proteases , termed caspases , are involved in the apoptotic cascade",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "leading to proteolysis of specific substrates and to morphological changes",
+            "relation": "CAUSE-RESULT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "associated with programmed cell death . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 6,
+            "text": "Although common members of the apoptotic cascade are shared between different cell types ,",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 6,
+            "parent": 2,
+            "text": "it appears that cell-specific factors can influence the response to a given apoptotic stimuli . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 0,
+            "text": "Characterization and understanding of the basic mechanisms",
+            "relation": "ROOT"
+        },
+        {
+            "id": 8,
+            "parent": 7,
+            "text": "involved in the different pathways",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "protecting or leading to cell death",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 7,
+            "text": "may provide novel ways",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "to control inappropriate apoptosis",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "involved in several diseases . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
+}

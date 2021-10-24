@@ -1,0 +1,94 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "TNF is one of the cytokines",
+			"relation": "BACKGROUND"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "secreted by the cells of the immune system . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "Our data demonstrate that those cell lines",
+			"relation": "ROOT"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "lacking capability",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "to form metastatic tumors in vivo",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "are susceptible to TNF induced apoptosis in vitro . <S>",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 7,
+			"parent": 3,
+			"text": "However , cell lines with high metastatic potential are resistant to TNF in vitro . <S>",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "Furthermore , the same cell lines were resistant to cytolytic action of other cytotoxic proteins",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "secreted by LAK cells . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 10,
+			"parent": 3,
+			"text": "Our data showed that TNF resistance in vitro correlates with the increased level of transcription factor NF-kappaB . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 11,
+			"parent": 3,
+			"text": "This finding may provide a tool",
+			"relation": "FINDINGS"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "to improve current protocols of immunotherapy",
+			"relation": "ENABLEMENT"
+		},
+		{
+			"id": 13,
+			"parent": 11,
+			"text": "and insights",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 14,
+			"parent": 11,
+			"text": "to how tumor cells are or are not killed by LAK cells . <S>",
+			"relation": "ELABORATION"
+		}
+	]
+}

@@ -105,6 +105,7 @@ app.controller('EDUListController',
     $scope.heads = []; // 各EDUのhead IDのリスト
     $scope.depRels = []; // 各EDUとそのheadとの間の談話関係、のリスト
     $scope.relations = CONSTANTS.relations; // 定義された談話関係
+    $scope.sentence_ids = []; // 各EDUの文番号のリスト
 
     $scope.operations = []; // アクション履歴
 
@@ -118,7 +119,7 @@ app.controller('EDUListController',
     });
     $scope.canvas_width = CONSTANTS.CANVAS_WIDTH; // キャンバス横幅
 
-    // サンプルファイルのファイル名リスト (samples.txt) を読み込んで描画、ファイル名の配列を作成
+    // サンプルファイルのファイル名リスト (examples.txt) を読み込んで描画、ファイル名の配列を作成
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
@@ -127,7 +128,7 @@ app.controller('EDUListController',
             }
         }
     }
-    xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples.txt");
+    xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/examples.txt");
     xhr.send();
     console.log(xhr);
 
@@ -185,6 +186,16 @@ app.controller('EDUListController',
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
         // 談話関係ラベルの初期化
         $scope.depRels = _.range($scope.edus.length).map(function() { return 'null'; });
+        // 文番号
+        $scope.sentence_ids = [];
+        $scope.sentence_ids.push(0)
+        var sentence_id = 1;
+        for (var i = 1; i < $scope.heads.length; ++i) {
+            $scope.sentence_ids.push(sentence_id);
+            if ($scope.edus[i].includes("<S>")) {
+                sentence_id += 1;
+            }
+        }
         //
         $scope.$apply();
         // 描画
@@ -207,6 +218,16 @@ app.controller('EDUListController',
         $scope.heads = _.pluck(obj, 'parent');
         // 談話関係ラベルの抽出
         $scope.depRels = _.pluck(obj, 'relation');
+        // 文番号
+        $scope.sentence_ids = [];
+        $scope.sentence_ids.push(0)
+        var sentence_id = 1;
+        for (var i = 1; i < $scope.heads.length; ++i) {
+            $scope.sentence_ids.push(sentence_id);
+            if ($scope.edus[i].includes("<S>")) {
+                sentence_id += 1;
+            }
+        }
         //
         $scope.$apply();
         // 描画
@@ -335,7 +356,13 @@ app.controller('EDUListController',
 
     // クリップボードにコピー
     $scope.copyToClipboard = function() {
-        var text = $scope.edus[$scope.first];
+        var text = "";
+        for (var i = 1; i < $scope.edus.length; i++) {
+            text = text + $scope.edus[i].replace("<S>", "").replace("<P>", "");
+            if (i != $scope.edus.length - 1) {
+                text = text + " ";
+            }
+        }
         var textBox = document.createElement("textarea");
         textBox.setAttribute("id", "target");
         textBox.setAttribute("type", "hidden");
@@ -344,13 +371,8 @@ app.controller('EDUListController',
         textBox.select();
         document.execCommand("copy");
         document.body.removeChild(textBox);
-        console.log("Copied " + text);
-
-        $scope.first = -1;
-        // 履歴
-        $scope.operations.pop();
-        console.log("clearNode popped:");
-        console.log($scope.operations);
+        console.log("Copied:");
+        console.log(text);
     };
 
     // 保存
@@ -408,6 +430,16 @@ app.controller('EDUListController',
                     $scope.heads = _.pluck(obj, 'parent');
                     // 談話関係ラベルの抽出
                     $scope.depRels = _.pluck(obj, 'relation');
+                    // 文番号
+                    $scope.sentence_ids = [];
+                    $scope.sentence_ids.push(0)
+                    var sentence_id = 1;
+                    for (var i = 1; i < $scope.heads.length; ++i) {
+                        $scope.sentence_ids.push(sentence_id);
+                        if ($scope.edus[i].includes("<S>")) {
+                            sentence_id += 1;
+                        }
+                    }
                     //
                     $scope.$apply();
                     // 描画
@@ -423,7 +455,7 @@ app.controller('EDUListController',
         var arrayIndex = Math.floor(Math.random() * $scope.sampleFileList.length);
         var sampleFile = $scope.sampleFileList[arrayIndex];
         console.log(sampleFile)
-        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/" + sampleFile);
+        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/examples/" + sampleFile);
         xhr.send();
         console.log(xhr);
         $scope.inputFile = sampleFile;
@@ -632,35 +664,42 @@ app.controller('EDUListController',
             centerS.y += 10;
         }
         centerT.y += 25;
+        // X方向の微修正
+        centerS.x -= 3;
+        centerT.x -= 3;
 
+        // ベジェ曲線用の座標計算
         var width = Utils.findPos(angular.element('#' + id1)[0]).x;
-
-        // 距離 (比率)
-        var percent = 1 - Math.abs(Utils.getTrimNumber(id1) - Utils.getTrimNumber(id2)) / ($scope.heads.length - 1);
-
-        // 謎の調整
-        if ($scope.edus.length > 30 && percent > 0.5) {
-            percent = percent - 0.5;
-        }
-        percent = Math.min(percent, 0.85);
-
-        var offX = width * percent;
+        var depLength = Math.abs(Utils.getTrimNumber(id1) - Utils.getTrimNumber(id2));
+        var depLengthRatio = depLength / ($scope.heads.length - 1);
+        // depLengthRatio = 1 - depLengthRatio;
+        // if ($scope.edus.length > 30 && depLengthRatio > 0.5) {
+        //     depLengthRatio = depLengthRatio - 0.5;
+        // }
+        // depLengthRatio = Math.min(depLengthRatio, 0.85);
+        // var offX = width * depLengthRatio;
+        var offX = Math.max(width * (1 - depLengthRatio) - 20, 0);
 
         // 描画
         var ctx = angular.element('#canvas')[0].getContext('2d');
         ctx.strokeStyle = color;
         ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(centerS.x, centerS.y);
-        ctx.bezierCurveTo(offX, centerS.y, offX, centerT.y, centerT.x, centerT.y);
-        ctx.stroke();
+        ctx.beginPath(); // 開始
+        ctx.moveTo(centerS.x, centerS.y); // 始点
+        ctx.bezierCurveTo(offX, centerS.y, // 始点に対するベジェ曲線用座標
+                          offX, centerT.y, // 終点に対するベジェ曲線用座標
+                          centerT.x, centerT.y // 終点
+                          );
+        ctx.stroke(); // レンダリング
 
-        ctx.beginPath();
+        // 矢印の先部分
         var radius = 6;
         ctx.fillStyle = color;
+        ctx.beginPath(); // 開始
         ctx.moveTo(centerT.x - radius, centerT.y - radius);
         ctx.lineTo(centerT.x - radius, centerT.y + radius);
         ctx.lineTo(centerT.x, centerT.y);
+        ctx.stroke(); // レンダリング
 
         ctx.closePath();
         ctx.fill();
@@ -842,7 +881,7 @@ app.controller('EDUListController',
         var arrayIndex = Math.floor(Math.random() * $scope.sampleFileList.length);
         var sampleFile = $scope.sampleFileList[arrayIndex];
         console.log(sampleFile)
-        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/samples/" + sampleFile);
+        xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/examples/" + sampleFile);
         xhr.send();
         console.log(xhr);
         $scope.inputFile = sampleFile;

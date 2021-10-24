@@ -21,7 +21,7 @@
         <script src="./annotate.js"></script>
     </head>
 
-    <body id="body" style="background-color: #EEEEEE"
+    <body id="body" style="background-color: #F4F4F4"
         ng-app="MyApp" ng-controller="EDUListController">
         <!-- キャンバス要素 -->
         <canvas id="canvas" height="{{canvas_height}}" width="{{canvas_width}}">
@@ -71,9 +71,9 @@
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E"
-                    value="クリップボードにコピー"
+                    value="全文をコピー"
                     ng-click="copyToClipboard()"
-                    ng-show="!!inputFile" ng-disabled="first === -1">
+                    ng-show="!!inputFile">
 
                 <!-- 保存 -->
                 <input type="button" class="btn btn-info"
@@ -84,20 +84,20 @@
 
                 <!-- 例 -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #6F99AD; border-color: #6F99AD; color: black"
+                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
                     value="ランダムサンプル"
                     ng-click="showRandomSample()">
 
                 <!-- ガイドライン (pdf) -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #6F99AD; border-color: #6F99AD; color: black"
+                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
                     value="ガイドライン"
                     onClick="location.href='https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf'">
 
                 <!-- EDU分割ツール -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #6F99AD; border-color: #6F99AD; color: black"
-                    value="EDU分割ツール"
+                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
+                    value="EDU分割に切替"
                     onClick="location.href='https://norikinishida.github.io/tools/discdep/segmentation.html'">
 
             </div>
@@ -119,22 +119,29 @@
         <div class="container edu-list" id="list">
             <div ng-repeat="displayText in edus track by $index">
                 <!-- 1EDU -->
-                <button id="edu{{$index}}"
-                    type="button" class="btn btn-default active"
-                    ng-click="highLight('edu' + ($index).toString())"
-                    ng-mouseover="mouseOverHandler($index)"
-                    ng-mouseleave="mouseOutHandler($index)"
-                    ng-style="{'background-color': (first === $index) ?
-                                        blinkNodeColor1 :
-                                        ((mouseOverIndex >= 0 && $index === mouseOverIndex) ?
+                <div class="edu">
+                    <button id="edu{{$index}}"
+                        type="button" class="btn btn-default active"
+                        ng-click="highLight('edu' + ($index).toString())"
+                        ng-mouseover="mouseOverHandler($index)"
+                        ng-mouseleave="mouseOutHandler($index)"
+                        ng-style="{'background-color': (first === $index) ?
                                             blinkNodeColor1 :
-                                            ((mouseOverIndex >= 0 && (heads[mouseOverIndex] == $index || heads[$index] == mouseOverIndex)) ?
-                                                blinkNodeColor2 :
-                                                'white')),
-                                'color': (first === $index) ? 'black' : 'black'}"
-                    ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
-                    <h5>{{displayText | TailorString}}</h5>
-                </button>
+                                            ((mouseOverIndex >= 0 && $index === mouseOverIndex) ?
+                                                blinkNodeColor1 :
+                                                ((mouseOverIndex >= 0 && (heads[mouseOverIndex] == $index || heads[$index] == mouseOverIndex)) ?
+                                                    blinkNodeColor2 :
+                                                    (
+                                                        (sentence_ids[$index] % 2 === 0) ? '#F4FFFF' :'#F4F4FF'
+                                                    )
+                                                )
+                                            ),
+                                    'color': (heads[$index] >= 0) ? 'black' : 'black'}"
+                        ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
+                        <h5>{{displayText | TailorString}}</h5>
+                    </button>
+                    <span class="edu-index">{{$index}}</span>
+                </div>
             </div>
         </div>
 

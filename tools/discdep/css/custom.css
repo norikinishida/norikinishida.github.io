@@ -12,7 +12,7 @@
     width: 1000px;
 }
 .edu-list {
-    top: 160px;
+    top: 170px;
     left: 190px;
     width: 1000px;
 }
@@ -21,8 +21,19 @@
     left: 190px;
     width: 1000px;
 }
+.edu {
+    display: flex;
+    align-items: end;
+}
+.edu-for-seg {
+    display: flex;
+    align-items: center;
+}
 h5 {
     display: inline-block;
     text-align: left;
     white-space: normal;
+}
+.edu-index {
+    text-align: left;
 }

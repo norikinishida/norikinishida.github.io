@@ -1,0 +1,118 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "A total of 37 chronic , severe , nonsmoking asthmatic patients with documented reversible airways obstruction were classified as glucocorticoid-sensitive or -resistant on the basis of changes in FEV1 , FVC , and peak expiratory flow ( PEF ) after oral prednisolone . <S>",
+			"relation": "ROOT"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "The resistant patients showed no significant improvements in airflow limitation . <S>",
+			"relation": "FINDINGS"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "Phytohemagglutinin ( PHA ) -induced proliferation of peripheral blood T lymphocytes from the sensitive but not the resistant asthmatic patients was significantly",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "( p less than 0.01 )",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "inhibited by dexamethasone",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "( 10(-7) mol/L ) ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 7,
+			"parent": 3,
+			"text": "reflecting a shift of the dose-response curve . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 8,
+			"parent": 9,
+			"text": "When all the asthmatic patients were analyzed together ,",
+			"relation": "TEMPORAL"
+		},
+		{
+			"id": 9,
+			"parent": 3,
+			"text": "there was a significant correlation between the degree of sensitivity of T cells to dexamethasone and the clinical responsiveness to prednisolone",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "( p less than 0.01 ) . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 11,
+			"parent": 9,
+			"text": "No differences were observed between six of the sensitive and resistant patients in the clearance of plasma prednisolone",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "derived from orally administered prednisone . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 13,
+			"parent": 11,
+			"text": "Peripheral blood mononuclear cell glucocorticoid receptors were also characterized in five sensitive and seven resistant patients . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 14,
+			"parent": 11,
+			"text": "The numbers and binding affinities of these receptors could not account for the observed difference in the susceptibility of these cells to functional inhibition by dexamethasone in vitro . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 15,
+			"parent": 1,
+			"text": "These results suggest that clinical glucocorticoid resistance in chronic asthma does not reflect abnormal glucocorticoid clearance",
+			"relation": "FINDINGS"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "but may be due at least partly to a relative insensitivity of T lymphocytes to glucocorticoids . <S>",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 17,
+			"parent": 15,
+			"text": "This lack of sensitivity is unexplained",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 18,
+			"parent": 17,
+			"text": "but is not attributable to abnormalities of cellular glucocorticoid receptors . <S>",
+			"relation": "COMPARISON"
+		}
+	]
+}

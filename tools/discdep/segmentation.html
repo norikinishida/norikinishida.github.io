@@ -21,7 +21,7 @@
         <script src="./annotate.js"></script>
     </head>
 
-    <body id="body" style="background-color: #EEEEEE"
+    <body id="body" style="background-color: #F4F4F4"
         ng-app="MyApp" ng-controller="EDUListController">
         <!-- キャンバス要素 -->
         <canvas id="canvas" height="{{canvas_height}}" width="{{canvas_width}}">
@@ -49,20 +49,20 @@
 
                 <!-- 例 -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #6F99AD; border-color: #6F99AD; color: black"
+                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
                     value="ランダムサンプル"
                     ng-click="showRandomSampleForSeg()">
 
                 <!-- ガイドライン (pdf) -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #6F99AD; border-color: #6F99AD; color: black"
+                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
                     value="ガイドライン"
                     onClick="location.href='https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf'">
 
-                <!-- 談話依存構造アノテーションツール -->
+                <!-- EDU分割ツール -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #6F99AD; border-color: #6F99AD; color: black"
-                    value="談話依存構造アノテーションツール"
+                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
+                    value="談話構造アノテーションに切替"
                     onClick="location.href='https://norikinishida.github.io/tools/discdep/index.html'">
 
             </div>
@@ -71,21 +71,22 @@
         <!-- EDUリスト (メイン部分) -->
         <div class="container edu-list-for-seg" id="list">
             <div ng-repeat="edu in edus track by $index">
-                <span style="background-color: #0072B5; color: white; font-size: 14px; border-radius: 7px; padding: 3px">{{$index}}</span>
-                <!-- <br> -->
-                <button type="button" class="btn btn-default"
-                    ng-click="segment($parent.$index, $index)"
-                    ng-mouseover="mouseOverHandlerForSeg($parent.$index, $index)"
-                    ng-mouseleave="mouseOutHandlerForSeg($parent.$index, $index)"
-                    ng-style="{'background-color': (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
-                                    blinkNodeColor1 :
-                                    'white',
-                                'font-size': '18px'}"
-                    style="outline: none"
-                    ng-repeat="tokenText in edu track by $index"
-                    ng-disabled="$parent.$index == 0 && $index == 0">
-                    {{tokenText}}
-                </button>
+                <div class="edu-for-seg">
+                    <span style="font-size: 14px">{{$index}}</span>
+                    <button type="button" class="btn btn-default"
+                        ng-click="segment($parent.$index, $index)"
+                        ng-mouseover="mouseOverHandlerForSeg($parent.$index, $index)"
+                        ng-mouseleave="mouseOutHandlerForSeg($parent.$index, $index)"
+                        ng-style="{'background-color': (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
+                                        blinkNodeColor1 :
+                                        'white',
+                                    'font-size': '18px'}"
+                        style="outline: none"
+                        ng-repeat="tokenText in edu track by $index"
+                        ng-disabled="$parent.$index == 0 && $index == 0">
+                        {{tokenText}}
+                    </button>
+                </div>
             </div>
         </div>
 

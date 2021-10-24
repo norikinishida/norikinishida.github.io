@@ -1,0 +1,154 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 5,
+			"text": "The generation of genomic diversity during the course of infection has the potential",
+			"relation": "BACKGROUND"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "to affect all aspects of HIV-1 replication ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "including expression of the proviral genome . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 4,
+			"parent": 5,
+			"text": "To gain a better understanding of the impact of long terminal repeat ( LTR ) sequence diversity on LTR-directed gene expression in cells of the central nervous system ( CNS ) and immune system ,",
+			"relation": "ENABLEMENT"
+		},
+		{
+			"id": 5,
+			"parent": 0,
+			"text": "we amplified and cloned LTRs from proviral DNA in HIV-1-infected peripheral blood . <S>",
+			"relation": "ROOT"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "Sequence analysis of nineteen LTRs",
+			"relation": "FINDINGS"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "cloned from 2 adult and 3 pediatric patients",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "revealed an average of 33 nucleotide changes",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 9,
+			"parent": 6,
+			"text": "( with respect to the sequence of the LAI LTR )",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 10,
+			"parent": 8,
+			"text": "within the 455-bp U3 region . <S>",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 11,
+			"parent": 6,
+			"text": "Transient expression analyses in cells of neuroglial and lymphocytic origin demonstrated that some of these LTRs had activities",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "which varied significantly from the LAI LTR in U-373 MG cells ( an astrocytoma cell line ) as well as in Jurkat cells ( a CD4- positive lymphocyte cell line ) . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 13,
+			"parent": 16,
+			"text": "While LTRs",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "which demonstrated the highest activities in U-373 MG cells",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 15,
+			"parent": 13,
+			"text": "also yielded high activities in Jurkat cells ,",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 16,
+			"parent": 11,
+			"text": "the LTRs were generally more active in Jurkat cells",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "when compared to the LAI LTR . <S>",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 18,
+			"parent": 16,
+			"text": "Differences in LTR sequence also resulted in differences in transcription factor recruitment to cis-acting sites within the U3 region of the LTR ,",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 19,
+			"parent": 18,
+			"text": "as demonstrated by electrophoretic mobility shift assays . <S>",
+			"relation": "MANNER-MEANS"
+		},
+		{
+			"id": 20,
+			"parent": 18,
+			"text": "In particular , naturally occurring sequence variation impacted transcription factor binding to an activating transcription factor/cAMP response element binding ( ATF/CREB ) binding site",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 21,
+			"parent": 20,
+			"text": "( located between the LEF-1 and distal NF-kappaB transcription factor binding sites )",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 22,
+			"parent": 20,
+			"text": "that we identified in previous studies of the HIV-1 LTR . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 23,
+			"parent": 5,
+			"text": "These findings suggest that LTR sequence changes can significantly affect basal LTR function and transcription factor recruitment ,",
+			"relation": "FINDINGS"
+		},
+		{
+			"id": 24,
+			"parent": 23,
+			"text": "which may , in turn , alter the course of viral replication in cells of CNS and immune system origin . <S>",
+			"relation": "ELABORATION"
+		}
+	]
+}
