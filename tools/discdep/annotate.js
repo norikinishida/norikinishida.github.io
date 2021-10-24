@@ -119,7 +119,7 @@ app.controller('EDUListController',
     });
     $scope.canvas_width = CONSTANTS.CANVAS_WIDTH; // キャンバス横幅
 
-    // サンプルファイルのファイル名リスト (examples.txt) を読み込んで描画、ファイル名の配列を作成
+    // サンプルファイル名リスト (examples.txt) を読み込んで描画、ファイル名の配列を作成
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
@@ -131,6 +131,27 @@ app.controller('EDUListController',
     xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/examples.txt");
     xhr.send();
     console.log(xhr);
+
+    // サンプルファイル名辞書 (examples.csv) を読み込んで、談話関係->ファイル名リストの辞書を作成
+    var xhr2 = new XMLHttpRequest();
+    xhr2.onreadystatechange = function() {
+        if (xhr2.readyState == 4) {
+            if (xhr2.status == 200) {
+                $scope.sampleFileDict = {};
+                var lines = xhr2.responseText.split("\n");
+                for (var i = 0; i < lines.length; ++i) {
+                    var line = lines[i];
+                    if (line != "") {
+                        var items = line.split(",");
+                        $scope.sampleFileDict[items[0]] = items.slice(1);
+                    }
+                }
+            }
+        }
+    }
+    xhr2.open("GET", "https://norikinishida.github.io/tools/discdep/data/examples.csv");
+    xhr2.send();
+    console.log(xhr2);
 
     // EDU分割用
     $scope.eduBegins = [];
@@ -407,7 +428,7 @@ app.controller('EDUListController',
     };
 
     // 例示
-    $scope.showRandomSample = function () {
+    $scope.showRandomSample = function (depRel) {
         // クリア
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
@@ -452,9 +473,8 @@ app.controller('EDUListController',
                 }
             }
         }
-        var arrayIndex = Math.floor(Math.random() * $scope.sampleFileList.length);
-        var sampleFile = $scope.sampleFileList[arrayIndex];
-        console.log(sampleFile)
+        var arrayIndex = Math.floor(Math.random() * $scope.sampleFileDict[depRel].length);
+        var sampleFile = $scope.sampleFileDict[depRel][arrayIndex];
         xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/examples/" + sampleFile);
         xhr.send();
         console.log(xhr);
@@ -880,7 +900,6 @@ app.controller('EDUListController',
         }
         var arrayIndex = Math.floor(Math.random() * $scope.sampleFileList.length);
         var sampleFile = $scope.sampleFileList[arrayIndex];
-        console.log(sampleFile)
         xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/examples/" + sampleFile);
         xhr.send();
         console.log(xhr);
