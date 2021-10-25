@@ -76,6 +76,13 @@
                     ng-click="copyToClipboard()"
                     ng-show="!!inputFile">
 
+                <!-- 途中保存 -->
+                <input type="button" class="btn btn-info"
+                    style="background-color: #20854E; border-color: #20854E"
+                    value="途中保存"
+                    ng-click="saveToFile()"
+                    ng-show="!!inputFile">
+
                 <!-- 保存 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E"

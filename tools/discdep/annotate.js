@@ -400,6 +400,10 @@ app.controller('EDUListController',
         document.body.removeChild(textBox);
         console.log("Copied:");
         console.log(text);
+        ngToast.create({
+            content: '全文をクリップボードにコピーしました',
+            timeout: 2000
+        });
     };
 
     // 保存
@@ -880,6 +884,10 @@ app.controller('EDUListController',
         document.body.removeChild(textBox);
         console.log("Copied:");
         console.log(text);
+        ngToast.create({
+            content: '全文をクリップボードにコピーしました',
+            timeout: 2000
+        });
     };
 
     // 保存
