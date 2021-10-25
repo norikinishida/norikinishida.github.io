@@ -356,7 +356,9 @@ app.controller('EDUListController',
         }
         else if (op.type == "change") {
             // もし最終アクションがラベルの変更なら、ラベルを戻す
-            var id1 = op.id1, id2 = op.id2, rel = op.changed_relation;;
+            var id1 = op.id1;
+            var id2 = op.id2;
+            var rel = op.changed_relation;
             $scope.heads[id2] = id1;
             $scope.depRels[id2] = rel;
             // 描画
@@ -364,7 +366,9 @@ app.controller('EDUListController',
         }
         else if (op.type === 'delete') {
             // もし最終アクションが結合の削除なら、結合を戻す
-            var id1 = op.id1, id2 = op.id2, rel = op.deleted_relation;
+            var id1 = op.id1;
+            var id2 = op.id2;
+            var rel = op.deleted_relation;
             $scope.heads[id2] = id1;
             $scope.depRels[id2] = rel;
             // 描画
@@ -568,13 +572,6 @@ app.controller('EDUListController',
             $scope.operations.push(op);
             console.log("highLight pushed:");
             console.log($scope.operations);
-        }
-        else if ($scope.depRels[$scope.first] === "SAME-UNIT") {
-            ngToast.danger({
-                content: 'エラー: Same-Unitチェインの始点と接続してください！',
-                timeout: 2000
-            });
-            $scope.first = -1;
         }
         else {
             // modifierセット
