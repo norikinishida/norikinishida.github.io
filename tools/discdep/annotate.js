@@ -141,7 +141,7 @@ app.controller('EDUListController',
                 var lines = xhr2.responseText.split("\n");
                 for (var i = 0; i < lines.length; ++i) {
                     var line = lines[i];
-                    if (line != "") {
+                    if (line !== "") {
                         var items = line.split(",");
                         $scope.sampleFileDict[items[0]] = items.slice(1);
                     }
@@ -412,6 +412,12 @@ app.controller('EDUListController',
 
     // 保存
     $scope.saveToFile = function() {
+        if ($scope.progress !== 100) {
+            ngToast.warning({
+                content: 'WARNING: 談話依存構造は完全ではありません！',
+                timeout: 5000
+            });
+        }
         // 辞書データの初期化
         var data = {root: []};
         // 辞書データ作成
@@ -596,7 +602,7 @@ app.controller('EDUListController',
             drawAll();
 
             // 履歴追加
-            if (mode != "change") {
+            if (mode !== "change") {
                 var op = {type: 'connect', id1: $scope.first.toString(), id2: second.toString()};
                 $scope.operations.push(op);
                 console.log("popRelation pushed:");
