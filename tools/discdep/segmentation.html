@@ -80,10 +80,10 @@
         <div class="container edu-list-for-seg" id="list">
             <div ng-repeat="edu in edus track by $index">
                 <!-- Each EDU -->
-                    <!-- EDU index -->
-                    <span style="font-size: 14px">{{$index}}</span>
-                    <!-- EDU content -->
-                    <button type="button" class="btn btn-default"
+                <!-- EDU index -->
+                <span>{{$index}}</span>
+                <!-- EDU content -->
+                <button type="button" class="btn btn-default"
                         ng-click="segment($parent.$index, $index)"
                         ng-mouseover="mouseOverHandlerForSeg($parent.$index, $index)"
                         ng-mouseleave="mouseOutHandlerForSeg($parent.$index, $index)"
@@ -95,8 +95,8 @@
                         style="outline: none"
                         ng-repeat="tokenText in edu track by $index"
                         ng-disabled="$parent.$index == 0 && $index == 0">
-                        {{tokenText}}
-                    </button>
+                    {{tokenText}}
+                </button>
             </div>
         </div>
 
