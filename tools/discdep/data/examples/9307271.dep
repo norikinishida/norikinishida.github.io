@@ -21,60 +21,66 @@
 		{
 			"id": 3,
 			"parent": 1,
-			"text": "that is normally expressed in early fetal development but not in adult peripheral blood . <S>",
+			"text": "that is normally expressed in early fetal development",
 			"relation": "ELABORATION"
 		},
 		{
 			"id": 4,
+			"parent": 3,
+			"text": "but not in adult peripheral blood . <S>",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 5,
 			"parent": 1,
 			"text": "GR6 is activated in the UCSD-AML1 cell line and in a leukemic sample ,",
 			"relation": "ELABORATION"
 		},
 		{
-			"id": 5,
-			"parent": 4,
+			"id": 6,
+			"parent": 5,
 			"text": "both of which carry a t(3;3)(q21;q26) . <S>",
 			"relation": "ELABORATION"
 		},
 		{
-			"id": 6,
+			"id": 7,
 			"parent": 1,
 			"text": "In UCSD-AML1 , we have also identified fusion transcripts between the ecotropic viral insertion site I ( EVI1 ) gene in 3q26 and GR6 and between EVI1 and Ribophorin I",
 			"relation": "ADDITION"
 		},
 		{
-			"id": 7,
-			"parent": 6,
+			"id": 8,
+			"parent": 7,
 			"text": "that maps 30 kb telomeric to GR6 in 3q21 . <S>",
 			"relation": "ELABORATION"
 		},
 		{
-			"id": 8,
-			"parent": 6,
-			"text": "All fusions splice the 5' ends of the 3q21 genes into exon 2 of the EVI1 gene , an event",
-			"relation": "ELABORATION"
-		},
-		{
 			"id": 9,
-			"parent": 8,
-			"text": "that is similar to the normal intergenic splicing of MDS1-EVI1 and to those",
+			"parent": 7,
+			"text": "All fusions splice the 5' ends of the 3q21 genes into exon 2 of the EVI1 gene , an event",
 			"relation": "ELABORATION"
 		},
 		{
 			"id": 10,
 			"parent": 9,
-			"text": "previously documented in leukemias with t(3;21) and t(3;12) ,",
+			"text": "that is similar to the normal intergenic splicing of MDS1-EVI1 and to those",
 			"relation": "ELABORATION"
 		},
 		{
 			"id": 11,
 			"parent": 10,
-			"text": "in which acute myelogenous leukemia 1-EVI1 fusions and ETV6-EVI1 fusions , respectively , occur . <S>",
+			"text": "previously documented in leukemias with t(3;21) and t(3;12) ,",
 			"relation": "ELABORATION"
 		},
 		{
 			"id": 12,
-			"parent": 8,
+			"parent": 11,
+			"text": "in which acute myelogenous leukemia 1-EVI1 fusions and ETV6-EVI1 fusions , respectively , occur . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 13,
+			"parent": 9,
 			"text": "The Ribophorin I-EVI1 fusion in particular may be a common occurrence in t(3;3) . <S>",
 			"relation": "ELABORATION"
 		}

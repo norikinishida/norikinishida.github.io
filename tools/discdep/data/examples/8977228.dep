@@ -1,172 +1,148 @@
-﻿{
-	"root": [
-		{
-			"id": 0,
-			"parent": -1,
-			"text": "ROOT",
-			"relation": "null"
-		},
-		{
-			"id": 1,
-			"parent": 0,
-			"text": "The molecular mechanisms of the effects of IL-4 and IL-13 on HIV infection in human monocytes",
-			"relation": "ROOT"
-		},
-		{
-			"id": 2,
-			"parent": 1,
-			"text": "as they matured into monocyte-derived macrophages over 7 days",
-			"relation": "TEMPORAL"
-		},
-		{
-			"id": 3,
-			"parent": 1,
-			"text": "were investigated",
-			"relation": "SAME-UNIT"
-		},
-		{
-			"id": 4,
-			"parent": 1,
-			"text": "using HIV-1 ( BaL ) , and low passage clinical strains . <S>",
-			"relation": "MANNER-MEANS"
-		},
-		{
-			"id": 5,
-			"parent": 1,
-			"text": "IL-4 and IL-13 up-regulated the expression of both genomic and spliced HIV mRNA in monocytes",
-			"relation": "FINDINGS"
-		},
-		{
-			"id": 6,
-			"parent": 5,
-			"text": "cultured on Teflon ,",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 7,
-			"parent": 5,
-			"text": "as determined by Northern analysis and p24 Ag assay . <S>",
-			"relation": "MANNER-MEANS"
-		},
-		{
-			"id": 8,
-			"parent": 9,
-			"text": "Using a nuclear run-on assay ,",
-			"relation": "MANNER-MEANS"
-		},
-		{
-			"id": 9,
-			"parent": 5,
-			"text": "IL-4 stimulation was shown to enhance transcription by two- to threefold . <S>",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 10,
-			"parent": 9,
-			"text": "IL-4 stimulated nuclear factor-kappaB nuclear translocation and binding before enhancement of HIV RNA expression . <S>",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 11,
-			"parent": 5,
-			"text": "Conversely , IL-4 and IL-13 markedly and significantly inhibited HIV replication at the transcriptional level in monocyte-derived macrophages ,",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 12,
-			"parent": 11,
-			"text": "and this occurred",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 13,
-			"parent": 12,
-			"text": "whether these cytokines were added before or after HIV infection . <S>",
-			"relation": "CONDITION"
-		},
-		{
-			"id": 14,
-			"parent": 11,
-			"text": "The reversal from stimulation to inhibition occurred after 3 to 5 days of adherence to plastic . <S>",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 15,
-			"parent": 14,
-			"text": "IL-4 had no significant effect on HIV reverse transcription . <S>",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 16,
-			"parent": 1,
-			"text": "The effect of both cytokines on the monocyte maturation/differentiation",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 17,
-			"parent": 16,
-			"text": "( CD11b , CD13 , and CD26 )",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 18,
-			"parent": 16,
-			"text": "and other macrophage markers",
-			"relation": "SAME-UNIT"
-		},
-		{
-			"id": 19,
-			"parent": 16,
-			"text": "( CD14 and CD68 )",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 20,
-			"parent": 18,
-			"text": "was examined . <S>",
-			"relation": "SAME-UNIT"
-		},
-		{
-			"id": 21,
-			"parent": 16,
-			"text": "IL-4 enhanced CD11b ,",
-			"relation": "FINDINGS"
-		},
-		{
-			"id": 22,
-			"parent": 21,
-			"text": "but inhibited CD26 expression",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 23,
-			"parent": 22,
-			"text": "and delayed CD13 loss . <S>",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 24,
-			"parent": 21,
-			"text": "IL-13 had similar effects on CD11b and CD13 , but no effect on CD26 . <S>",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 25,
-			"parent": 1,
-			"text": "Hence , these cytokines do not simply enhance monocyte differentiation ,",
-			"relation": "FINDINGS"
-		},
-		{
-			"id": 26,
-			"parent": 25,
-			"text": "but have complex and slightly divergent effects",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 27,
-			"parent": 26,
-			"text": "that impact on HIV replication probably through cell signaling pathways and nuclear factor-kappaB translocation . <S>",
-			"relation": "ELABORATION"
-		}
-	]
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "The molecular mechanisms of the effects of IL-4 and IL-13 on HIV infection in human monocytes",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "as they matured into monocyte-derived macrophages over 7 days",
+            "relation": "TEMPORAL"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "were investigated",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 4,
+            "parent": 1,
+            "text": "using HIV-1 ( BaL ) , and low passage clinical strains . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 5,
+            "parent": 1,
+            "text": "IL-4 and IL-13 up-regulated the expression of both genomic and spliced HIV mRNA in monocytes",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "cultured on Teflon ,",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 5,
+            "text": "as determined by Northern analysis and p24 Ag assay . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 8,
+            "parent": 9,
+            "text": "Using a nuclear run-on assay ,",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 9,
+            "parent": 5,
+            "text": "IL-4 stimulation was shown to enhance transcription by two- to threefold . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "IL-4 stimulated nuclear factor-kappaB nuclear translocation and binding before enhancement of HIV RNA expression . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 11,
+            "parent": 5,
+            "text": "Conversely , IL-4 and IL-13 markedly and significantly inhibited HIV replication at the transcriptional level in monocyte-derived macrophages ,",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "and this occurred",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "whether these cytokines were added before or after HIV infection . <S>",
+            "relation": "CONDITION"
+        },
+        {
+            "id": 14,
+            "parent": 11,
+            "text": "The reversal from stimulation to inhibition occurred after 3 to 5 days of adherence to plastic . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "IL-4 had no significant effect on HIV reverse transcription . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 16,
+            "parent": 1,
+            "text": "The effect of both cytokines on the monocyte maturation/differentiation ( CD11b , CD13 , and CD26 ) and other macrophage markers ( CD14 and CD68 ) was examined . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "IL-4 enhanced CD11b ,",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 18,
+            "parent": 17,
+            "text": "but inhibited CD26 expression",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 19,
+            "parent": 18,
+            "text": "and delayed CD13 loss . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 20,
+            "parent": 17,
+            "text": "IL-13 had similar effects on CD11b and CD13 , but no effect on CD26 . <S>",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 21,
+            "parent": 1,
+            "text": "Hence , these cytokines do not simply enhance monocyte differentiation ,",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 22,
+            "parent": 21,
+            "text": "but have complex and slightly divergent effects",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 23,
+            "parent": 22,
+            "text": "that impact on HIV replication probably through cell signaling pathways and nuclear factor-kappaB translocation . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
 }

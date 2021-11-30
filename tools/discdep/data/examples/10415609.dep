@@ -1,100 +1,88 @@
-﻿{
-	"root": [
-		{
-			"id": 0,
-			"parent": -1,
-			"text": "ROOT",
-			"relation": "null"
-		},
-		{
-			"id": 1,
-			"parent": 4,
-			"text": "Different glucocorticoid hormones ( GCH ) show differences in the intensity and in the kinetics of their immunomodulating activity . <S>",
-			"relation": "BACKGROUND"
-		},
-		{
-			"id": 2,
-			"parent": 1,
-			"text": "The mechanism ( s ) of action of GCH is under investigation ,",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 3,
-			"parent": 2,
-			"text": "but is has been noted that they exert immune activity via the genomic pathway . <S>",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 4,
-			"parent": 0,
-			"text": "We have studied the effects of prednisone ( PDN ) , deflazacort ( DFC ) , and dexamethasone ( DXM ) on the production of cytokines",
-			"relation": "ROOT"
-		},
-		{
-			"id": 5,
-			"parent": 4,
-			"text": "( IL-2 , IL-6 , TNF-alpha , IL-10 )",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 6,
-			"parent": 4,
-			"text": "by peripheral T lymphocytes , and the effects on the inhibition of NF-kB DNA binding activity by activated Jurkat cell line . <S>",
-			"relation": "SAME-UNIT"
-		},
-		{
-			"id": 7,
-			"parent": 4,
-			"text": "The data",
-			"relation": "FINDINGS"
-		},
-		{
-			"id": 8,
-			"parent": 7,
-			"text": "obtained",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 9,
-			"parent": 7,
-			"text": "show that the three GCH molecules exert an immunosuppression on cytokine production by T lymphocytes and a strong decrease in the nuclear translocation of NF-kB in Jurkat cells ;",
-			"relation": "SAME-UNIT"
-		},
-		{
-			"id": 10,
-			"parent": 7,
-			"text": "moreover , ( a ) not all the cytokines",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 11,
-			"parent": 10,
-			"text": "investigated",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 12,
-			"parent": 10,
-			"text": "were affected , and not with the same intensity , by the three GCH",
-			"relation": "SAME-UNIT"
-		},
-		{
-			"id": 13,
-			"parent": 10,
-			"text": "and ( b ) DXM inhibited the binding activity of NF-kB less than that of DFC and PDN . <S>",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 14,
-			"parent": 4,
-			"text": "These data are in agreement with the concept",
-			"relation": "FINDINGS"
-		},
-		{
-			"id": 15,
-			"parent": 14,
-			"text": "that different GCH compounds might differ in their binding and affinity properties , tissue-specific metabolism , and interaction with transcription factor . <S>",
-			"relation": "ELABORATION"
-		}
-	]
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 4,
+            "text": "Different glucocorticoid hormones ( GCH ) show differences in the intensity and in the kinetics of their immunomodulating activity . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "The mechanism ( s ) of action of GCH is under investigation ,",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "but is has been noted that they exert immune activity via the genomic pathway . <S>",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 4,
+            "parent": 0,
+            "text": "We have studied the effects of prednisone ( PDN ) , deflazacort ( DFC ) , and dexamethasone ( DXM ) on the production of cytokines ( IL-2 , IL-6 , TNF-alpha , IL-10 ) by peripheral T lymphocytes , and the effects on the inhibition of NF-kB DNA binding activity by activated Jurkat cell line . <S>",
+            "relation": "ROOT"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "The data",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "obtained",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 7,
+            "parent": 5,
+            "text": "show that the three GCH molecules exert an immunosuppression on cytokine production by T lymphocytes and a strong decrease in the nuclear translocation of NF-kB in Jurkat cells ;",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 8,
+            "parent": 5,
+            "text": "moreover , ( a ) not all the cytokines",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "investigated",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 10,
+            "parent": 8,
+            "text": "were affected , and not with the same intensity , by the three GCH",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 11,
+            "parent": 8,
+            "text": "and ( b ) DXM inhibited the binding activity of NF-kB less than that of DFC and PDN . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 12,
+            "parent": 4,
+            "text": "These data are in agreement with the concept",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "that different GCH compounds might differ in their binding and affinity properties , tissue-specific metabolism , and interaction with transcription factor . <S>",
+            "relation": "ELABORATION"
+        }
+    ]
 }

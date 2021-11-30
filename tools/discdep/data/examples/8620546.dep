@@ -1,0 +1,112 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 2,
+            "text": "Although transcriptional factors AP-1 and nuclear factor of activated T cells ( NF-AT ) are important for the normal induction of IL-2 ,",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 2,
+            "parent": 3,
+            "text": "it is unknown if the age-related decline in IL-2 production by activated human T cells may be associated with aberrancies in transcriptional regulatory proteins . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 3,
+            "parent": 0,
+            "text": "In the current studies , IL-2 production by T cells from elderly ( mean 78 years ) and young ( mean 37 years ) humans was measured in cultures",
+            "relation": "ROOT"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "stimulated with PHA , PHA plus PMA , crosslinked anti-CD3 mAB OKT3 plus PMA , or PMA plus ionomycin . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 5,
+            "parent": 3,
+            "text": "Substantial decreases of IL-2 production were observed for cell cultures from 7 of 12 elderly individuals in response to the different stimuli ,",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "whereas the levels of IL-2 produced by stimulated T cells from other elderly individuals were equivalent to those",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "observed for stimulated T cells of young subjects . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 5,
+            "text": "Analyses of nuclear extracts by electrophoretic DNA mobility shift assays showed that decreased IL-2 production by stimulated T cells of elderly individuals was closely associated with impairments in the activation of both AP-1 and NF-AT . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "By contrast , T cells from elderly subjects with normal levels of IL-2 production exhibited normal activation of AP-1 and NF-AT . <S>",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 10,
+            "parent": 8,
+            "text": "In addition , the results of competition experiments",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "analyzing the normal components of NF-AT",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 12,
+            "parent": 10,
+            "text": "showed that the age-related reductions in stimulus-dependent NF-AT complexes corresponded to the slow migrating complexes",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 13,
+            "parent": 10,
+            "text": "that were composed of c-Fos/c-Jun AP-1 . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 14,
+            "parent": 10,
+            "text": "The resting and stimulated levels of NF kappa B were reduced in T cells from certain elderly individuals ;",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "however , alterations of NF kappa B did not correlate with changes in IL-2 expression . <S>",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 16,
+            "parent": 3,
+            "text": "Thus , these results show that age-related impairments in the activation of AP-1 and NF-AT are closely associated with decreased expression of IL-2",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "and further suggest that aberrancies in the signaling pathways important for the induction of transcriptionally active c-Fos/c-Jun AP-1 may contribute to the impaired activation of NF-AT . <S>",
+            "relation": "ADDITION"
+        }
+    ]
+}

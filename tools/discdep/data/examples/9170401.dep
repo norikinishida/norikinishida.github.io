@@ -1,136 +1,130 @@
-﻿{
-	"root": [
-		{
-			"id": 0,
-			"parent": -1,
-			"text": "ROOT",
-			"relation": "null"
-		},
-		{
-			"id": 1,
-			"parent": 2,
-			"text": "BACKGROUND :",
-			"relation": "TEXTUAL-ORGANIZATION"
-		},
-		{
-			"id": 2,
-			"parent": 4,
-			"text": "Activated platelets tether and activate myeloid leukocytes . <S>",
-			"relation": "BACKGROUND"
-		},
-		{
-			"id": 3,
-			"parent": 4,
-			"text": "To investigate the potential relevance of this mechanism in acute myocardial infarction ( AMI ) ,",
-			"relation": "ENABLEMENT"
-		},
-		{
-			"id": 4,
-			"parent": 0,
-			"text": "we examined cytokine induction by leukocyte-platelet adhesion and the occurrence of leukocyte-platelet conjugates in patients with AMI . <S>",
-			"relation": "ROOT"
-		},
-		{
-			"id": 5,
-			"parent": 6,
-			"text": "METHODS AND RESULTS :",
-			"relation": "TEXTUAL-ORGANIZATION"
-		},
-		{
-			"id": 6,
-			"parent": 4,
-			"text": "We obtained peripheral venous blood samples in 20 patients with AMI before and daily for 5 days after direct percutaneous transluminal coronary angioplasty ( PTCA ) and in 20 patients",
-			"relation": "MANNER-MEANS"
-		},
-		{
-			"id": 7,
-			"parent": 6,
-			"text": "undergoing elective PTCA . <S>",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 8,
-			"parent": 4,
-			"text": "Throughout the study period , CD41 immunofluorescence of leukocytes ( flow cytometry ) revealed increased leukocyte-platelet adhesion in patients with AMI",
-			"relation": "FINDINGS"
-		},
-		{
-			"id": 9,
-			"parent": 8,
-			"text": "compared with control patients",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 10,
-			"parent": 8,
-			"text": "( mean +/- SE of fluorescence [ channels ] before PTCA : 77 +/- 16 versus 35 +/- 9 ; P = .003 ) . <S>",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 11,
-			"parent": 8,
-			"text": "In vitro , thrombin-stimulated fixed platelets bound to neutrophils and monocytes . <S>",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 12,
-			"parent": 11,
-			"text": "Within 2 hours , this resulted in increased mRNA for interleukin ( IL ) , 1 beta , IL-8 , and monocyte chemoattractant protein ( MCP ) -1 in unfractionated leukocytes . <S>",
-			"relation": "CAUSE-RESULT"
-		},
-		{
-			"id": 13,
-			"parent": 12,
-			"text": "After 4 hours , IL-1 beta and IL-8 concentration of the cell-free supernatant had increased by 268 +/- 36 % and 210 +/- 7 % , respectively ,",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 14,
-			"parent": 13,
-			"text": "and cellular MCP-1 content had increased by 170 +/- 8 % . <S>",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 15,
-			"parent": 11,
-			"text": "Addition of activated platelets to adherent monocytes had a similar effect",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 16,
-			"parent": 15,
-			"text": "and was associated with nuclear factor-kappa B activation . <S>",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 17,
-			"parent": 15,
-			"text": "Inhibition of binding by anti-P selectin antibodies reduced the effect of activated platelets on cytokine production . <S>",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 18,
-			"parent": 19,
-			"text": "CONCLUSIONS :",
-			"relation": "TEXTUAL-ORGANIZATION"
-		},
-		{
-			"id": 19,
-			"parent": 4,
-			"text": "In patients with AMI , leukocyte-platelet adhesion is increased . <S>",
-			"relation": "FINDINGS"
-		},
-		{
-			"id": 20,
-			"parent": 19,
-			"text": "Binding of activated platelets induces IL-1 beta , IL-8 , and MCP-1 in leukocytes . <S>",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 21,
-			"parent": 20,
-			"text": "Our findings suggest that leukocyte-platelet adhesion contributes to the regulation of inflammatory responses in AMI . <S>",
-			"relation": "ADDITION"
-		}
-	]
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 2,
+            "text": "BACKGROUND :",
+            "relation": "TEXTUAL-ORGANIZATION"
+        },
+        {
+            "id": 2,
+            "parent": 4,
+            "text": "Activated platelets tether and activate myeloid leukocytes . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 3,
+            "parent": 4,
+            "text": "To investigate the potential relevance of this mechanism in acute myocardial infarction ( AMI ) ,",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 4,
+            "parent": 0,
+            "text": "we examined cytokine induction by leukocyte-platelet adhesion and the occurrence of leukocyte-platelet conjugates in patients with AMI . <S>",
+            "relation": "ROOT"
+        },
+        {
+            "id": 5,
+            "parent": 6,
+            "text": "METHODS AND RESULTS :",
+            "relation": "TEXTUAL-ORGANIZATION"
+        },
+        {
+            "id": 6,
+            "parent": 4,
+            "text": "We obtained peripheral venous blood samples in 20 patients with AMI before and daily for 5 days after direct percutaneous transluminal coronary angioplasty ( PTCA ) and in 20 patients",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "undergoing elective PTCA . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 4,
+            "text": "Throughout the study period , CD41 immunofluorescence of leukocytes ( flow cytometry ) revealed increased leukocyte-platelet adhesion in patients with AMI",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 9,
+            "parent": 8,
+            "text": "compared with control patients ( mean +/- SE of fluorescence [ channels ] before PTCA : 77 +/- 16 versus 35 +/- 9 ; P = .003 ) . <S>",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 10,
+            "parent": 8,
+            "text": "In vitro , thrombin-stimulated fixed platelets bound to neutrophils and monocytes . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 11,
+            "parent": 10,
+            "text": "Within 2 hours , this resulted in increased mRNA for interleukin ( IL ) , 1 beta , IL-8 , and monocyte chemoattractant protein ( MCP ) -1 in unfractionated leukocytes . <S>",
+            "relation": "CAUSE-RESULT"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "After 4 hours , IL-1 beta and IL-8 concentration of the cell-free supernatant had increased by 268 +/- 36 % and 210 +/- 7 % , respectively ,",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 13,
+            "parent": 12,
+            "text": "and cellular MCP-1 content had increased by 170 +/- 8 % . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 14,
+            "parent": 10,
+            "text": "Addition of activated platelets to adherent monocytes had a similar effect",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 15,
+            "parent": 14,
+            "text": "and was associated with nuclear factor-kappa B activation . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 16,
+            "parent": 14,
+            "text": "Inhibition of binding by anti-P selectin antibodies reduced the effect of activated platelets on cytokine production . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 17,
+            "parent": 18,
+            "text": "CONCLUSIONS :",
+            "relation": "TEXTUAL-ORGANIZATION"
+        },
+        {
+            "id": 18,
+            "parent": 4,
+            "text": "In patients with AMI , leukocyte-platelet adhesion is increased . <S>",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 19,
+            "parent": 18,
+            "text": "Binding of activated platelets induces IL-1 beta , IL-8 , and MCP-1 in leukocytes . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 20,
+            "parent": 19,
+            "text": "Our findings suggest that leukocyte-platelet adhesion contributes to the regulation of inflammatory responses in AMI . <S>",
+            "relation": "ADDITION"
+        }
+    ]
 }

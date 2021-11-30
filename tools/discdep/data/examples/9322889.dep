@@ -1,0 +1,220 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 9,
+			"text": "The myb family of transcription factors has been strongly implicated in the regulation of cell growth and differentiation in the haematopoietic system . <S>",
+			"relation": "BACKGROUND"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "The v-myb oncogene ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "carried by avian defective retroviruses ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "causes leukaemias in the chicken",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 5,
+			"parent": 2,
+			"text": "and transforms haematopoietic cells in vitro . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 6,
+			"parent": 2,
+			"text": "Its normal cellular equivalent c-myb , has been shown to promote the proliferation",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "and block the differentiation of haematopoietic cells in several experimental models",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "and is required for fetal haematopoiesis . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 9,
+			"parent": 0,
+			"text": "Two other members of the family have been cloned more recently , A-myb and B-myb ,",
+			"relation": "ROOT"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "which show sequence homology with c-myb in several domains ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "of which the DNA binding domain as well as other regulatory domains . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 12,
+			"parent": 9,
+			"text": "Both have been shown to be transcription factors . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 13,
+			"parent": 9,
+			"text": "B-myb is also involved in the control of proliferation and differentiation ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "but ,",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "unlike c-myb ,",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 16,
+			"parent": 14,
+			"text": "it is expressed in many cell types . <S>",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 17,
+			"parent": 13,
+			"text": "The third member of the family , A-myb , shows the most restricted pattern of expression ,",
+			"relation": "COMPARISON"
+		},
+		{
+			"id": 18,
+			"parent": 17,
+			"text": "suggesting a very specific role for this transcription factor . <S>",
+			"relation": "CAUSE-RESULT"
+		},
+		{
+			"id": 19,
+			"parent": 17,
+			"text": "A-myb is expressed in a subpopulation of normal B lymphocytes",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 20,
+			"parent": 19,
+			"text": "activated in vivo",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 21,
+			"parent": 19,
+			"text": "and localised in the germinal center of peripheral lymphoid organs",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 22,
+			"parent": 21,
+			"text": "and is not detected at significant levels in all other mature or immature haematopoietic populations",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 23,
+			"parent": 22,
+			"text": "studied ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 24,
+			"parent": 22,
+			"text": "including bone marrow cells , T lymphocytes , granulocytes , monocytes , either at rest or after in vitro activation . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 25,
+			"parent": 19,
+			"text": "These studies indicate that A-myb plays a role during a narrow window of normal B cell differentiation . <S>",
+			"relation": "CAUSE-RESULT"
+		},
+		{
+			"id": 26,
+			"parent": 19,
+			"text": "A-myb expression has also been studied in a wide range of neoplastic B cells ,",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 27,
+			"parent": 26,
+			"text": "representing the whole spectrum of B cell differentiation . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 28,
+			"parent": 26,
+			"text": "A-myb is strongly expressed in Burkitt 's lymphomas ( BL ) and slg+ B-acute lymphoblastic leukaemias ( B-ALL ) and not in all other leukaemias/lymphomas",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 29,
+			"parent": 28,
+			"text": "tested ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 30,
+			"parent": 28,
+			"text": "with the exception of a subset of CLL ( about 25 % of cases ) . <S>",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 31,
+			"parent": 28,
+			"text": "It is intriguing that the A-myb genome has been localised relatively close to the c-myc gene on chromosome 8 ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 32,
+			"parent": 31,
+			"text": "suggesting that the c-myc translocation in BL and B-ALL may affect A-myb transcription . <S>",
+			"relation": "CAUSE-RESULT"
+		},
+		{
+			"id": 33,
+			"parent": 9,
+			"text": "Studies are in progress",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 34,
+			"parent": 33,
+			"text": "to investigate the functional relationship between A-myb and c-myc , particularly in the context of BL cells",
+			"relation": "ENABLEMENT"
+		},
+		{
+			"id": 35,
+			"parent": 34,
+			"text": "and to determine whether A-myb is deregulated in these cells . <S>",
+			"relation": "ADDITION"
+		}
+	]
+}

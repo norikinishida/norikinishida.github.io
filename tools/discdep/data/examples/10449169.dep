@@ -1,0 +1,118 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 17,
+			"text": "Rheumatoid arthritis ( RA ) is a chronic autoimmune inflammatory disease",
+			"relation": "BACKGROUND"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "in which unknown arthrogenic autoantigen is presented to CD4+ T cells . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "The strong association of the disease with an epitope within the HLA-DR chain",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "shared between various alleles of HLA-DR4 and DR1",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "emphasizes the importance of antigen presentation . <S>",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "This immune response predominantly occurs in the synovial tissue and fluid of the joints",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "and autoreactive T cells are readily demonstrable in both the synovial compartment and blood . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "Circulating dendritic cells ( DC ) are phenotypically and functionally identical with normal peripheral blood ( PB ) DC . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "In the synovial tissue , fully differentiated perivascular DC are found in close association with T cells and with B cell follicles ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "sometimes containing follicular DC . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 11,
+			"parent": 9,
+			"text": "These perivascular DC migrate across the activated endothelium from blood",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "and receive differentiative signals within the joint from monocyte-derived cytokines and CD40-ligand+ T cells . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 13,
+			"parent": 9,
+			"text": "In the SF , DC manifest an intermediate phenotype , similar to that of monocyte-derived DC in vitro . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "Like a delayed-type hypersensitivity response , the rheumatoid synovium represents an effector site . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "DC at many effector sites have a characteristic pattern of infiltration and differentiation . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "It is important to note that the effector response is not self-limiting in RA autoimmune inflammation . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 17,
+			"parent": 0,
+			"text": "In this article , we argue that the presentation of self-antigen by DC and by autoantibody-producing B cells is critical for the perpetuation of the autoimmune response . <S>",
+			"relation": "ROOT"
+		},
+		{
+			"id": 18,
+			"parent": 17,
+			"text": "Permanently arresting this ongoing immune response with either pharmaceutical agents or immunotherapy is a major challenge for immunology . <S>",
+			"relation": "ELABORATION"
+		}
+	]
+}

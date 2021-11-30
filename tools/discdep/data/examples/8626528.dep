@@ -1,0 +1,148 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null"
+		},
+		{
+			"id": 1,
+			"parent": 10,
+			"text": "Activation of T lymphocytes requires the combined signaling of the T cell receptor and costimulatory molecules",
+			"relation": "BACKGROUND"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "such as CD28 . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "The ability",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "of T cells to produce interleukin-2 ( IL-2 )",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "is a critical control point in T lymphocyte activation . <S>",
+			"relation": "SAME-UNIT"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "The IL-2 enhancer contains a functional motif",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "named CD28 response element ( CD28RE )",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "that serves a role as a target for mitogenic T cell activation signals . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 9,
+			"parent": 6,
+			"text": "The CD28RE sequence reveals similarity to the consensus kappaB binding motif . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 10,
+			"parent": 0,
+			"text": "Here we demonstrate that CD28RE binds an inducible protein with a molecular mass of approximately 35 kDa",
+			"relation": "ROOT"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "called nuclear factor of mitogenic-activated T cells ( NF-MATp35 )",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 12,
+			"parent": 10,
+			"text": "that is clearly different from the known NF- kappaB/Rel family members . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 13,
+			"parent": 10,
+			"text": "Induction of NF-MATp35 was shown to depend on de novo protein synthesis",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "and was restricted to T cells",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "that received a mitogenic combination of T cell stimuli ,",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "not necessarily including CD28 signaling . <S>",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 17,
+			"parent": 13,
+			"text": "Nonmitogenic T cell stimulation did not result in appearance of NF-MATp35 . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 18,
+			"parent": 10,
+			"text": "These results indicate that mitogenic combinations of T cell activation signals are integrated at the level of NF-MATp35 induction . <S>",
+			"relation": "CAUSE-RESULT"
+		},
+		{
+			"id": 19,
+			"parent": 17,
+			"text": "Similar to its effect on IL-2 production , cyclosporin A inhibited the induction of NF-MATp35 . <S>",
+			"relation": "ADDITION"
+		},
+		{
+			"id": 20,
+			"parent": 21,
+			"text": "Taken together ,",
+			"relation": "CAUSE-RESULT"
+		},
+		{
+			"id": 21,
+			"parent": 10,
+			"text": "these data demonstrate that the nuclear appearance of NF-MATp35 shows excellent correlation with IL-2 production ,",
+			"relation": "FINDINGS"
+		},
+		{
+			"id": 22,
+			"parent": 21,
+			"text": "which is a unique characteristic among nuclear factors",
+			"relation": "ELABORATION"
+		},
+		{
+			"id": 23,
+			"parent": 22,
+			"text": "implicated in the control of IL-2 gene expression . <S>",
+			"relation": "ELABORATION"
+		}
+	]
+}

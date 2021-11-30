@@ -1,184 +1,178 @@
-﻿{
-	"root": [
-		{
-			"id": 0,
-			"parent": -1,
-			"text": "ROOT",
-			"relation": "null"
-		},
-		{
-			"id": 1,
-			"parent": 0,
-			"text": "Lymphocyte cell lines were established from five patients with vitamin D-dependent rickets , type II ( VDDR-II ) . <S>",
-			"relation": "ROOT"
-		},
-		{
-			"id": 2,
-			"parent": 1,
-			"text": "These lines were established by infection with human T-lymphotrophic virus type I ( HTLV-I ) . <S>",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 3,
-			"parent": 1,
-			"text": "Binding of [3H]1 alpha,25-dihydroxyvitamin D3 ( 1,25(OH)2D3 ) to its receptor in these cell lines was compared to binding studies",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 4,
-			"parent": 3,
-			"text": "using a T-lymphocyte cell line ( S-LB1 ) from a normal individual . <S>",
-			"relation": "MANNER-MEANS"
-		},
-		{
-			"id": 5,
-			"parent": 1,
-			"text": "The 1,25(OH)2D3 receptor of S-LB1 was comparable to the well-characterized chick intestinal 1,25(OH)2D3 receptor in terms of its ligand binding affinity and capacity , its mobility on 5-20 % sucrose gradients , and its adsorption to and elution properties from DNA-cellulose . <S>",
-			"relation": "FINDINGS"
-		},
-		{
-			"id": 6,
-			"parent": 5,
-			"text": "Three cell lines",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 7,
-			"parent": 6,
-			"text": "established from patients with VDDR-II",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 8,
-			"parent": 6,
-			"text": "( Rh-VDR , Sh-VDR , and Ab-VDR )",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 9,
-			"parent": 6,
-			"text": "showed no specific binding of 1,25(OH)2D3 to a receptor",
-			"relation": "SAME-UNIT"
-		},
-		{
-			"id": 10,
-			"parent": 6,
-			"text": "and treatment of the cultured cells with 1,25(OH)2D3 did not stimulate production of 24,25-dihydroxy-vitamin D3 ( 24,25(OH)2D3 ) , a response",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 11,
-			"parent": 10,
-			"text": "which is diagnostic of the presence of a functional 1,25(OH)2D3 receptor . <S>",
-			"relation": "CAUSE-RESULT"
-		},
-		{
-			"id": 12,
-			"parent": 6,
-			"text": "In a fourth cell line , A1-VDR , the receptor for 1,25(OH)2D3 had a low binding capacity",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 13,
-			"parent": 12,
-			"text": "and 25(OH)D3-24-hydroxylase activity was not detectable . <S>",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 14,
-			"parent": 12,
-			"text": "Induction of 24,25-(OH)2D3 synthesis by 1,25(OH)2D3 was observed in the fifth cell line , designated Ro-VDR ,",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 15,
-			"parent": 14,
-			"text": "although the sensitivity to hormone treatment was lower than in the control cell line from a normal donor . <S>",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 16,
-			"parent": 14,
-			"text": "The capacity of the receptor for 1,25(OH)2D3 was low in Ro-VDR . <S>",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 17,
-			"parent": 5,
-			"text": "In all cell lines",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 18,
-			"parent": 17,
-			"text": "where 1,25(OH)2D3 binding to a receptor was detectable ,",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 19,
-			"parent": 17,
-			"text": "the receptor had the typical sedimentation coefficient of 3.7 S on sucrose density gradient analysis . <S>",
-			"relation": "SAME-UNIT"
-		},
-		{
-			"id": 20,
-			"parent": 17,
-			"text": "Binding and elution properties to DNA-cellulose , however , differed from normal in both Ro-VDR and A1-VDR cells",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 21,
-			"parent": 20,
-			"text": "where elution from DNA-cellulose occurred at a lower salt concentration",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 22,
-			"parent": 21,
-			"text": "than is typical of the 1,25(OH)2D3 receptor . <S>",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 23,
-			"parent": 24,
-			"text": "While Ro-VDR cells showed typical nuclear localization of the unoccupied 1,25(OH)2D3 receptor ,",
-			"relation": "COMPARISON"
-		},
-		{
-			"id": 24,
-			"parent": 20,
-			"text": "neither the unoccupied nor the occupied receptor from A1-VDR cells was completely localized in the nucleus . <S>",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 25,
-			"parent": 17,
-			"text": "In a series of functional studies we found that modulation of the level of the mRNAs coding for both the c-myc oncogene and the growth factor",
-			"relation": "ADDITION"
-		},
-		{
-			"id": 26,
-			"parent": 25,
-			"text": "known as granulocyte-monocyte colony stimulating activity by 1,25(OH)2D3",
-			"relation": "ELABORATION"
-		},
-		{
-			"id": 27,
-			"parent": 25,
-			"text": "correlated with the 1,25(OH)2D3 receptor status of these cells . <S>",
-			"relation": "SAME-UNIT"
-		},
-		{
-			"id": 28,
-			"parent": 1,
-			"text": "Use of these cell lines will facilitate further study of the molecular defect ( s ) in the receptor for 1,25(OH)2D3 in vitamin D-dependent rickets type II",
-			"relation": "FINDINGS"
-		},
-		{
-			"id": 29,
-			"parent": 28,
-			"text": "and will allow a correlation with impairment of cellular functions . <S>",
-			"relation": "ADDITION"
-		}
-	]
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 0,
+            "text": "Lymphocyte cell lines were established from five patients with vitamin D-dependent rickets , type II ( VDDR-II ) . <S>",
+            "relation": "ROOT"
+        },
+        {
+            "id": 2,
+            "parent": 1,
+            "text": "These lines were established by infection with human T-lymphotrophic virus type I ( HTLV-I ) . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 3,
+            "parent": 1,
+            "text": "Binding of [3H]1 alpha,25-dihydroxyvitamin D3 ( 1,25(OH)2D3 ) to its receptor in these cell lines was compared to binding studies",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 4,
+            "parent": 3,
+            "text": "using a T-lymphocyte cell line ( S-LB1 ) from a normal individual . <S>",
+            "relation": "MANNER-MEANS"
+        },
+        {
+            "id": 5,
+            "parent": 1,
+            "text": "The 1,25(OH)2D3 receptor of S-LB1 was comparable to the well-characterized chick intestinal 1,25(OH)2D3 receptor in terms of its ligand binding affinity and capacity , its mobility on 5-20 % sucrose gradients , and its adsorption to and elution properties from DNA-cellulose . <S>",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 6,
+            "parent": 5,
+            "text": "Three cell lines",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "established from patients with VDDR-II ( Rh-VDR , Sh-VDR , and Ab-VDR )",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 6,
+            "text": "showed no specific binding of 1,25(OH)2D3 to a receptor",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 9,
+            "parent": 6,
+            "text": "and treatment of the cultured cells with 1,25(OH)2D3 did not stimulate production of 24,25-dihydroxy-vitamin D3 ( 24,25(OH)2D3 ) , a response",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 10,
+            "parent": 9,
+            "text": "which is diagnostic of the presence of a functional 1,25(OH)2D3 receptor . <S>",
+            "relation": "CAUSE-RESULT"
+        },
+        {
+            "id": 11,
+            "parent": 6,
+            "text": "In a fourth cell line , A1-VDR , the receptor for 1,25(OH)2D3 had a low binding capacity",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 12,
+            "parent": 11,
+            "text": "and 25(OH)D3-24-hydroxylase activity was not detectable . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 13,
+            "parent": 11,
+            "text": "Induction of 24,25-(OH)2D3 synthesis by 1,25(OH)2D3 was observed in the fifth cell line , designated Ro-VDR ,",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 14,
+            "parent": 13,
+            "text": "although the sensitivity to hormone treatment was lower than in the control cell line from a normal donor . <S>",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 15,
+            "parent": 13,
+            "text": "The capacity of the receptor for 1,25(OH)2D3 was low in Ro-VDR . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 16,
+            "parent": 5,
+            "text": "In all cell lines",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 17,
+            "parent": 16,
+            "text": "where 1,25(OH)2D3 binding to a receptor was detectable ,",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 18,
+            "parent": 16,
+            "text": "the receptor had the typical sedimentation coefficient of 3.7 S on sucrose density gradient analysis . <S>",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 19,
+            "parent": 16,
+            "text": "Binding and elution properties to DNA-cellulose , however , differed from normal in both Ro-VDR and A1-VDR cells",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 20,
+            "parent": 19,
+            "text": "where elution from DNA-cellulose occurred at a lower salt concentration",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 21,
+            "parent": 20,
+            "text": "than is typical of the 1,25(OH)2D3 receptor . <S>",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 22,
+            "parent": 23,
+            "text": "While Ro-VDR cells showed typical nuclear localization of the unoccupied 1,25(OH)2D3 receptor ,",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 23,
+            "parent": 19,
+            "text": "neither the unoccupied nor the occupied receptor from A1-VDR cells was completely localized in the nucleus . <S>",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 24,
+            "parent": 16,
+            "text": "In a series of functional studies we found that modulation of the level of the mRNAs coding for both the c-myc oncogene and the growth factor",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 25,
+            "parent": 24,
+            "text": "known as granulocyte-monocyte colony stimulating activity by 1,25(OH)2D3",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 26,
+            "parent": 24,
+            "text": "correlated with the 1,25(OH)2D3 receptor status of these cells . <S>",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 27,
+            "parent": 1,
+            "text": "Use of these cell lines will facilitate further study of the molecular defect ( s ) in the receptor for 1,25(OH)2D3 in vitamin D-dependent rickets type II",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 28,
+            "parent": 27,
+            "text": "and will allow a correlation with impairment of cellular functions . <S>",
+            "relation": "ADDITION"
+        }
+    ]
 }

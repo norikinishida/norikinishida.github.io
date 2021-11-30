@@ -1,0 +1,70 @@
+{
+    "root": [
+        {
+            "id": 0,
+            "parent": -1,
+            "text": "ROOT",
+            "relation": "null"
+        },
+        {
+            "id": 1,
+            "parent": 2,
+            "text": "The design of combination hormonal and immunotherapeutic protocols for breast cancer patients may be facilitated by analysis of preclinical in vitro model systems . <S>",
+            "relation": "BACKGROUND"
+        },
+        {
+            "id": 2,
+            "parent": 0,
+            "text": "Estrogen receptor positive ( ER+ : MCF-7 ) and negative ( ER- : MDA-MB-231 ) human breast cancer cell lines were utilized",
+            "relation": "ROOT"
+        },
+        {
+            "id": 3,
+            "parent": 2,
+            "text": "to evaluate the effects of tamoxifen ( TAM ) and estradiol ( E2 ) on modulation of breast cancer target susceptibility to lysis by lymphokine-activated killer ( LAK ) cells . <S>",
+            "relation": "ENABLEMENT"
+        },
+        {
+            "id": 4,
+            "parent": 2,
+            "text": "E2-stimulated ER+ cells were more susceptible to lysis by LAK cells than corresponding TAM-treated or control cells ,",
+            "relation": "FINDINGS"
+        },
+        {
+            "id": 5,
+            "parent": 4,
+            "text": "while treatment of ER- cells with either E2 or TAM alone did not alter from control their susceptibility to this immune-mediated lysis . <S>",
+            "relation": "COMPARISON"
+        },
+        {
+            "id": 6,
+            "parent": 4,
+            "text": "All ER+ and ER- cells",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 7,
+            "parent": 6,
+            "text": "tested",
+            "relation": "ELABORATION"
+        },
+        {
+            "id": 8,
+            "parent": 6,
+            "text": "remained sensitive after treatment with TAM to lysis by LAK cells . <S>",
+            "relation": "SAME-UNIT"
+        },
+        {
+            "id": 9,
+            "parent": 6,
+            "text": "In addition , an adenocarcinoma reactive human-mouse chimeric monoclonal antibody ( ING-1 ) was able to significantly boost in vivo generated LAK cell-mediated lysis of control , E2-treated , and TAM-treated ER+ and ER- cells . <S>",
+            "relation": "ADDITION"
+        },
+        {
+            "id": 10,
+            "parent": 2,
+            "text": "These in vitro results provide a preclinical rationale for in vivo testing of TAM , interleukin-2 ( IL-2 ) , and breast cancer reactive antibody-dependent cellular cytotoxicity facilitating antibody in patients with refractory or high risk breast cancer . <S>",
+            "relation": "FINDINGS"
+        }
+    ]
+}
