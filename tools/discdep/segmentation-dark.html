@@ -18,10 +18,10 @@
         <link href="./bower_components/ngToast/dist/ngToast.min.css" rel="stylesheet">
         <link href="./bower_components/ngToast/dist/ngToast-animations.min.css" rel="stylesheet">
         <link href="./css/custom.css" rel="stylesheet">
-        <script src="./annotate.js"></script>
+        <script src="./annotate-dark.js"></script>
     </head>
 
-    <body id="body" style="background-color: #F4F4F4; color: #000000"
+    <body id="body" style="background-color: #282C34; color: #ABB2BF"
         ng-app="MyApp" ng-controller="EDUListController">
         <!-- キャンバス要素 -->
         <canvas id="canvas" height="{{canvas_height}}" width="{{canvas_width}}">
@@ -43,40 +43,40 @@
             <div class="row">
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
+                    style="background-color: #98C379; border-color: #98C379; color: #282C34"
                     value="全文をコピー"
                     ng-click="copyToClipboardForSeg()"
                     ng-show="!!inputFile">
 
                 <!-- 保存 -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
+                    style="background-color: #98C379; border-color: #98C379; color: #282C34"
                     value="保存"
                     ng-click="saveToFileForSeg()"
                     ng-show="!!inputFile">
 
                 <!-- 例 -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
+                    style="background-color: #282C34; border-color: #98C379; color: #98C379"
                     value="ランダムサンプル"
                     ng-click="showRandomSampleForSeg()">
 
                 <!-- ガイドライン (pdf) -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
+                    style="background-color: #282C34; border-color: #98C379; color: #98C379"
                     value="ガイドライン"
                     onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
 
                 <!-- 質問フォーム -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
+                    style="background-color: #282C34; border-color: #98C379; color: #98C379"
                     value="質問フォーム"
                     onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkti228KKxdWQZufRlg7F9xgonqo7pFTzZZGfbP2I56SDOSQ/viewform')">
 
                 <!-- ツール切り替え -->
                 <!--
                 <input type="button" class="btn btn-info"
-                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
+                    style="background-color: #282C34; border-color: #98C379; color: #98C379"
                     value="談話構造アノテーションに切替"
                     onClick="window.open('https://norikinishida.github.io/tools/discdep/index.html')">
                 -->
@@ -98,8 +98,11 @@
                         ng-style="{'background-color':
                                         (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
                                             blinkNodeColor1 :
-                                            '#FAFAFA',
-                                    'color': '#000000',
+                                            '#282C34',
+                                    'color':
+                                        (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
+                                            '#282C34' :
+                                            '#ABB2BF',
                                     'font-size': '18px'}"
                         style="outline: none"
                         ng-repeat="tokenText in edu track by $index"

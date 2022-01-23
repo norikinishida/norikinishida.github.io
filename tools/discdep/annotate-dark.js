@@ -27,12 +27,12 @@ app.constant('CONSTANTS', {
     ],
     // Colors are set according to the palette of The New England Journal of Medicine
     // 色
-    NORMAL_LINK_COLOR: '#0072B5', // NEJM Blue
-    NORMAL_LABEL_COLOR: '#BC3C29', // NEJM Red
-    BLINK_LINK_COLOR: '#E18727', // NEJM Orange
-    BLINK_LABEL_COLOR: '#E18727', // NEJM Orange
-    BLINK_NODE_COLOR1: '#E18727', // NEJM Orange
-    BLINK_NODE_COLOR2: '#FFDC91', // Creamy Orange
+    NORMAL_LINK_COLOR: '#61AFEF', // One Dark Blue
+    NORMAL_LABEL_COLOR: '#E06C75', // One Dark Red
+    BLINK_LINK_COLOR: '#D19A66', // One Dark Orange
+    BLINK_LABEL_COLOR: '#D19A66', // One Dark Orange
+    BLINK_NODE_COLOR1: '#D19A66', // One Dark Orange
+    BLINK_NODE_COLOR2: '#E5C07B', // One Dark Yellow
     //MAX_N: 150,
     MAX_N: 500,
     //  全体の横幅
