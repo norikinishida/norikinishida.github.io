@@ -24,6 +24,7 @@ app.constant('CONSTANTS', {
         "SAME-UNIT",
         // Special
         "SEGMENTATION-ERROR",
+        "ATTRIBUTION",
     ],
     // Colors are set according to the palette of The New England Journal of Medicine
     // 色
