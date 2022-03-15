@@ -252,7 +252,7 @@ app.controller('EDUListController',
         // 談話関係ラベルの抽出
         $scope.depRels = _.pluck(obj, 'relation');
         // XXX
-        $scope.eduTypes = _.pluck(obj, 'relation');
+        $scope.eduTypes = _.pluck(obj, 'type');
         // 文番号
         $scope.sentence_ids = [];
         $scope.sentence_ids.push(0)
@@ -1050,7 +1050,7 @@ app.controller('EDUListController',
                     // 談話関係ラベルの抽出
                     $scope.depRels = _.pluck(obj, 'relation');
                     // XXX
-                    $scope.eduTypes = _.pluck(obj, 'relation');
+                    $scope.eduTypes = _.pluck(obj, 'type');
                     //
                     $scope.$apply();
                 }
