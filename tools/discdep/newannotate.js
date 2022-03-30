@@ -28,8 +28,8 @@ app.constant('CONSTANTS', {
     // XXX
     eduTypeVocab: [
         "Background",
-        "Contribution-Summary",
-        "Contribution-Detail",
+        "Actions",
+        "Results",
         "Implication",
     ],
     // Colors are set according to the palette of The New England Journal of Medicine
