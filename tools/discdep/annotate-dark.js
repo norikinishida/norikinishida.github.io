@@ -1036,6 +1036,8 @@ app.controller('EDUListController',
                     $scope.heads = _.pluck(obj, 'parent');
                     // relationsのセット
                     $scope.relations = _.pluck(obj, 'relation');
+                    // tagsのセット
+                    $scope.tags = _.pluck(obj, 'tag');
                     //
                     $scope.$apply();
                 }
@@ -1124,6 +1126,7 @@ app.controller('EDUListController',
         // $scope.eduBegins = [];
         $scope.heads = [];
         $scope.relations = [];
+        $scope.tags = [];
         // var accum = 0;
         // for (var i = 0; i < $scope.edus.length; i++) {
         //     $scope.eduBegins[i] = accum;
@@ -1131,6 +1134,7 @@ app.controller('EDUListController',
         // }
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
         $scope.relations = _.range($scope.edus.length).map(function() { return 'null'; });
+        $scope.tags = _.range($scope.edus.length).map(function() { return 'null'; });
     };
 
     $scope.mergeEDUs = function(eduIndex, tokenIndex) {
@@ -1153,6 +1157,7 @@ app.controller('EDUListController',
         // $scope.eduBegins = [];
         $scope.heads = [];
         $scope.relations = [];
+        $scope.tags = [];
         // var accum = 0;
         // for (var i = 0; i < $scope.edus.length; i++) {
         //     $scope.eduBegins[i] = accum;
@@ -1160,6 +1165,7 @@ app.controller('EDUListController',
         // }
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
         $scope.relations = _.range($scope.edus.length).map(function() { return 'null'; });
+        $scope.tags = _.range($scope.edus.length).map(function() { return 'null'; });
     };
 
 
