@@ -48,6 +48,15 @@
                     ng-click="clearNode()"
                     ng-show="!!inputFile" ng-disabled="first === -1">
 
+                <!-- タグ付け -->
+                <!--
+                <input type="button" class="btn btn-info"
+                    style="background-color: #98C379; border-color: #98C379; color: #282C34"
+                    value="タグ付け"
+                    ng-click="setTag()"
+                    ng-show="!!inputFile" ng-disabled="first === -1">
+                -->
+
                 <!-- ラベル変更 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #98C379; border-color: #98C379; color: #282C34"
@@ -115,10 +124,12 @@
                 </div>
 
                 <!-- ガイドライン (pdf) -->
+                <!--
                 <input type="button" class="btn btn-info"
                     style="background-color: #282C34; border-color: #98C379; color: #98C379"
                     value="ガイドライン"
                     onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
+                -->
 
                 <!-- 質問フォーム -->
                 <!--
@@ -141,9 +152,12 @@
                     <button type="button" class="btn btn-info dropdown-toggle"
                         data-toggle="dropdown" aria-expanded="false"
                         style="background-color: #282C34; border-color: #98C379; color: #98C379">
-                        その他の操作<span class="caret"></span>
+                        その他<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item"
+                                onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
+                                ガイドライン</a></li>
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkti228KKxdWQZufRlg7F9xgonqo7pFTzZZGfbP2I56SDOSQ/viewform')">
                                 質問フォーム</a></li>
@@ -210,20 +224,34 @@
                         <h5>{{displayText | TailorString}}</h5>
                     </button>
                     <!-- EDU index -->
+                    <!-- <span>{{$index}} ({{tags[$index]}})</span> -->
                     <span>{{$index}}</span>
                 </div>
             </div>
         </div>
 
-        <!-- 談話関係ラベル選択ダイアログ (アノテーション) -->
-        <div id="dialog-form" title="ラベルを下記から選択してください"
+        <!-- 談話関係選択ダイアログ (アノテーション) -->
+        <div id="dialog-form" title="談話関係を下記から選択してください"
         ng-show="showAddDialog">
             <form>
                  <select class="form-control" id="select" name="select" >
-                     <option ng-repeat="relation in relations">{{relation}}</option>
+                     <option ng-repeat="relation in relationVocab">{{relation}}</option>
                  </select>
             </form>
         </div>
+
+        <!-- タグ選択ダイアログ (アノテーション) -->
+        <!--
+        <div id="dialog-form-for-tag" title="タグを下記から選択してください"
+        ng-show="showAddDialogForTag">
+            <form>
+                 <select class="form-control" id="selectForTag" name="selectForTag" >
+                     <option ng-repeat="tg in tagVocab">{{tg}}</option>
+                 </select>
+            </form>
+        </div>
+        -->
+
 
     </body>
 </html>

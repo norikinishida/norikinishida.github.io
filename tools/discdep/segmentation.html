@@ -62,10 +62,12 @@
                     ng-click="showRandomSampleForSeg()">
 
                 <!-- ガイドライン (pdf) -->
+                <!--
                 <input type="button" class="btn btn-info"
                     style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
                     value="ガイドライン"
                     onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
+                -->
 
                 <!-- 質問フォーム -->
                 <!--
@@ -88,9 +90,12 @@
                     <button type="button" class="btn btn-info dropdown-toggle"
                         data-toggle="dropdown" aria-expanded="false"
                         style="background-color: #F4F4F4; border-color: #20854E; color: #20854E">
-                        その他の操作<span class="caret"></span>
+                        その他<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item"
+                                onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
+                                ガイドライン</a></li>
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkti228KKxdWQZufRlg7F9xgonqo7pFTzZZGfbP2I56SDOSQ/viewform')">
                                 質問フォーム</a></li>

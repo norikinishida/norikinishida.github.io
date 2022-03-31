@@ -49,13 +49,11 @@
                     ng-show="!!inputFile" ng-disabled="first === -1">
 
                 <!-- タグ付け -->
-                <!--
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="タグ付け"
                     ng-click="setTag()"
                     ng-show="!!inputFile" ng-disabled="first === -1">
-                -->
 
                 <!-- ラベル変更 -->
                 <input type="button" class="btn btn-info"
@@ -213,8 +211,7 @@
                         <h5>{{displayText | TailorString}}</h5>
                     </button>
                     <!-- EDU index -->
-                    <!-- <span>{{$index}} ({{tags[$index]}})</span> -->
-                    <span>{{$index}}</span>
+                    <span>{{$index}} ({{tags[$index]}})</span>
                 </div>
             </div>
         </div>
@@ -230,7 +227,6 @@
         </div>
 
         <!-- タグ選択ダイアログ (アノテーション) -->
-        <!--
         <div id="dialog-form-for-tag" title="タグを下記から選択してください"
         ng-show="showAddDialogForTag">
             <form>
@@ -239,7 +235,6 @@
                  </select>
             </form>
         </div>
-        -->
 
     </body>
 </html>
