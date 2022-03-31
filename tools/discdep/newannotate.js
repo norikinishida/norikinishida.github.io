@@ -28,6 +28,7 @@ app.constant('CONSTANTS', {
     // XXX
     eduTypeVocab: [
         "Background",
+        "Objective",
         "Action",
         "Result",
         "Implication",
