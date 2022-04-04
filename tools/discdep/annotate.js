@@ -25,7 +25,6 @@ app.constant('CONSTANTS', {
     ],
     tagVocab: [
         "Background",
-        "Objective",
         "Action",
         "Result",
         "Implication",
