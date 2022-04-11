@@ -48,15 +48,6 @@
                     ng-click="clearNode()"
                     ng-show="!!inputFile" ng-disabled="first === -1">
 
-                <!-- タグ付け -->
-                <!--
-                <input type="button" class="btn btn-info"
-                    style="background-color: #98C379; border-color: #98C379; color: #282C34"
-                    value="タグ付け"
-                    ng-click="setTag()"
-                    ng-show="!!inputFile" ng-disabled="first === -1">
-                -->
-
                 <!-- ラベル変更 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #98C379; border-color: #98C379; color: #282C34"
@@ -72,11 +63,13 @@
                     ng-show="!!inputFile" ng-disabled="first === -1">
 
                 <!-- undo -->
+                <!--
                 <input type="button" class="btn btn-info"
                     style="background-color: #98C379; border-color: #98C379; color: #282C34"
                     value="undo"
                     ng-click="undo()"
                     ng-show="!!inputFile" ng-disabled="operations.length === 0">
+                -->
 
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
@@ -122,30 +115,6 @@
                         <li><a class="dropdown-item" ng-click="showRandomSample('SAME-UNIT')">Same-Unit</a></li>
                     </ul>
                 </div>
-
-                <!-- ガイドライン (pdf) -->
-                <!--
-                <input type="button" class="btn btn-info"
-                    style="background-color: #282C34; border-color: #98C379; color: #98C379"
-                    value="ガイドライン"
-                    onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
-                -->
-
-                <!-- 質問フォーム -->
-                <!--
-                <input type="button" class="btn btn-info"
-                    style="background-color: #282C34; border-color: #98C379; color: #98C379"
-                    value="質問フォーム"
-                    onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkti228KKxdWQZufRlg7F9xgonqo7pFTzZZGfbP2I56SDOSQ/viewform')">
-                -->
-
-                <!-- ツール切り替え -->
-                <!--
-                <input type="button" class="btn btn-info"
-                    style="background-color: #282C34; border-color: #98C379; color: #98C379"
-                    value="EDU分割に切替"
-                    onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation.html')">
-                -->
 
                 <! -- その他 -->
                 <div class="btn-group">
@@ -223,36 +192,19 @@
                         ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
                         <h5>{{displayText | TailorString}}</h5>
                     </button>
-                    <!-- EDU index -->
-                    <span>{{$index}}
-                     (<span style="color: #E06C75;">{{tags[$index]}}</span>)
-                    </span>
                 </div>
             </div>
         </div>
 
         <!-- 談話関係選択ダイアログ (アノテーション) -->
-        <div id="dialog-form" title="談話関係を下記から選択してください"
-        ng-show="showAddDialog">
+        <div id="dialog-form-for-rel" title="談話関係を下記から選択してください"
+        ng-show="showAddDialogForRel">
             <form>
-                 <select class="form-control" id="select" name="select" >
+                 <select class="form-control" id="selectForRel" name="selectForRel" >
                      <option ng-repeat="relation in relationVocab">{{relation}}</option>
                  </select>
             </form>
         </div>
-
-        <!-- タグ選択ダイアログ (アノテーション) -->
-        <!--
-        <div id="dialog-form-for-tag" title="タグを下記から選択してください"
-        ng-show="showAddDialogForTag">
-            <form>
-                 <select class="form-control" id="selectForTag" name="selectForTag" >
-                     <option ng-repeat="tg in tagVocab">{{tg}}</option>
-                 </select>
-            </form>
-        </div>
-        -->
-
 
     </body>
 </html>

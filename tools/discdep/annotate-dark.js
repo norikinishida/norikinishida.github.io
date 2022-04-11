@@ -23,6 +23,7 @@ app.constant('CONSTANTS', {
         // Special
         "SEGMENTATION-ERROR",
     ],
+    // EDUタグ
     tagVocab: [
         "Background",
         "Action",
@@ -113,7 +114,7 @@ app.controller('EDUListController',
     $scope.tags = []; // 各EDUのタグのリスト
     $scope.sentence_ids = []; // 各EDUの文番号のリスト
 
-    $scope.operations = []; // アクション履歴
+    // $scope.operations = []; // アクション履歴
 
     $scope.blinkNodeColor1 = CONSTANTS.BLINK_NODE_COLOR1;
     $scope.blinkNodeColor2 = CONSTANTS.BLINK_NODE_COLOR2;
@@ -178,7 +179,7 @@ app.controller('EDUListController',
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
 
         // 状態の初期化
-        $scope.operations = [];
+        // $scope.operations = [];
         $scope.first = second = -1;
 
         // 入力ファイルの設定
@@ -277,31 +278,17 @@ app.controller('EDUListController',
 
     // ノード解除処理
     $scope.clearNode = function() {
+        console.log("clearNode was called.");
         $scope.first = -1;
         // 履歴
-        $scope.operations.pop();
-        console.log("clearNode popped:");
-        console.log($scope.operations);
-    };
-
-    // タグ付け処理
-    $scope.setTag = function () {
-        // チェック
-        if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
-            ngToast.danger({
-                content: 'エラー: ノードが選択されていません！',
-                timeout: 2000
-            });
-            return;
-        }
-        // タグの選択
-        popTag();
-        // 描画
-        drawAll();
+        // $scope.operations.pop();
+        // console.log($scope.operations);
     };
 
     // 談話関係変更処理
     $scope.changeLabel = function () {
+        console.log("changeLabel was called.");
+
         // チェック
         if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
             ngToast.danger({
@@ -326,13 +313,13 @@ app.controller('EDUListController',
         // 描画
         drawAll();
         // 履歴
-        $scope.operations.push(op);
-        console.log("changeLabel pushed:");
-        console.log($scope.operations);
+        // $scope.operations.push(op);
+        // console.log($scope.operations);
     };
 
     // リンク削除処理
     $scope.deleteLink = function () {
+        console.log("deleteLink was called.");
         // チェック
         if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
             ngToast.danger({
@@ -357,55 +344,54 @@ app.controller('EDUListController',
         drawAll();
         $scope.first = -1;
         // 履歴
-        $scope.operations.push(op);
-        console.log("deleteLink: pushed");
-        console.log($scope.operations);
+        // $scope.operations.push(op);
+        // console.log($scope.operations);
     };
 
     // UNDO処理
-    $scope.undo = function() {
-        // 最終アクション
-        var op = _.last($scope.operations);
-        console.log("undo top:");
-        console.log(op);
-        if (op.type === 'click') {
-            // もし最終アクションがhead選択なら、head解除
-            $scope.first = -1;
-        }
-        else if (op.type === 'connect') {
-            // もし最終アクションがmodifier選択なら、headとmodifierの結合をなくす
-            $scope.heads[op.id2] = -1;
-            $scope.relations[op.id2] = 'null';
-            // 描画
-            drawAll();
-        }
-        else if (op.type == "change") {
-            // もし最終アクションが談話関係の変更なら、談話関係を戻す
-            var id1 = op.id1;
-            var id2 = op.id2;
-            var rel = op.changed_relation;
-            $scope.heads[id2] = id1;
-            $scope.relations[id2] = rel;
-            // 描画
-            drawAll();
-        }
-        else if (op.type === 'delete') {
-            // もし最終アクションが結合の削除なら、結合を戻す
-            var id1 = op.id1;
-            var id2 = op.id2;
-            var rel = op.deleted_relation;
-            $scope.heads[id2] = id1;
-            $scope.relations[id2] = rel;
-            // 描画
-            drawAll();
-        }
-        $scope.operations.pop();
-        console.log("undo popped:");
-        console.log($scope.operations);
-    };
+    // $scope.undo = function() {
+    //     // 最終アクション
+    //     var op = _.last($scope.operations);
+    //     console.log("undo top:");
+    //     console.log(op);
+    //     if (op.type === 'click') {
+    //         // もし最終アクションがhead選択なら、head解除
+    //         $scope.first = -1;
+    //     }
+    //     else if (op.type === 'connect') {
+    //         // もし最終アクションがmodifier選択なら、headとmodifierの結合をなくす
+    //         $scope.heads[op.id2] = -1;
+    //         $scope.relations[op.id2] = 'null';
+    //         // 描画
+    //         drawAll();
+    //     }
+    //     else if (op.type == "change") {
+    //         // もし最終アクションが談話関係の変更なら、談話関係を戻す
+    //         var id1 = op.id1;
+    //         var id2 = op.id2;
+    //         var rel = op.changed_relation;
+    //         $scope.heads[id2] = id1;
+    //         $scope.relations[id2] = rel;
+    //         // 描画
+    //         drawAll();
+    //     }
+    //     else if (op.type === 'delete') {
+    //         // もし最終アクションが結合の削除なら、結合を戻す
+    //         var id1 = op.id1;
+    //         var id2 = op.id2;
+    //         var rel = op.deleted_relation;
+    //         $scope.heads[id2] = id1;
+    //         $scope.relations[id2] = rel;
+    //         // 描画
+    //         drawAll();
+    //     }
+    //     $scope.operations.pop();
+    //     console.log($scope.operations);
+    // };
 
     // クリップボードにコピー
     $scope.copyToClipboard = function() {
+        console.log("copyToClipboard was called.")
         var text = "";
         for (var i = 1; i < $scope.edus.length; i++) {
             text = text + $scope.edus[i].replace("<S>", "").replace("<P>", "");
@@ -437,6 +423,7 @@ app.controller('EDUListController',
 
     // 保存
     $scope.saveToFile = function() {
+        console.log("saveToFile was called.")
         if ($scope.progress !== 100) {
             ngToast.warning({
                 content: 'WARNING: 談話依存構造は完全ではありません！',
@@ -475,13 +462,14 @@ app.controller('EDUListController',
 
     // 例示
     $scope.showRandomSample = function (relation) {
+        console.log("showRandomSample was called.")
         // クリア
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
 
         // 状態の初期化
-        $scope.operations = [];
+        // $scope.operations = [];
         $scope.first = second = -1;
 
         // JSONファイルを読み込んで描画
@@ -592,6 +580,7 @@ app.controller('EDUListController',
 
     // リンク追加処理 (EDUのクリック)
     $scope.highLight = function(id) {
+        console.log("highLight was called.");
         // 選択されたEDUのindex
         var index = parseInt(id.toString().substr(3));
 
@@ -602,10 +591,9 @@ app.controller('EDUListController',
             // 描画
             $scope.mouseOutHandler(id);
             // 履歴追加
-            var op = {type: 'click', index: index};
-            $scope.operations.push(op);
-            console.log("highLight pushed:");
-            console.log($scope.operations);
+            // var op = {type: 'click', index: index};
+            // $scope.operations.push(op);
+            // console.log($scope.operations);
         }
         else {
             // modifierセット
@@ -616,13 +604,14 @@ app.controller('EDUListController',
     };
 
     // 談話関係の選択
-    $scope.showAddDialog = false;
+    $scope.showAddDialogForRel = false;
     var popRelation = function(mode) {
+        console.log("popRelation was called.");
         var dialog;
 
         function relationCallback() {
             // 談話依存関係のセット
-            rel = angular.element('#select')[0].options[select.selectedIndex].text;
+            rel = angular.element('#selectForRel')[0].options[selectForRel.selectedIndex].text;
             $scope.heads[second] = $scope.first;
             $scope.relations[second] = rel;
 
@@ -630,25 +619,24 @@ app.controller('EDUListController',
             drawAll();
 
             // 履歴追加
-            if (mode !== "change") {
-                var op = {type: 'connect', id1: $scope.first.toString(), id2: second.toString()};
-                $scope.operations.push(op);
-                console.log("popRelation pushed:");
-                console.log($scope.operations);
-            }
+            // if (mode !== "change") {
+            //     var op = {type: 'connect', id1: $scope.first.toString(), id2: second.toString()};
+            //     $scope.operations.push(op);
+            //     console.log($scope.operations);
+            // }
 
             // 状態の初期化
             $scope.first = -1; second = -1;
 
             // ダイアログのクローズ
-            $scope.showAddDialog = false;
+            $scope.showAddDialogForRel = false;
             dialog.dialog('close');
 
             //
             $scope.$apply();
         }
 
-        dialog = $("#dialog-form").dialog({
+        dialog = $("#dialog-form-for-rel").dialog({
             autoOpen: false,
             height: 200,
             width: 450,
@@ -667,61 +655,7 @@ app.controller('EDUListController',
         rel = '';
 
         // ダイアログのポップアップ
-        $scope.showAddDialog = true;
-        dialog.dialog("open");
-    };
-
-    // タグ選択
-    $scope.showAddDialogForTag = false;
-    var popTag = function() {
-        var dialog;
-
-        function tagCallback() {
-            // 依存関係のセット
-            tg = angular.element('#selectForTag')[0].options[selectForTag.selectedIndex].text;
-            console.log(angular.element("#selectForTag")[0].options[0].text);
-            console.log(angular.element("#selectForTag")[0].options[1].text);
-            console.log(angular.element("#selectForTag")[0].options[2].text);
-            console.log(angular.element("#selectForTag")[0].options[3].text);
-            console.log(selectForTag.selectedIndex);
-            console.log($scope.first);
-            console.log(tg);
-            $scope.tags[$scope.first] = tg;
-
-            // 描画
-            drawAll();
-
-            // 状態の初期化
-            $scope.first = -1; second = -1;
-
-            // ダイアログのクローズ
-            $scope.showAddDialogForTag = false;
-            dialog.dialog('close');
-
-            //
-            $scope.$apply();
-        }
-
-        dialog = $("#dialog-form-for-tag").dialog({
-            autoOpen: false,
-            height: 200,
-            width: 450,
-            modal: true,
-            buttons: {
-                OK: tagCallback
-            },
-            position: {
-                my: 'left top',
-                at: 'left+10% top+10%',
-                of: window
-            }
-        });
-
-        // EDUラベルの初期化
-        tg = '';
-
-        // ダイアログのポップアップ
-        $scope.showAddDialogForTag = true;
+        $scope.showAddDialogForRel = true;
         dialog.dialog("open");
     };
 
@@ -757,9 +691,9 @@ app.controller('EDUListController',
 
     // リンクの描画
     var drawCurve = function(id1, id2, color) {
-        while ($scope.operations.length > 0 && _.last($scope.operations).type === 'click') {
-            $scope.operations.splice($scope.operations.length - 1, 1);
-        }
+        // while ($scope.operations.length > 0 && _.last($scope.operations).type === 'click') {
+        //     $scope.operations.splice($scope.operations.length - 1, 1);
+        // }
 
         // source coordinate
         var centerS = Utils.findPos(angular.element('#' + id1)[0]);
@@ -864,6 +798,80 @@ app.controller('EDUListController',
     };
 
     /************************************************/
+    // タグ付け用
+    /************************************************/
+
+    // タグ付け処理
+    $scope.setTag = function () {
+        // チェック
+        if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
+            ngToast.danger({
+                content: 'エラー: ノードが選択されていません！',
+                timeout: 2000
+            });
+            return;
+        }
+        // タグの選択
+        popTag();
+        // 描画
+        drawAll();
+    };
+
+    // タグ選択
+    $scope.showAddDialogForTag = false;
+    var popTag = function() {
+        var dialog;
+
+        function tagCallback() {
+            // 依存関係のセット
+            tg = angular.element('#selectForTag')[0].options[selectForTag.selectedIndex].text;
+            console.log(angular.element("#selectForTag")[0].options[0].text);
+            console.log(angular.element("#selectForTag")[0].options[1].text);
+            console.log(angular.element("#selectForTag")[0].options[2].text);
+            console.log(angular.element("#selectForTag")[0].options[3].text);
+            console.log(selectForTag.selectedIndex);
+            console.log($scope.first);
+            console.log(tg);
+            $scope.tags[$scope.first] = tg;
+
+            // 描画
+            drawAll();
+
+            // 状態の初期化
+            $scope.first = -1; second = -1;
+
+            // ダイアログのクローズ
+            $scope.showAddDialogForTag = false;
+            dialog.dialog('close');
+
+            //
+            $scope.$apply();
+        }
+
+        dialog = $("#dialog-form-for-tag").dialog({
+            autoOpen: false,
+            height: 200,
+            width: 450,
+            modal: true,
+            buttons: {
+                OK: tagCallback
+            },
+            position: {
+                my: 'left top',
+                at: 'left+10% top+10%',
+                of: window
+            }
+        });
+
+        // EDUラベルの初期化
+        tg = '';
+
+        // ダイアログのポップアップ
+        $scope.showAddDialogForTag = true;
+        dialog.dialog("open");
+    };
+
+    /************************************************/
     // EDU分割用
     // ファイルアップロード
     /************************************************/
@@ -880,7 +888,7 @@ app.controller('EDUListController',
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
 
         // 状態の初期化
-        $scope.operations = [];
+        // $scope.operations = [];
         $scope.first = second = -1;
 
         // 入力ファイルの設定

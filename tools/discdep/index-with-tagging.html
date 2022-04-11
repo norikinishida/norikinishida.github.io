@@ -70,11 +70,13 @@
                     ng-show="!!inputFile" ng-disabled="first === -1">
 
                 <!-- undo -->
+                <!--
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="undo"
                     ng-click="undo()"
                     ng-show="!!inputFile" ng-disabled="operations.length === 0">
+                -->
 
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
@@ -120,30 +122,6 @@
                         <li><a class="dropdown-item" ng-click="showRandomSample('SAME-UNIT')">Same-Unit</a></li>
                     </ul>
                 </div>
-
-                <!-- ガイドライン (pdf) -->
-                <!--
-                <input type="button" class="btn btn-info"
-                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
-                    value="ガイドライン"
-                    onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
-                -->
-
-                <!-- 質問フォーム -->
-                <!--
-                <input type="button" class="btn btn-info"
-                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
-                    value="質問フォーム"
-                    onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkti228KKxdWQZufRlg7F9xgonqo7pFTzZZGfbP2I56SDOSQ/viewform')">
-                -->
-
-                <!-- ツール切り替え -->
-                <!--
-                <input type="button" class="btn btn-info"
-                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
-                    value="EDU分割に切替"
-                    onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation.html')">
-                -->
 
                 <! -- その他 -->
                 <div class="btn-group">
@@ -211,18 +189,16 @@
                         <h5>{{displayText | TailorString}}</h5>
                     </button>
                     <!-- EDU index -->
-                    <span>{{$index}}
-                     (<span style="color: #BC3C29;">{{tags[$index]}}</span>)
-                    </span>
+                    <span>&lt;<span style="color: #BC3C29;">{{tags[$index]}}</span>&gt; {{$index}}</span>
                 </div>
             </div>
         </div>
 
         <!-- 談話関係選択ダイアログ (アノテーション) -->
-        <div id="dialog-form" title="談話関係を下記から選択してください"
-        ng-show="showAddDialog">
+        <div id="dialog-form-for-rel" title="談話関係を下記から選択してください"
+        ng-show="showAddDialogForRel">
             <form>
-                 <select class="form-control" id="select" name="select" >
+                 <select class="form-control" id="selectForRel" name="selectForRel" >
                      <option ng-repeat="relation in relationVocab">{{relation}}</option>
                  </select>
             </form>
