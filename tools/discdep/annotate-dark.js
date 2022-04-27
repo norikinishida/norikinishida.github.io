@@ -98,6 +98,8 @@ app.controller('EDUListController',
     // 変数など
     /************************************************/
 
+    $scope.taggingMode = false;
+
     $scope.relationVocab = CONSTANTS.relationVocab; // 定義された談話関係
     $scope.tagVocab = CONSTANTS.tagVocab ; // 定義されたタグ
 
@@ -164,14 +166,23 @@ app.controller('EDUListController',
     // $scope.eduBegins = [];
 
     /************************************************/
-    // ファイルアップロード
+    // 談話依存構造アノテーション用
+    // 1. ファイルアップロード
     /************************************************/
 
-    $scope.handleFileSelect = function ($files) {
+    $scope.handleFileSelect = function ($files, taggingMode) {
         // チェック
         if (!$files || !$files[0]) {
             return;
         }
+        if (taggingMode === 'tagging') {
+            $scope.taggingMode = true;
+        }
+        else {
+            $scope.taggingMode = false;
+        }
+        console.log("taggingMode:");
+        console.log($scope.taggingMode);
 
         // クリア
         var canvas = angular.element('#canvas')[0];
@@ -228,11 +239,13 @@ app.controller('EDUListController',
         $scope.$apply();
         // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
-            if ($scope.heads[i] >= 0) {
-                // リンクの描画
-                drawCurve('edu' + $scope.heads[i].toString(), 'edu' + i.toString(), CONSTANTS.NORMAL_LINK_COLOR);
-                // 談話関係の描画
-                addRelation('edu' + i.toString(), $scope.relations[i], CONSTANTS.NORMAL_LABEL_COLOR);
+            if ($scope.taggingMode) {
+                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+            }
+            else {
+                if ($scope.heads[i] >= 0) {
+                    connect($scope.heads[i].toString(), i.toString(), $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
+                }
             }
         }
     };
@@ -263,17 +276,20 @@ app.controller('EDUListController',
         $scope.$apply();
         // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
-            if ($scope.heads[i] >= 0) {
-                // リンクの描画
-                drawCurve('edu' + $scope.heads[i].toString(), 'edu' + i.toString(), CONSTANTS.NORMAL_LINK_COLOR);
-                // 談話関係の描画
-                addRelation('edu' + i.toString(), $scope.relations[i], CONSTANTS.NORMAL_LABEL_COLOR);
+            if ($scope.taggingMode) {
+                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+            }
+            else {
+                if ($scope.heads[i] >= 0) {
+                    connect($scope.heads[i].toString(), i.toString(), $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
+                }
             }
         }
     };
 
     /************************************************/
-    // 上部のボタンを押したときの処理 + プログレスバー
+    // 談話依存構造アノテーション用
+    // 2. 上部のボタンを押したときの処理 + プログレスバー
     /************************************************/
 
     // ノード解除処理
@@ -461,8 +477,17 @@ app.controller('EDUListController',
     };
 
     // 例示
-    $scope.showRandomSample = function (relation) {
+    $scope.showRandomSample = function (relation, taggingMode) {
         console.log("showRandomSample was called.")
+        if (taggingMode === 'tagging') {
+            $scope.taggingMode = true;
+        }
+        else {
+            $scope.taggingMode = false;
+        }
+        console.log("taggingMode:");
+        console.log($scope.taggingMode);
+
         // クリア
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
@@ -501,9 +526,13 @@ app.controller('EDUListController',
                     $scope.$apply();
                     // 描画
                     for (var i = 0; i < $scope.heads.length; ++i) {
-                        if ($scope.heads[i] >= 0) {
-                            drawCurve('edu' + $scope.heads[i].toString(), 'edu' + i.toString(), CONSTANTS.NORMAL_LINK_COLOR);
-                            addRelation('edu' + i.toString(), $scope.relations[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                        if ($scope.taggingMode) {
+                            addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                        }
+                        else {
+                            if ($scope.heads[i] >= 0) {
+                                connect($scope.heads[i].toString(), i.toString(), $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
+                            }
                         }
                     }
                 }
@@ -529,7 +558,8 @@ app.controller('EDUListController',
     });
 
     /************************************************/
-    // マウスがEDUと重なったとき・外れたときの処理
+    // 談話依存構造アノテーション用
+    // 3. マウスがEDUと重なったとき・外れたときの処理
     /************************************************/
 
     // マウスカーソルが乗っかったときの処理
@@ -550,11 +580,16 @@ app.controller('EDUListController',
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
         for (var i = 0; i < $scope.heads.length; ++i) {
-            if (i === pos && $scope.heads[i] >= 0) {
-                connect($scope.heads[i], i, $scope.relations[i], CONSTANTS.BLINK_LINK_COLOR, CONSTANTS.BLINK_LABEL_COLOR);
+            if ($scope.taggingMode) {
+                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
             }
-            else if ($scope.heads[i] >= 0) {
-                connect($scope.heads[i], i, $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
+            else {
+                if (i === pos && $scope.heads[i] >= 0) {
+                    connect($scope.heads[i], i, $scope.relations[i], CONSTANTS.BLINK_LINK_COLOR, CONSTANTS.BLINK_LABEL_COLOR);
+                }
+                else if ($scope.heads[i] >= 0) {
+                    connect($scope.heads[i], i, $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
+                }
             }
         }
     };
@@ -575,7 +610,8 @@ app.controller('EDUListController',
     };
 
     /************************************************/
-    // EDUをクリックしたときの処理
+    // 談話依存構造アノテーション用
+    // 4. EDUをクリックしたときの処理
     /************************************************/
 
     // リンク追加処理 (EDUのクリック)
@@ -668,7 +704,8 @@ app.controller('EDUListController',
     };
 
     /************************************************/
-    // 描画処理
+    // 談話依存構造アノテーション用
+    // 5. 描画処理
     /************************************************/
 
     // クリアして描画
@@ -677,11 +714,15 @@ app.controller('EDUListController',
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
         for (var i = 0; i < $scope.heads.length; ++i) {
-            if ($scope.heads[i] >= 0) {
-                connect($scope.heads[i], i, $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
+            if ($scope.taggingMode) {
+                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+            }
+            else {
+                if ($scope.heads[i] >= 0) {
+                    connect($scope.heads[i], i, $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
+                }
             }
         }
-
     };
 
     var connect = function(id1, id2, rel, link_color, label_color, fontSize) {
@@ -799,22 +840,29 @@ app.controller('EDUListController',
 
     /************************************************/
     // タグ付け用
+    // 4. EDUをクリックしたときの処理
     /************************************************/
 
-    // タグ付け処理
-    $scope.setTag = function () {
-        // チェック
-        if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
-            ngToast.danger({
-                content: 'エラー: ノードが選択されていません！',
-                timeout: 2000
-            });
-            return;
+    // タグ付け処理 (EDUのクリック)
+    $scope.highLightForTag = function(id) {
+        console.log("highLightForTag was called.");
+        // 選択されたEDUのindex
+        var index = parseInt(id.toString().substr(3));
+
+        // headかmodifierか
+        if ($scope.first === -1) {
+            // headセット
+            $scope.first = index;
+            // 描画
+            $scope.mouseOutHandler(id);
+            // 履歴追加
         }
-        // タグの選択
-        popTag();
-        // 描画
-        drawAll();
+        else {
+            // modifierセット
+            second = index;
+            // 談話関係の選択画面へ
+            popTag();
+        }
     };
 
     // タグ選択
@@ -825,14 +873,14 @@ app.controller('EDUListController',
         function tagCallback() {
             // 依存関係のセット
             tg = angular.element('#selectForTag')[0].options[selectForTag.selectedIndex].text;
-            console.log(angular.element("#selectForTag")[0].options[0].text);
-            console.log(angular.element("#selectForTag")[0].options[1].text);
-            console.log(angular.element("#selectForTag")[0].options[2].text);
-            console.log(angular.element("#selectForTag")[0].options[3].text);
             console.log(selectForTag.selectedIndex);
             console.log($scope.first);
+            console.log(second);
             console.log(tg);
-            $scope.tags[$scope.first] = tg;
+            // $scope.tags[$scope.first] = tg;
+            for (var i = $scope.first; i <= second; i++) {
+                $scope.tags[i] = tg;
+            }
 
             // 描画
             drawAll();
@@ -872,8 +920,49 @@ app.controller('EDUListController',
     };
 
     /************************************************/
+    // タグ付け用
+    // 5. 描画処理
+    /************************************************/
+
+    // タグの描画
+    var addTag = function(id, tag, color, fontSize) {
+        if (!tag) {
+            console.log("addTag:")
+            console.log(tag);
+            ngToast.danger({
+                content: 'Invalid tag',
+                timeout: 2000
+            });
+            return;
+        }
+        fontSize = fontSize || 15;
+
+        // 位置
+        var centerZ = Utils.findPos(angular.element('#' + id)[0]);
+        centerZ.x += angular.element('#' + id)[0].style.width;
+        centerZ.y += angular.element('#' + id)[0].style.height;
+
+        // 調整
+        var canvasPos = Utils.findPos(angular.element('#canvas')[0]);
+        centerZ.x -= canvasPos.x;
+        centerZ.x += 90;
+        centerZ.y -= canvasPos.y;
+        centerZ.y += 30;
+
+        // 描画
+        var ctx = angular.element('#canvas')[0].getContext('2d');
+        ctx.font = fontSize.toString() + "px Arial";
+        // ctx.fillStyle = '#005AB5';
+        // ctx.fillStyle = CONSTANTS.NORMAL_LABEL_COLOR;
+        ctx.fillStyle = color;
+        ctx.textAlign = "right";
+        // while (tag.length < 12) tag = ' ' + tag;
+        ctx.fillText(tag, centerZ.x - fontSize * 7, centerZ.y);
+    };
+
+    /************************************************/
     // EDU分割用
-    // ファイルアップロード
+    // 1. ファイルアップロード
     /************************************************/
 
     $scope.handleFileSelectForSeg = function ($files) {
@@ -960,7 +1049,7 @@ app.controller('EDUListController',
 
     /************************************************/
     // EDU分割用
-    // 上部のボタンを押したときの処理
+    // 2. 上部のボタンを押したときの処理
     /************************************************/
 
     // クリップボードにコピー
@@ -1060,7 +1149,7 @@ app.controller('EDUListController',
 
     /************************************************/
     // EDU分割用
-    // マウスがトークンセルと重なったとき・外れたときの処理
+    // 3. マウスがトークンセルと重なったとき・外れたときの処理
     /************************************************/
 
     // マウスカーソルが乗っかったときの処理
@@ -1095,7 +1184,7 @@ app.controller('EDUListController',
 
     /************************************************/
     // EDU分割用
-    // トークンセルをクリックしたときの処理
+    // 4. トークンセルをクリックしたときの処理
     /************************************************/
 
     // EDU分割・マージ処理

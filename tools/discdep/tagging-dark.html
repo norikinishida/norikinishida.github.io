@@ -18,10 +18,10 @@
         <link href="./bower_components/ngToast/dist/ngToast.min.css" rel="stylesheet">
         <link href="./bower_components/ngToast/dist/ngToast-animations.min.css" rel="stylesheet">
         <link href="./css/custom.css" rel="stylesheet">
-        <script src="./annotate.js"></script>
+        <script src="./annotate-dark.js"></script>
     </head>
 
-    <body id="body" style="background-color: #F4F4F4; color: #000000"
+    <body id="body" style="background-color: #282C34; color: #ABB2BF"
         ng-app="MyApp" ng-controller="EDUListController">
         <!-- キャンバス要素 -->
         <canvas id="canvas" height="{{canvas_height}}" width="{{canvas_width}}">
@@ -34,38 +34,45 @@
             <!-- メニューバー1行目 -->
             <div class="row">
                 <!-- ファイルアップロード -->
-                <input type="file" ngf-select="handleFileSelectForSeg($files)" name="files[]" multiple />
+                <input type="file" ngf-select="handleFileSelect($files, 'tagging')" name="files[]" multiple />
                 <span>ファイル名: {{inputFile}}</span>
             </div>
             <br>
 
             <!-- メニューバー2行目 -->
             <div class="row">
+                <!-- 選択解除 -->
+                <input type="button" class="btn btn-info"
+                    style="background-color: #98C379; border-color: #98C379; color: #282C34"
+                    value="選択解除"
+                    ng-click="clearNode()"
+                    ng-show="!!inputFile" ng-disabled="first === -1">
+
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
+                    style="background-color: #98C379; border-color: #98C379; color: #282C34"
                     value="全文をコピー"
-                    ng-click="copyToClipboardForSeg()"
+                    ng-click="copyToClipboard()"
                     ng-show="!!inputFile">
 
                 <!-- 保存 -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
+                    style="background-color: #98C379; border-color: #98C379; color: #282C34"
                     value="保存"
-                    ng-click="saveToFileForSeg()"
+                    ng-click="saveToFile()"
                     ng-show="!!inputFile">
 
                 <!-- 例 -->
                 <input type="button" class="btn btn-info"
-                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
+                    style="background-color: #282C34; border-color: #98C379; color: #98C379"
                     value="ランダムサンプル"
-                    ng-click="showRandomSampleForSeg()">
+                    ng-click="showRandomSample('ROOT', 'tagging')">
 
                 <! -- その他 -->
                 <div class="btn-group">
                     <button type="button" class="btn btn-info dropdown-toggle"
                         data-toggle="dropdown" aria-expanded="false"
-                        style="background-color: #F4F4F4; border-color: #20854E; color: #20854E">
+                        style="background-color: #282C34; border-color: #98C379; color: #98C379">
                         その他<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
@@ -76,11 +83,11 @@
                                 onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkti228KKxdWQZufRlg7F9xgonqo7pFTzZZGfbP2I56SDOSQ/viewform')">
                                 質問フォーム</a></li>
                         <li><a class="dropdown-item"
-                                onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation-dark.html')">
+                                onClick="window.open('https://norikinishida.github.io/tools/discdep/index-dark.html')">
                                 ダークモード</a></li>
                         <li><a class="dropdown-item"
-                                onClick="window.open('https://norikinishida.github.io/tools/discdep/index.html')">
-                                談話依存構造アノテーション</a></li>
+                                onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation.html')">
+                                EDU分割ツール</a></li>
                      </ul>
                 </div>
 
@@ -88,28 +95,47 @@
         </div>
 
         <!-- EDUリスト (メイン部分) -->
-        <div class="container edu-list-for-seg" id="list">
-            <div ng-repeat="edu in edus track by $index">
+        <div class="container edu-list" id="list">
+            <div ng-repeat="displayText in edus track by $index">
                 <!-- Each EDU -->
-                <!-- EDU index -->
-                <span>{{$index}}</span>
-                <!-- EDU content -->
-                <button type="button" class="btn btn-default"
-                        ng-click="segment($parent.$index, $index)"
-                        ng-mouseover="mouseOverHandlerForSeg($parent.$index, $index)"
-                        ng-mouseleave="mouseOutHandlerForSeg($parent.$index, $index)"
+                <div class="edu">
+                    <!-- EDU content -->
+                    <button id="edu{{$index}}"
+                        type="button" class="btn btn-default active"
+                        ng-click="highLightForTag('edu' + ($index).toString())"
+                        ng-mouseover="mouseOverHandler($index)"
+                        ng-mouseleave="mouseOutHandler($index)"
                         ng-style="{'background-color':
-                                        (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
+                                        (first === $index) ?
                                             blinkNodeColor1 :
-                                            '#FAFAFA',
-                                    'color': '#000000',
-                                    'font-size': '18px'}"
-                        style="outline: none"
-                        ng-repeat="tokenText in edu track by $index"
-                        ng-disabled="$parent.$index == 0 && $index == 0">
-                    {{tokenText}}
-                </button>
+                                            ((mouseOverIndex >= 0 && $index === mouseOverIndex) ?
+                                                blinkNodeColor1 :
+                                                (sentence_ids[$index] % 2 === 0) ? '#2A2834' :'#283234'
+                                            ),
+                                    'color':
+                                        (first === $index) ?
+                                            '#282C34' :
+                                            ((mouseOverIndex >= 0 && $index === mouseOverIndex) ?
+                                                '#282C34' :
+                                                (sentence_ids[$index] % 2 === 0) ? '#AFB5C4' :'#AFB5C4'
+                                            )}"
+                        ng-disabled="$index === 0">
+                        <h5>{{displayText | TailorString}}</h5>
+                    </button>
+                    <!-- EDU index -->
+                    <span>{{$index}}</span>
+                </div>
             </div>
+        </div>
+
+        <!-- タグ選択ダイアログ (アノテーション) -->
+        <div id="dialog-form-for-tag" title="タグを下記から選択してください"
+        ng-show="showAddDialogForTag">
+            <form>
+                 <select class="form-control" id="selectForTag" name="selectForTag" >
+                     <option ng-repeat="tg in tagVocab">{{tg}}</option>
+                 </select>
+            </form>
         </div>
 
     </body>

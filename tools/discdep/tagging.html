@@ -34,7 +34,7 @@
             <!-- メニューバー1行目 -->
             <div class="row">
                 <!-- ファイルアップロード -->
-                <input type="file" ngf-select="handleFileSelect($files)" name="files[]" multiple />
+                <input type="file" ngf-select="handleFileSelect($files, 'tagging')" name="files[]" multiple />
                 <span>ファイル名: {{inputFile}}</span>
             </div>
             <br>
@@ -48,36 +48,6 @@
                     ng-click="clearNode()"
                     ng-show="!!inputFile" ng-disabled="first === -1">
 
-                <!-- タグ付け -->
-                <input type="button" class="btn btn-info"
-                    style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
-                    value="タグ付け"
-                    ng-click="setTag()"
-                    ng-show="!!inputFile" ng-disabled="first === -1">
-
-                <!-- ラベル変更 -->
-                <input type="button" class="btn btn-info"
-                    style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
-                    value="ラベル変更"
-                    ng-click="changeLabel()"
-                    ng-show="!!inputFile" ng-disabled="first === -1">
-
-                <!-- リンク削除 -->
-                <input type="button" class="btn btn-info"
-                    style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
-                    value="リンク削除"
-                    ng-click="deleteLink()"
-                    ng-show="!!inputFile" ng-disabled="first === -1">
-
-                <!-- undo -->
-                <!--
-                <input type="button" class="btn btn-info"
-                    style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
-                    value="undo"
-                    ng-click="undo()"
-                    ng-show="!!inputFile" ng-disabled="operations.length === 0">
-                -->
-
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
@@ -85,43 +55,18 @@
                     ng-click="copyToClipboard()"
                     ng-show="!!inputFile">
 
-                <!-- 途中保存 -->
-                <input type="button" class="btn btn-info"
-                    style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
-                    value="途中保存"
-                    ng-click="saveToFile()"
-                    ng-show="!!inputFile">
-
                 <!-- 保存 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="保存"
                     ng-click="saveToFile()"
-                    ng-show="!!inputFile" ng-disabled="progress !== 100">
+                    ng-show="!!inputFile">
 
                 <!-- 例 -->
-                <div class="btn-group">
-                    <button type="button" class="btn btn-info dropdown-toggle"
-                        data-toggle="dropdown" aria-expanded="false"
-                        style="background-color: #F4F4F4; border-color: #20854E; color: #20854E">
-                        ランダムサンプル<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" ng-click="showRandomSample('ROOT')">すべて</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('ELABORATION')">Elaboration</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('ADDITION')">Addition</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('COMPARISON')">Comparison</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('CAUSE-RESULT')">Cause-Result</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('CONDITION')">Condition</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('TEMPORAL')">Temporal</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('ENABLEMENT')">Enablement</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('MANNER-MEANS')">Manner-Means</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('BACKGROUND')">Background</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('FINDINGS')">Findings</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('TEXTUAL-ORGANIZATION')">Textual-Organization</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('SAME-UNIT')">Same-Unit</a></li>
-                    </ul>
-                </div>
+                <input type="button" class="btn btn-info"
+                    style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
+                    value="ランダムサンプル"
+                    ng-click="showRandomSample('ROOT', 'tagging')">
 
                 <! -- その他 -->
                 <div class="btn-group">
@@ -149,18 +94,6 @@
             </div>
         </div>
 
-        <!-- プログレスバー -->
-        <div class="container progress-bar-container" ng-if="!!inputFile">
-            <div class="progress">
-                <div class="progress-bar" role="progressbar"
-                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                    ng-style="{'width': progress + '%', 'background-color': '#20854E', 'color': '#F4F4F4'}">
-                <span>{{progressDetail}}</span>
-                </div>
-            </div>
-        </div>
-        <br>
-
         <!-- EDUリスト (メイン部分) -->
         <div class="container edu-list" id="list">
             <div ng-repeat="displayText in edus track by $index">
@@ -169,7 +102,7 @@
                     <!-- EDU content -->
                     <button id="edu{{$index}}"
                         type="button" class="btn btn-default active"
-                        ng-click="highLight('edu' + ($index).toString())"
+                        ng-click="highLightForTag('edu' + ($index).toString())"
                         ng-mouseover="mouseOverHandler($index)"
                         ng-mouseleave="mouseOutHandler($index)"
                         ng-style="{'background-color':
@@ -177,31 +110,16 @@
                                             blinkNodeColor1 :
                                             ((mouseOverIndex >= 0 && $index === mouseOverIndex) ?
                                                 blinkNodeColor1 :
-                                                ((mouseOverIndex >= 0 && (heads[mouseOverIndex] == $index || heads[$index] == mouseOverIndex)) ?
-                                                    blinkNodeColor2 :
-                                                    (
-                                                        (sentence_ids[$index] % 2 === 0) ? '#F4FFFF' :'#F4F4FF'
-                                                    )
-                                                )
+                                                (sentence_ids[$index] % 2 === 0) ? '#F4FFFF' :'#F4F4FF'
                                             ),
                                     'color': (heads[$index] >= 0) ? '#000000' : '#000000'}"
-                        ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
+                        ng-disabled="$index === 0">
                         <h5>{{displayText | TailorString}}</h5>
                     </button>
                     <!-- EDU index -->
-                    <span>&lt;<span style="color: #BC3C29;">{{tags[$index]}}</span>&gt; {{$index}}</span>
+                    <span>{{$index}}</span>
                 </div>
             </div>
-        </div>
-
-        <!-- 談話関係選択ダイアログ (アノテーション) -->
-        <div id="dialog-form-for-rel" title="談話関係を下記から選択してください"
-        ng-show="showAddDialogForRel">
-            <form>
-                 <select class="form-control" id="selectForRel" name="selectForRel" >
-                     <option ng-repeat="relation in relationVocab">{{relation}}</option>
-                 </select>
-            </form>
         </div>
 
         <!-- タグ選択ダイアログ (アノテーション) -->
