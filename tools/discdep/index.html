@@ -136,6 +136,9 @@
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation.html')">
                                 EDU分割ツール</a></li>
+                        <li><a class="dropdown-item"
+                                onClick="window.open('https://norikinishida.github.io/tools/discdep/tagging.html')">
+                                EDUタグ付けツール</a></li>
                      </ul>
                 </div>
 
@@ -172,9 +175,7 @@
                                                 blinkNodeColor1 :
                                                 ((mouseOverIndex >= 0 && (heads[mouseOverIndex] == $index || heads[$index] == mouseOverIndex)) ?
                                                     blinkNodeColor2 :
-                                                    (
-                                                        (sentence_ids[$index] % 2 === 0) ? '#F4FFFF' :'#F4F4FF'
-                                                    )
+                                                    (sentence_ids[$index] % 2 === 0) ? '#F4FFFF' :'#F4F4FF'
                                                 )
                                             ),
                                     'color': (heads[$index] >= 0) ? '#000000' : '#000000'}"

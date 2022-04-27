@@ -240,7 +240,12 @@ app.controller('EDUListController',
         // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
             if ($scope.taggingMode) {
-                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                if ($scope.tags[i] == "null") {
+                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LINK_COLOR);
+                }
+                else {
+                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                }
             }
             else {
                 if ($scope.heads[i] >= 0) {
@@ -277,7 +282,12 @@ app.controller('EDUListController',
         // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
             if ($scope.taggingMode) {
-                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                if ($scope.tags[i] == "null") {
+                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LINK_COLOR);
+                }
+                else {
+                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                }
             }
             else {
                 if ($scope.heads[i] >= 0) {
@@ -527,7 +537,12 @@ app.controller('EDUListController',
                     // 描画
                     for (var i = 0; i < $scope.heads.length; ++i) {
                         if ($scope.taggingMode) {
-                            addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                            if ($scope.tags[i] == "null") {
+                                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LINK_COLOR);
+                            }
+                            else {
+                                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                            }
                         }
                         else {
                             if ($scope.heads[i] >= 0) {
@@ -581,7 +596,12 @@ app.controller('EDUListController',
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
         for (var i = 0; i < $scope.heads.length; ++i) {
             if ($scope.taggingMode) {
-                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                if ($scope.tags[i] == "null") {
+                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LINK_COLOR);
+                }
+                else {
+                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                }
             }
             else {
                 if (i === pos && $scope.heads[i] >= 0) {
@@ -715,7 +735,12 @@ app.controller('EDUListController',
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
         for (var i = 0; i < $scope.heads.length; ++i) {
             if ($scope.taggingMode) {
-                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                if ($scope.tags[i] == "null") {
+                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LINK_COLOR);
+                }
+                else {
+                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                }
             }
             else {
                 if ($scope.heads[i] >= 0) {

@@ -136,6 +136,9 @@
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation-dark.html')">
                                 EDU分割ツール</a></li>
+                        <li><a class="dropdown-item"
+                                onClick="window.open('https://norikinishida.github.io/tools/discdep/tagging-dark.html')">
+                                EDUタグ付けツール</a></li>
                      </ul>
                 </div>
 
@@ -172,9 +175,7 @@
                                                 blinkNodeColor1 :
                                                 ((mouseOverIndex >= 0 && (heads[mouseOverIndex] == $index || heads[$index] == mouseOverIndex)) ?
                                                     blinkNodeColor2 :
-                                                    (
-                                                        (sentence_ids[$index] % 2 === 0) ? '#2A2834' :'#283234'
-                                                    )
+                                                    (sentence_ids[$index] % 2 === 0) ? '#2A2834' :'#283234'
                                                 )
                                             ),
                                     'color':
@@ -184,9 +185,7 @@
                                                 '#282C34' :
                                                 ((mouseOverIndex >= 0 && (heads[mouseOverIndex] == $index || heads[$index] == mouseOverIndex)) ?
                                                     '#282C34' :
-                                                    (
-                                                        (sentence_ids[$index] % 2 === 0) ? '#AFB5C4' :'#AFB5C4'
-                                                    )
+                                                    (sentence_ids[$index] % 2 === 0) ? '#AFB5C4' :'#AFB5C4'
                                                 )
                                             )}"
                         ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
