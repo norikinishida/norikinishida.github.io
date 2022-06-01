@@ -104,7 +104,7 @@
                         ng-style="{'background-color':
                                         (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
                                             blinkNodeColor1 :
-                                            '#FAFAFA',
+                                            ($parent.$index % 2 === 0) ? '#F4FFFF' : '#F4F4FF',
                                     'color': '#000000',
                                     'font-size': '18px'}"
                         style="outline: none"
