@@ -1043,6 +1043,16 @@ app.controller('EDUListController',
         $scope.relations = _.range($scope.edus.length).map(function() { return 'null'; });
         // tagsの初期化
         $scope.tags = _.range($scope.edus.length).map(function() { return 'null'; });
+        // sentence_idsのセット
+        $scope.sentence_ids = [];
+        $scope.sentence_ids.push(0)
+        var sentence_id = 1;
+        for (var i = 1; i < $scope.heads.length; ++i) {
+            $scope.sentence_ids.push(sentence_id);
+            if ($scope.edus[i].includes("<S>")) {
+                sentence_id += 1;
+            }
+        }
         //
         $scope.$apply();
     };
@@ -1068,6 +1078,16 @@ app.controller('EDUListController',
         $scope.relations = _.pluck(obj, 'relation');
         // tagのセット
         $scope.tags = _.pluck(obj, 'tag');
+        // sentence_idsのセット
+        $scope.sentence_ids = [];
+        $scope.sentence_ids.push(0)
+        var sentence_id = 1;
+        for (var i = 1; i < $scope.heads.length; ++i) {
+            $scope.sentence_ids.push(sentence_id);
+            if ($scope.edus[i].includes("<S>")) {
+                sentence_id += 1;
+            }
+        }
         //
         $scope.$apply();
     };
@@ -1159,6 +1179,16 @@ app.controller('EDUListController',
                     $scope.relations = _.pluck(obj, 'relation');
                     // tagsのセット
                     $scope.tags = _.pluck(obj, 'tag');
+                    // sentence_idsのセット
+                    $scope.sentence_ids = [];
+                    $scope.sentence_ids.push(0)
+                    var sentence_id = 1;
+                    for (var i = 1; i < $scope.heads.length; ++i) {
+                        $scope.sentence_ids.push(sentence_id);
+                        if ($scope.edus[i].includes("<S>")) {
+                            sentence_id += 1;
+                        }
+                    }
                     //
                     $scope.$apply();
                 }
@@ -1256,6 +1286,15 @@ app.controller('EDUListController',
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
         $scope.relations = _.range($scope.edus.length).map(function() { return 'null'; });
         $scope.tags = _.range($scope.edus.length).map(function() { return 'null'; });
+        $scope.sentence_ids = [];
+        $scope.sentence_ids.push(0)
+        var sentence_id = 1;
+        for (var i = 1; i < $scope.heads.length; ++i) {
+            $scope.sentence_ids.push(sentence_id);
+            if ($scope.edus[i].includes("<S>")) {
+                sentence_id += 1;
+            }
+        }
     };
 
     $scope.mergeEDUs = function(eduIndex, tokenIndex) {
@@ -1287,6 +1326,15 @@ app.controller('EDUListController',
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
         $scope.relations = _.range($scope.edus.length).map(function() { return 'null'; });
         $scope.tags = _.range($scope.edus.length).map(function() { return 'null'; });
+        $scope.sentence_ids = [];
+        $scope.sentence_ids.push(0)
+        var sentence_id = 1;
+        for (var i = 1; i < $scope.heads.length; ++i) {
+            $scope.sentence_ids.push(sentence_id);
+            if ($scope.edus[i].includes("<S>")) {
+                sentence_id += 1;
+            }
+        }
     };
 
 

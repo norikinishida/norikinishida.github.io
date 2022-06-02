@@ -104,11 +104,11 @@
                         ng-style="{'background-color':
                                         (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
                                             blinkNodeColor1 :
-                                            ($parent.$index % 2 === 0) ? '#2A2834' : '#283234',
+                                            (sentence_ids[$parent.$index] % 2 === 0) ? '#2A2834' : '#283234',
                                     'color':
                                         (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
                                             '#282C34' :
-                                            ($parent.$index % 2 === 0) ? '#AFB5C4' : '#AFB5C4',
+                                            (sentence_ids[$parent.$index] % 2 === 0) ? '#AFB5C4' : '#AFB5C4',
                                     'font-size': '18px'}"
                         style="outline: none"
                         ng-repeat="tokenText in edu track by $index"
