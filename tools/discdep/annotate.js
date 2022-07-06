@@ -5,31 +5,32 @@ var app = angular.module('MyApp', ['ngFileUpload', 'ngToast']);
 app.constant('CONSTANTS', {
     // 談話関係
     relationVocab: [
-        "ROOT",
-        // General
-        "ELABORATION",
-        "ADDITION",
-        "COMPARISON",
-        "CAUSE-RESULT",
-        "CONDITION",
-        "TEMPORAL",
-        "ENABLEMENT",
-        "MANNER-MEANS",
-        "BACKGROUND",
-        // Functional
-        "TEXTUAL-ORGANIZATION",
-        "ATTRIBUTION",
-        "SAME-UNIT",
+        "ROOT", // 0
+        "ADDITION", // 1
+        "ELABORATION", // 2
+        "COMPARISON", // 3
+        "CAUSE-RESULT", // 4
+        "CONDITION", // 5
+        "TEMPORAL", // 6
+        "BACKGROUND", // 7
+        "ENABLEMENT", // 8
+        "MANNER-MEANS", // 9
+        "CONCLUSION", // 10
+        "ATTRIBUTION", // 11
+        "TEXTUAL-ORGANIZATION", // 12
+        "SAME-UNIT", // 13
         // Special
         "SEGMENTATION-ERROR",
     ],
     // EDUタグ
     tagVocab: [
         "Background",
-        "Action",
+        "Objective",
+        "Method",
         "Result",
-        "Implication",
+        "Conclusion",
         "Title",
+        "Misc.",
     ],
     // Colors are set according to the palette of The New England Journal of Medicine
     NORMAL_LINK_COLOR: '#0072B5', // NEJM Blue
