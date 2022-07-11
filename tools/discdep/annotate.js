@@ -427,7 +427,7 @@ app.controller('EDUListController',
                 text = text; // Do nothing
             }
             else if ($scope.edus[i].includes("<S>")) {
-                text = text + "\n";
+                text = text + "\n\n";
             }
             else {
                 text = text + " ";
@@ -1104,7 +1104,7 @@ app.controller('EDUListController',
             for (var j = 0; j < $scope.edus[i].length; j++) {
                 text = text + $scope.edus[i][j].replace("<S>", "").replace("<P>", "")
                 if ($scope.edus[i][j] === "<S>") {
-                    text = text + "\n";
+                    text = text + "\n\n";
                 }
                 else {
                     text = text + " ";
