@@ -12,22 +12,23 @@ app.constant('CONSTANTS', {
         "CAUSE-RESULT", // 4
         "CONDITION", // 5
         "TEMPORAL", // 6
-        "BACKGROUND", // 7
-        "ENABLEMENT", // 8
-        "MANNER-MEANS", // 9
-        "CONCLUSION", // 10
-        "ATTRIBUTION", // 11
-        "TEXTUAL-ORGANIZATION", // 12
-        "SAME-UNIT", // 13
+        "ENABLEMENT", // 7
+        "MANNER-MEANS", // 8
+        "BACKGROUND", // 9
+        "VERIFICATION", // 10
+        "CONCLUSION", // 11
+        "ATTRIBUTION", // 12
+        "TEXTUAL-ORGANIZATION", // 13
+        "SAME-UNIT", // 14
         // Special
         "SEGMENTATION-ERROR",
     ],
     // EDUタグ
     tagVocab: [
         "Background",
-        "Objective",
-        "Method",
-        "Result",
+        "Hypothesis-Objective",
+        "Verification-Method",
+        "Verification-Result",
         "Conclusion",
         "Title",
         "Misc.",
