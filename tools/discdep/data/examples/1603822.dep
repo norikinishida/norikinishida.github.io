@@ -1,0 +1,144 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "In 19 patients with a malignant breast tumor , tumor tissue and blood were taken",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "to determine the eicosanoid profile and platelet aggregation . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "Values were compared with those of patients with benign tumors ( n = 4 ) , or undergoing a mammary reduction ( n = 7 ) . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "Postoperatively , blood was taken as well",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "in order to compare pre- and postoperative values . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 6,
+			"parent": 4,
+			"text": "Eicosanoids were measured in peripheral blood monocytes and mammary tissue by means of HPLC ;",
+			"relation": "ELABORATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "furthermore , TXA2 , 6-keto-PGF1 alpha , and PGE2 were determined by RIA . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 8,
+			"parent": 1,
+			"text": "Differences in pre- and postoperative values of cancer patients were seen in plasma RIA values :",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "PGE2 and 6-k-PGF1 alpha were significantly higher preoperatively",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "when compared with postoperatively ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 9,
+			"text": "however , such differences were seen in the control groups as well . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 13,
+			"text": "Compared to benign tumor or mammary reduction test material",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 8,
+			"text": "the eicosanoid profile of tissue obtained from malignant mammary tumors showed important differences . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "Except for PGF2 alpha , HHT and 15-HETE no detectable quantities of eicosanoids were found in the non-tumor material ,",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "whereas in the malignant tumor material substantial quantities of a number of eicosanoid metabolites were present . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 16,
+			"parent": 8,
+			"text": "Statistically significant correlations could be established between patient/histopathology data and the results of the platelet aggregation assays , e.g. between menopausal status and ADP aggregation ; oestrogen receptor ( +/- ) and collagen and arachidonic acid aggregation , inflammatory cell infiltration score and arachidonic acid aggregation and fibrosis score and ADP aggregation . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 1,
+			"text": "The results show",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 18,
+			"parent": 17,
+			"text": "that eicosanoid synthesis in material from mammary cancer patients is different from that in benign mammary tissue . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 19,
+			"parent": 17,
+			"text": "The implications , in particular , in relation to future prognosis of the patient , remain obscure . <S>",
+			"relation": "ELABORATION",
+			"tag": "Conclusion"
+		}
+	]
+}

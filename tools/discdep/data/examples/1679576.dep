@@ -1,0 +1,67 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "The effect of constitutive Tax expression on the interaction of NF-kappa B with its recognition sequence and on NF-kappa B-dependent gene expression was examined in T lymphoid Jurkat cell lines ( 19D and 9J ) stably transformed with a Tax expression vector . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Tax expressing T cell lines contained a constitutive level of NF-kappa B binding activity , detectable by mobility shift assay and uv cross-linking using a palindromic NF-kappa B probe homologous to the interferon beta PRDII site . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "In Jurkat and NC2.10 induction with phorbol esters resulted in the appearance of new DNA binding proteins of 85 , 75 , and 54 kDa ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "whereas in Tax expressing cells the 85-kDa protein and a 92-kDa DNA binding protein were constitutively induced . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 2,
+			"text": "Expression of Tax protein in 19D and 9J resulted in transcription of the endogenous NF-kappa B-dependent granulocyte-macrophage colony stimulating factor gene and increased basal level expression of transfected NF-kappa B-regulated promoters . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "Nonetheless transcription of both the endogenous and the transfected gene was inducible by PMA treatment . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 1,
+			"text": "Tax expression in Jurkat T cells may alter the stoichiometry of NF-kappa B DNA binding proteins",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "and thus change the expression of NF-kappa B-regulated promoters . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		}
+	]
+}

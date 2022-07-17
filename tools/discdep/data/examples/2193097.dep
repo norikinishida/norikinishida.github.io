@@ -1,0 +1,88 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "Lipopolysaccharide ( LPS ) potently stimulates human immunodeficiency virus type 1-long terminal repeat ( HIV-1-LTR ) CAT constructs transfected into monocyte/macrophage-like cell lines but not a T cell line . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "This effect appears to be mediated through the induction of nuclear factor kappa B ( NF-kappa B ) . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "Electrophoretic mobility shift assays demonstrate",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "that LPS induces a DNA binding activity indistinguishable from NF-kappa B in U937 and THP-1 cells . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "LPS is also shown to dramatically increase HIV-1 production from a chronically infected monocyte/macrophage-like cloned cell line , U1 , which produces very low levels of HIV-1 at baseline . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "The stimulation of viral production from this cell line occurs",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "only if these cells are treated with granulocyte/macrophage colony-stimulating factor ( GM-CSF ) before treatment with LPS . <S>",
+			"relation": "CONDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "This stimulation of HIV-1 production is correlated with an increase in the level of HIV-1 RNA and and activation of NF-kappa B . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 6,
+			"text": "LPS is not able to induce HIV-1 production in a cloned T cell line . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 6,
+			"text": "The effect of LPS on HIV-1 replication occurs at picogram per milliliter concentrations",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "and may be clinically significant in understanding the variability of the natural history of HIV-1 infection . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

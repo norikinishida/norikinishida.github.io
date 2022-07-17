@@ -1,0 +1,39 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "Binding of 3H-dexamethasone and 3H-aldosterone by peripheral lymphocyte receptors was investigated in healthy persons and hypertensive patients before and after 2-week captopril treatment . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "The number of glucocorticoid and mineralocorticoid binding sites was increased in hypertensives vs normotensives . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "The treatment with the ACE inhibitor captopril led to activation of hormone-receptor interactions . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "There was a more marked rise of the number of receptors in middle-aged ( 44-55 years ) hypertensives vs elderly ( 61-80 years ) subjects after captopril treatment . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		}
+	]
+}

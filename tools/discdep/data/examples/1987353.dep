@@ -1,0 +1,88 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "The rate of transcription initiation directed by the long terminal repeat ( LTR ) of HIV-1 increases in response to mitogenic stimuli of T cells . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "Here we show",
+			"relation": "ROOT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "that the response of the HIV-1 LTR may be governed by two independent sequences located 5' to the site of transcription initiation sequences that bind either NFAT-1 or NF kappa B . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "The rate of LTR-directed gene expression increased in response to treatment with either a phorbol ester or tumor necrosis factor alpha",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "if either the NFAT-1 or NF kappa B binding sites were deleted ,",
+			"relation": "CONDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 4,
+			"text": "but failed to respond to these mitogenic stimuli",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "if both sequences were absent . <S>",
+			"relation": "CONDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 4,
+			"text": "The HIV-1 mutant virus containing both NF kappa B and NFAT-1 deletion was able to replicate",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "although at a much decreased growth rate ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 8,
+			"text": "while the deletion of NFAT-1 alone increased the viral growth rate in Jurkat cells . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 4,
+			"text": "Neither deletion of NF kappa B nor deletion of NFAT-1 decreased activation of viral replication by phorbol ester . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		}
+	]
+}

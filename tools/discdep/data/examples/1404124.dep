@@ -1,0 +1,39 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "We investigated the clinical significance of glucocorticoid receptor determination in 20 patients with systemic lupus erythematosus ( SLE ) who afterwards developed nephrotic syndrome . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Glucocorticoid receptor concentrations in mononuclear leukocytes ( MNL ) in these patients were comparable with those in both other patients with SLE and healthy persons . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "Improvement in urinary protein excretion and in disease activity , which was scored according to the SLE Disease Activity Index system of the University of Toronto , closely related to the glucocorticoid receptor concentrations in MNL isolated from the corresponding patients . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "In summary , glucocorticoid receptor determination in patients with lupus nephritis may be a predictive clue for assessing responsiveness to glucocorticoid therapy . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

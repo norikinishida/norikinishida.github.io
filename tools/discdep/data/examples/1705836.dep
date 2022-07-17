@@ -1,0 +1,214 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 4,
+			"text": "1,25-Dihydroxyvitamin D3 [ 1,25(OH)2D3 ] induces differentiation and inhibits proliferation of myeloid leukemic cells from various lines and patients ;",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "these effects are probably mediated through the 1,25(OH)2D3 receptor . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "Little is known of expression of 1,25(OH)2D3 receptor RNA in hematopoietic cells . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 0,
+			"text": "We examined the expression and modulation of expression of 1,25(OH)2D3 receptor RNA in various proliferating and nonproliferating hematopoietic cells . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "Constitutive expression of 1,25(OH)2D3 receptor RNA was detected in various kinds of hematopoietic cells , including macrophages and activated T lymphocytes , as well as in cell lines KG-1 ( myeloblasts ) , HL-60 ( promyelocytes ) , ML-3 ( myelomonoblasts ) , U937 , THP-1 ( monoblasts ) , K562 ( erythroblasts ) , and S-LB1 ( HTLV-1-transfected T lymphocytes ) . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "Receptor transcripts were 4.6 kilobases ( kb ) ,",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "and no variant sizes were observed . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 5,
+			"text": "All cell lines examined in this group also expressed 1,25(OH)2D3 receptors . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "Most B lymphocyte lines expressed negligible levels of 1,25(OH)2D3 receptor RNA and protein ;",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "however ; analysis of a lymphoid/myeloid somatic hybrid suggested",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "that suppression of expression of 1,25(OH)2D3 receptor RNA in B lymphocytes may be a dominant characteristic . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 9,
+			"text": "HL-60 cells were cultured with 10(-7) mol/L 1,25(OH)2D3 for 24 to 72 hours ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "and levels of expression of 1,25(OH)2D3 receptor and its RNA were examined . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 14,
+			"parent": 12,
+			"text": "Levels of RNA coding for the receptor were not modulated by exposure to high levels of ligand . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "Levels of occupied 1,25(OH)2D3 receptor protein increased in these HL-60 cells ;",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "but the total number of 1,25(OH)2D3 receptors decreased about 50 % at 24 hours",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "and returned toward normal at 72 hours . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 18,
+			"parent": 14,
+			"text": "Steady-state levels of 1,25(OH)2D3 receptor RNA were not affected by terminal differentiation of HL-60 toward either granulocytes or macrophages . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 19,
+			"parent": 9,
+			"text": "Nondividing macrophages from normal individuals also expressed 1,25(OH)2D3 receptor RNA . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 20,
+			"parent": 19,
+			"text": "In contrast , nondividing peripheral blood lymphocytes from normal individuals did not express 1,25(OH)2D3 receptor RNA ;",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 21,
+			"parent": 20,
+			"text": "with stimulation of proliferation of these cells , accumulation of 1,25(OH)2D3 receptor RNA increased markedly . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 22,
+			"parent": 9,
+			"text": "Half-life ( t1/2 ) of 1,25(OH)2D3 receptor RNA in T lymphocytes was short ( 1 hour )",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 23,
+			"parent": 22,
+			"text": "as determined",
+			"relation": "ELABORATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 24,
+			"parent": 23,
+			"text": "by measuring decay of the message after addition of actinomycin D . <S>",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 25,
+			"parent": 26,
+			"text": "Consistent with this short t1/2 ,",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 26,
+			"parent": 22,
+			"text": "accumulation of 1,25(OH)2D3 receptor RNA increased in cells",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 27,
+			"parent": 26,
+			"text": "as their protein synthesis was inhibited . <S>",
+			"relation": "TEMPORAL",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 28,
+			"parent": 4,
+			"text": "Further studies are required",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 29,
+			"parent": 28,
+			"text": "to understand the physiologic role of 1,25(OH)2D3 receptors in myeloid cells and proliferating T lymphocytes . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Conclusion"
+		}
+	]
+}

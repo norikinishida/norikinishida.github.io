@@ -1,0 +1,95 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "Analogs of 1 alpha,25-dihydroxyvitamin D3 ( 1 alpha,25-(OH)2D3 ) with substitutions on C-11 were synthesized . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Small apolar substitutions ( 11 alpha-methyl , 11 alpha-fluoromethyl ) did not markedly decrease the affinity for the vitamin D receptor ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "but larger ( 11 alpha-chloromethyl or 11 alpha- or 11 beta-phenyl ) or more polar substitutions ( 11 alpha-hydroxymethyl , 11 alpha-(2-hydroxyethyl ] decreased the affinity to less than 5 % of that of 1 alpha,25-OH)2D3 . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "Their affinity for the vitamin D-binding protein , however , increased up to 4-fold . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 2,
+			"text": "The biological activity of 11 alpha-methyl-1 alpha,25-(OH)2D3 closely resembled that of the natural hormone on normal and leukemic cell proliferation and bone resorption ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "whereas its in vivo effect on calcium metabolism of the rachitic chick was about 50 % of that of 1 alpha,25-(OH)2D3 . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "The 11 beta-methyl analog had a greater than 10-fold lower activity . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 2,
+			"text": "The differentiating effects of the other C-11 analogs on human promyeloid leukemia cells ( HL-60 ) agreed well with their bone-resorbing activity and receptor affinity ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "but they demonstrated lower calcemic effects in vivo . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 1,
+			"text": "Large or polar substitutions on C-11 of 1 alpha,25-(OH)2D3 thus impair the binding of the vitamin D receptor",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "but increase the affinity to vitamin D-binding protein . <S>",
+			"relation": "COMPARISON",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 10,
+			"text": "The effects of many C-11-substituted 1 alpha,25-(OH)2D3 analogs on HL-60 cell differentiation exceeded their activity on calcium metabolism . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

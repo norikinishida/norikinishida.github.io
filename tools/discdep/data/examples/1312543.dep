@@ -1,0 +1,81 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "Mineralocorticoid effector mechanisms were evaluated in 29 patients with preeclampsia and in 25 uncomplicated pregnancies by measurement of plasma aldosterone , levels of mineralocorticoid receptor ( MR ) in mononuclear leucocytes , and subtraction potential difference ( SPD ; rectal minus oral values ) . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Mean values for plasma aldosterone were not different between the two groups ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "but significant differences were observed for MR ( preeclampsia , 81 +/- 44 receptors/cell ; controls , 306 +/- 168 ) and SPD ( preeclampsia , 65 +/- 7 mV ; controls , 12 +/- 5 mV ) . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "In six cases we determined MR , plasma aldosterone , and SPD in patients with preeclampsia before and 3 months after delivery . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "MR were reduced before delivery ( 96 +/- 27 receptors/cell ) ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "and SPD increased ( 64 +/- 8 mV ) ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "with both parameters normalizing after delivery ( MR , 242 +/- 79 ; SPD , 14.0 +/- 4 mV ) . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 5,
+			"text": "Aldosterone levels returned to normal nonpregnant values after delivery . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 1,
+			"text": "These data suggest an important role for abnormalities in mineralocorticoid effector mechanisms in the etiology of preeclampsia",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "and could be an useful marker for diagnosis . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

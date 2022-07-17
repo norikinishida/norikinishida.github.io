@@ -1,0 +1,67 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "A MEDLINE search of the English-language literature was conducted",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "using the indexing terms ' immunology , calcitriol and vitamin D '",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "to identify studies indicating a role for calcitriol as a primary immunomodulator . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "Sixty-six papers published between January 1956 and June 1991 were identified . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "Forty-five of these reports are cited in this review . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 1,
+			"text": "The data strongly suggest an endocrine , autocrine and/or paracrine role for calcitriol in immune regulation . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "No unifying hypothesis has yet emerged explaining this collection of data . <S>",
+			"relation": "ELABORATION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 8,
+			"parent": 1,
+			"text": "This paper provides a brief review of immune properties currently attributed to calcitriol . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

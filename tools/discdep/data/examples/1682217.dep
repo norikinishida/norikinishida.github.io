@@ -1,0 +1,116 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 5,
+			"text": "The v-erbA oncoprotein represents a retrovirus-transduced oncogenic version of the thyroid hormone ( T3/T4 ) receptor c-erbA ( type alpha ) . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "It contributes to virus-induced erythroleukemia",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "by efficiently arresting differentiation of red cell progenitors",
+			"relation": "MANNER-MEANS",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "and by suppressing transcription of erythrocyte-specific genes . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 5,
+			"parent": 0,
+			"text": "Here , we show",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "that v-erbA and c-erbA bind directly to sequences within the promoter of the erythrocyte-specific carbonic anhydrase II ( CAII ) , a gene whose transcription is efficiently suppressed by v-erbA . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "This erbA-binding site confers thyroid hormone responsiveness to a heterologous promoter in transient expression experiments",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "and is a target for efficient down-regulation of CAII transcription by the v-erbA oncoprotein . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 5,
+			"text": "In stably transformed erythroblasts coexpressing the v-erbA oncoprotein and the c-erbA/T3 receptor at an approximately equimolar ratio , c-erbA activity is dominant over v-erbA . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "T3 efficiently induced erythroid differentiation in these cells ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "thus overcoming the v-erbA-mediated differentiation arrest . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 10,
+			"text": "Likewise , T3 activated CAII transcription as well as transient expression of a T3-responsive reporter gene containing the CAII-specific erbA-binding site . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 9,
+			"text": "The c-erbA-dependent activation of this CAII reporter construct could only be suppressed by very high amounts of v-erbA . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 5,
+			"text": "Our results suggest",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "that overexpression of v-erbA is required for its function as an oncoprotein . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

@@ -1,0 +1,116 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 6,
+			"text": "Cyclosporin A and FK506 are immunosuppressive compounds that have similar inhibitory effects on the expression of several lymphokines produced by T lymphocytes . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 3,
+			"text": "Despite their similar effects",
+			"relation": "COMPARISON",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "the drugs bind to two different cytosolic protein , cyclophilin and FKBP respectively ,",
+			"relation": "COMPARISON",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "which raises the possibility that they have different modes of action . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Background"
+		},
+		{
+			"id": 5,
+			"parent": 6,
+			"text": "Using constructs in which mRNA production controlled by a specific transcription factor could be readily measured",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 0,
+			"text": "we found",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "that both cyclosporin A and FK506 completely inhibited transcription activated by NF-AT , NFIL2 A , NFIL2 B",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "and partially inhibited transcription activated by NF kappa B . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 6,
+			"text": "Cyclosporin A and FK506 inhibited only transcriptional activation that was dependent on Ca2+ mobilization . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 6,
+			"text": "However , cyclosporin A and FK506 did not inhibit Ca2+ mobilization dependent expression of c-fos mRNA",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "indicating",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "that only a subset of signalling pathways regulated by Ca2+ is sensitive to these drugs . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 6,
+			"text": "Furthermore , we did not observe any qualitative differences between the effect of cyclosporin A and FK506 on six different transcription factors",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "which suggests",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "that these drugs may interfere with the activity of a novel Ca2+ dependent step that regulates several transcription factors . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		}
+	]
+}

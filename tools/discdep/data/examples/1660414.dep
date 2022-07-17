@@ -1,0 +1,60 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "The number and affinity of glucocorticoid binding sites in peripheral mononuclear leukocytes of patients with atopic dermatitis ( AD ) and healthy controls were determined under baseline conditions and after a defined oral glucocorticoid treatment . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Patients with AD ( n = 15 ) exhibited significantly more glucocorticoid receptors ( GR ) per cell than the control group ( n = 22 ) ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "while the GR affinity did not differ . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "Methylprednisolone treatment resulted in a significant reduction of the GR sites per cell in the steroid-treated control group ( n = 10 )",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "in contrast to the patients . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 4,
+			"text": "The dissociation constant was not affected by methylprednisolone treatment in either group . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 1,
+			"text": "In view of the therapeutic efficiency of glucocorticoids in AD and findings of abnormal cAMP and cAMP-phosphodiesterase activity , the elevated GR concentrations in AD lend support to the hypothesis of a compensatory GR upregulation due to an insufficient action of endogenous cortisol or to altered cAMP-induced GR expression . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

@@ -1,0 +1,88 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "A single point assay of glucocorticoid receptors ( GR ) in human lymphocytes based on the measurement of specific dexamethasone binding has been developed",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "and compared with a common multi-point Scatchard analysis . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "The assay conditions - concentration of the ligand 20 nmol/l , incubation time 2 h and the cell count 2-6 mil. cells/tube in the assay volume 0.25 ml were found to be optimal . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "An attempt was also undertaken",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "to use a cell harvester for the separation of cells from unbound ligand . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 6,
+			"parent": 7,
+			"text": "Though specifically bound dexamethasone measured by whole-cell assay and that using cell harvester correlated well ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 4,
+			"text": "almost by one order lower values obtained with the latter method render it non-applicable for receptor quantitation . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "The results from 9 healthy volunteers ( average GR concentration 7131 +/- 1256 sites/cell ) correlated excellently with those obtained by the Scatchard analysis . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 1,
+			"text": "The single point assay has been also applied for determination of GH in 10 children treated with large doses of prednisone . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "The average values from healthy volunteers did not differ significantly from those found in these children ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "though much broader range was found in patients . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		}
+	]
+}

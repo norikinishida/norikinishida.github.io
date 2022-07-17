@@ -1,0 +1,130 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "We have described the isolation of chemically induced CEM subclones that express CD4 receptors and bind soluble gp120 , yet show a markedly reduced susceptibility to infection with HIV-1 . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Two subclones were found to have an abnormal response to the protein kinase C ( PKC ) activator PMA . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "PMA treatment induced CD3 and CD25 ( IL-2R ) receptors on the parental line and on other ethyl-methanesulfonate-derived subclones , but not on these two mutants . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "Direct assays of PKC activity were conducted . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "Total cellular PKC enzymatic activity was found to be normal in these subclones . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "PMA-induced CD4 down-modulation occurred normally . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "In addition , activation of c-raf kinase was normal . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 9,
+			"text": "Since HIV-1 long terminal repeat contains two functional nuclear factor kB ( NF-kB ) regulatory elements ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 9,
+			"parent": 1,
+			"text": "we studied the ability of PMA to induce NF-kB binding activity by different assays . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "Chloramphenicol acetyl transferase ( CAT ) assays using the HIV-1 ( -139 ) long terminal repeat-CAT construct showed no PMA induction of CAT activity in these subclones",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "( unlike the parental line and other subclones ) . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 10,
+			"text": "Okadaic acid , an inhibitor of phosphatases 1 and 2A , did not overcome the defect in these subclones . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 10,
+			"text": "Gel retardation assays , using a 32P-probe containing the HIV-1 NF-kB probe and nuclear extracts from PMA-treated cells , showed significantly reduced induction of nuclear NF-kB binding proteins in these two subclones",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "compared with wild type CEM and a control subclone . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 10,
+			"text": "Deoxycholate treatment of cytoplasmic extracts from these subclones released much reduced NF-kB binding proteins from their cytoplasmic pools . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 16,
+			"parent": 1,
+			"text": "Thus , reduced levels of PKC-induced nuclear NF-kB activity in two T cell subclones did not affect their normal cell growth ,",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "but correlated with a pronounced reduction in their susceptibility to HIV-1 infection . <S>",
+			"relation": "COMPARISON",
+			"tag": "Conclusion"
+		}
+	]
+}

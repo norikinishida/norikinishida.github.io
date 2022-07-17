@@ -1,0 +1,95 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "To examine the role of mineralocorticoids in the pathophysiology of pregnancy-induced hypertension ( PIH ) ,",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "we studied plasma aldosterone and 18-hydroxycorticosterone levels in 25 women with PIH and 25 normal pregnant women , as controls . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "Furthermore , we evaluated the mineralocorticoid receptor ( MR ) status in mononuclear leukocytes in the 2 groups . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "MR count was significantly ( P less than 0.0005 ) decreased in the PIH group ( 148 +/- 9 binding sites/cell )",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "compared with the control group ( 300 +/- 17 binding sites/cell ; mean +/- SEM ) . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 4,
+			"text": "Plasma aldosterone in women with PIH was 281 +/- 61 pmol/L ;",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "in normal pregnant women it was 697 +/- 172 pmol/L ( P less than 0.025 ) . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 4,
+			"text": "Plasma 18-hydroxycorticosterone was also significantly ( P less than 0.025 ) lower ( PIH , 1071 +/- 149 pmol/L ; controls , 1907 +/- 318 pmol/L ) . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 4,
+			"text": "These values were determined at the onset of clinical symptoms of PIH . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 2,
+			"text": "These results can not be explained by receptor down-regulation",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "due to higher levels of mineralocorticoids in PIH ;",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 10,
+			"text": "a hitherto unknown mineralocorticoid may , thus , be responsible for the hypertension and altered MR status . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		}
+	]
+}

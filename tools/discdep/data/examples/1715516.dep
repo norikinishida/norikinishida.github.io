@@ -1,0 +1,102 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 9,
+			"text": "Cyclosporin A and FK506 inhibit T- and B-cell activation and other processes essential to an effective immune response . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "In T lymphocytes these drugs disrupt an unknown step in the transmission of signals from the T-cell antigen receptor to cytokine genes that coordinate the immune response . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 4,
+			"text": "The putative intracellular receptors for FK506 and cyclosporin are cis-trans prolyl isomerases . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "Binding of the drug inhibits isomerase activity ,",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "but studies with other prolyl isomerase inhibitors and analysis of cyclosporin-resistant mutants in yeast suggest",
+			"relation": "COMPARISON",
+			"tag": "Background"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "that the effects of the drug result from the formation of an inhibitory complex between the drug and isomerase , and not from inhibition of isomerase activity . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Background"
+		},
+		{
+			"id": 7,
+			"parent": 1,
+			"text": "A transcription factor , NF-AT , which is essential for early T-cell gene activation , seems to be a specific target of cyclosporin A and FK506 action",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "because transcription directed by this protein is blocked in T cells treated with these drugs , with little or no effect on other transcription factors such as AP-1 and NF-kappa B . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Background"
+		},
+		{
+			"id": 9,
+			"parent": 0,
+			"text": "Here we demonstrate",
+			"relation": "ROOT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "that NF-AT is formed",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "when a signal from the antigen receptor induces a pre-existing cytoplasmic subunit to translocate to the nucleus and combine with a newly synthesized nuclear subunit of NF-AT . <S>",
+			"relation": "CONDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 9,
+			"text": "FK506 and cyclosporin A block translocation of the cytoplasmic component",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "without affecting synthesis of the nuclear subunit . <S>",
+			"relation": "ELABORATION",
+			"tag": "Conclusion"
+		}
+	]
+}

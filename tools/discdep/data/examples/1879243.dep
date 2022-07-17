@@ -1,0 +1,46 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "The number of estrogen receptors ( ER ) in human peripheral leucocytes in 12 women with menopausal type II diabetes was measured with radio-ligand binding method . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "The results were compared with those of 12 menopausal women without diabetes and 12 normal women of childbearing age . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "It was found that the number of ER in the patients was significantly decreased . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "Our data indicate",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "that decrease of ER level in leukocytes may be related to the pathogenesis of type II diabetes in menopausal period . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

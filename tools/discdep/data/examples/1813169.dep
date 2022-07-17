@@ -1,0 +1,60 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "Plasma cortisol concentration and blood leukocyte content of glucocorticoid receptors ( GCR ) were assayed in 20 patients with deficiency syndromes , 10 cold in property ( deficiency-cold ) , the other 10 hot in property ( deficiency-heat ) , and also in 10 healthy individuals as normal control",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "for the purpose of investigating the nature of cold and heat syndromes . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "As a result , the cases of deficiency-cold syndrome ( DCS ) had a normal concentration of plasma cortisol but a lowered content of GCR in leukocytes",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "when compared with the normal control ( P less than 0.05 ) ;",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "the cases of deficiency-heat syndrome ( DHS ) had a higher concentration of plasma cortisol than the normal control ( P less than 0.05 ) and a slightly higher content of GCR in leukocytes . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "It was concluded that the DCS is characterized by diminished biological effects of adrenocortical activity ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "while the DHS , by augmented biological effects of adrenocortical activity . <S>",
+			"relation": "COMPARISON",
+			"tag": "Conclusion"
+		}
+	]
+}

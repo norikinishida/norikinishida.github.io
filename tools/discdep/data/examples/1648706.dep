@@ -1,0 +1,25 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "The authors provide the results of studying 1,25-dihydroxyvitamin D3 ( calcitriol ) in lymphocytes of children with rickets and rickets-like diseases . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "It is proposed that the character of their expression under the influence of vitamin D may be used with differential diagnostic purposes in view . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

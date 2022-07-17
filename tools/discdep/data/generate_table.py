@@ -7,8 +7,8 @@ import utils
 
 RELATIONS = [
     "ROOT",
-    "ELABORATION",
     "ADDITION",
+    "ELABORATION",
     "COMPARISON",
     "CAUSE-RESULT",
     "CONDITION",
@@ -16,9 +16,12 @@ RELATIONS = [
     "ENABLEMENT",
     "MANNER-MEANS",
     "BACKGROUND",
-    "FINDINGS",
+    "VERIFICATION",
+    "CONCLUSION",
+    "ATTRIBUTION",
     "TEXTUAL-ORGANIZATION",
     "SAME-UNIT",
+    # "SEGMENTATION-ERROR",
 ]
 
 

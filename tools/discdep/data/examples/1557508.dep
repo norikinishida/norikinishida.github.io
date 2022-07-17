@@ -1,0 +1,53 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "1 . In order to further understand the apparent glucocorticoid resistance in major depressive disorder ,",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "circadian variation in cortisol concentration , dexamethasone suppression and glucocorticoid receptor binding in mononuclear leukocytes , polymorphonuclear leukocytes and cultured skin fibroblasts were measured in rigidly defined major depressive disorder patients and non-depressed psychiatric controls . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "2 . Mononuclear leukocytes binding to glucocorticoid correlated significantly with polymorphonuclear leukocytes binding to glucocorticoid ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "but both determinations failed to differentiate major depressive disorder and control subjects . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "3 . Initial and post-dexamethasone in vitro fibroblast binding to glucocorticoid was not different between major depressive disorder and non-depressed control subjects . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 2,
+			"text": "4 . The phenomenon of glucocorticoid resistance in major depressive disorder remains unexplained . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

@@ -1,0 +1,67 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 4,
+			"text": "Glucocorticosteroids remain the major treatment modality for systemic lupus erythematosus ( SLE ) ,",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "but their mechanism of action is unclear . <S>",
+			"relation": "COMPARISON",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "Over the past decade it has become clear that glucocorticosteroid receptors play a significant role in the mechanism of glucocorticosteroid action . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 0,
+			"text": "We studied glucocorticosteroid receptor density and affinity on peripheral blood mononuclear cells by the glucocorticosteroid binding assay in 33 patients with SLE who had taken no glucocorticosteroid for the previous 6 months and in 32 healthy controls . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "Patients ' disease activity was measured by the SLE Disease Activity Index ( SLEDAI ) . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 6,
+			"parent": 4,
+			"text": "Glucocorticosteroid receptors on leukocytes of patients with SLE were significantly higher than in healthy controls ( 4419 +/- 306 vs 3369 +/- 196 , p less than 0.005 ) . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "The binding affinity was not different between patients and controls . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "There was no correlation between glucocorticosteroid receptor number and SLE disease activity . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		}
+	]
+}

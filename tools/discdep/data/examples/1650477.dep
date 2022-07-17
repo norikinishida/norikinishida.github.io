@@ -1,0 +1,67 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "Human immunodeficiency virus ( HIV ) expression and replication are under tight regulatory control . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "We demonstrate",
+			"relation": "ROOT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "that 1,25-dihydroxycholecalciferol [ 1,25-(OH)2D3 ] enhances the replication of monocyte- and lymphocyte-tropic strains of HIV-1 up to 10,000-fold in monocyte cell lines , peripheral blood monocytes , and unfractionated peripheral blood mononuclear cells . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "1,25(OH)2D3 is therefore one of the most potent regulators of HIV-1 replication described to date . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 5,
+			"parent": 2,
+			"text": "Precursors of 1,25(OH)2D3 enhance HIV-1 replication in proportion to their affinity for the 1,25(OH)2D3 intracellular receptor ,",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "suggesting",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "that 1,25(OH)2D3 influences HIV-1 replication by mechanisms involving this receptor . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 8,
+			"parent": 2,
+			"text": "These studies may have important implications for the design of effective therapy of HIV-1 infection . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

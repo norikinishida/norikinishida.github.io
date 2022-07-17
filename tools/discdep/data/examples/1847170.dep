@@ -1,0 +1,137 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "Platelet-activating factor is a potent mediator of the inflammatory response . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Studies of the actions of platelet-activating factor have centered mainly around neutrophils , monocytes , and platelets . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "In this report we begin to uncover the influence of platelet-activating factor on B lymphocytes . <S>",
+			"relation": "ROOT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 4,
+			"parent": 5,
+			"text": "Employing the EBV-transformed human B cell line SKW6.4 ,",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "we demonstrate",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "that platelet-activating factor significantly alters membrane phospholipid metabolism indicated by the incorporation of 32P into phosphatidylcholine , phosphatidylinositol , and phosphatidic acid but not significantly into phosphatidylethanolamine at concentrations ranging from 10(-9) to 10(-6) M . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "The inactive precursor , lyso-platelet-activating factor , at a concentration as high as 10(-7) M had no effect on any of the membrane phospholipids . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 5,
+			"text": "We also show",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "that platelet-activating factor from 10(-12) to 10(-6) M induced rapid and significant elevation in intracellular calcium levels ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "whereas lyso-platelet-activating factor was again ineffective . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 5,
+			"text": "We further demonstrate the impact of platelet-activating factor binding to B cells",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "by measuring platelet-activating factor induced arachidonic acid release and 5-hydroxyeicosatetraenoic acid production . <S>",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 13,
+			"parent": 5,
+			"text": "Moreover , platelet-activating factor was capable of inducing transcription of the nuclear proto-oncogenes c-fos and c-jun . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 5,
+			"text": "Finally we explored the possible role of 5-hydroxyeicosatetraenoic acid as a regulator of arachidonic acid liberation",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "demonstrating",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "that endogenous 5-lipoxygenase activity modulates platelet-activating factor induced arachidonic acid release",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "perhaps acting at the level of phospholipase A2 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 18,
+			"parent": 3,
+			"text": "In summary , platelet-activating factor is shown here to have a direct and profound effect on a pure B cell line . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}
