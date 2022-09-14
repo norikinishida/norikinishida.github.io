@@ -1,0 +1,151 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "We have earlier shown",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "that stimulation of human CD4+ T cells with SEA presented on Chinese hamster ovary ( CHO ) -DR transfectants coexpressing either B7 or LFA-3 resulted in distinct cytokine profiles . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "We now demonstrate",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "that B7 , but not LFA-3 , strongly costimulated IL-2 transcription and mRNA expression in CD4+ T cells . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "Maximal increase in IL-2 transcription was recorded with CHO-DR/B7/LFA-3 ,",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "suggesting a cooperative effect of B7 and LFA-3 at the transcriptional level . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "Gel-shift analysis demonstrated",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "that stimulation of CD4+ T cells with CHO-DR and staphylococcal enterotoxin A was sufficient to induce significant amounts of NF-kappa B binding proteins ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "whereas induction of AP-1 binding proteins required costimulation . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 5,
+			"text": "LFA-3 induced moderate levels of AP-1 ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "but did not influence the levels of NF-kappa B ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 10,
+			"text": "while B7 costimulation strongly induced both AP-1 and substantially enhanced NF-kappa B binding proteins . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 5,
+			"text": "The CHO-DR/B7/LFA-3 triple transfectant induced a further increase in AP-1 and NF-kappa B binding proteins",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "compared with the double transfectants . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 5,
+			"text": "The level of Oct-1 binding proteins remained similar in all samples . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 16,
+			"parent": 5,
+			"text": "Super-shift analysis revealed",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "that the NF-kappa B complex of costimulated CD4+ T cells contained large amounts of p50 , substantial amounts of p65 , and marginal levels of c-Rel proteins . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 18,
+			"parent": 17,
+			"text": "The AP-1 binding proteins contained c-Jun , Jun-D , and Fra-1 , but marginal amounts of Jun-B and c-Fos . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 19,
+			"parent": 3,
+			"text": "Our results indicate distinct effects of B7 and LFA-3 costimulation on the activity of AP-1 and NF-kappa B . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 20,
+			"parent": 19,
+			"text": "These may partly account for the differential effects of B7 and LFA-3 costimulation on IL-2 expression . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

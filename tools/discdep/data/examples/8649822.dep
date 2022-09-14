@@ -1,0 +1,88 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "We describe the isolation of human LH-2 , a putative transcription factor containing two cysteine-rich regions ( LIM domains ) and a homeobox ( Hox ) DNA-binding domain . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "High levels of hLH-2 expression were observed in all cases of chronic myelogenous leukaemia ( CML ) tested ,",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "regardless of disease status . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "hLH-2 was mapped to chromosome 9Q33-34.1 , in the same region as the reciprocal translocation that creates the BCR-ABL chimera of the Philadelphia chromosome ( Ph ' ) , the hallmark of CML ;",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "hLH-2 was retained on the derivative 9 chromosome",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "and is therefore centromeric of c-ABL . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 2,
+			"text": "The proximity of hLH-2 to the breakpoint on chromosome 9 raises the possibility of cis-activation by the t(9;22)(q34;q11) translocation . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 2,
+			"text": "In addition to finding hLH-2 expression in all cases of CML , expression was observed in lymphoid malignancies and myeloid cell lines , but not in primary cases of acute myelogenous leukaemia . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 2,
+			"text": "The role of hLH-2 in the development or progression of leukaemia is not known . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 10,
+			"parent": 1,
+			"text": "However , hLH-2 may prove useful as a marker of CML",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "for monitoring residual disease . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Conclusion"
+		}
+	]
+}

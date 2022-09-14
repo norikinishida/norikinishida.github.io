@@ -1,0 +1,123 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 8,
+			"text": "The Epstein-Barr virus ( EBV ) nuclear antigen 2 ( EBNA-2 ) protein is essential for the immortalization of human primary B cells by EBV . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "EBNA-2 trans-activates cellular and viral genes like CD23 , c-fgr , latent membrane protein 1 ( LMP1 ) and terminal protein 1 ( TP1 ) . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "Trans-activation of the TP1 promoter and of the BamHI C promoter has already been investigated in detail",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "and appears to be mediated via protein-protein interactions and not by direct binding of EBNA-2 type A ( of EBV type 1 ) to the DNA . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 5,
+			"parent": 1,
+			"text": "EBNA-2 is able to trans-activate the expression of the LMP gene in several cell lines . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 6,
+			"parent": 1,
+			"text": "Various reports have delineated the cis-acting elements of the LMP promoter through which EBNA-2 mediates trans-activation . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 7,
+			"parent": 8,
+			"text": "To determine whether EBNA-2 also trans-activates the LMP promoter by protein-protein interactions ,",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 8,
+			"parent": 0,
+			"text": "we performed a series of gel retardation assays and competition experiments with LMP promoter fragments of different sizes . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "We determined",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "that the protein-binding region on the LMP promoter was within a 42 bp fragment encompassing nucleotides -135 to -176 relative to the LMP transcriptional start site . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 9,
+			"text": "None of the DNA fragments investigated indicated interaction of EBNA-2 with the DNA via protein-protein interactions . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 9,
+			"text": "No significant differences between EBNA-2-positive and EBNA-2-negative nuclear extracts could be seen in the gel retardation assay under conditions that clearly showed binding of EBNA-2A to the TP1 promoter . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "However , analysis of sucrose gradient fractions in the gel retardation assay provided evidence that the LMP promoter-binding proteins form a complex of higher M(r) in EBNA-2-positive cell extracts . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "These complexes were destroyed by detergent . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 8,
+			"text": "We deduce from these results",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "that EBNA-2-positive cells might indeed contain specific complexes bound to the LMP promoter which are , however , too labile to be detected in a standard gel retardation assay . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

@@ -1,0 +1,123 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "We evaluated the ability of eosinophil granule major basic protein ( MBP ) to stimulate interleukin ( IL ) -8 production by neutrophils . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "MBP over the concentration range of 0.1 to 10 microM stimulated the release of up to approximately 8 ng/ml IL-8 . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "Incubation with 2 microM MBP showed",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "that , after a 1 h lag , the level of IL-8 release increased with time for approximately 10 h . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "At the 2 microM concentration , eosinophil cationic protein , eosinophil-derived neurotoxin , and eosinophil peroxidase did not stimulate significant levels of IL-8 production . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 2,
+			"text": "MBP stimulated 2-fold increases in IL-8 messenger RNA ( mRNA ) after 1 and 3 h of incubation , which were blocked by pretreatment with actinomycin D . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "However , stimulation with MBP did not produce an increase in the binding activity of nuclear factor ( NF ) -kappaB or activator protein-1 . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "No NF-IL-6 binding activity was detected in the same nuclear extracts . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 6,
+			"text": "In addition , stimulation with MBP prolonged the stability of IL-8 mRNA . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 2,
+			"text": "MBP also induced transient increases in mRNA for macrophage inflammatory protein ( MIP ) -1alpha and MIP-1beta ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "but did not stimulate the release of either chemokine . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 1,
+			"text": "These findings indicate",
+			"relation": "CONDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "that MBP is selective among the eosinophil granule proteins as a stimulus for neutrophil IL-8 release",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "and , further , that stimulation of neutrophil IL-8 release by MBP involves both transcriptional and posttranscriptional regulation . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 15,
+			"parent": 12,
+			"text": "We postulate",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "that MBP-induced release of IL-8 by neutrophils may contribute to the pathophysiology of acute asthma and other inflammatory lung diseases . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

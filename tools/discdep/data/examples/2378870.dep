@@ -1,0 +1,95 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "It has previously been shown that 9S , untransformed progestin , estrogen , androgen , and glucocorticoid receptor complexes in rabbit uterine and liver cytosols contain a 59-kDa protein [ Tai , P.K. , Maeda , Y. , Nakao , K. , Wakim , N.G. , Duhring , J.L. , & Faber , L.E. ( 1986 ) Biochemistry 25 , 5269-5275 ] . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "In this work we show",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "that the monoclonal antibody KN 382/EC1 raised against the rabbit 59-kDa protein reacts with 9S , untransformed glucocorticoid receptor complexes in cytosol prepared from human IM-9 lymphocytes but not with 4S salt-transformed receptors . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "The human protein recognized by the EC1 antibody is a 56-kDa protein ( p56 ) of moderate abundance located predominantly in the cytoplasm by indirect immunofluorescence . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "There are at least six isomorphs of p56 by two-dimensional gel analysis . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "N-Terminal sequencing ( 20 amino acids ) shows",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "that p56 is a unique human protein . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 9,
+			"text": "When p56 is immunoadsorbed from IM-9 cell cytosol ,",
+			"relation": "TEMPORAL",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 4,
+			"text": "both the 70- and 90-kDa heat shock proteins are coadsorbed in an immune-specific manner . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "Neither heat shock protein reacts directly with the EC1 antibody . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 2,
+			"text": "We conclude",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "that p56 exists in cytosol in a higher order complex containing hsp70 and hsp90 , both of which in turn have been found to be associated with untransformed steroid receptors . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

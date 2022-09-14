@@ -1,0 +1,88 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "Sterol regulatory element ( SRE ) has been recognized to regulate various key genes coding for especially low density lipoprotein ( LDL ) -receptor , 3-hydroxy-3-methylglutaryl coenzyme A ( HMG-CoA ) reductase and HMG-CoA synthase known to play a crucial role in the cholesterol feedback mechanism . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "The deranged cholesterol feedback mechanism has been widely recognised in initiation as well as progression of various types of cancers including chronic myeloid leukaemia ( CML ) . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "Consequently , the present study was addressed",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "to understand this phenomenon",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "and revealed the existence of a unique 47 kDa protein factor having affinity for this SRE sequence in lymphocytes from normal subjects as well as its absence in lymphocytes from untreated CML patients . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "However , this factor appeared",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "when the CML patients achieved complete haematological remission ( CHR ) through alpha-interferon therapy . <S>",
+			"relation": "TEMPORAL",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 3,
+			"text": "Further , an inverse relationship was also observed between sterol modulated LDL-receptor gene transcription and the binding affinity of this 47 kDa factor to the SRE sequence . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 10,
+			"text": "Based upon these results",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 10,
+			"parent": 3,
+			"text": "we propose",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "that alpha-interferon through its receptor initiates phosphatidic acid dependent signalling which in turn regulates the affinity of 47 kDa sterol regulatory element binding factor as well as LDL-receptor gene transcription in lymphocytes from CML patients . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

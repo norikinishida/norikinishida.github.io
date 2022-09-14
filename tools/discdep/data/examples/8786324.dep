@@ -1,0 +1,123 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "IL-4 and IL-10 inhibit the cytokine production and mRNA expression by monocytes/macrophages . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 3,
+			"text": "To investigate the molecular mechanism of the inhibitory effect on transcriptional or post-transcriptional regulation of IL-6 gene expression by IL-4 and IL-10 ,",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "we studied IL-6 production , expression level of IL-6 mRNA , IL-6 promoter activity , transcriptional activity of NF-kappaB and NF-IL-6 , and IL-6 mRNA stability in human monocytic cell lines , THP-1 and U937 , stimulated by PMA and LPS in the absence or the presence of IL-4 or IL-10 . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "Both IL-4 and IL-10 were seen to inhibit IL-6 production and the expression of IL-6 mRNA in both monocytic cell lines studied . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "In chloramphenicol acetyltransferase assays , utilizing the transient transfection of a chloramphenicol acetyltransferase reporter plasmid containing the IL-6 gene promoter , IL-4 , but not IL-10 , suppressed the transcriptional activity of the IL-6 gene promoter stimulated by PMA and LPS . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 4,
+			"text": "Electrophoretic mobility shift assays showed",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "that IL-4 , but not IL-10 , inhibited nuclear NF-kappaB activity ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "and that IL-4 and IL-10 did not affect NF-IL-6 activity . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 6,
+			"text": "On the other hand , IL-10 enhanced the degradation of IL-6 mRNA in a mRNA stability assay . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 3,
+			"text": "These results suggest",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "that IL-4 may inhibit the transcription of the IL-6 gene",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "by affecting NF-kappaB binding activity ,",
+			"relation": "MANNER-MEANS",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 11,
+			"text": "while IL-10 may inhibit the IL-6 mRNA levels post-transcriptionally ,",
+			"relation": "COMPARISON",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "without suppressing promoter activity . <S>",
+			"relation": "TEMPORAL",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 15,
+			"parent": 10,
+			"text": "Therefore , we conclude",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "that IL-4 and IL-10 inhibit IL-6 production by different mechanisms in human monocytic cell lines . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

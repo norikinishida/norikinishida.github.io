@@ -1,0 +1,95 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "XPB is a subunit of the basal transcription factor TFIIH , which is also involved in nucleotide excision repair ( NER ) and potentially in cell cycle regulation . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "A frameshift mutation in the 3'-end of the XPB gene is responsible for a concurrence of two disorders : xeroderma pigmentosum ( XP ) and Cockayne 's syndrome ( CS ) . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "We have isolated TFIIH from cells derived from a patient ( XP11BE ) who carries this frameshift mutation ( TFIIHmut ) and from the mother of this patient ( TFIIHwt )",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "to determine the biochemical consequences of the mutation . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 5,
+			"parent": 6,
+			"text": "Although identical in composition and stoichiometry to TFIIHwt ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "TFIIHmut shows a reduced 3' --> 5' XPB helicase activity . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "A decrease in helicase and DNA-dependent ATPase activities was also observed with the mutated recombinant XPB protein . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "The XPB mutation causes a severe NER defect . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "In addition , we provide evidence for a decrease in basal transcription activity in vitro . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "The latter defect may provide an explanation for many of the XP and CS symptoms that are difficult to rationalize based solely on an NER defect . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 3,
+			"text": "Thus , this work presents the first detailed analysis of a naturally occurring mutation in a basal transcription factor",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "and supports the concept that the combined XP/CS clinical entity is actually the result of a combined transcription/repair deficiency . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

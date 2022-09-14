@@ -1,0 +1,74 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "Interspecies somatic cell hybrids were generated",
+			"relation": "CONCLUSION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "by fusing the mouse T-lymphoma cell line , BW5147 , with normal human T lymphocytes at different stages of differentiation . <S>",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "Thymocytes , activated peripheral T lymphocytes , or an activated T-cell clone were used as human partners , respectively , in three independent fusions . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "Irrespective of the human cell partner used for fusion , a certain number of hybrids lost CD5 surface expression over a period of time in culture . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "Analysis at the phenotype and genetic level showed",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "that lack of CD5 expression was due neither to segregation of human autosome 11 , on which the CD5 gene has been mapped , nor to deletion of the CD5 structural gene . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "Furthermore , loss of CD5 surface expression correlated with the absence of specific mRNA . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 9,
+			"text": "Since these hybrids preferentially segregate human chromosomes ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 9,
+			"parent": 1,
+			"text": "these results indicate the existence of a non-syntenic trans-active locus , or loci , positively controlling the expression of the human CD5 gene . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

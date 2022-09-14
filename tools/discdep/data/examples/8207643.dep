@@ -1,0 +1,137 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "This study examined the effects of leukemia inhibitory factor ( LIF ) on human immunodeficiency virus ( HIV ) replication in mononuclear phagocytes ( MNP ) . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "LIF induced a dose-dependent increase in p24 antigen production in the chronically infected promonocytic cell line U1 . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "The magnitude and time kinetics of the LIF effects were similar to interleukin 1 ( IL-1 ) , IL-6 , and tumor necrosis factor ( TNF ) , other cytokines known to induce HIV replication in this cell line . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 5,
+			"text": "To characterize mechanisms responsible for these LIF effects ,",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 5,
+			"parent": 1,
+			"text": "levels of HIV mRNA , activation of the DNA binding protein nuclear factor ( NF ) -kB , signal transduction pathways , and potential interactions with other cytokines were analyzed . <S>",
+			"relation": "ADDITION",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "LIF increased steady-state levels of HIV mRNA at 2.0 , 4.3 , and 9.2 kB . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "This was detectable by 24 h",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "and persisted until 72 h . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 10,
+			"text": "The DNA binding protein NF-kB is a central mediator in cytokine activation of HIV transcription . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 6,
+			"text": "NF-kB levels were higher in unstimulated U1 cells",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "as compared to the parent cell line U937 . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 10,
+			"text": "In both cell lines LIF increased NF-kB activity . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 14,
+			"text": "Induction of NF-kB and HIV replication by cytokines are at least in part dependent on reactive oxygen intermediates . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 6,
+			"text": "The oxygen radical scavenger N-acetyl-L-cysteine , but not an inhibitor of nitric oxide synthase , inhibited LIF-induced HIV replication . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 6,
+			"text": "LIF induces the production of other cytokines in monocytes",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "but its effects on HIV replication were not inhibited by antibodies to IL-1 , TNF , or IL-6 . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 1,
+			"text": "These results identify LIF as a stimulus of HIV replication . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 18,
+			"parent": 1,
+			"text": "( ABSTRACT TRUNCATED AT 250 WORDS ) <S>",
+			"relation": "TEXTUAL-ORGANIZATION",
+			"tag": "Misc."
+		}
+	]
+}

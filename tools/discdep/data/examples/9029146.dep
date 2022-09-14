@@ -1,0 +1,95 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "Rap1 is a small , Ras-like GTPase whose function and regulation are still largely unknown . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "We have developed a novel assay to monitor the active , GTP-bound form of Rap1 based on the differential affinity of Rap1GTP and Rap1GDP for the Rap binding domain of RalGDS ( RBD ) . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "Stimulation of blood platelets with alpha-thrombin or other platelet activators caused a rapid and strong induction of Rap1 that associated with RBD in vitro . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "Binding to RBD increased from undetectable levels in resting platelets to > 50 % of total Rap1 within 30 s after stimulation . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "An increase in the intracellular Ca2+ concentration is both necessary and sufficient for Rap1 activation",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "since it was induced by agents that increase intracellular Ca2+",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "and inhibited by a Ca2+-chelating agent . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 3,
+			"text": "Neither inhibition of translocation of Rap1 to the cytoskeleton nor inhibition of platelet aggregation affected thrombin-induced activation of Rap1 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 3,
+			"text": "In contrast , prostaglandin I2 ( PGI2 ) , a strong negative regulator of platelet function , inhibited agonist-induced as well as Ca2+-induced activation of Rap1 . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 2,
+			"text": "From our results , we conclude",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "that Rap1 activation in platelets is an important common event in early agonist-induced signalling ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "and that this activation is mediated by an increased intracellular Ca2+ concentration . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

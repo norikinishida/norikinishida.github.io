@@ -1,0 +1,81 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 4,
+			"text": "Induction by hemin increases ,",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "while induction with 12-O-tetradecanoylphorbol-13-acetate ( TPA ) represses ,",
+			"relation": "COMPARISON",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "erythroid-specific gene expression in the human cell line K562 . <S>",
+			"relation": "SAME-UNIT",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 0,
+			"text": "We analyzed the effects of hemin or TPA induction on the binding and activity of transcription factors at a regulatory element found within the transcriptional regulatory sequences of many erythroid-specific genes . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "TPA induction increases the binding of ubiquitous AP-1 factors to this element . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "TPA induction inhibits the binding of the lineage limited transcription factor NF-E2 to this transcriptional control element . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "Hemin induction of K562 cells does not facilitate the binding of NF-E2 to its recognition site . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 5,
+			"text": "Hemin induction appears to nonspecifically increase the expression of transiently transfected genes in K562 cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 5,
+			"text": "Beyond this nonspecific increase in gene expression , hemin induction acts to increase the activity of the lineage limited transcription factor NF-E2 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 5,
+			"text": "The divergent effects of hemin and TPA on gene expression in K562 cells are mediated , in part , by their contrasting effects on the transcription factor NF-E2 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		}
+	]
+}

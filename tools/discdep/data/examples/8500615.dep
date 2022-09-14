@@ -1,0 +1,53 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "A reporter gene under the control of a T-cell antigen receptor element was activated in Jurkat cells by antigen receptor triggering or by a combination of phorbol myristate acetate , which activates protein kinase C , and a calcium ionophore . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Both these signals were necessary for expression of the reporter gene . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 4,
+			"text": "When co-transfected with a construct capable of overexpressing the tyrosine kinase p59fyn ,",
+			"relation": "TEMPORAL",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "the reporter gene was activated by PMA alone . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "Thus p59fyn could replace the calcium ionophore but not activation of protein kinase C . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 1,
+			"text": "The activation by p59fyn plus PMA was blocked by EGTA and by the immunosuppressant drug cyclosporin A . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		}
+	]
+}

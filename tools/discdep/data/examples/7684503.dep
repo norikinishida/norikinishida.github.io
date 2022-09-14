@@ -1,0 +1,102 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "The cytokines interleukin-1 beta ( IL-1 beta ) and tumor necrosis factor alpha ( TNF-alpha ) are released by mononuclear phagocytes in vitro after stimulation with mycobacteria",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "and are considered to mediate pathophysiologic events , including granuloma formation and systemic symptoms . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "We demonstrated",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "that the Mycobacterium tuberculosis cell wall component lipoarabinomannan ( LAM ) is a very potent inducer of IL-1 beta gene expression in human monocytes",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "and investigated the mechanism of this effect . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "We localized the LAM- , lipopolysaccharide ( LPS ) - , and TNF-alpha-inducible promoter activity to a -131/+15 ( positions -131 to +15 ) DNA fragment of the IL-1 beta gene by deletion analysis and chloramphenicol acetyltransferase assay . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "Within this DNA fragment , there were two novel 9-bp motifs ( -90/-82 and -40/-32 ) with high homology to the nuclear factor-IL6 ( NF-IL6 ) binding site . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "Site-directed mutagenesis demonstrated",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "that the two NF-IL-6 motifs could be independently activated by LAM , LPS , or TNF-alpha",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "and that they acted in an orientation-independent manner . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 6,
+			"text": "DNA mobility shift assay revealed specific binding of nuclear protein ( s ) from LAM- , LPS- , or TNF-alpha- stimulated THP-1 cells to the NF-IL6 motifs . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 3,
+			"text": "We conclude",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "that the two NF-IL6 sites mediate induction of IL-1 beta in response to the stimuli LAM , LPS , and TNF-alpha . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

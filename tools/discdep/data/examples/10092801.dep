@@ -1,0 +1,88 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "We introduce a new experimental system combining adenovirus-mediated gene transfer and fetal thymic organ culture ( FTOC ) . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "This system allowed us to efficiently express in developing thymocytes a mutant form of the NF-kappa B inhibitor I kappa B alpha ( mut-I kappa B ) and to study the maturation defects occurring when NF-kappa B activation is inhibited during fetal development . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "Fetal thymocytes infected with adenovirus containing mut-I kappa B were found to develop normally until the CD44-CD25+ , CD4-CD8- double-negative stage ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "while production of more mature double-positive and single-positive populations was strongly decreased . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "Proliferation , as measured by the percentage of cells in cycle appeared normal ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "as did rearrangement and expression of the TCR beta-chain . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 3,
+			"text": "However , apoptosis was much higher in FTOC infected with adenovirus containing mut-I kappa B than in FTOC infected with a control virus . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 9,
+			"text": "Taken together ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 9,
+			"parent": 1,
+			"text": "these results suggest",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "that NF-kappa B plays a crucial role",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "in ensuring the differentiation and survival of thymocytes in the early stages of their development . <S>",
+			"relation": "TEMPORAL",
+			"tag": "Conclusion"
+		}
+	]
+}

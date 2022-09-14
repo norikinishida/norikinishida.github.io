@@ -1,0 +1,32 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "The expression of distinct sets of genes at different stages of B-lymphocyte and T-lymphocyte differentiation is controlled at the level of transcription . <S>",
+			"relation": "ROOT",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "A number of recent studies have described interactions between transcription factors in lymphocytes that provide new insights into mechanisms regulating gene expression . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "These mechanisms include the assembly of higher order nucleoprotein complexes and other protein-protein interactions that enhance the functional specificity of transcriptional regulators in lymphocytes . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		}
+	]
+}

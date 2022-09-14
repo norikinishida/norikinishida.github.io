@@ -1,0 +1,130 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "Ligation of Ag receptors in T and B lymphocytes initiates signal transduction cascades which alter the expression of genes that regulate cellular proliferation and differentiation . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "The transmission of signals from the membrane to the nucleus is mediated principally through the action of protein tyrosine and serine/threonine kinases . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "We have identified",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "and characterized",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "a novel serine/threonine kinase that phosphorylated the proto-oncogene product , c-Fos , and is termed Fos kinase . <S>",
+			"relation": "SAME-UNIT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "Fos kinase was rapidly activated after ligation of the CD3 and CD2 receptors in Jurkat and normal human T lymphocytes and in response to IL-6 and anti-IgM in the human B cell lines AF10 and Ramos , respectively . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "The phorbol ester , PMA , was also a potent inducer of Fos kinase activity in all of the above populations ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "suggesting",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "that PKC plays a role in the regulation of this enzyme . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 6,
+			"text": "Fos kinase phosphorylates c-Fos at a site near the C-terminus , as well as a peptide derived from this region ( residues 359-370 , RKGSSSNEPSSD ) ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "and Fos peptide competitively inhibited c-Fos phosphorylation . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 6,
+			"text": "Fos kinase was shown to be distinct from other identified serine/threonine kinases , including protein kinase A , protein kinase C , casein kinase II , MAP kinases , p70S6K and p90RSK . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 6,
+			"text": "Fos kinase was purified by anion exchange chromatography",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "and exhibited an apparent M(r) = 65,000 and isoelectric point = 6.1 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 3,
+			"text": "Fos kinase may play a role in transcriptional regulation through its capacity to phosphorylate c-Fos at a site required for expression of the transcriptional transrepressive activity of this molecule . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "Moreover , its rapid activation suggests",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "it may have a wider role within signal transduction cascades in lymphocytes . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

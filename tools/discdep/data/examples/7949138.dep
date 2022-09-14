@@ -1,0 +1,137 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "The tal-1 gene , frequently activated in human T-cell acute lymphoblastic leukemia ( T-ALL ) , is expressed in the erythroid , megakaryocytic , and mast cell lineages during normal hematopoiesis . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 3,
+			"text": "To gain further insight into the molecular mechanisms that control tal-1 expression ,",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "we investigated tal-1 chromatin structure in erythroid/megakaryocytic cell lines and in T-cell lines either with or without tal-1 rearrangements . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "Tal-1 transcription was shown to be monoallelic in Jurkat , a T-cell line that expresses tal-1 in the absence of apparent genomic alteration of the locus . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "Methylation studies indicated",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "that the tal-15 ' GC-rich region behaves like a CpG island ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "hypomethylated in normal cells ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "and methylated de novo on transcriptionally inactive alleles in established cell lines . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 4,
+			"text": "Five major DNase-I hypersensitive sites ( HS ) were mapped in the tal-1 locus . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "HS I , IV , and V were exclusively observed in the erythroid/megakaryocytic cell lines that express tal-1 from the promoters 1a and 1b . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "HS II was weak in hematopoietic cell lines , absent in Hela ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "and greatly enhanced in Jurkat ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 11,
+			"text": "suggesting",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "that this region might be implicated in the cis-activation of tal-1 promoter 1b in this cell line . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 10,
+			"text": "HS III was weak in HEL and Jurkat ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "and greatly enhanced in DU528 , a T-cell line that bears a t (1;14) and initiates tal-1 transcription within exon 4 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 3,
+			"text": "These results suggest",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 18,
+			"parent": 17,
+			"text": "that distinct regulatory elements are associated with the use of the different tal-1 promoters . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

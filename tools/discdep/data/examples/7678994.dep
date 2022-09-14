@@ -1,0 +1,144 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 4,
+			"text": "Tal-1 rearrangements are associated with nearly 30 % of human T acute lymphoblastic leukemia . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Tal-1 gene encodes a putative transcription factor with a basic helix-loop-helix domain",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "and is known to be predominantly expressed in hematopoietic cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 0,
+			"text": "We investigated the pattern of tal-1 expression in purified human hematopoietic cells by in situ hybridization and reverse transcriptase polymerase chain reaction analysis . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "Both methods demonstrated",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "that the tal-1 gene is expressed in megakaryocytes and erythroblasts as well as in basophilic granulocytes . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "In addition , our results indicate",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "that the tal-1 1A promoter , which contains two consensus GATA-binding sites , is active mainly in these lineages . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 10,
+			"text": "Because the GATA-1 gene is known to transactivate several genes specific for the erythroid , megakaryocytic , and mastocytic/basophilic lineages ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 10,
+			"parent": 4,
+			"text": "we studied GATA-1 expression in these purified hematopoietic cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "We found",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "that GATA-1 and tal-1 genes are coexpressed in these three lineages . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 11,
+			"text": "Remarkably , the expression of both genes is downmodulated during erythroid and megakaryocytic terminal maturation . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 11,
+			"text": "In immature hematopoietic cells , tal-1 and GATA-1 genes are coexpressed in committed progenitors cells ( CD34+/CD38(2+) ) ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "whereas they are not detectable in the most primitive cells ( CD34(2+)/CD38- ) . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 16,
+			"parent": 14,
+			"text": "In contrast , GATA-2 is strongly expressed in both most primitive and committed progenitors cells ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "whereas GATA-3 is mostly detected in most primitive ones . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 18,
+			"parent": 4,
+			"text": "Altogether our results strongly suggest",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 19,
+			"parent": 18,
+			"text": "that GATA-1 modulates the transcription of tal-1 during the differentiation of the erythroid , megakaryocytic , and basosophilic lineages . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

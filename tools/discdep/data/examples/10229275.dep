@@ -1,0 +1,67 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "It is known that sulfated polysaccharides can mimic the action of common T-cell mitogens . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 3,
+			"text": "To investigate the molecular basis of the mitogenic effect of high molecular weight dextran sulfate ( HMDS ) ,",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "monocyte-derived macrophages were transfected with recombinant plasmid containing chloramphenicol acetyl transferase ( CAT ) reporter gene under the control of the HIV-1 long terminal repeat ( LTR ) promoter , which is regulated by transcription factor NF-kappaB . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "We observed",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "that HMDS , similar to bacterial lipopolysaccharide ( LPS ) , increases the expression of CAT reporter gene",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "suggesting increased activity of NF-kappaB . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 4,
+			"text": "The activation of NF-kappaB correlated with the increased expression of B7.1 molecules . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 3,
+			"text": "It was postulated that this NF-kappaB-regulated promoter might play a role in the activation of the accessory cells as well as the rate of replication of HIV-1 in monocyte-derived macrophages . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

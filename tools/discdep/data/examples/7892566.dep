@@ -1,0 +1,53 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "Since most B cell clones immortalized with EBV virus can be induced to produce interleukin-2 , a typical T cell cytokine ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "we studied the role of different elements of the IL-2 promoter in such clones by transfection . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "It was found , in particular , that the element TCEd , which binds the transcription factor NF-kB , is very active in all three B clones tested . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "This element has no activity in T cells of the Jurkat line . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "The NFATd element , which binds the transcription factor NFAT-1 and is very active in T cells , is only weakly active in one B clone and not at all in another . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 2,
+			"text": "Different elements thus contribute to IL-2 promoter activity in different cells . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

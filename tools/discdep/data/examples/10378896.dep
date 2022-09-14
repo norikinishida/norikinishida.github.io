@@ -1,0 +1,144 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "Granulocyte-macrophage colony-stimulating factor ( GM-CSF ) and interleukin ( IL ) -3 induced tyrosine phosphorylation of 92-kDa protein in normal human monocytes . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "We identified this 92-kDa protein as STAT5 , but not as STATs1 , 3 , and 6 nor c-fes and vav protooncogene products ,",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "and demonstrated its translocation to the nucleus , enhancement of specific DNA binding capacity , and potentiation of trancriptional activity by GM-CSF . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "N-formyl-methionyl-leucyl-phenylalanine ( FMLP ) and phorbol myristate acetate ( PMA ) induced tyrosine phosphorylation of 42- and 44-kDa proteins , which were identified as extracellular signal-regulated kinase ( ERK ) , in human monocytes . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 6,
+			"text": "In marked contrast to neutrophils and MO7e cells ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 2,
+			"text": "GM-CSF did not induce tyrosine phosphorylation and activation of ERK in monocytes . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "Among upstream signaling molecules of ERK , Shc was constitutively associated with Grb2",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "and was not tyrosine-phosphorylated by GM-CSF and FMLP ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 7,
+			"text": "and Sos1 and c-Raf-1 were not phosphorylated by GM-CSF , IL-3 , TNF , and FMLP in monocytes ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 7,
+			"text": "whereas all these signaling molecules were affected and/or utilized by GM-CSF in MO7e cells . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 12,
+			"text": "In contrast to neutrophils ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 6,
+			"text": "p38 was constitutively phosphorylated",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "and agonist-dependent phosphorylation and activation was not detected in human monocytes . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 6,
+			"text": "Superoxide release stimulated by FMLP was inhibited partially by PD98059 or SB203580 , a specific inhibitor of ERK or p38 pathway ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "and was almost completely inhibited by the combination of both inhibitors ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 16,
+			"parent": 14,
+			"text": "whereas PMA-induced superoxide release was resistant to these two inhibitors in monocytes . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 6,
+			"text": "PD98059 inhibited GM-CSF-dependent proliferation of MO7e cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 18,
+			"parent": 2,
+			"text": "Present results indicate trancriptional roles of STAT5 and functional roles of ERK and/or p38 in normal human monocytes stimulated by physiological receptor-mediated agonists GM-CSF and FMLP . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 19,
+			"parent": 18,
+			"text": "Possible roles of ERK in proliferation of transformed cells were also suggested . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

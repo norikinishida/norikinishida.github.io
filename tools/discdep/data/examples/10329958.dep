@@ -1,0 +1,81 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "We recently reported",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "that prolonged exposure of human aortic endothelial cells ( HAEC ) to low shear stress flow patterns is associated with a sustained increase in the activated form of the transcriptional regulator nuclear factor-kappaB ( NF-kappaB ) . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "Here we investigate the hypothesis that low shear-induced activation of NF-kappaB is responsible for enhanced expression of vascular cell adhesion molecule ( VCAM-1 ) resulting in augmented endothelial cell-monocyte ( EC-Mn ) adhesion and that this activation is dependent on intracellular oxidant activity . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "Before exposure to low shear ( 2 dyn/cm2 ) for 6 h , HAEC were preincubated with or without the antioxidants pyrrolidine dithiocarbamate ( PDTC ) or N-acetyl-L-cysteine ( NAC ) . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "PDTC strongly inhibited low shear-induced activation of NF-kappaB , expression of VCAM-1 , and EC-Mn adhesion . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "Paradoxically , NAC exerted a positive effect on low shear-induced VCAM-1 expression and EC-Mn adhesion and only slightly downregulated NF-kappaB activation . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "However , cytokine-induced NF-kappaB activation and VCAM-1 expression are blocked by both PDTC and NAC . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 3,
+			"text": "These data suggest",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "that NF-kappaB plays a key role in low shear-induced VCAM-1 expression",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "and that pathways mediating low shear- and cytokine-induced EC-Mn adhesion may be differentially regulated . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

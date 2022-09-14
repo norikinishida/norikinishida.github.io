@@ -1,0 +1,123 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "Rheumatoid arthritis synovial tissue was examined",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "and compared with osteoarthritis tissue for the presence of the nuclear transcription factor C/EBP beta ( NF-IL-6 ) . <S>",
+			"relation": "ADDITION",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "The region ( lining or sublining ) , cell type , and subcellular distribution ( cytoplasmic or nuclear ) of the expression of C/EBP beta was characterized . <S>",
+			"relation": "ELABORATION",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "Rheumatoid arthritis synovial fluid and blood and normal peripheral blood were also examined . <S>",
+			"relation": "ADDITION",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 5,
+			"parent": 1,
+			"text": "C/EBP beta was detected in the synovial lining and in sublining cells of synovial tissue from patients with both rheumatoid and osteoarthritis . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "A significant ( P < 0.001 and < 0.05 , respectively ) increase in the percentage of cells with nuclear staining was seen in the lining layer ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "compared to cells in the sublining region , in rheumatoid and osteoarthritis . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 5,
+			"text": "In both diseases a strong correlation ( r = 0.79 , P < 0.001 ) was observed between the percentage of cells in the synovial lining that were positive for nuclear C/EBP beta and lining cell depth . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 5,
+			"text": "Two-color immunohistochemistry demonstrated",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "that both macrophages and fibroblast-like synoviocytes were positive for nuclear C/EBP beta . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 5,
+			"text": "The presence of C/EBP beta was confirmed by immunohistochemistry and Western blot analysis with isolated synovial fibroblasts . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 5,
+			"text": "Nuclear C/EBP beta was also detected in rheumatoid synovial fluid monocytes/macrophages , but not in lymphocytes or neutrophils . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 5,
+			"text": "Western blot analysis confirmed the presence of C/EBP beta in these cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 5,
+			"text": "The intensity of C/EBP beta staining was greater ( P < 0.001 ) in synovial fluid monocytes than in those from normal or rheumatoid peripheral blood . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 1,
+			"text": "In conclusion , the enhanced nuclear staining for C/EBP beta in the synovial lining , compared to the sublining , suggesting activation in the lining , and the positive correlation of lining layer depth with the percentage of cells in the lining positive for nuclear C/EBP beta , suggest a potential role for C/EBP beta in chronic inflammation . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "The regulation of the production or activity of C/EBP beta , to inhibit inflammatory mediator expression by synovial macrophages and fibroblasts , offers a novel approach to therapeutic intervention . <S>",
+			"relation": "ELABORATION",
+			"tag": "Conclusion"
+		}
+	]
+}

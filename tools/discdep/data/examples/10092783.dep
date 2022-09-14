@@ -1,0 +1,102 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 5,
+			"text": "The IL-2 growth hormone is the major growth factor of activated T lymphocytes during a developing immune response . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "IL-2 is required not only for cell cycle progression but also to protect Ag-activated T cells from programmed cell death . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "In several cell types , activation of NF-kappa B and/or activating protein-1 ( AP-1 ) has been demonstrated to be extremely important in blocking apoptosis . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 5,
+			"text": "To determine whether either or both of these transcription factors are involved in cell survival or cell cycle progression in response to IL-2 ,",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 5,
+			"parent": 0,
+			"text": "primary human T cells responsive to the growth factor were analyzed for NF-kappa B and AP-1 activation . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "The current study clearly demonstrates",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "that IL-2 does not induce I kappa B alpha degradation or NF-kappa B activation in primary human T cells that respond to IL-2 by entering the cell cycle and avoiding apoptosis . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "Similarly , IL-2 neither activates JNK",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "nor increases AP-1 binding activity to a consensus o-tetradecanoylphorbol 13-acetate ( TPA ) response element . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 6,
+			"text": "On the other hand , the growth factor does induce the activation of STAT3 and STAT5 in these cells ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "as has been previously demonstrated . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 5,
+			"text": "These data show",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "that neither NF-kappa B nor AP-1 activation is required for IL-2-mediated survival or cell cycle progression in activated primary human T cells . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

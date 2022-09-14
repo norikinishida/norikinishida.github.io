@@ -1,0 +1,74 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "Chlamydia pneumoniae is an important respiratory pathogen . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Recently , its presence has been demonstrated in atherosclerotic lesions . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "In this study , we characterized C. pneumoniae-mediated activation of endothelial cells",
+			"relation": "ROOT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "and demonstrated an enhanced expression of endothelial adhesion molecules followed by subsequent rolling , adhesion , and transmigration of leukocytes ( monocytes , granulocytes ) . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "These effects were blocked by mAbs against endothelial and/or leukocyte adhesion molecules ( beta1 and beta2 integrins ) . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "Additionally , activation of different signal transduction pathways in C. pneumoniae-infected endothelial cells was shown : protein tyrosine phosphorylation , up-regulation of phosphorylated p42/p44 mitogen-activated protein kinase , and NF-kappaB activation/translocation occurred within 10-15 min . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "Increased mRNA and surface expression of E-selectin , ICAM-1 , and VCAM-1 were noted within hours . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 3,
+			"text": "Thus , C. pneumoniae triggers a cascade of events that could lead to endothelial activation , inflammation , and thrombosis ,",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "which in turn may result in or may promote atherosclerosis . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		}
+	]
+}

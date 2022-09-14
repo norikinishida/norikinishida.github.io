@@ -1,0 +1,88 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 4,
+			"text": "Transcription factor NF kappa B ( nuclear factor kappa B ) is induced in T lymphocytes from young individuals",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "following activation with a variety of stimuli including anti-CD3 , phorbol myristate acetate ( PMA ) , and tumor necrosis factor-alpha ( TNF-alpha ) . <S>",
+			"relation": "TEMPORAL",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "In contrast , activated T lymphocytes from older individuals show a significant reduction in the induction of NF kappa B in response to the same stimuli . <S>",
+			"relation": "COMPARISON",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 0,
+			"text": "The age-related decline in induction of NF kappa B could not be attributed to alteration in the composition of subunits ,",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "p50 and p65 were found to be the predominant subunits of induced NF kappa B in T cells from young as well as elderly donors . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 4,
+			"text": "Furthermore , similar levels of NF kappa B were found in the cytosols of unactivated T cells from both young and elderly donors",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "suggesting",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "that precursor levels of NF kappa B remain unaltered during aging . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 4,
+			"text": "These results suggest",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "that an age-associated decline in the induction of NF kappa B in activated T cells from elderly individuals may be attributable to altered regulation of the inhibitor , I kappa B ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "and may play an important role in immune dysregulation accompanying aging . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

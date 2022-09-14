@@ -1,0 +1,109 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 5,
+			"text": "Lung disease associated with disorders such as cystic fibrosis ( CF ) may be amenable to somatic gene therapy in which there is delivery of the normal gene directly to the respiratory epithelium using E1a- adenovirus ( Ad ) type 2- or 5-based vectors . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "For safety reasons , the Ad vectors are rendered replication deficient by deletion of the E1a region . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 5,
+			"text": "Because there is the theoretical possibility of an E1a- replication-deficient vector replicating",
+			"relation": "CAUSE-RESULT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "as a result of recombination or complementation with Ad 2/5 E1a sequences present in the target cell ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 5,
+			"parent": 0,
+			"text": "this study is directed toward evaluating respiratory epithelium of normals and individuals with CF for the presence of E1a sequences . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 6,
+			"parent": 8,
+			"text": "Using Ad 2/5 E1a-specific primers and the polymerase chain reaction",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "to evaluate DNA recovered from freshly isolated nasal and bronchial epithelium recovered by brushing ,",
+			"relation": "ENABLEMENT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 8,
+			"parent": 5,
+			"text": "E1a sequences were detected in respiratory epithelium of 19 of 91 normals ( 21 % ) . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "In the E1a-positive samples , the average of E1a copy number was 55 +/- 18/10(3) recovered cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 8,
+			"text": "In CF individuals , 7 of 52 ( 13 % ) had detectable E1a sequences in the respiratory epithelium , with E1a copy number in the positive samples of 80 +/- 21/10(3) recovered cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 5,
+			"text": "These results demonstrate",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "that there are detectable Ad 2/5 E1a sequences in the respiratory epithelium of a small percentage of normals and individuals with CF . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 14,
+			"text": "Because of the theoretical potential of such sequences supporting replication of E1a- Ad vectors ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 14,
+			"parent": 11,
+			"text": "human gene therapy protocols for CF utilizing such vectors should consider evaluating study individuals for the presence of Ad 2/5 E1a sequences in the respiratory epithelium . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

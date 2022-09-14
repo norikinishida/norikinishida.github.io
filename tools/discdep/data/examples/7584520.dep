@@ -1,0 +1,109 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "The aim of this study was to investigate whether mutations in the glucocorticoid receptor could account for the increasing unresponsiveness of patients with chronic lymphatic leukemia ( CLL ) to combination chemotherapy . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "The receptor was tested immunocytochemically , in steroid binding assays , and by a mutation screening ( denaturing gradient gel electrophoresis ) of the receptor-cDNA . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "The receptor concentration ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "as measured by staining and steroid binding test ,",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "varied considerably",
+			"relation": "SAME-UNIT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "but showed no clear correlation to clinical response . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 8,
+			"text": "Using a highly sensitive mutation screening assay of the DNA- and the steroid-binding region ,",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 8,
+			"parent": 3,
+			"text": "none of the treated patients revealed any mutation ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "suggesting",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "that the glucocorticoid receptor in the CLL patients tested is not altered in these domains . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 3,
+			"text": "In one individual who had not been treated before analysis a silent mutation was found in one receptor allele . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 1,
+			"text": "The results suggest",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "that mechanisms other than altered ligand or DNA binding of the receptor may be responsible for the lack of response to chemotherapy . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 14,
+			"parent": 12,
+			"text": "This conclusion is discussed in relation to the mechanism of corticoid resistance in mouse and human lymphoma cells in culture . <S>",
+			"relation": "ELABORATION",
+			"tag": "Conclusion"
+		}
+	]
+}

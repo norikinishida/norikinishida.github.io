@@ -1,0 +1,242 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "In summary , we derived an experimental system that allows us to dissect the function of GATA-1 in red cell development at a genetic level . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "We have established the essential nature of GATA-1 during both primitive and definitive erythropoiesis . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 4,
+			"text": "By ablating the expression of the endogenous GATA-1 gene ,",
+			"relation": "MANNER-MEANS",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "we are in a position to introduce a variety of constructs that harbor subtle modifications in flanking or protein-coding sequences . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "We can now study regulatory regions and functional domains of the protein in the context of a true erythroid environment , experiments that have not been possible heretofore . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 6,
+			"parent": 7,
+			"text": "Although the assay involves the dramatic loss of red cell production ,",
+			"relation": "COMPARISON",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 7,
+			"parent": 4,
+			"text": "it should be possible to define important regulatory domains that can then be assayed using less stringent systems , such as cell-free extracts for in vitro transcription . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 8,
+			"parent": 4,
+			"text": "The ideal situation would be analyses conducted in GATA-1- erythroid cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "However , these cells have been impossible to generate",
+			"relation": "COMPARISON",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "given the requirement of GATA-1 for Epo receptor expression and red cell viability ( C. Simon and S. Orkin , unpublished observations ) . <S>",
+			"relation": "CONDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 8,
+			"text": "It may be possible to produce such cells",
+			"relation": "ELABORATION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "by first expressing the Epo receptor under the influence of a constitutive promoter",
+			"relation": "MANNER-MEANS",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "and then targeting the GATA-1 gene . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 14,
+			"parent": 15,
+			"text": "If GATA-1- red cells were available ,",
+			"relation": "CONDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 15,
+			"parent": 4,
+			"text": "the analyses would involve the actual transcription of or chromatin structure surrounding the globin genes . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 16,
+			"parent": 4,
+			"text": "Structure-function studies of the GATA-1 protein could be greatly simplified",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "and a larger number of mutants studied . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 18,
+			"parent": 16,
+			"text": "However , the ES cell system can be used as an alternative",
+			"relation": "COMPARISON",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 19,
+			"parent": 18,
+			"text": "until targeted erythroleukemia cells become available . <S>",
+			"relation": "CONDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 20,
+			"parent": 4,
+			"text": "Other applications involve the introduction of other GATA-binding protein family members to determine whether they rescue the mutation . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 21,
+			"parent": 22,
+			"text": "If they can not ,",
+			"relation": "CONDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 22,
+			"parent": 20,
+			"text": "chimeric proteins can be tested",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 23,
+			"parent": 22,
+			"text": "to identify which amino acids distinguish the different family members . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 24,
+			"parent": 4,
+			"text": "We feel",
+			"relation": "ELABORATION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 25,
+			"parent": 24,
+			"text": "that these experiments are vital to understanding the function of GATA-1 during erythroid ontogeny . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 26,
+			"parent": 4,
+			"text": "How does GATA-1 regulate red cell genes like globin or the Epo receptor ? <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 27,
+			"parent": 28,
+			"text": "Once we identify the functional domains of the GATA-binding proteins ,",
+			"relation": "CONDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 28,
+			"parent": 26,
+			"text": "we hope to learn what proteins GATA-1 binds to in the basic transcription machinery or in chromatin . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 29,
+			"parent": 4,
+			"text": "Is GATA-1 necessary for globin gene switching ? <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 30,
+			"parent": 29,
+			"text": "GATA-1 may be modified differently during development",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 31,
+			"parent": 30,
+			"text": "so that the locus control region can interact with different globin promoters . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 32,
+			"parent": 4,
+			"text": "We may find",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 33,
+			"parent": 32,
+			"text": "that one region of the protein is required for embryonic expression and another for adult globin gene expression . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

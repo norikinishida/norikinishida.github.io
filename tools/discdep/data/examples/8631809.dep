@@ -1,0 +1,109 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 4,
+			"text": "The mechanism of action of the immunosuppressive drug cyclosporin A ( CsA ) is the inactivation of the Ca2+/calmodulin-dependent serine-threonine phosphatase calcineurin by the drug-immunophilin complex . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Inactive calcineurin is unable to activate the nuclear factor of activated T cells ( NFAT ) , a transcription factor required for expression of the interleukin 2 ( IL-2 ) gene . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "IL-2 production by CsA-treated cells is therefore dramatically reduced . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 0,
+			"text": "We demonstrate here , however ,",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "that NFAT can be activated ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "and significant levels of IL-2 can be produced by the CsA-resistant CD28-signaling pathway . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 4,
+			"text": "In transient transfection assays , both multicopy NFAT- and IL-2 promoter-beta-galactosidase reporter gene constructs could be activated by phorbol 12-myristate 13-acetate ( PMA ) /alpha-CD28 stimulation ,",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "and this activation was resistant to CsA . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 7,
+			"text": "Electrophoretic mobility shift assay showed the induction of a CsA-resistant NFAT complex in the nuclear extracts of peripheral blood T cells stimulated with PMA plus alphaCD28 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 7,
+			"text": "Peripheral blood T cells stimulated with PMA/alphaCD28 produced IL-2 in the presence of CsA . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 4,
+			"text": "Collectively , these data suggest",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "that NFAT can be activated",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "and IL-2 can be produced",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 14,
+			"parent": 12,
+			"text": "in a calcineurin independent manner . <S>",
+			"relation": "SAME-UNIT",
+			"tag": "Conclusion"
+		}
+	]
+}

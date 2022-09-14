@@ -1,0 +1,74 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "The chimeric gene , AML1/ETO ( MTG8 ) , generated in t(8;21) acute myeloid leukemia enhances the expression of Bcl-2 . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 3,
+			"text": "To evaluate whether this enhancement is the primary role of AML1/ETO in leukemogenesis ,",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "effects of over-expression of Bcl-2 in the murine myeloid precursor cell line , 32Dcl3 , were examined . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 4,
+			"parent": 5,
+			"text": "When 32Dcl3 cells expressing exogenous Bcl-2 were induced to differentiate ,",
+			"relation": "TEMPORAL",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "the onset of morphological differentiation was delayed . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "However , even the cells expressing very high levels of exogenous Bcl-2 eventually underwent differentiation without a significant decrease in the synthesis of Bcl-2 . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "On the contrary , 32Dcl3 cells stably expressing AML1/ETO were completely resistant to differentiation",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "and continued to grow in the presence of G-CSF . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 3,
+			"text": "These results are consistent with the interpretation that stimulation of Bcl-2 expression is not the primary target of AML1/ETO . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

@@ -1,0 +1,102 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 6,
+			"text": "Cyclosporin A ( CsA ) exerts its immunosuppressive effect",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "by inhibiting the activity of nuclear factor of activated T cells ( NFAT ) ,",
+			"relation": "MANNER-MEANS",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "thus preventing transcriptional induction of several cytokine genes . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "This effect is thought to be largely mediated through inactivation of the phosphatase calcineurin ,",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "which in turn inhibits translocation of an NFAT component to the nucleus . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Background"
+		},
+		{
+			"id": 6,
+			"parent": 0,
+			"text": "Here we report",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "that CsA treatment of Raji B and Jurkat T cell lines yields a phosphorylated form of NFATp that is inhibited in DNA-binding and in its ability to form an NFAT complex with Fos and Jun . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "Immunoblot analyses and metabolic labeling with [32P]orthophosphate show",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "that CsA alters NFATp migration on SDS-polyacrylamide gel electrophoresis",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "by increasing its phosphorylation level",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "without affecting subcellular distribution . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 6,
+			"text": "Dephosphorylation by in vitro treatment with calcineurin or alkaline phosphatase restores NFATp DNA binding activity and its ability to reconstitute an NFAT complex with Fos and Jun proteins . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 6,
+			"text": "These data point to a new mechanism for CsA-sensitive regulation of NFATp in which dephosphorylation is critical for DNA binding . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

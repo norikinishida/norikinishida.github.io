@@ -1,0 +1,81 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 4,
+			"text": "A transcription factor NF kappa B , which regulates expression of various cellular genes involved in immune responses and viral genes including HIV , is sequestered in the cytoplasm as a complex with an inhibitory protein I kappa B . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Various extracellular signals induce phosphorylation and rapid degradation of I kappa B alpha",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "to release NF kappa B . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 0,
+			"text": "Cu2+ was found to inhibit the activation of NF kappa B induced by TNF-alpha , TPA , or H2O2 . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "Deoxycholate treatment of the cytoplasmic extract prepared from cells stimulated by TNF-alpha in the presence of Cu2+ resulted in the release of NF kappa B from I kappa B alpha ,",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "indicating",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "that Cu2+ interferes with the dissociation of the NF kappa B-I kappa B complex . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 5,
+			"text": "Neither phosphorylation nor degradation of I kappa B alpha was observed upon TNF-alpha stimulation in the presence of Cu2+ . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 4,
+			"text": "These results indicate",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "that Cu2+ inhibits the release of NF kappa B by blockade of a signal leading to the phosphorylation of I kappa B alpha . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

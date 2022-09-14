@@ -1,0 +1,109 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "A novel Ets protein was isolated by yeast one-hybrid screening of a cDNA library made from lipopolysaccharide-stimulated mouse splenic B cells ,",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "using the SP6 kappa promoter kappaY element as a bait . <S>",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "The novel Ets protein was most closely related to PU.1 and Spi-B within the DNA binding Ets domain",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "and was therefore named Spi-C . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "However , Spi-C may represent a novel subgroup within the Ets protein family ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "as it differed significantly from Spi-B and PU.1 within helix 1 of the Ets domain . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "Spi-C was encoded by a single-copy gene that was mapped to chromosome 10 , region C . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "Spi-C interacted with DNA similarly to PU.1",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "as judged by methylation interference , band-shift and site selection analysis ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 8,
+			"text": "and activated transcription of a kappaY element reporter gene upon co-transfection of HeLa cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 7,
+			"text": "Spi-C RNA was expressed in mature B lymphocytes and at lower levels in macrophages . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 7,
+			"text": "Furthermore , pre-B cell and plasma cell lines were Spi-C-negative ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "suggesting",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "that Spi-C might be a regulatory molecule during a specific phase of B lymphoid development . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		}
+	]
+}

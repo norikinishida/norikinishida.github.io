@@ -1,0 +1,130 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "The human T-cell leukemia virus type I ( HTLV-I ) promoter contains three copies of imperfect repeats of a 21-base pair sequence designated here as TRE ( Tax-response element ) that is responsive to the virally encoded transactivator protein Tax . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "We have identified",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "and separated",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "four nuclear proteins from C81-66-45 cells , an HTLV-I immortalized Tax-expressing human T-lymphocyte line ( Salahuddin et al. , 1983 ) , that interact with the TRE-DNA , none of which are identical with the Tax-protein . <S>",
+			"relation": "SAME-UNIT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 2,
+			"text": "The proteins identified have molecular weights of about 32 , 36 to 42 , 50 and 110 kD . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 2,
+			"text": "Four different methods were used",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "to identify the proteins . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "First , from different cell lines three or all four of the nuclear proteins were specifically cross-linked by UV irradiation to the radioactively labeled TRE-DNA fragment . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "Second , TRE-DNA binding proteins sedimented through a glycerol density gradient at rates corresponding to proteins of native molecular weights of 35 to 50 kD and 110 kD . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 10,
+			"parent": 8,
+			"text": "Third , only the 50 kD protein was retained on a biotinylated DNA-streptavidin matrix",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "when the DNA fragment contained the TRE-DNA . <S>",
+			"relation": "CONDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 12,
+			"parent": 8,
+			"text": "Fourth , extensive purification by several cycles of TRE-DNA affinity chromatography resulted in the 32 , 36 to 42 and 110 kD proteins and to less extent the 50 kD factor . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 13,
+			"parent": 8,
+			"text": "Two abundant proteins of 75 and 80 kD were competed out by poly[d(I-C)] in all reactions . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 14,
+			"parent": 2,
+			"text": "The cAMP-response element CRE , TGACGTCA , present in the 21 base-pair sequence , appears to be essential for specific protein-TRE-DNA interactions",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "because mutation of the two G 's destroys this complex . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 16,
+			"parent": 14,
+			"text": "This result suggests",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "that the cAMP response element binding protein , CREB , is involved in the protein-TRE-DNA complex and in mediating the Tax response . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

@@ -1,0 +1,81 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "We have examined binding of the nuclear protein HMG-I to the human gamma-globin promoter . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "We find",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "that HMG-I binds preferentially to the more 3' of a pair of GATA motifs in the gamma-globin promoter ;",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "this paired motif is bound by the erythroid factor GATA-1 . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 2,
+			"text": "A naturally occurring mutation ( -175 T-C ) in the area bound by HMG-I results in overexpression of gamma-globin in adult red blood cells ( HPFH ) and up-regulation of the gamma-globin promoter in in vitro expression assays ;",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "HMG-I does not bind to this mutant sequence . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "A survey of GATA motifs from other globin cis-elements demonstrates HMG-I binding to most of them . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 1,
+			"text": "These findings implicate HMG-I in the HPFH phenotype ;",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "we speculate",
+			"relation": "ELABORATION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "that it may participate in the formation of multiprotein complexes that regulate globin gene expression . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

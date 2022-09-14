@@ -1,0 +1,116 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "We tested the effect of three linear or two loop peptides derived from the V3 region of the HTLV-III BH10 clone or the SF2 strain of human immunodeficiency virus type 1 on IL-2-driven T cell proliferation . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "V3-BH10 , which consists of 42 amino acids and has a loop structure , suppressed IL-2-driven proliferation of all IL-2-dependent cells [ Kit225 , ED-40515(+) , KT-3 , 7-day PHA-blasts , and fresh peripheral blood mononuclear cells ] tested ,",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "whereas it did not suppress the cell growth of IL-2-independent cell lines ( Hut102 , Molt-4 , and Jurkat ) . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "This suppressive effect was also seen in IL-2-driven cell growth of CD8-positive lymphocytes purified from 7-day PHA-blasts ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "indicating",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "that CD4 molecules were not required for the suppression . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 2,
+			"text": "The treatment with anti-V3 loop monoclonal antibody ( 902 antibody ) completely abolished the suppressive effect of V3-BH10 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 2,
+			"text": "In addition , V3-BH10 generated the arrest of Kit225 cells",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "and also purified CD8-positive lymphocytes in G1 phase in the presence of IL-2 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 2,
+			"text": "Neither chromatin condensation nor DNA fragmentation was detected in Kit225 cells cultured with V3-BH10 and IL-2 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 2,
+			"text": "V3-BH10 neither blocked radiolabeled IL-2 binding to IL-2 receptors",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "nor affected tyrosyl phosphorylation of several cellular proteins ( p120 , p98 , p96 , p54 , and p38 ) , which is immediately induced by IL-2 stimulation . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 11,
+			"text": "However , V3-BH10 enhanced IL-2-induced mRNA expression of c-fos but not c-myc or junB . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 1,
+			"text": "Thus , the binding of V3 loop of gp120 to the cell surface molecule ( s ) appears to affect intracellular IL-2 signaling ,",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "which leads to the suppression of IL-2-induced T cell growth . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		}
+	]
+}

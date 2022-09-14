@@ -1,0 +1,151 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "All-trans retinoic acid ( RA ) is an important morphogen in vertebrate development , a normal constituent in human adult blood",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "and is also involved in the control of cell growth and differentiation in acute promyelocytic leukemia . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "We have examined the effects of RA on normal hematopoiesis",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "by using early hematopoietic progenitor cells ( HPC ) stringently purified from adult peripheral blood . <S>",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "In clonogenetic fetal calf serum-supplemented ( FCS+ ) or -nonsupplemented ( FCS- ) culture treated with saturating levels of interleukin-3 ( IL-3 ) granulocyte-macrophage colony-stimulating factor ( GM-CSF ) and erythropoietin ( Ep ) ( combined with c-kit ligand in FCS(-)-culture conditions ) , RA induces a dramatic dose-dependent shift from erythroid to granulomonocytic colony formation ,",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "the latter colonies being essentially represented by granulocytic clones . <S>",
+			"relation": "TEMPORAL",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "This shift is apparently not caused by a recruitment phenomenon ,",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "because in FCS+ culture , the total number of colonies is not significantly modified by RA addition . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 5,
+			"text": "In FCS- liquid-suspension culture supplemented with saturating Ep level and low-dose IL-3/GM-CSF , adult HPC undergo unilineage erythropoietic differentiation :",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 9,
+			"text": "Here again , treatment with high-dose RA induces a shift from the erythroid to granulocytic differentiation pathway . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 5,
+			"text": "Studies on RA time-response or pulse treatment in semisolid or liquid culture show",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "that early RA addition is most effective ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "thus indicating",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "that early but not late HPC are sensitive to its action . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 3,
+			"text": "We then analyzed the expression of the master GATA1 gene , which encodes a finger transcription factor required for normal erythroid development ;",
+			"relation": "ADDITION",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "addition of RA to HPC stimulated into unilineage erythropoietic differentiation in liquid culture caused a virtually complete inhibition of GATA1 mRNA induction . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 3,
+			"text": "These results indicate",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 18,
+			"parent": 17,
+			"text": "that RA directly inhibits the erythroid differentiation program at the level of early adult HPC ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 19,
+			"parent": 18,
+			"text": "and may lead to a shift from the erythroid to granulocytic differentiation pathway . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 20,
+			"parent": 17,
+			"text": "This phenomenon is correlated with inhibition of GATA1 induction in the early stages of erythropoietic differentiation . <S>",
+			"relation": "ELABORATION",
+			"tag": "Conclusion"
+		}
+	]
+}

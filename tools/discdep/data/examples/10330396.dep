@@ -1,0 +1,116 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "We recently developed an assay in which nuclear export of the shuttling transcription factor NFAT ( nuclear factor of activated T cells ) can be reconstituted in permeabilized cells with the GTPase Ran and the nuclear export receptor CRM1 . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "We have now used this assay",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "to identify another export factor . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 4,
+			"parent": 2,
+			"text": "After preincubation of permeabilized cells with a Ran mutant that can not hydrolyze GTP ( RanQ69L ) , cytosol supports NFAT export ,",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "but CRM1 and Ran alone do not . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 4,
+			"text": "The RanQ69L preincubation leads to accumulation of CRM1 at the cytoplasmic periphery of the nuclear pore complex ( NPC ) in association with the p62 complex and Can/Nup214 . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "RanGTP-dependent association of CRM1 with these nucleoporins was reconstituted in vitro . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 4,
+			"text": "By biochemical fractionation and reconstitution , we showed",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "that RanBP1 restores nuclear export after the RanQ69L preincubation . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 4,
+			"text": "It also stimulates nuclear export in cells that have not been preincubated with RanQ69L . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 4,
+			"text": "RanBP1 as well as Ran-binding domains of the cytoplasmic nucleoporin RanBP2 promote the release of CRM1 from the NPC . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 13,
+			"text": "Taken together ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 2,
+			"text": "our results indicate",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "that RanGTP is important for the targeting of export complexes to the cytoplasmic side of the NPC",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "and that RanBP1 and probably RanBP2 are involved in the dissociation of nuclear export complexes from the NPC in a terminal step of transport . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

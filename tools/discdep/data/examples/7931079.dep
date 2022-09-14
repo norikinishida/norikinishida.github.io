@@ -1,0 +1,158 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "The differentiating agent retinoic acid ( RA ) has been previously reported to interfere with 12-O-tetradecanoyl-phorbol-13-acetate ( TPA ) /Ca(2+)-induced signals for the regulation of the -96 to -66-bp octamer motif found in the enhancer for the interleukin ( IL ) -2 gene , which encodes a major T lymphocyte growth factor . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "The IL-2 octamer motif is a composite cis-element which binds Oct-1 and Oct-2 as well as a TPA/Ca(2+)-inducible nuclear factor , previously termed octamer-associated protein ( OAP40 ) . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "We show here",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "that Oct-2 ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "despite the presence of an active transcriptional activation domain ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 4,
+			"text": "requires TPA/Ca(2+)-induced signals",
+			"relation": "SAME-UNIT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 4,
+			"text": "to strongly transactivate the IL-2 octamer motif in Jurkat T cells . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 3,
+			"text": "This Oct-2-dependent transactivation is inhibited by RA . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 3,
+			"text": "The presence of an intact COOH-terminal domain of Oct-2 contributes to both TPA/Ca(2+)-induced transactivation and the RA-mediated repression . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 3,
+			"text": "We also show",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "that both Fos and Jun components of the AP-1 factors participate in the OAP40 complex . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 3,
+			"text": "Furthermore , transfected c-jun , jun-B , jun-D , c-fos , or Fos-B expression vectors partially substitute for TPA and Ca2+",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "and cooperate with Oct-2 for the transactivation of the combined OAP/octamer cis-element . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 3,
+			"text": "Mutations of the genuine octamer-binding site abrogate both the binding of Oct-1 and Oct-2 and the TPA/Ca(2+)-induced transactivation of the OAP/octamer motif . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 3,
+			"text": "OAP confers to Oct-2 responsivity to both TPA/Ca2+ and RA ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 16,
+			"parent": 15,
+			"text": "since specific mutations of the AP-1/OAP-binding site significantly reduce the transactivation by Oct-2 in response to TPA and Ca2+",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "and abolish the inhibition by RA . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 18,
+			"parent": 3,
+			"text": "Furthermore , retinoic acid receptor ( RAR ) alpha is able to inhibit in vitro the formation of the complex between the nuclear AP-1/OAP and its specific binding site ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 19,
+			"parent": 18,
+			"text": "resulting in the interference with Oct-2-dependent cis-regulatory function of this AP-1 element . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 20,
+			"parent": 3,
+			"text": "Therefore , we propose",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 21,
+			"parent": 20,
+			"text": "that the TPA/calcium-activated AP-1/OAP element is the main target of positive or negative regulatory signals influencing the IL-2 octamer motif , through synergism with Oct-2 and antagonism by RAR . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

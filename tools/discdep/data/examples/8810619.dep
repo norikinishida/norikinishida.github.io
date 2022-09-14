@@ -1,0 +1,102 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "Cystic fibrosis ( CF ) patients develop progressive cytokine-mediated inflammatory lung disease , with abundant production of thick , tenacious , protease- and oxidant-rich purulent airway secretions that are difficult to clear even with physiotherapy . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "In the search for a potential treatment , we have tested tyloxapol , an alkylaryl polyether alcohol polymer detergent previously used as a mucolytic agent in adult chronic bronchitis . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "Tyloxapol inhibits activation of the transcription factor nuclear factor-kappa B ( NK-kappa B ) ,",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "reduces resting secretion of the cytokine interleukin-8 ( IL-8 ) in cultured human monocytes ,",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "and inhibits lipopolysaccharide ( LPS ) -stimulated release of tumor necrosis factor-alpha ( TNF-alpha ) , IL-1 beta , IL-6 , IL-8 , granulocyte-macrophage colony-stimulating factor ( GM-CSF ) , and the eiconsanoids thromboxane A2 and leukotriene B4 ( LTB4 ) . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "We have previously shown",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "that tyloxapol is a potent antioxidant for hydroxyl radicals ( OH ) . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Background"
+		},
+		{
+			"id": 8,
+			"parent": 2,
+			"text": "Tyloxapol ( 0.05 to 0.1 % wt/vol ) effectively scavenges the oxidant hypochlorous acid ( HOCl ; 1 to 7.5 mM ) in vitro ,",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "and protects from HOCl-mediated lung injury in rats . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 8,
+			"text": "Tyloxapol also reduces the viscosity of CF sputum ( from 463 +/- 133 to 128 +/- 52 centipoise ) . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 2,
+			"text": "We conclude",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "that tyloxapol is potentially useful as a new antiinflammatory therapy for CF lung disease ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "and could possibly promote clearance of secretions in the CF airway . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		}
+	]
+}

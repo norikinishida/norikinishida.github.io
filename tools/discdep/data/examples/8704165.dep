@@ -1,0 +1,116 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 6,
+			"text": "All-trans-retinoic acid ( ATRA ) is the drug of choice in the treatment of acute promyelocytic leukemia ( APL ) . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "ATRA induces both in vitro and in vivo differentiation of APL cells into mature granulocytes . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "However , the molecular mechanisms involved in ATRA-dependent growth inhibition and cellular differentiation are not presently understood . <S>",
+			"relation": "COMPARISON",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 1,
+			"text": "The NB4 cell line , which is derived from the bone marrow of a patient with APL during relapse , can be used as a model system to study the growth and differentiation of APL cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 5,
+			"parent": 6,
+			"text": "Because interferon ( IFN ) regulatory factors ( IRF-1 and IRF-2 ) and other IFN-inducible gene products regulate cell growth ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 6,
+			"parent": 0,
+			"text": "we analyzed the effects of ATRA on the expression of these genes . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "We show",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "that ATRA directly activates IRF-1 gene expression ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "followed by activation of IRF-2 and 2'-5' oligoadenylate synthetase ( OAS ) gene expression with slower kinetics . <S>",
+			"relation": "TEMPORAL",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 7,
+			"text": "In addition to NB4 cells , ATRA also activated IRF-1 gene expression in HL-60 , U937 , and THP-1 cells , which all respond to ATRA by growth inhibition . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 7,
+			"text": "A more than additive increase in IRF-1 gene expression was seen with ATRA and IFN-gamma in NB4 cells . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 7,
+			"text": "ATRA did not activate nuclear factor kappa B or signal transducer and activator of transcription ( STAT ) activation pathways ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "suggesting",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "that an alternate mechanism is involved in IRF-1 gene activation . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 6,
+			"text": "The ATRA-induced expression of IRF-1 , an activator of transcription and repressor of transformation , may be one of the molecular mechanisms of ATRA-induced growth inhibition , and the basis for the synergistic actions of ATRA and IFNs in myeloid leukemia cells . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

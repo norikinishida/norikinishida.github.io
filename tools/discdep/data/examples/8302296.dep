@@ -1,0 +1,151 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 5,
+			"text": "We have previously shown",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "that a human B lymphoma cell line , B104 , expressed surface IgM ( sIgM ) and surface IgD ( sIgD ) ,",
+			"relation": "ATTRIBUTION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "and that crosslinking of sIgM and sIgD by anti-IgM antibody ( Ab ) and anti-IgD Ab , respectively , induced Ca2+ influx to almost the same degree ,",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "whereas only sIgM-crosslinking caused B104 cell death . <S>",
+			"relation": "COMPARISON",
+			"tag": "Background"
+		},
+		{
+			"id": 5,
+			"parent": 0,
+			"text": "Here , we investigated the accumulation of cyclic AMP ( cAMP ) , the hydrolysis of inositol phosphates , protein kinase C ( PKC ) activity and the induction of Egr-1 and c-fos mRNA expression by sIgM- and sIgD-crosslinking",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "to examine differences in the signals mediated through sIgM and sIgD in B104 cells . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 7,
+			"parent": 5,
+			"text": "Both sIgM- and sIgD-crosslinking with antibodies induced elevation of cAMP levels , phosphatidylinositol turnover , PKC activation and expression of Egr-1 and c-fos mRNA ,",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "although sIgM-crosslinking was more effective than sIgD-crosslinking ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "presumably due to the higher expression of sIgM than of sIgD . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 7,
+			"text": "Egr-1 mRNA expression induced by sIgM- and sIgD-crosslinking was inhibited by H7 , erbstatin and genistein , but not by HA1004 . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 7,
+			"text": "Erbstatin and genistein inhibited the sIg-crosslinking-induced Egr-1 mRNA expression in a dose-dependent manner parallel to that observed in the inhibition of sIg-crosslinking-induced protein tyrosine phosphorylation . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 7,
+			"text": "Phorbol myristate acetate induced Egr-1 mRNA expression",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "but forskolin and dibutyryl cyclic AMP did not . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 5,
+			"text": "These findings suggest",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 15,
+			"parent": 14,
+			"text": "that the Egr-1 mRNA activating signals through sIgM and sIgD are protein tyrosine kinase- and PKC-dependent , but protein kinase A-independent . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 16,
+			"parent": 5,
+			"text": "Cyclosporin A ( CsA ) and FK506 rescued B104 cells from death induced by anti-IgM Ab ,",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "but did not affect the expression of Egr-1 and c-fos mRNA ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 18,
+			"parent": 16,
+			"text": "showing",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 19,
+			"parent": 18,
+			"text": "that CsA and FK506 affect signal transducers differently from or downstream to these molecules . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 20,
+			"parent": 5,
+			"text": "The difference in signals transduced through sIgM and sIgD in B104 cells is discussed . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

@@ -1,0 +1,109 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 2,
+			"text": "In order to elucidate the role of c-myb gene in erythroid differentiation of K562 cell induced by hemin ( Hm ) and erythropoietin ( Epo ) ,",
+			"relation": "ENABLEMENT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 2,
+			"parent": 0,
+			"text": "we constructed recombinant plasmid that could produce antisense myb RNA after induction with dexamethasone . <S>",
+			"relation": "ROOT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "During treatment with Hm , K562 cells constitutively expressed c-myb mRNA ,",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "and 50 % of them began to synthesize hemoglobin ( Hb ) . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "Expression of antisense myb RNA reduced the amount of c-myb mRNA ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "and the percentage of Hb-synthesizing cells was decreased to 20 % . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 3,
+			"text": "In the presence of Epo , c-myb mRNA declined",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "and 20 % of K562 cells synthesized Hb",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 7,
+			"text": "regardless of antisense myb RNA expression . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 2,
+			"text": "It is suggested that constitutive expression of c-myb mRNA is necessary for Hm-induced differentiation , and that a decrease in the amount of c-myb mRNA induced by antisense myb RNA expression suppresses Hm-induced differentiation . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 11,
+			"parent": 2,
+			"text": "The amount of c-myb mRNA in K562 cells was reduced during the differentiation induced by Epo . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "Expression of GATA-1 mRNA was almost constant during Hm-induced differentiation ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "but increased during Epo treatment . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 2,
+			"text": "It is supposed that the mechanism of Hm-induced differentiation is distinguished from that of Epo-induced differentiation in K562 cells . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

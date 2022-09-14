@@ -1,0 +1,165 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "Cells from the human monocytic leukemia cell line THP-1 differentiate towards a macrophage-like phenotype",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "when stimulated with phorbol 12-myristate -13- acetate ( PMA ) , 1,25-dihydroxy-vitamin D3 , and various other agents . <S>",
+			"relation": "CONDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "We demonstrate here",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "that the expression of the lysosomal enzyme acid sphingomyelinase ( ASM ; E.C.3.1.4.12 ) is induced during this process",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "and is strongly elevated in differentiated THP-1 cells , as well as in differentiated human mononuclear phagocytes . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 7,
+			"text": "Using Northern blotting , RNase protection assay , and nuclear run-on analyses ,",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 7,
+			"parent": 3,
+			"text": "we show",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "that the up-regulation of ASM expression is regulated mainly at the level of transcription",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "and that new protein synthesis is required for enhanced ASM activity . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 3,
+			"text": "This cell-type specific induction by PMA treatment was further investigated with respect to transcriptional control . <S>",
+			"relation": "ADDITION",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "A series of 5' deletion derivatives of the upstream regulatory region were used in transient transfection assays",
+			"relation": "ELABORATION",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "to identify promoter elements required for basal and inducible gene expression . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 13,
+			"parent": 10,
+			"text": "A PMA responsive element was localized to a region between -319 and -219 bp upstream of the initiation codon",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "and co-transfections with transcription factor expression plasmids for AP-2 and Sp1 resulted in augmented ASM promoter activity , which was abolished when the binding sites for these two factors were deleted . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 16,
+			"text": "Using electrophoretic mobility shift assays and supershift assays",
+			"relation": "MANNER-MEANS",
+			"tag": "Verification-Method"
+		},
+		{
+			"id": 16,
+			"parent": 13,
+			"text": "we demonstrate",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 17,
+			"parent": 16,
+			"text": "that this region is specifically bound by Sp1 and AP-2 . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 18,
+			"parent": 16,
+			"text": "These factors are present in nuclear extracts prepared from both induced and uninduced THP-1 cells . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 19,
+			"parent": 18,
+			"text": "However , the intensity of the complex formed appeared to increase",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 20,
+			"parent": 19,
+			"text": "when nuclear extracts from PMA-treated cells were used . <S>",
+			"relation": "TEMPORAL",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 21,
+			"parent": 3,
+			"text": "From these studies , we conclude",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 22,
+			"parent": 21,
+			"text": "that a concerted action of the transcription factors AP-2 and Sp1 is essential for the up -regulation of ASM expression during the process of macrophage differentiation . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		}
+	]
+}

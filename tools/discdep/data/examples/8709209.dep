@@ -1,0 +1,116 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 4,
+			"text": "The transcriptionally regulatory regions of the lymphomagenic Akv and SL3-3 murine leukemia retroviruses ( MLVs ) contain two types of E-box consensus motifs , CAGATG . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "One type , EA/S , is located in the upstream promoter region ,",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 2,
+			"text": "and the other , E(gre) , is located in a tandem repeat with enhancer properties . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 4,
+			"parent": 0,
+			"text": "We have examined the requirements of the individual E-boxes in MLV transcriptional regulation . <S>",
+			"relation": "ROOT",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "In lymphoid cell lines only , the E(gre)-binding protein complexes included ALF1 or HEB and E2A basic helix-loop-helix proteins . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "Ectopic ALF1 and E2A proteins required intact E(gre) motifs",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "for mediating transcriptional activation . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "ALF1 transactivated transcription of Akv MLV through the two E(gre) motifs equally ,",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 8,
+			"text": "whereas E2A protein required the promoter-proximal E(gre) motif . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 5,
+			"text": "In T- and B-cell lines , the E(gre) motifs were of major importance for Akv MLV transcriptional activity ,",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 10,
+			"text": "while the EA/S motif had some effect . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 5,
+			"text": "In contrast , neither E(gre) nor EA/S motifs contributed pronouncedly to Akv MLV transcription in NIH 3T3 cells lacking DNA-binding ALF1 or HEB and E2A proteins . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 5,
+			"text": "The Id1 protein was found to repress ALF1 activity in vitro and in vivo . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "Moreover , ectopic Id1 repressed E(gre)-directed but not EA/S-directed MLV transcription in lymphoid cell lines . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 15,
+			"parent": 4,
+			"text": "In conclusion , E(gre) motifs and interacting basic helix-loop-helix proteins are important determinants for MLV transcriptional activity in lymphocytic cell lines . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

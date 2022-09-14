@@ -1,0 +1,74 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "Coordination of the immune response to injury or disease in the brain is postulated to involve bi-directional discourse between the immune system and the central nervous system . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "This cross communication involves soluble mediators , including various growth factors , cytokines , and neuropeptides . <S>",
+			"relation": "ELABORATION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "In this report , we demonstrate",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "that the supernatant from activated T-lymphocytes is able to induce the transcription of a potent cytokine , TGF-beta 2 in glial cells . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 3,
+			"text": "The activating stimulus invokes signaling mechanisms distinct from known kinase or protease pathways . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 5,
+			"text": "Activation of TGF-beta 2 transcription correlates with the loss of binding activity for an 80 kDA glial labile repressor protein , GLRP , to a responsive region within the TFG-beta 2 promoter . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 8,
+			"text": "Although GLRP shares some characteristics with the inducible transcription factor AP-1 ,",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 6,
+			"text": "it appears to be distinct from known AP-1 family members . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 3,
+			"text": "These data along with previous observations demonstrating the potent immunosuppressive activity of TGF-beta 2 , support a model for a feedback mechanism between the activated T-lymphocytes and astrocytes via TGF-beta 2 to regulate the immune response . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}

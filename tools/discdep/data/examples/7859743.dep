@@ -1,0 +1,116 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 0,
+			"text": "This study demonstrates",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "that human immunodeficiency virus type 1 ( HIV-1 ) Tat protein amplifies the activity of tumor necrosis factor ( TNF ) , a cytokine that stimulates HIV-1 replication through activation of NF-kappa B . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 3,
+			"parent": 1,
+			"text": "In HeLa cells stably transfected with the HIV-1 tat gene ( HeLa-tat cells ) , expression of the Tat protein enhanced both TNF-induced activation of NF-kappa B and TNF-mediated cytotoxicity . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "A similar potentiation of TNF effects was observed in Jurkat T cells and HeLa cells treated with soluble Tat protein . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 6,
+			"text": "TNF-mediated activation of NF-kappa B and cytotoxicity involves the intracellular formation of reactive oxygen intermediates . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Background"
+		},
+		{
+			"id": 6,
+			"parent": 1,
+			"text": "Therefore , Tat-mediated effects on the cellular redox state were analyzed . <S>",
+			"relation": "ADDITION",
+			"tag": "Hypothesis-Objective"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "In both T cells and HeLa cells HIV-1 Tat suppressed the expression of Mn-dependent superoxide dismutase ( Mn-SOD ) , a mitochondrial enzyme that is part of the cellular defense system against oxidative stress . <S>",
+			"relation": "VERIFICATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "Thus , Mn-SOD RNA protein levels and activity were markedly reduced in the presence of Tat . <S>",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 7,
+			"text": "Decreased Mn-SOD expression was associated with decreased levels of glutathione and a lower ratio of reduced : oxidized glutathione . <S>",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 7,
+			"text": "A truncated Tat protein ( Tat1-72 ) , known to transactivate the HIV-1 long terminal repeat ( LTR ) , no longer affected Mn-SOD expression , the cellular redox state or TNF-mediated cytotoxicity . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 1,
+			"text": "Thus , our experiments demonstrate",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "that the C-terminal region of HIV-1 Tat is required",
+			"relation": "ATTRIBUTION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 13,
+			"parent": 12,
+			"text": "to suppress Mn-SOD expression",
+			"relation": "ENABLEMENT",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 14,
+			"parent": 13,
+			"text": "and to induce pro-oxidative conditions reflected by a drop in reduced glutathione ( GSH ) and the GSH : oxidized GSH ( GSSG ) ratio . <S>",
+			"relation": "ADDITION",
+			"tag": "Conclusion"
+		},
+		{
+			"id": 15,
+			"parent": 1,
+			"text": "( ABSTRACT TRUNCATED AT 250 WORDS ) <S>",
+			"relation": "TEXTUAL-ORGANIZATION",
+			"tag": "Misc."
+		}
+	]
+}

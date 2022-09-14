@@ -1,0 +1,102 @@
+﻿{
+	"root": [
+		{
+			"id": 0,
+			"parent": -1,
+			"text": "ROOT",
+			"relation": "null",
+			"tag": "null"
+		},
+		{
+			"id": 1,
+			"parent": 3,
+			"text": "Tumor necrosis factor ( TNF ) mediates a wide variety of disease states including septic shock , acute and chronic inflammation , and cachexia . <S>",
+			"relation": "BACKGROUND",
+			"tag": "Background"
+		},
+		{
+			"id": 2,
+			"parent": 1,
+			"text": "Recently , a multivalent guanylhydrazone ( CNI-1493 ) developed as an inhibitor of macrophage activation was shown to suppress TNF production and protect against tissue inflammation and endotoxin lethality [ Bianchi , M. , Ulrich , P. , Bloom , O. , Meistrell , M. , Zimmerman , G.A. , Schmidtmayerova , H. , Bukrinsky , M. , Donnelley , T. , Bucala , R. , Sherry , B. , Manogue , K.R. , Tortolani , A.J. , Cerami , A. & Tracey , K.J. ( 1995 ) Mol.Med.1 , 254-266 , and Bianchi , M. , Bloom , O. , Raabe , T. , Cohen , P. S. , Chesney , J. , Sherry , B. , Schmidtmayerova , H. , Zhang , X. , Bukrinsky , M. , Ulrich , P. , Cerami , A. & Tracey , J. ( 1996 ) J.Exp.Med. , in press ] . <S>",
+			"relation": "ADDITION",
+			"tag": "Background"
+		},
+		{
+			"id": 3,
+			"parent": 0,
+			"text": "We have now elucidated the mechanism by which CNI-1493 inhibits macrophage TNF synthesis",
+			"relation": "ROOT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 4,
+			"parent": 3,
+			"text": "and show here",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 5,
+			"parent": 4,
+			"text": "that it acts through suppression of TNF translation efficiency . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 6,
+			"parent": 3,
+			"text": "CNI-1493 blocked neither the lipopolysaccharide ( LPS ) -induced increases in the expression of TNF mRNA nor the translocation of nuclear factor NF-kappa B to the nucleus in macrophages activated by 15 min of LPS stimulation ,",
+			"relation": "ELABORATION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 7,
+			"parent": 6,
+			"text": "indicating",
+			"relation": "CAUSE-RESULT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 8,
+			"parent": 7,
+			"text": "that CNI-1493 does not interfere with early NF-kappa B-mediated transcriptional regulation of TNF . <S>",
+			"relation": "ATTRIBUTION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 9,
+			"parent": 6,
+			"text": "However , synthesis of the 26-kDa membrane form of TNF was effectively blocked by CNI-1493 . <S>",
+			"relation": "COMPARISON",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 10,
+			"parent": 6,
+			"text": "Further evidence for the translational suppression of TNF is given by experiments using chloram-phenicol acetyltransferase ( CAT ) constructs containing elements of the TNF gene that are involved in TNF translational regulation . <S>",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 11,
+			"parent": 6,
+			"text": "Both the 5' and 3' untranslated regions of the TNF gene were required",
+			"relation": "ADDITION",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 12,
+			"parent": 11,
+			"text": "to elicit maximal translational suppression by CNI-1493 . <S>",
+			"relation": "ENABLEMENT",
+			"tag": "Verification-Result"
+		},
+		{
+			"id": 13,
+			"parent": 3,
+			"text": "Identification of the molecular target through which CNI- 1493 inhibits TNF translation should provide insight into the regulation of macrophage activation and mechanisms of inflammation . <S>",
+			"relation": "CONCLUSION",
+			"tag": "Conclusion"
+		}
+	]
+}
