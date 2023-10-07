@@ -15,7 +15,7 @@ app.constant('CONSTANTS', {
         "ENABLEMENT", // 7
         "MANNER-MEANS", // 8
         "BACKGROUND", // 9
-        "VERIFICATION", // 10
+        // "VERIFICATION", // 10
         "CONCLUSION", // 11
         "ATTRIBUTION", // 12
         "TEXTUAL-ORGANIZATION", // 13
@@ -26,10 +26,14 @@ app.constant('CONSTANTS', {
     // EDUタグ
     tagVocab: [
         "Background",
-        "Hypothesis-Objective",
-        "Verification-Method",
-        "Verification-Result",
-        "Conclusion",
+        // "Hypothesis-Objective",
+        // "Verification-Method",
+        // "Verification-Result",
+        // "Conclusion",
+        "Objective",
+        "Method",
+        "Result",
+        "Discussion",
         "Title",
         "Misc.",
     ],
