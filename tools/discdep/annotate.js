@@ -32,10 +32,9 @@ app.constant('CONSTANTS', {
         // "Conclusion",
         "Objective",
         "Method",
-        "Result",
-        "Discussion",
+        "Result-Discussion",
         "Title",
-        "Misc.",
+        "Misc."
     ],
     // Colors are set according to the palette of The New England Journal of Medicine
     NORMAL_LINK_COLOR: '#0072B5', // NEJM Blue
