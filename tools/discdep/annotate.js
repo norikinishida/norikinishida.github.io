@@ -7,21 +7,23 @@ app.constant('CONSTANTS', {
     relationVocab: [
         // Special 0
         "Root",
-        // Base
+        // Base 1
         "Addition",
         "Elaboration",
         "Comparison",
         "Cause-Result",
         "Condition",
         "Spatio-Temporal",
+        // Base 2
+        "Background",
         "Enablement",
         "Manner-Means",
-        "Background",
+        "Evaluation",
         "Conclusion",
         // Special 1
         "Attribution",
         "Textual-Organization",
-        "Same-unit",
+        "Same-Unit",
         // Special 2
         "Segmentation-Error",
     ],
