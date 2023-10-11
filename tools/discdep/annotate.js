@@ -5,23 +5,25 @@ var app = angular.module('MyApp', ['ngFileUpload', 'ngToast']);
 app.constant('CONSTANTS', {
     // 談話関係
     relationVocab: [
-        "ROOT", // 0
-        "ADDITION", // 1
-        "ELABORATION", // 2
-        "COMPARISON", // 3
-        "CAUSE-RESULT", // 4
-        "CONDITION", // 5
-        "TEMPORAL", // 6
-        "ENABLEMENT", // 7
-        "MANNER-MEANS", // 8
-        "BACKGROUND", // 9
-        // "VERIFICATION", // 10
-        "CONCLUSION", // 11
-        "ATTRIBUTION", // 12
-        "TEXTUAL-ORGANIZATION", // 13
-        "SAME-UNIT", // 14
-        // Special
-        "SEGMENTATION-ERROR",
+        // Special 0
+        "Root",
+        // Base
+        "Addition",
+        "Elaboration",
+        "Comparison",
+        "Cause-Result",
+        "Condition",
+        "Spatio-Temporal",
+        "Enablement",
+        "Manner-Means",
+        "Background",
+        "Conclusion",
+        // Special 1
+        "Attribution",
+        "Textual-Organization",
+        "Same-unit",
+        // Special 2
+        "Segmentation-Error",
     ],
     // EDUタグ
     tagVocab: [
