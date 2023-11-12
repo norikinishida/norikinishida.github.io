@@ -20,11 +20,13 @@ app.constant('CONSTANTS', {
         "Manner-Means",
         "Evaluation",
         "Conclusion",
+        "Contributions",
         // Special 1
         "Attribution",
         "Textual-Organization",
         "Same-Unit",
         // Special 2
+        "Dependency",
         "Segmentation-Error",
     ],
     // EDUタグ
