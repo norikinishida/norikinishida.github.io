@@ -13,7 +13,7 @@ app.constant('CONSTANTS', {
         "Comparison",
         "Cause-Result",
         "Condition",
-        "Spatio-Temporal",
+        "Temporal",
         // Base 1
         "Enablement",
         "Manner-Means",
