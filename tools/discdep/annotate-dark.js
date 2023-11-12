@@ -15,12 +15,12 @@ app.constant('CONSTANTS', {
         "Condition",
         "Spatio-Temporal",
         // Base 1
-        "Background",
         "Enablement",
         "Manner-Means",
-        "Evaluation",
+        "Background",
         "Conclusion",
         "Contributions",
+        "Evaluation",
         // Special 1
         "Attribution",
         "Textual-Organization",
