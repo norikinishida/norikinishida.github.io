@@ -19,8 +19,10 @@ app.constant('CONSTANTS', {
         "Manner-Means",
         "Background",
         "Conclusion",
-        "Contributions",
-        "Evaluation",
+        // Scientific Paper
+        "MRAD",
+        "MRAD-R",
+        "MRAD-D",
         // Special 1
         "Attribution",
         "Textual-Organization",
