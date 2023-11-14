@@ -20,7 +20,7 @@ app.constant('CONSTANTS', {
         "Background",
         "Conclusion",
         // Scientific Paper
-        "I-MRAD",
+        "MRAD",
         "MRAD-R",
         "MRAD-D",
         // Special 1
