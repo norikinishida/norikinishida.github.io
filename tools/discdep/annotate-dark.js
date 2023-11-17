@@ -5,27 +5,38 @@ var app = angular.module('MyApp', ['ngFileUpload', 'ngToast']);
 app.constant('CONSTANTS', {
     // 談話関係
     relationVocab: [
-        // General
         "Root",
-        "Elaboration-S",
-        "Elaboration-C",
+        // 情報の単純な追加、詳細化、並列、言い換え
+        "Elaboration-Subord",
+        "Elaboration-Coord",
+        // 対比、譲歩、相違性・類似性の強調
         "Comparison",
-        "Cause-Result",
+        // 原因、理由、条件、仮定
+        "Cause",
         "Condition",
+        // 結果
+        "Result",
+        // 付帯状況、時間
         "Temporal",
+        // 背景
+        "Background",
+        // 目的と手段
         "Enablement",
         "Manner-Means",
-        "Background",
+        // 調査、検証
+        "Investigation",
+        "Investigation-Action",
+        "Investigation-Result",
+        "Investigation-Discussion",
+        // 結論、要約
         "Conclusion",
-        // 仮説検証
-        "Verification-Method",
-        "Verification-Result",
-        "Verification-Discussion",
-        // Special
-        "Attribution",
+        "Summary",
+        // 文書構造
         "Textual-Organization",
+        // 構文
+        "Attribution",
         "Same-Unit",
-        // Special
+        // 特殊
         "Dependency",
         "Segmentation-Error",
     ],
