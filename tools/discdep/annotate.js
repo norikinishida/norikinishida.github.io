@@ -6,16 +6,15 @@ app.constant('CONSTANTS', {
     // 談話関係
     relationVocab: [
         "Root",
-        // 情報の単純な追加、詳細化、並列、言い換え
-        "Elaboration-Subord",
-        "Elaboration-Coord",
+        // 情報の単純な追加 (掘り下げ subordination、拡げ coordination)
+        "Elaboration", // "Elaboration-Subord"
+        "Extension", // "Elaboration-Coord
         // 対比、譲歩、相違性・類似性の強調
         "Comparison",
-        // 原因、理由、条件、仮定
+        // 原因理由、結果、条件、仮定
         "Cause",
-        "Condition",
-        // 結果
         "Result",
+        "Condition",
         // 付帯状況、時間
         "Temporal",
         // 背景
@@ -23,15 +22,18 @@ app.constant('CONSTANTS', {
         // 目的と手段
         "Enablement",
         "Manner-Means",
+        // 評価、感想、考察
+        "Evaluation",
+        "Discussion",
+        // まとめ、結論
+        "Summary-Conclusion",
         // 調査、検証
         "Investigation",
-        "Investigation-Action",
-        "Investigation-Result",
-        "Investigation-Discussion",
-        // 結論、要約
-        "Conclusion",
-        "Summary",
+        // "Investigation-Action",
+        // "Investigation-Result",
+        // "Investigation-Discussion",
         // 文書構造
+        "Title",
         "Textual-Organization",
         // 構文
         "Attribution",
