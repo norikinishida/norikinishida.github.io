@@ -27,17 +27,12 @@ app.constant('CONSTANTS', {
         "Discussion",
         // まとめ、結論
         "Summary-Conclusion",
-        // 調査、検証
-        "Investigation",
-        // "Investigation-Action",
-        // "Investigation-Result",
-        // "Investigation-Discussion",
-        // 文書構造
-        "Title",
-        "Textual-Organization",
         // 構文
         "Attribution",
         "Same-Unit",
+        // 文書構造
+        "Title",
+        "Textual-Organization",
         // 特殊
         "Dependency",
         "Segmentation-Error",
