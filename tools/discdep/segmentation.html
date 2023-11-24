@@ -2,6 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Discourse Dependency Structure Annotation Tool</title>
+
         <script src="./bower_components/jquery/dist/jquery.min.js"></script>
         <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="./bower_components/jquery-ui/jquery-ui.min.js"></script>
@@ -18,11 +19,11 @@
         <link href="./bower_components/ngToast/dist/ngToast.min.css" rel="stylesheet">
         <link href="./bower_components/ngToast/dist/ngToast-animations.min.css" rel="stylesheet">
         <link href="./css/custom.css" rel="stylesheet">
+
         <script src="./annotate.js"></script>
     </head>
 
-    <body id="body" style="background-color: #F4F4F4; color: #000000"
-        ng-app="MyApp" ng-controller="EDUListController">
+    <body id="body" style="background-color: #F4F4F4; color: #000000" ng-app="MyApp" ng-controller="EDUListController">
         <!-- キャンバス要素 -->
         <canvas id="canvas" height="{{canvas_height}}" width="{{canvas_width}}">
             The current version does not support HTML5 canvas API, please use a new version of chrome or firefox.
@@ -61,10 +62,11 @@
                     value="ランダムサンプル"
                     ng-click="showRandomSampleForSeg()">
 
-                <! -- その他 -->
+                <!-- その他 -->
                 <div class="btn-group">
                     <button type="button" class="btn btn-info dropdown-toggle"
-                        data-toggle="dropdown" aria-expanded="false"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
                         style="background-color: #F4F4F4; border-color: #20854E; color: #20854E">
                         その他<span class="caret"></span>
                     </button>
@@ -78,9 +80,6 @@
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation-dark.html')">
                                 ダークモード</a></li>
-                        <li><a class="dropdown-item"
-                                onClick="window.open('https://norikinishida.github.io/tools/discdep/tagging.html')">
-                                EDUタグ付けツール</a></li>
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/index.html')">
                                 談話依存構造アノテーション</a></li>

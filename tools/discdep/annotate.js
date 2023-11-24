@@ -37,17 +37,34 @@ app.constant('CONSTANTS', {
         "Dependency",
         "Segmentation-Error",
     ],
+    priorityVocab: [
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+    ],
     // EDUタグ
     tagVocab: [
-        "Background",
-        // "Hypothesis-Objective",
-        // "Verification-Method",
-        // "Verification-Result",
-        // "Conclusion",
-        "Objective-Method",
-        "Result-Discussion",
-        "Title",
-        "Misc."
+        "B",
+        "A",
+        "R",
+        "D",
+        "C",
+        "Tag",
+    ],
+    // 構成素ラベル
+    constituentVocab: [
+        "Root",
+        "Inv",
+        // "R-Inv",
+        // "RD-R-Inv",
+        "RD",
+        "A",
+        // "Inv-A",
+        "R",
+        "D",
+        // "RD-R",
+        // "RD-D",
+        "B",
+        // "Inv-B",
+        "C",
     ],
     // Colors are set according to the palette of The New England Journal of Medicine
     NORMAL_LINK_COLOR: '#0072B5', // NEJM Blue
@@ -62,14 +79,14 @@ app.constant('CONSTANTS', {
     CANVAS_WIDTH: 1500, // canvas_height will be automatically set.
 });
 
-// 引数が0未満なら"null"を返す
+// フィルター関数の登録: 引数が0未満なら"null"を返す
 app.filter('TransformParent', function() {
    return function(p) {
         return (p < 0) ? 'null' : p;
    };
 });
 
-// 文字列を先頭からMAX_N文字目まで切り出す
+// フィルター関数の登録: 文字列を先頭からMAX_N文字目まで切り出す
 app.filter('TailorString', ['CONSTANTS', function(CONSTANTS) {
    return function(s) {
        // return s.substr(0, CONSTANTS.MAX_N);
@@ -108,34 +125,44 @@ app.config(['ngToastProvider', function(ngToastProvider) {
     });
 }]);
 
-app.controller('EDUListController',
-                    ['$scope', 'Upload', 'CONSTANTS', 'Utils', 'ngToast',
+app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', 'ngToast',
                     function($scope, Upload, CONSTANTS, Utils, ngToast) {
 
     /************************************************/
     // 変数など
     /************************************************/
 
-    $scope.taggingMode = false;
+    // 談話関係、構成素ラベル、タグの辞書
+    $scope.relationVocab = CONSTANTS.relationVocab;
+    $scope.priorityVocab = CONSTANTS.priorityVocab;
+    $scope.constituentVocab = CONSTANTS.constituentVocab;
+    $scope.tagVocab = CONSTANTS.tagVocab ;
 
-    $scope.relationVocab = CONSTANTS.relationVocab; // 定義された談話関係
-    $scope.tagVocab = CONSTANTS.tagVocab ; // 定義されたタグ
+    // 入力ファイル名
+    $scope.inputFile = '';
 
-    $scope.inputFile = ''; // 入力ファイル
+    // EDUs
+    $scope.edus = [];
 
-    $scope.first = -1; // 選択されたheadノード
-    var second = -1; // 選択されたmodifierノード
-    var rel = ''; // 選択された談話関係
-    var tg = ''; // 選択されたタグ
+    // 一時グローバル変数
+    $scope.first = -1; // 最初に選択されたノード
+    var second = -1; // 2回目に選択されたノード
+    var temp_relation = ''; // 選択された談話関係
+    var temp_priority = -1;
+    var temp_constituent = ''; // 選択された構成素ラベル
+    var temp_tag = ''; // 選択されたタグ
 
-    $scope.edus = []; // EDUのリスト
+    // 各EDUのhead ID、談話関係、構成素ラベル、タグ
     $scope.heads = []; // 各EDUのhead IDのリスト
     $scope.relations = []; // 各EDUとそのheadとの間の談話関係、のリスト
+    $scope.priorities = [];
+    $scope.constituents = []; // 各EDUとそのheadとの間の構成素ラベル、のリスト
     $scope.tags = []; // 各EDUのタグのリスト
-    $scope.sentence_ids = []; // 各EDUの文番号のリスト
 
-    // $scope.operations = []; // アクション履歴
+    // 各EDUの文番号
+    $scope.sentence_ids = [];
 
+    // 色、キャンバス
     $scope.blinkNodeColor1 = CONSTANTS.BLINK_NODE_COLOR1;
     $scope.blinkNodeColor2 = CONSTANTS.BLINK_NODE_COLOR2;
     $scope.canvas_height = 700; // キャンバス縦幅 (デフォルト値)
@@ -180,35 +207,23 @@ app.controller('EDUListController',
     xhr2.send();
     console.log(xhr2);
 
-    // EDU分割用
-    // $scope.eduBegins = [];
-
     /************************************************/
     // 談話依存構造アノテーション用
     // 1. ファイルアップロード
     /************************************************/
 
-    $scope.handleFileSelect = function ($files, taggingMode) {
+    $scope.handleFileSelect = function ($files) {
         // チェック
         if (!$files || !$files[0]) {
             return;
         }
-        if (taggingMode === 'tagging') {
-            $scope.taggingMode = true;
-        }
-        else {
-            $scope.taggingMode = false;
-        }
-        console.log("taggingMode:");
-        console.log($scope.taggingMode);
 
-        // クリア
+        // キャンバスのクリア
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
 
-        // 状態の初期化
-        // $scope.operations = [];
+        // 一時変数の初期化
         $scope.first = second = -1;
 
         // 入力ファイルの設定
@@ -234,16 +249,19 @@ app.controller('EDUListController',
     $scope.loadTextData = function(e) {
         // 改行区切り
         var contents = e.target.result.split('\n');
-        // edusのセット (空行はスキップ)
+
+        // EDUs (空行はスキップ)
         $scope.edus = _.filter(contents, function(s) { return s.length > 0} );
         $scope.edus.unshift('ROOT');
-        // headsの初期化
+
+        // 各EDUのhead, 談話関係、構成素ラベル、タグ
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
-        // relationsの初期化
         $scope.relations = _.range($scope.edus.length).map(function() { return 'null'; });
-        // tagsの初期化
+        $scope.priorities = _.range($scope.edus.length).map(function() { return -1; });
+        $scope.constituents = _.range($scope.edus.length).map(function() { return 'null'; });
         $scope.tags = _.range($scope.edus.length).map(function() { return 'null'; });
-        // sentence_idsのセット
+
+        // 各EDUの文番号
         $scope.sentence_ids = [];
         $scope.sentence_ids.push(0)
         var sentence_id = 1;
@@ -253,22 +271,26 @@ app.controller('EDUListController',
                 sentence_id += 1;
             }
         }
-        //
+
+        // 適応
         $scope.$apply();
+
         // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
-            if ($scope.taggingMode) {
-                if ($scope.tags[i] == "null") {
-                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LINK_COLOR);
-                }
-                else {
-                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
-                }
+            // タグの描画
+            if ($scope.tags[i] == "null") {
+                addTag('edu' + i.toString(), "x", CONSTANTS.NORMAL_LINK_COLOR);
             }
             else {
-                if ($scope.heads[i] >= 0) {
-                    connect($scope.heads[i].toString(), i.toString(), $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
-                }
+                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+            }
+            // 談話関係、構成素ラベルの描画
+            if ($scope.heads[i] >= 0) {
+                connect($scope.heads[i].toString(), i.toString(),
+                        $scope.relations[i],
+                        $scope.priorities[i],
+                        $scope.constituents[i],
+                        CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
             }
         }
     };
@@ -277,15 +299,18 @@ app.controller('EDUListController',
     $scope.loadJsonData = function(e) {
         // JSONオブジェクト
         var obj = JSON.parse(e.target.result).root;
-        // edusのセット
+
+        // EDUs
         $scope.edus = _.pluck(obj, 'text');
-        // headsのセット
+
+        // 各EDUのhead, 談話関係、構成素ラベル、タグ
         $scope.heads = _.pluck(obj, 'parent');
-        // relationsのセット
         $scope.relations = _.pluck(obj, 'relation');
-        // tagsのセット
+        $scope.priorities = _.pluck(obj, 'priority');
+        $scope.constituents = _.pluck(obj, 'constituent');
         $scope.tags = _.pluck(obj, 'tag');
-        // sentence_idsのセット
+
+        // 各EDUの文番号
         $scope.sentence_ids = [];
         $scope.sentence_ids.push(0)
         var sentence_id = 1;
@@ -295,22 +320,26 @@ app.controller('EDUListController',
                 sentence_id += 1;
             }
         }
-        //
+
+        // 適応
         $scope.$apply();
+
         // 描画
         for (var i = 0; i < $scope.heads.length; ++i) {
-            if ($scope.taggingMode) {
-                if ($scope.tags[i] == "null") {
-                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LINK_COLOR);
-                }
-                else {
-                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
-                }
+            // タグの描画
+            if ($scope.tags[i] == "null") {
+                addTag('edu' + i.toString(), "x", CONSTANTS.NORMAL_LINK_COLOR);
             }
             else {
-                if ($scope.heads[i] >= 0) {
-                    connect($scope.heads[i].toString(), i.toString(), $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
-                }
+                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+            }
+            // 談話関係と構成素ラベルの描画
+            if ($scope.heads[i] >= 0) {
+                connect($scope.heads[i].toString(), i.toString(),
+                        $scope.relations[i],
+                        $scope.priorities[i],
+                        $scope.constituents[i],
+                        CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
             }
         }
     };
@@ -323,10 +352,8 @@ app.controller('EDUListController',
     // ノード解除処理
     $scope.clearNode = function() {
         console.log("clearNode was called.");
+
         $scope.first = -1;
-        // 履歴
-        // $scope.operations.pop();
-        // console.log($scope.operations);
     };
 
     // 談話関係変更処理
@@ -348,22 +375,22 @@ app.controller('EDUListController',
             });
             return;
         }
-        // 関係の選択
-        var id1 = $scope.heads[$scope.first], id2 = $scope.first;
-        var op = {type: 'change', id1: id1, id2: id2, changed_relation: $scope.relations[id2]};
-        $scope.first = id1;
-        second = id2;
-        popRelation("change");
+
+        // 談話関係と構成素ラベルの選択
+        var temp_first = $scope.heads[$scope.first];
+        var temp_second = $scope.first;
+        $scope.first = temp_first;
+        second = temp_second;
+        popRelation();
+
         // 描画
         drawAll();
-        // 履歴
-        // $scope.operations.push(op);
-        // console.log($scope.operations);
     };
 
     // リンク削除処理
     $scope.deleteLink = function () {
         console.log("deleteLink was called.");
+
         // チェック
         if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
             ngToast.danger({
@@ -379,63 +406,27 @@ app.controller('EDUListController',
             });
             return;
         }
+
         // 削除処理
-        var id1 = $scope.heads[$scope.first], id2 = $scope.first;
-        var op = {type: 'delete', id1: id1, id2: id2, deleted_relation: $scope.relations[id2]};
-        $scope.heads[id2] = -1;
-        $scope.relations[id2] = 'null';
+        var temp_first = $scope.heads[$scope.first];
+        var temp_second = $scope.first;
+        $scope.heads[temp_second] = -1;
+        $scope.relations[temp_second] = 'null';
+        $scope.priorities[temp_second] = -1;
+        $scope.constituents[temp_second] = 'null';
+        $scope.tags[temp_second] = 'null';
+
         // 描画
         drawAll();
-        $scope.first = -1;
-        // 履歴
-        // $scope.operations.push(op);
-        // console.log($scope.operations);
-    };
 
-    // UNDO処理
-    // $scope.undo = function() {
-    //     // 最終アクション
-    //     var op = _.last($scope.operations);
-    //     console.log("undo top:");
-    //     console.log(op);
-    //     if (op.type === 'click') {
-    //         // もし最終アクションがhead選択なら、head解除
-    //         $scope.first = -1;
-    //     }
-    //     else if (op.type === 'connect') {
-    //         // もし最終アクションがmodifier選択なら、headとmodifierの結合をなくす
-    //         $scope.heads[op.id2] = -1;
-    //         $scope.relations[op.id2] = 'null';
-    //         // 描画
-    //         drawAll();
-    //     }
-    //     else if (op.type == "change") {
-    //         // もし最終アクションが談話関係の変更なら、談話関係を戻す
-    //         var id1 = op.id1;
-    //         var id2 = op.id2;
-    //         var rel = op.changed_relation;
-    //         $scope.heads[id2] = id1;
-    //         $scope.relations[id2] = rel;
-    //         // 描画
-    //         drawAll();
-    //     }
-    //     else if (op.type === 'delete') {
-    //         // もし最終アクションが結合の削除なら、結合を戻す
-    //         var id1 = op.id1;
-    //         var id2 = op.id2;
-    //         var rel = op.deleted_relation;
-    //         $scope.heads[id2] = id1;
-    //         $scope.relations[id2] = rel;
-    //         // 描画
-    //         drawAll();
-    //     }
-    //     $scope.operations.pop();
-    //     console.log($scope.operations);
-    // };
+        // リセット
+        $scope.first = -1;
+    };
 
     // クリップボードにコピー
     $scope.copyToClipboard = function() {
         console.log("copyToClipboard was called.")
+
         var text = "";
         for (var i = 1; i < $scope.edus.length; i++) {
             text = text + $scope.edus[i].replace("<S>", "").replace("<P>", "");
@@ -468,23 +459,27 @@ app.controller('EDUListController',
     // 保存
     $scope.saveToFile = function() {
         console.log("saveToFile was called.")
+
         if ($scope.progress !== 100) {
             ngToast.warning({
                 content: 'WARNING: 談話依存構造は完全ではありません！',
                 timeout: 5000
             });
         }
-        // 辞書データの初期化
-        var data = {root: []};
+
         // 辞書データ作成
+        var data = {root: []};
         for (var i = 0; i < $scope.heads.length; ++i) {
             var cur = {id: i,
                        parent: $scope.heads[i],
                        text: $scope.edus[i],
                        relation: $scope.relations[i],
+                       priority: $scope.priorities[i],
+                       constituent: $scope.constituents[i],
                        tag: $scope.tags[i]};
             data.root.push(cur);
         }
+
         // 出力ファイル名
         if ($scope.inputFile.endsWith(".dep")) {
             // Overwrite
@@ -498,31 +493,25 @@ app.controller('EDUListController',
             // xxxx.yyyy -> xxxx.yyyy.dep
             var outFileName = $scope.inputFile + ".dep";
         }
+
         // 出力ファイルオブジェクトの作成
-        var blob = new Blob([JSON.stringify(data, null, '\t')], {type: "text/plain;charset=utf-8"});
+        var blob = new Blob([JSON.stringify(data, null, '\t')],
+                            {type: "text/plain;charset=utf-8"});
+
         // 書き出し
         saveAs(blob, outFileName);
     };
 
     // 例示
-    $scope.showRandomSample = function (relation, taggingMode) {
+    $scope.showRandomSample = function (relation) {
         console.log("showRandomSample was called.")
-        if (taggingMode === 'tagging') {
-            $scope.taggingMode = true;
-        }
-        else {
-            $scope.taggingMode = false;
-        }
-        console.log("taggingMode:");
-        console.log($scope.taggingMode);
 
-        // クリア
+        // キャンバスのクリア
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
 
-        // 状態の初期化
-        // $scope.operations = [];
+        // 一時変数の初期化
         $scope.first = second = -1;
 
         // JSONファイルを読み込んで描画
@@ -532,15 +521,18 @@ app.controller('EDUListController',
                 if (xhr.status == 200) {
                     // JSONオブジェクト
                     var obj = JSON.parse(xhr.responseText).root;
-                    // edusのセット
+
+                    // EDUs
                     $scope.edus = _.pluck(obj, 'text');
-                    // headsのセット
+
+                    // 各EDUのhead、談話関係、構成素ラベル、タグ
                     $scope.heads = _.pluck(obj, 'parent');
-                    // relationsのセット
                     $scope.relations = _.pluck(obj, 'relation');
-                    // tagsのセット
+                    $scope.priorities = _.pluck(obj, 'priority');
+                    $scope.constituents = _.pluck(obj, 'constituent');
                     $scope.tags = _.pluck(obj, 'tag');
-                    // sentence_idsのセット
+
+                    // 各EDUの文番号
                     $scope.sentence_ids = [];
                     $scope.sentence_ids.push(0)
                     var sentence_id = 1;
@@ -550,27 +542,32 @@ app.controller('EDUListController',
                             sentence_id += 1;
                         }
                     }
-                    //
+
+                    // 適応
                     $scope.$apply();
+
                     // 描画
                     for (var i = 0; i < $scope.heads.length; ++i) {
-                        if ($scope.taggingMode) {
-                            if ($scope.tags[i] == "null") {
-                                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LINK_COLOR);
-                            }
-                            else {
-                                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
-                            }
+                        // タグの描画
+                        if ($scope.tags[i] == "null") {
+                            addTag('edu' + i.toString(), "x", CONSTANTS.NORMAL_LINK_COLOR);
                         }
                         else {
-                            if ($scope.heads[i] >= 0) {
-                                connect($scope.heads[i].toString(), i.toString(), $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
-                            }
+                            addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+                        }
+                        // 談話関係と構成素ラベルの描画
+                        if ($scope.heads[i] >= 0) {
+                            connect($scope.heads[i].toString(), i.toString(),
+                                    $scope.relations[i],
+                                    $scope.priorities[i],
+                                    $scope.constituents[i],
+                                    CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
                         }
                     }
                 }
             }
         }
+
         var arrayIndex = Math.floor(Math.random() * $scope.sampleFileDict[relation].length);
         var sampleFile = $scope.sampleFileDict[relation][arrayIndex];
         xhr.open("GET", "https://norikinishida.github.io/tools/discdep/data/examples/" + sampleFile);
@@ -599,35 +596,42 @@ app.controller('EDUListController',
     $scope.mouseOverIndex = -1;
     $scope.mouseOverHandler = function(pos) {
         // チェック
-        // if (pos < 0 || pos >= $scope.heads.length || $scope.heads[pos] < 0) {
         if (pos < 0 || pos >= $scope.heads.length) {
             return;
         }
 
         // マウスが乗っかったEDUのindex
         $scope.mouseOverIndex = pos;
-        // console.log($scope.mouseOverIndex);
 
         // 描画 (強調つき)
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
         for (var i = 0; i < $scope.heads.length; ++i) {
-            if ($scope.taggingMode) {
-                if ($scope.tags[i] == "null") {
-                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LINK_COLOR);
-                }
-                else {
-                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
-                }
+            // タグの描画
+            if ($scope.tags[i] == "null") {
+                addTag('edu' + i.toString(), "x", CONSTANTS.NORMAL_LINK_COLOR);
+            }
+            else if (i === pos) {
+                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.BLINK_LABEL_COLOR);
             }
             else {
-                if (i === pos && $scope.heads[i] >= 0) {
-                    connect($scope.heads[i], i, $scope.relations[i], CONSTANTS.BLINK_LINK_COLOR, CONSTANTS.BLINK_LABEL_COLOR);
-                }
-                else if ($scope.heads[i] >= 0) {
-                    connect($scope.heads[i], i, $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
-                }
+                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+            }
+            // 談話関係と構成素ラベルの描画
+            if (i === pos && $scope.heads[i] >= 0) {
+                connect($scope.heads[i], i,
+                        $scope.relations[i],
+                        $scope.priorities[i],
+                        $scope.constituents[i],
+                        CONSTANTS.BLINK_LINK_COLOR, CONSTANTS.BLINK_LABEL_COLOR);
+            }
+            else if ($scope.heads[i] >= 0) {
+                connect($scope.heads[i], i,
+                        $scope.relations[i],
+                        $scope.priorities[i],
+                        $scope.constituents[i],
+                        CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
             }
         }
     };
@@ -635,7 +639,6 @@ app.controller('EDUListController',
     // マウスカーソルが外れたときの処理
     $scope.mouseOutHandler = function(pos) {
         // チェック
-        // if (pos < 0 || pos >= $scope.heads.length || $scope.heads[pos] < 0) {
         if (pos < 0 || pos >= $scope.heads.length) {
             return;
         }
@@ -655,290 +658,59 @@ app.controller('EDUListController',
     // リンク追加処理 (EDUのクリック)
     $scope.highLight = function(id) {
         console.log("highLight was called.");
+
         // 選択されたEDUのindex
         var index = parseInt(id.toString().substr(3));
 
-        // headかmodifierか
+        // headかdependentか
         if ($scope.first === -1) {
-            // headセット
             $scope.first = index;
             // 描画
             $scope.mouseOutHandler(id);
-            // 履歴追加
-            // var op = {type: 'click', index: index};
-            // $scope.operations.push(op);
-            // console.log($scope.operations);
         }
         else {
-            // modifierセット
             second = index;
-            // 談話関係の選択画面へ
-            popRelation();
-        }
-    };
-
-    // 談話関係の選択
-    $scope.showAddDialogForRel = false;
-    var popRelation = function(mode) {
-        console.log("popRelation was called.");
-        var dialog;
-
-        function relationCallback() {
-            // 談話依存関係のセット
-            rel = angular.element('#selectForRel')[0].options[selectForRel.selectedIndex].text;
-            $scope.heads[second] = $scope.first;
-            $scope.relations[second] = rel;
-
-            // 描画
-            drawAll();
-
-            // 履歴追加
-            // if (mode !== "change") {
-            //     var op = {type: 'connect', id1: $scope.first.toString(), id2: second.toString()};
-            //     $scope.operations.push(op);
-            //     console.log($scope.operations);
-            // }
-
-            // 状態の初期化
-            $scope.first = -1; second = -1;
-
-            // ダイアログのクローズ
-            $scope.showAddDialogForRel = false;
-            dialog.dialog('close');
-
-            //
-            $scope.$apply();
-        }
-
-        dialog = $("#dialog-form-for-rel").dialog({
-            autoOpen: false,
-            height: 200,
-            width: 450,
-            modal: true,
-            buttons: {
-                OK: relationCallback
-            },
-            position: {
-                my: 'left top',
-                at: 'left+10% top+10%',
-                of: window
-            }
-        });
-
-        // 談話関係の初期化
-        rel = '';
-
-        // ダイアログのポップアップ
-        $scope.showAddDialogForRel = true;
-        dialog.dialog("open");
-    };
-
-    // head EDUのindexを返す
-    $scope.getHead = function(idx) {
-        if ($scope.heads[idx] === -1) {
-            return idx;
-        }
-        return $scope.getHead($scope.heads[idx]);
-    };
-
-    /************************************************/
-    // 談話依存構造アノテーション用
-    // 5. 描画処理
-    /************************************************/
-
-    // クリアして描画
-    var drawAll = function() {
-        var canvas = angular.element('#canvas')[0];
-        var ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
-        for (var i = 0; i < $scope.heads.length; ++i) {
-            if ($scope.taggingMode) {
-                if ($scope.tags[i] == "null") {
-                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LINK_COLOR);
-                }
-                else {
-                    addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
-                }
+            // 同じEDUが選択されたらタグ付け、異なるEDUなら談話関係と構成素ラベルの付与
+            if ($scope.first == second) {
+                popTag();
             }
             else {
-                if ($scope.heads[i] >= 0) {
-                    connect($scope.heads[i], i, $scope.relations[i], CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
-                }
+                popRelation();
             }
         }
     };
 
-    var connect = function(id1, id2, rel, link_color, label_color, fontSize) {
-        drawCurve('edu' + id1, 'edu' + id2, link_color);
-        addRelation('edu' + id2, rel, label_color, fontSize);
-    };
-
-    // リンクの描画
-    var drawCurve = function(id1, id2, color) {
-        // while ($scope.operations.length > 0 && _.last($scope.operations).type === 'click') {
-        //     $scope.operations.splice($scope.operations.length - 1, 1);
-        // }
-
-        // source coordinate
-        var centerS = Utils.findPos(angular.element('#' + id1)[0]);
-        centerS.x += angular.element('#' + id1)[0].style.width;
-        centerS.y += angular.element('#' + id1)[0].style.height;
-
-        // target coordinate
-        var centerT = Utils.findPos(angular.element('#' + id2)[0]);
-        centerT.x += angular.element('#' + id2)[0].style.width;
-        centerT.y += angular.element('#' + id2)[0].style.height;
-
-        // 調整
-        var canvasPos = Utils.findPos(angular.element('canvas')[0]);
-        centerS.x -= canvasPos.x;
-        centerS.y -= canvasPos.y;
-        centerT.x -= canvasPos.x;
-        centerT.y -= canvasPos.y;
-        if (centerT.y > centerS.y) {
-            // targetがsourceより下に位置するなら、下側からリンクが出る
-            centerS.y += 40;
-        }
-        else {
-            // targetがsourceより上に位置するなら、上側からリンクが出る
-            centerS.y += 10;
-        }
-        centerT.y += 25;
-        // X方向の微修正
-        centerS.x -= 3;
-        centerT.x -= 3;
-
-        // ベジェ曲線用の座標計算
-        var width = Utils.findPos(angular.element('#' + id1)[0]).x;
-        var depLength = Math.abs(Utils.getTrimNumber(id1) - Utils.getTrimNumber(id2));
-        var depLengthRatio = depLength / ($scope.heads.length - 1);
-        // depLengthRatio = 1 - depLengthRatio;
-        // if ($scope.edus.length > 30 && depLengthRatio > 0.5) {
-        //     depLengthRatio = depLengthRatio - 0.5;
-        // }
-        // depLengthRatio = Math.min(depLengthRatio, 0.85);
-        // var offX = width * depLengthRatio;
-        var offX = Math.max(width * (1 - depLengthRatio) - 20, 0);
-
-        // 描画
-        var ctx = angular.element('#canvas')[0].getContext('2d');
-        ctx.strokeStyle = color;
-        ctx.lineWidth = 2;
-        ctx.beginPath(); // 開始
-        ctx.moveTo(centerS.x, centerS.y); // 始点
-        ctx.bezierCurveTo(offX, centerS.y, // 始点に対するベジェ曲線用座標
-                          offX, centerT.y, // 終点に対するベジェ曲線用座標
-                          centerT.x, centerT.y // 終点
-                          );
-        ctx.stroke(); // レンダリング
-
-        // 矢印の先部分
-        var radius = 6;
-        ctx.fillStyle = color;
-        ctx.beginPath(); // 開始
-        ctx.moveTo(centerT.x - radius, centerT.y - radius);
-        ctx.lineTo(centerT.x - radius, centerT.y + radius);
-        ctx.lineTo(centerT.x, centerT.y);
-        ctx.stroke(); // レンダリング
-
-        ctx.closePath();
-        ctx.fill();
-    };
-
-    // 談話関係の描画
-    var addRelation = function(id2, relation, color, fontSize) {
-        if (!relation) {
-            console.log("addRelation:")
-            console.log(relation);
-            ngToast.danger({
-                content: 'Invalid relation',
-                timeout: 2000
-            });
-            return;
-        }
-        fontSize = fontSize || 15;
-
-        // 位置
-        var centerZ = Utils.findPos(angular.element('#' + id2)[0]);
-        centerZ.x += angular.element('#' + id2)[0].style.width;
-        centerZ.y += angular.element('#' + id2)[0].style.height;
-
-        // 調整
-        var canvasPos = Utils.findPos(angular.element('#canvas')[0]);
-        centerZ.x -= canvasPos.x;
-        centerZ.x += 90;
-        centerZ.y -= canvasPos.y;
-        centerZ.y += 30;
-
-        // 描画
-        var ctx = angular.element('#canvas')[0].getContext('2d');
-        ctx.font = fontSize.toString() + "px Arial";
-        // ctx.fillStyle = '#005AB5';
-        // ctx.fillStyle = CONSTANTS.NORMAL_LABEL_COLOR;
-        ctx.fillStyle = color;
-        ctx.textAlign = "right";
-        // while (relation.length < 12) relation = ' ' + relation;
-        ctx.fillText(relation, centerZ.x - fontSize * 7, centerZ.y);
-    };
-
-    /************************************************/
-    // タグ付け用
-    // 4. EDUをクリックしたときの処理
-    /************************************************/
-
-    // タグ付け処理 (EDUのクリック)
-    $scope.highLightForTag = function(id) {
-        console.log("highLightForTag was called.");
-        // 選択されたEDUのindex
-        var index = parseInt(id.toString().substr(3));
-
-        // headかmodifierか
-        if ($scope.first === -1) {
-            // headセット
-            $scope.first = index;
-            // 描画
-            $scope.mouseOutHandler(id);
-            // 履歴追加
-        }
-        else {
-            // modifierセット
-            second = index;
-            // 談話関係の選択画面へ
-            popTag();
-        }
-    };
-
-    // タグ選択
+    // タグの付与
     $scope.showAddDialogForTag = false;
     var popTag = function() {
+        console.log("popTag was called.");
         var dialog;
 
+        // コールバック関数
         function tagCallback() {
-            // 依存関係のセット
-            tg = angular.element('#selectForTag')[0].options[selectForTag.selectedIndex].text;
+            // 依存関係の設定
+            temp_tag = angular.element('#selectForTag')[0].options[selectForTag.selectedIndex].text;
             console.log(selectForTag.selectedIndex);
             console.log($scope.first);
             console.log(second);
-            console.log(tg);
-            // $scope.tags[$scope.first] = tg;
-            for (var i = $scope.first; i <= second; i++) {
-                $scope.tags[i] = tg;
-            }
+            console.log(temp_tag);
+            $scope.tags[$scope.first] = temp_tag; // NOTE: $scope.first == second
 
             // 描画
             drawAll();
 
-            // 状態の初期化
+            // 初期化
             $scope.first = -1; second = -1;
 
-            // ダイアログのクローズ
+            // クローズ
             $scope.showAddDialogForTag = false;
             dialog.dialog('close');
 
-            //
+            // 適応
             $scope.$apply();
         }
 
+        // ダイアログオブジェクト
         dialog = $("#dialog-form-for-tag").dialog({
             autoOpen: false,
             height: 200,
@@ -954,18 +726,111 @@ app.controller('EDUListController',
             }
         });
 
-        // EDUラベルの初期化
-        tg = '';
-
-        // ダイアログのポップアップ
+        // オープン
+        temp_tag = '';
         $scope.showAddDialogForTag = true;
         dialog.dialog("open");
     };
 
+    // 談話関係、構成素ラベルの付与
+    $scope.showAddDialogForRel = false;
+    var popRelation = function() {
+        console.log("popRelation was called.");
+
+        var dialog;
+
+        // コールバック関数
+        function relationCallback() {
+            // 談話依存関係の設定
+            temp_relation = angular.element('#selectForRel')[0].options[selectForRel.selectedIndex].text;
+            temp_priority = parseInt(angular.element('#selectForPri')[0].options[selectForPri.selectedIndex].text);
+            temp_constituent = angular.element('#selectForCon')[0].options[selectForCon.selectedIndex].text;
+            console.log(selectForRel.selectedIndex);
+            console.log($scope.first);
+            console.log(second);
+            console.log(temp_relation);
+            console.log(temp_priority);
+            console.log(temp_constituent);
+            $scope.heads[second] = $scope.first;
+            $scope.relations[second] = temp_relation;
+            $scope.priorities[second] = temp_priority;
+            $scope.constituents[second] = temp_constituent;
+
+            // 描画
+            drawAll();
+
+            // 初期化
+            $scope.first = -1; second = -1;
+
+            // クローズ
+            $scope.showAddDialogForRel = false;
+            dialog.dialog('close');
+
+            // 適応
+            $scope.$apply();
+        }
+
+        // ダイアログオブジェクト
+        dialog = $("#dialog-form-for-rel").dialog({
+            autoOpen: false,
+            height: 350,
+            width: 450,
+            modal: true,
+            buttons: {
+                OK: relationCallback
+            },
+            position: {
+                my: 'left top',
+                at: 'left+10% top+10%',
+                of: window
+            }
+        });
+
+        // オープン
+        temp_relation = '';
+        temp_priority = -1;
+        temp_constituent = '';
+        $scope.showAddDialogForRel = true;
+        dialog.dialog("open");
+    };
+
+    // head EDUのindexを返す
+    $scope.getHead = function(idx) {
+        if ($scope.heads[idx] === -1) {
+            return idx;
+        }
+        // recursive
+        return $scope.getHead($scope.heads[idx]);
+    };
+
     /************************************************/
-    // タグ付け用
+    // 談話依存構造アノテーション用
     // 5. 描画処理
     /************************************************/
+
+    // クリアして描画
+    var drawAll = function() {
+        var canvas = angular.element('#canvas')[0];
+        var ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
+        for (var i = 0; i < $scope.heads.length; ++i) {
+            // タグの描画
+            if ($scope.tags[i] == "null") {
+                addTag('edu' + i.toString(), "x", CONSTANTS.NORMAL_LINK_COLOR);
+            }
+            else {
+                addTag('edu' + i.toString(), $scope.tags[i], CONSTANTS.NORMAL_LABEL_COLOR);
+            }
+            // 談話関係と構成素ラベルの描画
+            if ($scope.heads[i] >= 0) {
+                connect($scope.heads[i], i,
+                        $scope.relations[i],
+                        $scope.priorities[i],
+                        $scope.constituents[i],
+                        CONSTANTS.NORMAL_LINK_COLOR, CONSTANTS.NORMAL_LABEL_COLOR);
+            }
+        }
+    };
 
     // タグの描画
     var addTag = function(id, tag, color, fontSize) {
@@ -1003,6 +868,129 @@ app.controller('EDUListController',
         ctx.fillText(tag, centerZ.x - fontSize * 7, centerZ.y);
     };
 
+    // 談話関係と構成素ラベルの描画
+    var connect = function(head_id, dep_id, relation, priority, constituent, link_color, label_color, fontSize) {
+        drawCurve('edu' + head_id, 'edu' + dep_id, link_color);
+        addRelation('edu' + dep_id, relation, priority, constituent, label_color, fontSize);
+    };
+
+    // リンクの描画
+    var drawCurve = function(head_id, dep_id, color) {
+        // while ($scope.operations.length > 0 && _.last($scope.operations).type === 'click') {
+        //     $scope.operations.splice($scope.operations.length - 1, 1);
+        // }
+
+        // source coordinate
+        var centerS = Utils.findPos(angular.element('#' + head_id)[0]);
+        centerS.x += angular.element('#' + head_id)[0].style.width;
+        centerS.y += angular.element('#' + head_id)[0].style.height;
+
+        // target coordinate
+        var centerT = Utils.findPos(angular.element('#' + dep_id)[0]);
+        centerT.x += angular.element('#' + dep_id)[0].style.width;
+        centerT.y += angular.element('#' + dep_id)[0].style.height;
+
+        // 調整
+        var canvasPos = Utils.findPos(angular.element('canvas')[0]);
+        centerS.x -= canvasPos.x;
+        centerS.y -= canvasPos.y;
+        centerT.x -= canvasPos.x;
+        centerT.y -= canvasPos.y;
+        if (centerT.y > centerS.y) {
+            // targetがsourceより下に位置するなら、下側からリンクが出る
+            centerS.y += 40;
+        }
+        else {
+            // targetがsourceより上に位置するなら、上側からリンクが出る
+            centerS.y += 10;
+        }
+        centerT.y += 25;
+        // X方向の微修正
+        centerS.x -= 3;
+        centerT.x -= 3;
+
+        // ベジェ曲線用の座標計算
+        var width = Utils.findPos(angular.element('#' + head_id)[0]).x;
+        var depLength = Math.abs(Utils.getTrimNumber(head_id) - Utils.getTrimNumber(dep_id));
+        var depLengthRatio = depLength / ($scope.heads.length - 1);
+        // depLengthRatio = 1 - depLengthRatio;
+        // if ($scope.edus.length > 30 && depLengthRatio > 0.5) {
+        //     depLengthRatio = depLengthRatio - 0.5;
+        // }
+        // depLengthRatio = Math.min(depLengthRatio, 0.85);
+        // var offX = width * depLengthRatio;
+        var offX = Math.max(width * (1 - depLengthRatio) - 20, 0);
+
+        // タグ追加による調整オフセット
+        var offset_for_tag = 40;
+
+        // 描画
+        var ctx = angular.element('#canvas')[0].getContext('2d');
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.beginPath(); // 開始
+        ctx.moveTo(centerS.x - offset_for_tag, centerS.y); // 始点
+        ctx.bezierCurveTo(offX - offset_for_tag, centerS.y, // 始点に対するベジェ曲線用座標
+                          offX - offset_for_tag, centerT.y, // 終点に対するベジェ曲線用座標
+                          centerT.x - offset_for_tag, centerT.y // 終点
+                          );
+        ctx.stroke(); // レンダリング
+
+        // 矢印の先部分
+        var radius = 6;
+        ctx.fillStyle = color;
+        ctx.beginPath(); // 開始
+        ctx.moveTo(centerT.x - radius - offset_for_tag, centerT.y - radius);
+        ctx.lineTo(centerT.x - radius - offset_for_tag, centerT.y + radius);
+        ctx.lineTo(centerT.x - offset_for_tag, centerT.y);
+        ctx.stroke(); // レンダリング
+
+        ctx.closePath();
+        ctx.fill();
+    };
+
+    // 談話関係の描画
+    var addRelation = function(dep_id, relation, priority, constituent, color, fontSize) {
+        if (!relation) {
+            console.log("addRelation:")
+            console.log(relation);
+            console.log(priority);
+            console.log(constituent);
+            ngToast.danger({
+                content: 'Invalid relation',
+                timeout: 2000
+            });
+            return;
+        }
+        fontSize = fontSize || 15;
+
+        // 位置
+        var centerZ = Utils.findPos(angular.element('#' + dep_id)[0]);
+        centerZ.x += angular.element('#' + dep_id)[0].style.width;
+        centerZ.y += angular.element('#' + dep_id)[0].style.height;
+
+        // 調整
+        var canvasPos = Utils.findPos(angular.element('#canvas')[0]);
+        centerZ.x -= canvasPos.x;
+        centerZ.x += 90;
+        centerZ.y -= canvasPos.y;
+        centerZ.y += 30;
+
+        // タグを追加したことによる調整
+        var offset_for_tag = 40;
+        centerZ.x -= offset_for_tag;
+
+        // 描画
+        var ctx = angular.element('#canvas')[0].getContext('2d');
+        ctx.font = fontSize.toString() + "px Arial";
+        // ctx.fillStyle = '#005AB5';
+        // ctx.fillStyle = CONSTANTS.NORMAL_LABEL_COLOR;
+        ctx.fillStyle = color;
+        ctx.textAlign = "right";
+        // while (relation.length < 12) relation = ' ' + relation;
+        ctx.fillText(relation + '#' + priority + ' [' + constituent + ']', centerZ.x - fontSize * 7, centerZ.y);
+    };
+
     /************************************************/
     // EDU分割用
     // 1. ファイルアップロード
@@ -1020,7 +1008,6 @@ app.controller('EDUListController',
         ctx.clearRect(0, 0, $scope.canvas_width, $scope.canvas_height);
 
         // 状態の初期化
-        // $scope.operations = [];
         $scope.first = second = -1;
 
         // 入力ファイルの設定
@@ -1046,22 +1033,23 @@ app.controller('EDUListController',
     $scope.loadTextDataForSeg = function(e) {
         // 改行区切り
         var contents = e.target.result.split('\n');
-        // edusのセット (空行はスキップ)
+
+        // EDUs (空行はスキップ)
         $scope.edus = _.filter(contents, function(s) { return s.length > 0} );
+
         // 各EDUを単語分割
-        // var accum = 0;
         for (var i = 0; i < $scope.edus.length; i++) {
             $scope.edus[i] = $scope.edus[i].split(" ");
-            // $scope.eduBegins[i] = accum;
-            // accum = accum + $scope.edus[i].length;
         }
-        // headsの初期化
+
+        // 各EDUのhead、談話関係、構成素ラベル、タグ
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
-        // relationsの初期化
         $scope.relations = _.range($scope.edus.length).map(function() { return 'null'; });
-        // tagsの初期化
+        $scope.priorities = _.range($scope.edus.length).map(function() { return -1; });
+        $scope.constituents= _.range($scope.edus.length).map(function() { return 'null'; });
         $scope.tags = _.range($scope.edus.length).map(function() { return 'null'; });
-        // sentence_idsのセット
+
+        // 各EDUの文番号
         $scope.sentence_ids = [];
         var sentence_id = 0;
         for (var i = 0; i < $scope.heads.length; ++i) {
@@ -1070,7 +1058,8 @@ app.controller('EDUListController',
                 sentence_id += 1;
             }
         }
-        //
+
+        // 適応
         $scope.$apply();
     };
 
@@ -1078,24 +1067,26 @@ app.controller('EDUListController',
     $scope.loadJsonDataForSeg = function(e) {
         // JSONオブジェクト
         var obj = JSON.parse(e.target.result).root;
-        // EDUテキストの抽出
+
+        // EDUs
         $scope.edus = _.pluck(obj, 'text');
+
         // ROOTの除去
         $scope.edus = $scope.edus.slice(1, $scope.edus.length);
+
         // 各EDUの単語分割
-        // var accum = 0;
         for (var i = 0; i < $scope.edus.length; i++) {
             $scope.edus[i] = $scope.edus[i].split(" ");
-            // $scope.eduBegins[i] = accum;
-            // accum = accum + $scope.edus[i].length;
         }
-        // headsのセット
+
+        // 各EDUのhead, 談話関係、構成素ラベル、タグ
         $scope.heads = _.pluck(obj, 'parent');
-        // relationsのセット
         $scope.relations = _.pluck(obj, 'relation');
-        // tagのセット
+        $scope.priorities = _.pluck(obj, 'priority');
+        $scope.constituents = _.pluck(obj, 'constituent');
         $scope.tags = _.pluck(obj, 'tag');
-        // sentence_idsのセット
+
+        // 各EDUの文番号
         $scope.sentence_ids = [];
         var sentence_id = 0;
         for (var i = 0; i < $scope.heads.length; ++i) {
@@ -1104,7 +1095,8 @@ app.controller('EDUListController',
                 sentence_id += 1;
             }
         }
-        //
+
+        // 適応
         $scope.$apply();
     };
 
@@ -1115,6 +1107,8 @@ app.controller('EDUListController',
 
     // クリップボードにコピー
     $scope.copyToClipboardForSeg = function() {
+        console.log("copyToClipboardForSeg was called.")
+
         var text = "";
         for (var i = 0; i < $scope.edus.length; i++) {
             for (var j = 0; j < $scope.edus[i].length; j++) {
@@ -1145,11 +1139,14 @@ app.controller('EDUListController',
 
     // 保存
     $scope.saveToFileForSeg = function() {
+        console.log("saveToFileForSeg was called.")
+
         let lines = [];
         for (var i = 0; i < $scope.edus.length; ++i) {
             const line = $scope.edus[i].join(" ") + "\n"
             lines.push(line);
         }
+
         // 出力ファイル名
         if ($scope.inputFile.endsWith(".edu.txt")) {
             // Overwrite
@@ -1163,14 +1160,18 @@ app.controller('EDUListController',
             // xxxx.yyyy -> xxxx.yyyy.edu.txt
             var outFileName = $scope.inputFile + ".edu.txt";
         }
+
         // 出力ファイルオブジェクトの作成
         var blob = new Blob(lines, {type: "text/plain;charset=utf-8"});
+
         // 書き出し
         saveAs(blob, outFileName);
     };
 
     // 例示
     $scope.showRandomSampleForSeg = function () {
+        console.log("showRandomSample was called.")
+
         // JSONファイルを読み込んで描画
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -1178,24 +1179,26 @@ app.controller('EDUListController',
                 if (xhr.status == 200) {
                     // JSONオブジェクト
                     var obj = JSON.parse(xhr.responseText).root;
-                    // edusのセット
+
+                    // EDUs
                     $scope.edus = _.pluck(obj, 'text');
+
                     // ROOTの除去
                     $scope.edus = $scope.edus.slice(1, $scope.edus.length);
+
                     // 各EDUの単語分割
-                    // var accum = 0;
                     for (var i = 0; i < $scope.edus.length; i++) {
                         $scope.edus[i] = $scope.edus[i].split(" ");
-                        // $scope.eduBegins[i] = accum;
-                        // accum = accum + $scope.edus[i].length;
                     }
-                    // headsのセット
+
+                    // 各EDUのhead, 談話関係、構成素ラベル、タグ
                     $scope.heads = _.pluck(obj, 'parent');
-                    // relationsのセット
                     $scope.relations = _.pluck(obj, 'relation');
-                    // tagsのセット
+                    $scope.priorities = _.pluck(obj, 'priority');
+                    $scope.constituents = _.pluck(obj, 'constituent');
                     $scope.tags = _.pluck(obj, 'tag');
-                    // sentence_idsのセット
+
+                    // 各EDUの文番号
                     $scope.sentence_ids = [];
                     var sentence_id = 0;
                     for (var i = 0; i < $scope.heads.length; ++i) {
@@ -1204,7 +1207,8 @@ app.controller('EDUListController',
                             sentence_id += 1;
                         }
                     }
-                    //
+
+                    // 適応
                     $scope.$apply();
                 }
             }
@@ -1227,7 +1231,6 @@ app.controller('EDUListController',
     $scope.mouseOverindexForSegT = -1;
     $scope.mouseOverHandlerForSeg = function(eduIndex, tokenIndex) {
         // チェック
-        // if (pos < 0 || pos >= $scope.heads.length || $scope.heads[pos] < 0) {
         if (eduIndex < 0 || eduIndex >= $scope.edus.length) {
             return;
         }
@@ -1235,14 +1238,11 @@ app.controller('EDUListController',
         // マウスが乗っかったEDUのindex
         $scope.mouseOverIndexForSegE = eduIndex;
         $scope.mouseOverIndexForSegT = tokenIndex;
-        // console.log($scope.mouseOverIndexForSegE);
-        // console.log($scope.mouseOverIndexForSegT);
     };
 
     // マウスカーソルが外れたときの処理
     $scope.mouseOutHandlerForSeg = function(eduIndex, tokenIndex) {
         // チェック
-        // if (pos < 0 || pos >= $scope.heads.length || $scope.heads[pos] < 0) {
         if (eduIndex < 0 || eduIndex >= $scope.edus.length) {
             return;
         }
@@ -1287,20 +1287,22 @@ app.controller('EDUListController',
         for (var i = eduIndex + 1; i < $scope.edus.length; i++) {
             newEdus.push($scope.edus[i]);
         }
+
         // 再設定
         $scope.edus = newEdus;
-        // $scope.eduBegins = [];
+
         $scope.heads = [];
         $scope.relations = [];
+        $scope.priorities = [];
+        $scope.constituents = [];
         $scope.tags = [];
-        // var accum = 0;
-        // for (var i = 0; i < $scope.edus.length; i++) {
-        //     $scope.eduBegins[i] = accum;
-        //     accum = accum + $scope.edus[i].length;
-        // }
+
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
         $scope.relations = _.range($scope.edus.length).map(function() { return 'null'; });
+        $scope.priorities = _.range($scope.edus.length).map(function() { return -1; });
+        $scope.constituents= _.range($scope.edus.length).map(function() { return 'null'; });
         $scope.tags = _.range($scope.edus.length).map(function() { return 'null'; });
+
         $scope.sentence_ids = [];
         var sentence_id = 0;
         for (var i = 0; i < $scope.heads.length; ++i) {
@@ -1326,20 +1328,22 @@ app.controller('EDUListController',
         for (var i = eduIndex + 1; i < $scope.edus.length; i++) {
             newEdus.push($scope.edus[i]);
         }
+
         // 再設定
         $scope.edus = newEdus;
-        // $scope.eduBegins = [];
+
         $scope.heads = [];
         $scope.relations = [];
+        $scope.priorities = [];
+        $scope.constituents = [];
         $scope.tags = [];
-        // var accum = 0;
-        // for (var i = 0; i < $scope.edus.length; i++) {
-        //     $scope.eduBegins[i] = accum;
-        //     accum = accum + $scope.edus[i].length;
-        // }
+
         $scope.heads = _.range($scope.edus.length).map(function() { return -1; });
         $scope.relations = _.range($scope.edus.length).map(function() { return 'null'; });
+        $scope.priorities = _.range($scope.edus.length).map(function() { return -1; });
+        $scope.constituents = _.range($scope.edus.length).map(function() { return 'null'; });
         $scope.tags = _.range($scope.edus.length).map(function() { return 'null'; });
+
         $scope.sentence_ids = [];
         var sentence_id = 0;
         for (var i = 0; i < $scope.heads.length; ++i) {
@@ -1349,6 +1353,5 @@ app.controller('EDUListController',
             }
         }
     };
-
 
 }]); // /EDUListController

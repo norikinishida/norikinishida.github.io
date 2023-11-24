@@ -2,6 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Discourse Dependency Structure Annotation Tool</title>
+
         <script src="./bower_components/jquery/dist/jquery.min.js"></script>
         <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="./bower_components/jquery-ui/jquery-ui.min.js"></script>
@@ -18,11 +19,11 @@
         <link href="./bower_components/ngToast/dist/ngToast.min.css" rel="stylesheet">
         <link href="./bower_components/ngToast/dist/ngToast-animations.min.css" rel="stylesheet">
         <link href="./css/custom.css" rel="stylesheet">
+
         <script src="./annotate.js"></script>
     </head>
 
-    <body id="body" style="background-color: #F4F4F4; color: #000000"
-        ng-app="MyApp" ng-controller="EDUListController">
+    <body id="body" style="background-color: #F4F4F4; color: #000000" ng-app="MyApp" ng-controller="EDUListController">
         <!-- キャンバス要素 -->
         <canvas id="canvas" height="{{canvas_height}}" width="{{canvas_width}}">
             The current version does not support HTML5 canvas API, please use a new version of chrome or firefox.
@@ -62,15 +63,6 @@
                     ng-click="deleteLink()"
                     ng-show="!!inputFile" ng-disabled="first === -1">
 
-                <!-- undo -->
-                <!--
-                <input type="button" class="btn btn-info"
-                    style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
-                    value="undo"
-                    ng-click="undo()"
-                    ng-show="!!inputFile" ng-disabled="operations.length === 0">
-                -->
-
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
@@ -95,33 +87,39 @@
                 <!-- 例 -->
                 <div class="btn-group">
                     <button type="button" class="btn btn-info dropdown-toggle"
-                        data-toggle="dropdown" aria-expanded="false"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
                         style="background-color: #F4F4F4; border-color: #20854E; color: #20854E">
                         ランダムサンプル<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" ng-click="showRandomSample('Root')">すべて</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('Elaboration-Subord')">Elaboration-Subord</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('Elaboration-Coord')">Elaboration-Coord</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Elaboration')">Elaboration</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Extension')">Extension</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Comparison')">Comparison</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('Cause-Result')">Cause-Result</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Cause')">Cause</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Result')">Result</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Condition')">Condition</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Temporal')">Temporal</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Background')">Background</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Enablement')">Enablement</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Manner-Means')">Manner-Means</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('Background')">Background</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('Conclusion')">Conclusion</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Evaluation')">Evaluation</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Discussion')">Discussion</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Summary-Conclusion')">Summary-Conclusion</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Attribution')">Attribution</a></li>
-                        <li><a class="dropdown-item" ng-click="showRandomSample('Textual-Organization')">Textual-Organization</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Same-Unit')">Same-Unit</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Title')">Title</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Textual-Organization')">Textual-Organization</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Dependency')">Dependency</a></li>
                     </ul>
                 </div>
 
-                <! -- その他 -->
+                <!-- その他 -->
                 <div class="btn-group">
                     <button type="button" class="btn btn-info dropdown-toggle"
-                        data-toggle="dropdown" aria-expanded="false"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
                         style="background-color: #F4F4F4; border-color: #20854E; color: #20854E">
                         その他<span class="caret"></span>
                     </button>
@@ -138,9 +136,6 @@
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation.html')">
                                 EDU分割ツール</a></li>
-                        <li><a class="dropdown-item"
-                                onClick="window.open('https://norikinishida.github.io/tools/discdep/tagging.html')">
-                                EDUタグ付けツール</a></li>
                      </ul>
                 </div>
 
@@ -165,6 +160,7 @@
                 <!-- Each EDU -->
                 <div class="edu">
                     <!-- EDU content -->
+                    <!-- <span style="color: #BC3C29;">{{tags[$index]}}</span> -->
                     <button id="edu{{$index}}"
                         type="button" class="btn btn-default active"
                         ng-click="highLight('edu' + ($index).toString())"
@@ -181,7 +177,8 @@
                                                 )
                                             ),
                                     'color': (heads[$index] >= 0) ? '#000000' : '#000000'}"
-                        ng-disabled="(first >= 0) && (heads[$index] >= 0 || $index === first || $index === getHead(first) || $index === 0)">
+                        ng-disabled="(first >= 0) && ((($index !== first) && (heads[$index] >= 0 || $index === getHead(first))) || ($index === 0))">
+                        <!-- 上記disable条件: 親持ち、ループ-->
                         <h5>{{displayText | TailorString}}</h5>
                     </button>
                     <!-- EDU index -->
@@ -191,12 +188,35 @@
             </div>
         </div>
 
-        <!-- 談話関係選択ダイアログ (アノテーション) -->
-        <div id="dialog-form-for-rel" title="談話関係を下記から選択してください"
-        ng-show="showAddDialogForRel">
+        <!-- 談話関係と優先度、構成素ラベルの選択ダイアログ (アノテーション) -->
+        <div id="dialog-form-for-rel" title="談話関係と優先度、構成素ラベルを下記から選択してください" ng-show="showAddDialogForRel">
+            談話関係:
             <form>
                  <select class="form-control" id="selectForRel" name="selectForRel" >
                      <option ng-repeat="relation in relationVocab">{{relation}}</option>
+                 </select>
+            </form>
+            優先度:
+            <form>
+                 <select class="form-control" id="selectForPri" name="selectForPri" >
+                     <option ng-repeat="priority in priorityVocab">{{priority}}</option>
+                 </select>
+            </form>
+            構成素ラベル:
+            <form>
+                 <select class="form-control" id="selectForCon" name="selectForCon" >
+                     <option ng-repeat="constituent in constituentVocab">{{constituent}}</option>
+                 </select>
+            </form>
+
+        </div>
+
+        <!-- タグの選択ダイアログ (アノテーション) -->
+        <div id="dialog-form-for-tag" title="タグを下記から選択してください"
+        ng-show="showAddDialogForTag">
+            <form>
+                 <select class="form-control" id="selectForTag" name="selectForTag" >
+                     <option ng-repeat="tag in tagVocab">{{tag}}</option>
                  </select>
             </form>
         </div>
