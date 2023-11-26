@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Discourse Dependency Structure Annotation Tool</title>
+
+        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <script src="./bower_components/file-saver/FileSaver.min.js"></script>
+        <script src="./bower_components/angular/angular.min.js"></script>
+        <script src="./bower_components/underscore/underscore-min.js"></script>
+        <script src="./bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+        <script src="./bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="./bower_components/ngToast/dist/ngToast.min.js"></script>
+
+        <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./bower_components/jquery-ui/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
+        <link href="./bower_components/jquery-ui/themes/smoothness/theme.css" rel="stylesheet">
+        <link href="./bower_components/ngToast/dist/ngToast.min.css" rel="stylesheet">
+        <link href="./bower_components/ngToast/dist/ngToast-animations.min.css" rel="stylesheet">
+        <link href="./css/custom.css" rel="stylesheet">
+
+        <script src="./annotate-dark.js"></script>
+    </head>
+
+    <body id="body" style="background-color: #282C34; color: #ABB2BF" ng-app="MyApp" ng-controller="EDUListController">
+        <!-- キャンバス要素 -->
+        <canvas id="canvas" height="{{canvas_height}}" width="{{canvas_width}}">
+            The current version does not support HTML5 canvas API, please use a new version of chrome or firefox.
+        </canvas>
+        <toast></toast>
+
+        <!-- メニューバー -->
+        <div class="container menu-bar">
+            <!-- メニューバー1行目 -->
+            <div class="row">
+                <!-- ファイルアップロード -->
+                <input type="file" ngf-select="handleFileSelectForSeg($files)" name="files[]" multiple />
+                <span>ファイル名: {{inputFile}}</span>
+            </div>
+            <br>
+
+            <!-- メニューバー2行目 -->
+            <div class="row">
+                <!-- コピー -->
+                <input type="button" class="btn btn-info"
+                    style="background-color: #98C379; border-color: #98C379; color: #282C34"
+                    value="全文をコピー"
+                    ng-click="copyToClipboardForSeg()"
+                    ng-show="!!inputFile">
+
+                <!-- 保存 -->
+                <input type="button" class="btn btn-info"
+                    style="background-color: #98C379; border-color: #98C379; color: #282C34"
+                    value="保存"
+                    ng-click="saveToFileForSeg()"
+                    ng-show="!!inputFile">
+
+                <!-- 例 -->
+                <input type="button" class="btn btn-info"
+                    style="background-color: #282C34; border-color: #98C379; color: #98C379"
+                    value="ランダムサンプル"
+                    ng-click="showRandomSampleForSeg()">
+
+                <!-- その他 -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
+                        style="background-color: #282C34; border-color: #98C379; color: #98C379">
+                        その他<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item"
+                                onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
+                                ガイドライン</a></li>
+                        <li><a class="dropdown-item"
+                                onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkti228KKxdWQZufRlg7F9xgonqo7pFTzZZGfbP2I56SDOSQ/viewform')">
+                                質問フォーム</a></li>
+                        <li><a class="dropdown-item"
+                                onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation.html')">
+                                ライトモード</a></li>
+                        <li><a class="dropdown-item"
+                                onClick="window.open('https://norikinishida.github.io/tools/discdep/index-dark.html')">
+                                談話依存構造アノテーション</a></li>
+                     </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- EDUリスト (メイン部分) -->
+        <div class="container edu-list-for-seg" id="list">
+            <div ng-repeat="edu in edus track by $index">
+                <!-- Each EDU -->
+                <!-- EDU index -->
+                <span>{{$index}}</span>
+                <!-- EDU content -->
+                <button type="button" class="btn btn-default"
+                        ng-click="segment($parent.$index, $index)"
+                        ng-mouseover="mouseOverHandlerForSeg($parent.$index, $index)"
+                        ng-mouseleave="mouseOutHandlerForSeg($parent.$index, $index)"
+                        ng-style="{'background-color':
+                                        (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
+                                            blinkNodeColor1 :
+                                            (sentence_ids[$parent.$index] % 2 === 0) ? '#2A2834' : '#283234',
+                                    'color':
+                                        (mouseOverIndexForSegE === $parent.$index && mouseOverIndexForSegT === $index) ?
+                                            '#282C34' :
+                                            (sentence_ids[$parent.$index] % 2 === 0) ? '#AFB5C4' : '#AFB5C4',
+                                    'font-size': '18px'}"
+                        style="outline: none"
+                        ng-repeat="tokenText in edu track by $index"
+                        ng-disabled="$parent.$index == 0 && $index == 0">
+                    {{tokenText}}
+                </button>
+            </div>
+        </div>
+
+    </body>
+</html>
