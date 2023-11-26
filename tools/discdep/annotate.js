@@ -74,6 +74,7 @@ app.constant('CONSTANTS', {
     BLINK_LABEL_COLOR: '#E18727', // NEJM Orange
     BLINK_NODE_COLOR1: '#E18727', // NEJM Orange
     BLINK_NODE_COLOR2: '#FFDC91', // Creamy Orange
+    BLINK_NODE_COLOR3: '#B47C1F', // Darker Orange
     //MAX_N: 150,
     MAX_N: 500,
     //  全体の横幅
@@ -167,6 +168,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
     // 色、キャンバス
     $scope.blinkNodeColor1 = CONSTANTS.BLINK_NODE_COLOR1;
     $scope.blinkNodeColor2 = CONSTANTS.BLINK_NODE_COLOR2;
+    $scope.blinkNodeColor3 = CONSTANTS.BLINK_NODE_COLOR3;
     $scope.canvas_height = 700; // キャンバス縦幅 (デフォルト値)
     // "edus"の長さ(=edus.length)が変わったら、キャンバスの縦幅を更新
     $scope.$watch('edus.length', function() {

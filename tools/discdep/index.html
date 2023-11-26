@@ -165,18 +165,19 @@
                         ng-mouseover="mouseOverHandler($index)"
                         ng-mouseleave="mouseOutHandler($index)"
                         ng-style="{'background-color':
-                                        (focused_index === $index) ?
+                                        ((focused_index >= 0 && focused_index === $index) || (mouseOverIndex >= 0 && $index === mouseOverIndex)) ?
                                             blinkNodeColor1 :
-                                            ((mouseOverIndex >= 0 && $index === mouseOverIndex) ?
-                                                blinkNodeColor1 :
-                                                ((mouseOverIndex >= 0 && (heads[mouseOverIndex] == $index || heads[$index] == mouseOverIndex)) ?
+                                            (
+                                                ((focused_index >= 0 && heads[$index] == focused_index) || (mouseOverIndex >= 0 && heads[$index] == mouseOverIndex)) ?
                                                     blinkNodeColor2 :
-                                                    (sentence_ids[$index] % 2 === 0) ? '#F4FFFF' :'#F4F4FF'
-                                                )
+                                                    (
+                                                        ((focused_index >= 0 && heads[focused_index] == $index) || (mouseOverIndex >= 0 && heads[mouseOverIndex] == $index)) ?
+                                                            blinkNodeColor3 :
+                                                            (sentence_ids[$index] % 2 === 0) ? '#F4FFFF' :'#F4F4FF'
+                                                    )
                                             ),
                                     'color': (heads[$index] >= 0) ? '#000000' : '#000000'}"
                         ng-disabled="(focused_index >= 0) && ((($index !== focused_index) && (heads[$index] >= 0 || $index === getHead(focused_index))) || ($index === 0))">
-                        <!-- 上記disable条件: 親持ち、ループ-->
                         <h5>{{displayText | TailorString}}</h5>
                     </button>
                     <span>{{$index}}</span>
