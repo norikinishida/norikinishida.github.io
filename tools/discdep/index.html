@@ -47,21 +47,21 @@
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="選択解除"
                     ng-click="clearNode()"
-                    ng-show="!!inputFile" ng-disabled="first === -1">
+                    ng-show="!!inputFile" ng-disabled="focused_index === -1">
 
                 <!-- ラベル変更 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="ラベル変更"
                     ng-click="changeLabel()"
-                    ng-show="!!inputFile" ng-disabled="first === -1">
+                    ng-show="!!inputFile" ng-disabled="focused_index === -1">
 
                 <!-- リンク削除 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="リンク削除"
                     ng-click="deleteLink()"
-                    ng-show="!!inputFile" ng-disabled="first === -1">
+                    ng-show="!!inputFile" ng-disabled="focused_index === -1">
 
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
@@ -165,7 +165,7 @@
                         ng-mouseover="mouseOverHandler($index)"
                         ng-mouseleave="mouseOutHandler($index)"
                         ng-style="{'background-color':
-                                        (first === $index) ?
+                                        (focused_index === $index) ?
                                             blinkNodeColor1 :
                                             ((mouseOverIndex >= 0 && $index === mouseOverIndex) ?
                                                 blinkNodeColor1 :
@@ -175,7 +175,7 @@
                                                 )
                                             ),
                                     'color': (heads[$index] >= 0) ? '#000000' : '#000000'}"
-                        ng-disabled="(first >= 0) && ((($index !== first) && (heads[$index] >= 0 || $index === getHead(first))) || ($index === 0))">
+                        ng-disabled="(focused_index >= 0) && ((($index !== focused_index) && (heads[$index] >= 0 || $index === getHead(focused_index))) || ($index === 0))">
                         <!-- 上記disable条件: 親持ち、ループ-->
                         <h5>{{displayText | TailorString}}</h5>
                     </button>
