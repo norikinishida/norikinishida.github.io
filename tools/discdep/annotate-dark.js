@@ -74,7 +74,7 @@ app.constant('CONSTANTS', {
     BLINK_LABEL_COLOR: '#D19A66', // One Dark Orange
     BLINK_NODE_COLOR1: '#D19A66', // One Dark Orange
     BLINK_NODE_COLOR2: '#E5C07B', // One Dark Yellow
-    BLINK_NODE_COLOR3: '#A77B51', // Darker Yellow
+    BLINK_NODE_COLOR3: '#C678DD', // One Dark Purple
     //MAX_N: 150,
     MAX_N: 500,
     //  全体の横幅

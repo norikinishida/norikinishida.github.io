@@ -73,8 +73,8 @@ app.constant('CONSTANTS', {
     BLINK_LINK_COLOR: '#E18727', // NEJM Orange
     BLINK_LABEL_COLOR: '#E18727', // NEJM Orange
     BLINK_NODE_COLOR1: '#E18727', // NEJM Orange
-    BLINK_NODE_COLOR2: '#FFDC91', // Creamy Orange
-    BLINK_NODE_COLOR3: '#B47C1F', // Darker Orange
+    BLINK_NODE_COLOR2: '#FFDC91', // NEJM Creamy Orange
+    BLINK_NODE_COLOR3: '#EE4C97', // NEJM PINK
     //MAX_N: 150,
     MAX_N: 500,
     //  全体の横幅
