@@ -916,6 +916,10 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         centerZ.y -= canvasPos.y;
         centerZ.y += 30;
 
+        // タグ追加による調整オフセット
+        var offset_for_tag = 20;
+        centerZ.x -= offset_for_tag;
+
         // 描画
         var ctx = angular.element('#canvas')[0].getContext('2d');
         ctx.font = fontSize.toString() + "px Arial";
@@ -981,7 +985,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         var offX = Math.max(width * (1 - depLengthRatio) - 20, 0);
 
         // タグ追加による調整オフセット
-        var offset_for_tag = 40;
+        var offset_for_tag = 50;
 
         // 描画
         var ctx = angular.element('#canvas')[0].getContext('2d');
@@ -1036,7 +1040,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         centerZ.y += 30;
 
         // タグを追加したことによる調整
-        var offset_for_tag = 40;
+        var offset_for_tag = 50;
         centerZ.x -= offset_for_tag;
 
         // 描画

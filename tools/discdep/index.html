@@ -47,21 +47,24 @@
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="選択解除"
                     ng-click="clearNode()"
-                    ng-show="!!inputFile" ng-disabled="focused_index === -1">
+                    ng-show="!!inputFile"
+                    ng-disabled="focused_index === -1">
 
                 <!-- ラベル変更 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="ラベル変更"
                     ng-click="changeLabel()"
-                    ng-show="!!inputFile" ng-disabled="focused_index === -1">
+                    ng-show="!!inputFile"
+                    ng-disabled="focused_index === -1">
 
                 <!-- リンク削除 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="リンク削除"
                     ng-click="deleteLink()"
-                    ng-show="!!inputFile" ng-disabled="focused_index === -1">
+                    ng-show="!!inputFile"
+                    ng-disabled="focused_index === -1">
 
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
@@ -82,7 +85,8 @@
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="保存"
                     ng-click="saveToFile()"
-                    ng-show="!!inputFile" ng-disabled="progress !== 100">
+                    ng-show="!!inputFile"
+                    ng-disabled="progress !== 100">
 
                 <!-- 例 -->
                 <div class="btn-group">
@@ -159,6 +163,40 @@
             <div ng-repeat="displayText in edus track by $index">
                 <!-- Each EDU -->
                 <div class="edu">
+                    <!-- EDU制御ボタン -->
+                    <div class="edu-buttons">
+                        <!-- 選択解除 -->
+                        <button
+                            type="button" class="edu-button"
+                            ng-click="clearLabel()"
+                            ng-show="!!inputFile"
+                            ng-disabled="focused_index === -1">
+                            <img src="images/sozai_batsu_black_256px_01.svg"
+                                 width="10"
+                                 height="10">
+                        </button>
+                        <!-- ラベル変更 -->
+                        <button
+                            type="button" class="edu-button"
+                            ng-click="changeLabel()"
+                            ng-show="!!inputFile"
+                            ng-disabled="focused_index === -1">
+                            <img src="images/sozai_curvearrow_black_256px_01.svg"
+                                 width="10"
+                                 height="10">
+                        </button>
+                        <!-- リンク削除 -->
+                        <button
+                            type="button" class="edu-button"
+                            ng-click="deleteLink()"
+                            ng-show="!!inputFile"
+                            ng-disabled="focused_index === -1">
+                            <img src="images/sozai_disconnection_black_256px_01.svg"
+                                 width="10"
+                                 height="10">
+                        </button>
+                    </div>
+                    <!-- EDUボタン -->
                     <button id="edu{{$index}}"
                         type="button" class="btn btn-default active"
                         ng-click="highLight('edu' + ($index).toString())"
@@ -180,6 +218,7 @@
                         ng-disabled="(focused_index >= 0) && ((($index !== focused_index) && (heads[$index] >= 0 || $index === getHead(focused_index))) || ($index === 0))">
                         <h5>{{displayText | TailorString}}</h5>
                     </button>
+                    <!-- EDU index -->
                     <span>{{$index}}</span>
                 </div>
             </div>

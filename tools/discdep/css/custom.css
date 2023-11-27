@@ -3,23 +3,23 @@
 }
 .menu-bar {
     top: 30px;
-    left: 200px;
-    width: 1000px;
+    left: 220px;
+    width: 800px;
 }
 .progress-bar-container {
     top: 150px;
-    left: 190px;
-    width: 1000px;
+    left: 210px;
+    width: 800px;
 }
 .edu-list {
     top: 190px;
-    left: 300;
-    width: 1000px;
+    left: 210px;
+    width: 800px;
 }
 .edu-list-for-seg {
     top: 150px;
-    left: 190px;
-    width: 1000px;
+    left: 210px;
+    width: 800px;
 }
 .edu {
     display: flex;
@@ -30,4 +30,12 @@ h5 {
     text-align: left;
     white-space: normal;
 }
-
+.edu-buttons {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+.edu-button{
+    /* background-color: inherit; */
+    cursor: pointer;
+}
