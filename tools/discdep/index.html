@@ -43,28 +43,34 @@
             <!-- メニューバー2行目 -->
             <div class="row">
                 <!-- 選択解除 -->
+                <!--
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="選択解除"
                     ng-click="clearNode()"
                     ng-show="!!inputFile"
                     ng-disabled="focused_index === -1">
+                -->
 
                 <!-- ラベル変更 -->
+                <!--
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="ラベル変更"
                     ng-click="changeLabel()"
                     ng-show="!!inputFile"
                     ng-disabled="focused_index === -1">
+                -->
 
                 <!-- リンク削除 -->
+                <!--
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
                     value="リンク削除"
                     ng-click="deleteLink()"
                     ng-show="!!inputFile"
                     ng-disabled="focused_index === -1">
+                -->
 
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
@@ -164,39 +170,40 @@
                 <!-- Each EDU -->
                 <div class="edu">
                     <!-- EDU制御ボタン -->
-                    <div class="edu-buttons">
+                    <div class="edu-buttons1">
+                        <div class="edu-buttons2">
                         <!-- 選択解除 -->
                         <button
                             type="button" class="edu-button"
-                            ng-click="clearLabel()"
+                            ng-click="clearNode()"
                             ng-show="!!inputFile"
-                            ng-disabled="focused_index === -1">
-                            <img src="images/sozai_batsu_black_256px_01.svg"
-                                 width="10"
-                                 height="10">
+                            ng-disabled="(focused_index === -1) || ((focused_index >= 0) && ((($index !== focused_index) && (heads[$index] >= 0 || $index === getHead(focused_index))) || ($index === 0)))">
+                            <img src="images/sozai_batsu_black_256px_01.svg" width="10">
+                            <!-- x -->
                         </button>
+                        </div>
+                        <div class="edu-buttons2">
                         <!-- ラベル変更 -->
                         <button
                             type="button" class="edu-button"
                             ng-click="changeLabel()"
                             ng-show="!!inputFile"
-                            ng-disabled="focused_index === -1">
-                            <img src="images/sozai_curvearrow_black_256px_01.svg"
-                                 width="10"
-                                 height="10">
+                            ng-disabled="(focused_index === -1) || ((focused_index >= 0) && ((($index !== focused_index) && (heads[$index] >= 0 || $index === getHead(focused_index))) || ($index === 0)))">
+                            <img src="images/sozai_curvearrow_black_256px_01.svg" width="10">
+                            <!-- C -->
                         </button>
                         <!-- リンク削除 -->
                         <button
                             type="button" class="edu-button"
                             ng-click="deleteLink()"
                             ng-show="!!inputFile"
-                            ng-disabled="focused_index === -1">
-                            <img src="images/sozai_disconnection_black_256px_01.svg"
-                                 width="10"
-                                 height="10">
+                            ng-disabled="(focused_index === -1) || ((focused_index >= 0) && ((($index !== focused_index) && (heads[$index] >= 0 || $index === getHead(focused_index))) || ($index === 0)))">
+                            <img src="images/sozai_disconnection_black_256px_01.svg" width="10">
+                            <!-- D -->
                         </button>
+                        </div>
                     </div>
-                    <!-- EDUボタン -->
+                    <!-- EDU content -->
                     <button id="edu{{$index}}"
                         type="button" class="btn btn-default active"
                         ng-click="highLight('edu' + ($index).toString())"

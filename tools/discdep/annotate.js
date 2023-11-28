@@ -79,6 +79,9 @@ app.constant('CONSTANTS', {
     MAX_N: 500,
     //  全体の横幅
     CANVAS_WIDTH: 1500, // canvas_height will be automatically set.
+    // 調整
+    OFFSET_FOR_TAG1: 50,
+    OFFSET_FOR_TAG2: 80,
 });
 
 // フィルター関数の登録: 引数が0未満なら"null"を返す
@@ -176,6 +179,8 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         $scope.canvas_height = ($scope.edus.length === 0) ? 700 : ($scope.edus.length / 75 * 4500 + 200);
     });
     $scope.canvas_width = CONSTANTS.CANVAS_WIDTH; // キャンバス横幅
+    $scope.offset_for_tag1 = CONSTANTS.OFFSET_FOR_TAG1;
+    $scope.offset_for_tag2 = CONSTANTS.OFFSET_FOR_TAG2;
 
     // サンプルファイル名リスト (examples.txt) を読み込んで描画、ファイル名の配列を作成
     var xhr = new XMLHttpRequest();
@@ -916,9 +921,8 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         centerZ.y -= canvasPos.y;
         centerZ.y += 30;
 
-        // タグ追加による調整オフセット
-        var offset_for_tag = 20;
-        centerZ.x -= offset_for_tag;
+        // タグ追加による調整
+        centerZ.x -= $scope.offset_for_tag1;
 
         // 描画
         var ctx = angular.element('#canvas')[0].getContext('2d');
@@ -984,18 +988,15 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         // var offX = width * depLengthRatio;
         var offX = Math.max(width * (1 - depLengthRatio) - 20, 0);
 
-        // タグ追加による調整オフセット
-        var offset_for_tag = 50;
-
         // 描画
         var ctx = angular.element('#canvas')[0].getContext('2d');
         ctx.strokeStyle = color;
         ctx.lineWidth = 2;
         ctx.beginPath(); // 開始
-        ctx.moveTo(centerS.x - offset_for_tag, centerS.y); // 始点
-        ctx.bezierCurveTo(offX - offset_for_tag, centerS.y, // 始点に対するベジェ曲線用座標
-                          offX - offset_for_tag, centerT.y, // 終点に対するベジェ曲線用座標
-                          centerT.x - offset_for_tag, centerT.y // 終点
+        ctx.moveTo(centerS.x - $scope.offset_for_tag2, centerS.y); // 始点
+        ctx.bezierCurveTo(offX - $scope.offset_for_tag2, centerS.y, // 始点に対するベジェ曲線用座標
+                          offX - $scope.offset_for_tag2, centerT.y, // 終点に対するベジェ曲線用座標
+                          centerT.x - $scope.offset_for_tag2, centerT.y // 終点
                           );
         ctx.stroke(); // レンダリング
 
@@ -1003,9 +1004,9 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         var radius = 6;
         ctx.fillStyle = color;
         ctx.beginPath(); // 開始
-        ctx.moveTo(centerT.x - radius - offset_for_tag, centerT.y - radius);
-        ctx.lineTo(centerT.x - radius - offset_for_tag, centerT.y + radius);
-        ctx.lineTo(centerT.x - offset_for_tag, centerT.y);
+        ctx.moveTo(centerT.x - radius - $scope.offset_for_tag2, centerT.y - radius);
+        ctx.lineTo(centerT.x - radius - $scope.offset_for_tag2, centerT.y + radius);
+        ctx.lineTo(centerT.x - $scope.offset_for_tag2, centerT.y);
         ctx.stroke(); // レンダリング
 
         ctx.closePath();
@@ -1040,8 +1041,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         centerZ.y += 30;
 
         // タグを追加したことによる調整
-        var offset_for_tag = 50;
-        centerZ.x -= offset_for_tag;
+        centerZ.x -= $scope.offset_for_tag2;
 
         // 描画
         var ctx = angular.element('#canvas')[0].getContext('2d');

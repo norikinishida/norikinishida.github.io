@@ -1,41 +1,52 @@
+/* 全体共通 */
 .menu-bar, .progress-bar-container, .edu-list, .edu-list-for-seg {
     position: absolute;
+    width: 950px;
+    left: 230px;
 }
+/* 上段のメニューバー */
 .menu-bar {
     top: 30px;
-    left: 220px;
-    width: 800px;
 }
+/* プログレスバー */
 .progress-bar-container {
     top: 150px;
-    left: 210px;
-    width: 800px;
 }
+/* EDUリスト */
 .edu-list {
     top: 190px;
-    left: 210px;
-    width: 800px;
 }
+/* EDUリスト (EDU分割モード) */
 .edu-list-for-seg {
     top: 150px;
-    left: 210px;
-    width: 800px;
 }
+/* 各EDU */
 .edu {
     display: flex;
-    align-items: end;
+    flex-direction: row;
+    align-items: center;
 }
+/* EDU index */
 h5 {
     display: inline-block;
     text-align: left;
     white-space: normal;
 }
-.edu-buttons {
-    display: inline-flex;
+/* EDU制御ボタン群 */
+.edu-buttons1 {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
+.edu-buttons2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* EDU制御ボタン */
 .edu-button{
-    /* background-color: inherit; */
+    /* background-color: transparent; */
+    background-color: inherit;
+    margin: 2px;
     cursor: pointer;
 }
