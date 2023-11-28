@@ -80,8 +80,8 @@ app.constant('CONSTANTS', {
     //  全体の横幅
     CANVAS_WIDTH: 1500, // canvas_height will be automatically set.
     // 調整
-    OFFSET_FOR_TAG1: 50,
-    OFFSET_FOR_TAG2: 80,
+    OFFSET_FOR_TAG1: 25,
+    OFFSET_FOR_TAG2: 55,
 });
 
 // フィルター関数の登録: 引数が0未満なら"null"を返す
