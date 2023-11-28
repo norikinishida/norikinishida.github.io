@@ -167,40 +167,38 @@
         <!-- EDUリスト (メイン部分) -->
         <div class="container edu-list" id="list">
             <div ng-repeat="displayText in edus track by $index">
-                <!-- Each EDU -->
+                <!-- 各EDU -->
                 <div class="edu">
                     <!-- EDU制御ボタン -->
                     <div class="edu-buttons1">
                         <div class="edu-buttons2">
-                        <!-- 選択解除 -->
-                        <button
-                            type="button" class="edu-button"
-                            ng-click="clearNode()"
-                            ng-show="!!inputFile"
-                            ng-disabled="(focused_index === -1) || ((focused_index >= 0) && ((($index !== focused_index) && (heads[$index] >= 0 || $index === getHead(focused_index))) || ($index === 0)))">
-                            <img src="images/sozai_batsu_black_256px_01.svg" width="10">
-                            <!-- x -->
-                        </button>
+                            <!-- 選択解除 -->
+                            <button
+                                type="button" class="edu-button"
+                                ng-click="clearNode()"
+                                ng-show="!!inputFile"
+                                ng-style=""
+                                ng-disabled="(focused_index === -1) || (focused_index != $index)">
+                                <img src="images/sozai_batsu_black_256px_01.svg">
+                            </button>
                         </div>
                         <div class="edu-buttons2">
-                        <!-- ラベル変更 -->
-                        <button
-                            type="button" class="edu-button"
-                            ng-click="changeLabel()"
-                            ng-show="!!inputFile"
-                            ng-disabled="(focused_index === -1) || ((focused_index >= 0) && ((($index !== focused_index) && (heads[$index] >= 0 || $index === getHead(focused_index))) || ($index === 0)))">
-                            <img src="images/sozai_curvearrow_black_256px_01.svg" width="10">
-                            <!-- C -->
-                        </button>
-                        <!-- リンク削除 -->
-                        <button
-                            type="button" class="edu-button"
-                            ng-click="deleteLink()"
-                            ng-show="!!inputFile"
-                            ng-disabled="(focused_index === -1) || ((focused_index >= 0) && ((($index !== focused_index) && (heads[$index] >= 0 || $index === getHead(focused_index))) || ($index === 0)))">
-                            <img src="images/sozai_disconnection_black_256px_01.svg" width="10">
-                            <!-- D -->
-                        </button>
+                            <!-- ラベル変更 -->
+                            <button
+                                type="button" class="edu-button"
+                                ng-click="changeLabel()"
+                                ng-show="!!inputFile"
+                                ng-disabled="(focused_index === -1) || (focused_index != $index)">
+                                <img src="images/sozai_reloading_black_256px_01.svg">
+                            </button>
+                            <!-- リンク削除 -->
+                            <button
+                                type="button" class="edu-button"
+                                ng-click="deleteLink()"
+                                ng-show="!!inputFile"
+                                ng-disabled="(focused_index === -1) || (focused_index != $index)">
+                                <img src="images/sozai_disconnection_black_256px_01.svg">
+                            </button>
                         </div>
                     </div>
                     <!-- EDU content -->
@@ -221,7 +219,20 @@
                                                             (sentence_ids[$index] % 2 === 0) ? '#F4FFFF' :'#F4F4FF'
                                                     )
                                             ),
-                                    'color': (heads[$index] >= 0) ? '#000000' : '#000000'}"
+                                    'color':
+                                        ((focused_index >= 0 && focused_index === $index) || (mouseOverIndex >= 0 && $index === mouseOverIndex)) ?
+                                            '#000000':
+                                            (
+                                                ((focused_index >= 0 && heads[$index] == focused_index) || (mouseOverIndex >= 0 && heads[$index] == mouseOverIndex)) ?
+                                                    '#000000':
+                                                    (
+                                                        ((focused_index >= 0 && heads[focused_index] == $index) || (mouseOverIndex >= 0 && heads[mouseOverIndex] == $index)) ?
+                                                            '#000000':
+                                                            (sentence_ids[$index] % 2 === 0) ? '#000000' :'#000000'
+                                                    )
+                                            ),
+                                    }"
+
                         ng-disabled="(focused_index >= 0) && ((($index !== focused_index) && (heads[$index] >= 0 || $index === getHead(focused_index))) || ($index === 0))">
                         <h5>{{displayText | TailorString}}</h5>
                     </button>

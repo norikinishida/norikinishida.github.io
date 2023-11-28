@@ -15,18 +15,24 @@
 /* EDUリスト */
 .edu-list {
     top: 190px;
+    display: flex;
+    flex-direction: column; /* 縦並び */
+    align-items: flex-start; /* 左右中央揃え */
 }
 /* EDUリスト (EDU分割モード) */
 .edu-list-for-seg {
     top: 150px;
+    display: flex;
+    flex-direction: column; /* 縦並び */
+    align-items: flex-start; /* 左右中央揃え */
 }
 /* 各EDU */
 .edu {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row; /* 横並び */
+    align-items: center; /* 上下中央揃え */
 }
-/* EDU index */
+/* EDU content */
 h5 {
     display: inline-block;
     text-align: left;
@@ -43,10 +49,22 @@ h5 {
     flex-direction: row;
     align-items: center;
 }
-/* EDU制御ボタン */
 .edu-button{
-    /* background-color: transparent; */
-    background-color: inherit;
-    margin: 2px;
+    display: inline-block;
+    /* サイズ */
+    width: 17px;
+    /* 中身 */
+    background: transparent;
+    /* 枠線 */
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 25%;
+    /* border-radius: 50%; */
+    /* 余白 */
+    margin: 2px; /* ボタン間の余白 */
+    padding: 2px; /* アイコンと枠線の間の予約
+    /* カーソル */
     cursor: pointer;
+    /* その他 */
+    -webkit-appearance: none;
 }
