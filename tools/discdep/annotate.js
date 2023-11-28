@@ -380,14 +380,14 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         // チェック
         if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
             ngToast.danger({
-                content: 'エラー: ノードが選択されていません！',
+                content: 'Error: Please choose a node!',
                 timeout: 2000
             });
             return;
         }
         if ($scope.heads[$scope.first] < 0) {
             ngToast.danger({
-                content: 'エラー: 選択されたノードには親ノードがありません！',
+                content: 'Error: The selected node does not have a parent (head)!',
                 timeout: 2000
             });
             return;
@@ -418,14 +418,14 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         // チェック
         if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
             ngToast.danger({
-                content: 'エラー: ノードが選択されていません！',
+                content: 'Error: Please choose a node!',
                 timeout: 2000
             });
             return;
         }
         if ($scope.heads[$scope.first] < 0) {
             ngToast.danger({
-                content: 'エラー: 選択されたノードには親ノードがありません！',
+                content: 'Error: The selected node does not have a parent (head)!',
                 timeout: 2000
             });
             return;
@@ -479,7 +479,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         console.log("Copied:");
         console.log(text);
         ngToast.create({
-            content: '全文をクリップボードにコピーしました',
+            content: 'Copied the entire text to the clipboard.',
             timeout: 2000
         });
     };
@@ -490,7 +490,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
         if ($scope.progress !== 100) {
             ngToast.warning({
-                content: 'WARNING: 談話依存構造は完全ではありません！',
+                content: 'WARNING: The discourse dependency structure is incomplete!',
                 timeout: 5000
             });
         }
@@ -1195,7 +1195,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         console.log("Copied:");
         console.log(text);
         ngToast.create({
-            content: '全文をクリップボードにコピーしました',
+            content: 'Copied the entire text to the clipboard.',
             timeout: 2000
         });
     };

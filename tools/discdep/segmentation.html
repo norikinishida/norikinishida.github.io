@@ -36,7 +36,7 @@
             <div class="row">
                 <!-- ファイルアップロード -->
                 <input type="file" ngf-select="handleFileSelectForSeg($files)" name="files[]" multiple />
-                <span>ファイル名: {{inputFile}}</span>
+                <span>File: {{inputFile}}</span>
             </div>
             <br>
 
@@ -45,21 +45,21 @@
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
-                    value="全文をコピー"
+                    value="Copy Text"
                     ng-click="copyToClipboardForSeg()"
                     ng-show="!!inputFile">
 
                 <!-- 保存 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #20854E; border-color: #20854E; color: #F4F4F4"
-                    value="保存"
+                    value="Save"
                     ng-click="saveToFileForSeg()"
                     ng-show="!!inputFile">
 
                 <!-- 例 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #F4F4F4; border-color: #20854E; color: #20854E"
-                    value="ランダムサンプル"
+                    value="Examples"
                     ng-click="showRandomSampleForSeg()">
 
                 <!-- その他 -->
@@ -68,21 +68,21 @@
                         data-toggle="dropdown"
                         aria-expanded="false"
                         style="background-color: #F4F4F4; border-color: #20854E; color: #20854E">
-                        その他<span class="caret"></span>
+                        Others<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
-                                ガイドライン</a></li>
+                                Guideline</a></li>
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkti228KKxdWQZufRlg7F9xgonqo7pFTzZZGfbP2I56SDOSQ/viewform')">
-                                質問フォーム</a></li>
+                                QA Form</a></li>
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation-dark.html')">
-                                ダークモード</a></li>
+                                Dark Mode</a></li>
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/index.html')">
-                                談話依存構造アノテーション</a></li>
+                                Discourse Dependency Structure Annotation Tool</a></li>
                      </ul>
                 </div>
 

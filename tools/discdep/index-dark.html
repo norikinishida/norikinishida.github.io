@@ -36,7 +36,7 @@
             <div class="row">
                 <!-- ファイルアップロード -->
                 <input type="file" ngf-select="handleFileSelect($files)" name="files[]" multiple />
-                <span>ファイル名: {{inputFile}}</span>
+                <span>File: {{inputFile}}</span>
             </div>
             <br>
 
@@ -75,21 +75,21 @@
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #98C379; border-color: #98C379; color: #282C34"
-                    value="全文をコピー"
+                    value="Copy Text"
                     ng-click="copyToClipboard()"
                     ng-show="!!inputFile">
 
                 <!-- 途中保存 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #98C379; border-color: #98C379; color: #282C34"
-                    value="途中保存"
+                    value="Temporary Save"
                     ng-click="saveToFile()"
                     ng-show="!!inputFile">
 
                 <!-- 保存 -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #98C379; border-color: #98C379; color: #282C34"
-                    value="保存"
+                    value="Save"
                     ng-click="saveToFile()"
                     ng-show="!!inputFile"
                     ng-disabled="progress !== 100">
@@ -100,10 +100,10 @@
                         data-toggle="dropdown"
                         aria-expanded="false"
                         style="background-color: #282C34; border-color: #98C379; color: #98C379">
-                        ランダムサンプル<span class="caret"></span>
+                        Examples<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" ng-click="showRandomSample('Root')">すべて</a></li>
+                        <li><a class="dropdown-item" ng-click="showRandomSample('Root')">All</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Elaboration')">Elaboration</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Extension')">Extension</a></li>
                         <li><a class="dropdown-item" ng-click="showRandomSample('Comparison')">Comparison</a></li>
@@ -131,21 +131,21 @@
                         data-toggle="dropdown"
                         aria-expanded="false"
                         style="background-color: #282C34; border-color: #98C379; color: #98C379">
-                        その他<span class="caret"></span>
+                        Others<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/Biomed-DTB-annotation-guideline.pdf')">
-                                ガイドライン</a></li>
+                                Guideline</a></li>
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdkti228KKxdWQZufRlg7F9xgonqo7pFTzZZGfbP2I56SDOSQ/viewform')">
-                                質問フォーム</a></li>
+                                QA Form</a></li>
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/index.html')">
-                                ライトモード</a></li>
+                                Light Mode</a></li>
                         <li><a class="dropdown-item"
                                 onClick="window.open('https://norikinishida.github.io/tools/discdep/segmentation-dark.html')">
-                                EDU分割ツール</a></li>
+                                EDU Segmentation Tool</a></li>
                      </ul>
                 </div>
 
@@ -179,7 +179,7 @@
                                 ng-show="!!inputFile"
                                 ng-style=""
                                 ng-disabled="(focused_index === -1) || (focused_index != $index)">
-                                <img src="images/sozai_batsu_white_256px_01.svg">
+                                <img src="images/sozai_batsu_white_256px_01.png" width="100%" title="Cancel selection">
                             </button>
                         </div>
                         <div class="edu-buttons2">
@@ -189,7 +189,7 @@
                                 ng-click="changeLabel()"
                                 ng-show="!!inputFile"
                                 ng-disabled="(focused_index === -1) || (focused_index != $index)">
-                                <img src="images/sozai_reloading_white_256px_01.svg">
+                                <img src="images/sozai_reloading_white_256px_01.png" width="100%" title="Change the labels">
                             </button>
                             <!-- リンク削除 -->
                             <button
@@ -197,7 +197,7 @@
                                 ng-click="deleteLink()"
                                 ng-show="!!inputFile"
                                 ng-disabled="(focused_index === -1) || (focused_index != $index)">
-                                <img src="images/sozai_disconnection_white_256px_01.svg">
+                                <img src="images/sozai_disconnection_white_256px_01.png" width="100%" title="Remove the dependency">
                             </button>
                         </div>
                     </div>
@@ -242,20 +242,20 @@
         </div>
 
         <!-- 談話関係と優先度、構成素ラベルの選択ダイアログ (アノテーション) -->
-        <div id="dialog-form-for-rel" title="談話関係と優先度、構成素ラベルを下記から選択してください" ng-show="showAddDialogForRel">
-            談話関係:
+        <div id="dialog-form-for-rel" title="Choose discourse relation, priority, and constituent labels" ng-show="showAddDialogForRel">
+            Discourse Relation:
             <form>
                  <select class="form-control" id="selectForRel" name="selectForRel" >
                      <option ng-repeat="relation in relationVocab">{{relation}}</option>
                  </select>
             </form>
-            優先度:
+            Priority:
             <form>
                  <select class="form-control" id="selectForPri" name="selectForPri" >
                      <option ng-repeat="priority in priorityVocab">{{priority}}</option>
                  </select>
             </form>
-            構成素ラベル:
+            Constituent Label:
             <form>
                  <select class="form-control" id="selectForCon" name="selectForCon" >
                      <option ng-repeat="constituent in constituentVocab">{{constituent}}</option>
@@ -265,7 +265,7 @@
         </div>
 
         <!-- タグの選択ダイアログ (アノテーション) -->
-        <div id="dialog-form-for-tag" title="タグを下記から選択してください"
+        <div id="dialog-form-for-tag" title="Choose a tag"
         ng-show="showAddDialogForTag">
             <form>
                  <select class="form-control" id="selectForTag" name="selectForTag" >

@@ -53,6 +53,7 @@ h5 {
     display: inline-block;
     /* サイズ */
     width: 17px;
+    height: 17px;
     /* 中身 */
     background: transparent;
     /* 枠線 */
