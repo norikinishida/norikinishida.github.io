@@ -218,7 +218,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     /************************************************/
     // 談話依存構造アノテーション用
-    // 1. ファイルアップロード
+    // 1. ファイル読み込み
     /************************************************/
 
     $scope.handleFileSelect = function ($files) {
@@ -355,106 +355,11 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     /************************************************/
     // 談話依存構造アノテーション用
-    // 2. 上部のボタンを押したときの処理 + プログレスバー
+    // 2. コピー、保存、例示
     /************************************************/
-
-    // ノード解除処理
-    $scope.clearNode = function() {
-        console.log("clearNode function begins.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
-
-        $scope.first = second = $scope.focused_index = -1;
-
-        console.log("clearNode function ends.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
-    };
-
-    // 談話関係変更処理
-    $scope.changeLabel = function () {
-        console.log("changeLabel function begins.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
-
-        // チェック
-        if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
-            ngToast.danger({
-                content: 'Error: Please choose a node!',
-                timeout: 2000
-            });
-            return;
-        }
-        if ($scope.heads[$scope.first] < 0) {
-            ngToast.danger({
-                content: 'Error: The selected node does not have a parent (head)!',
-                timeout: 2000
-            });
-            return;
-        }
-
-        // 談話関係と構成素ラベルの選択
-        var temp_first = $scope.heads[$scope.first];
-        var temp_second = $scope.first;
-        $scope.first = temp_first;
-        second = temp_second;
-        popRelation();
-
-        // 描画
-        console.log("changeLabel drawAll");
-        drawAll();
-
-        console.log("changeLabel function ends.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
-    };
-
-    // リンク削除処理
-    $scope.deleteLink = function () {
-        console.log("deleteLink function begins.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
-
-        // チェック
-        if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
-            ngToast.danger({
-                content: 'Error: Please choose a node!',
-                timeout: 2000
-            });
-            return;
-        }
-        if ($scope.heads[$scope.first] < 0) {
-            ngToast.danger({
-                content: 'Error: The selected node does not have a parent (head)!',
-                timeout: 2000
-            });
-            return;
-        }
-
-        // 削除処理
-        var temp_first = $scope.heads[$scope.first];
-        var temp_second = $scope.first;
-        $scope.heads[temp_second] = -1;
-        $scope.relations[temp_second] = 'null';
-        $scope.priorities[temp_second] = -1;
-        $scope.constituents[temp_second] = 'null';
-        $scope.tags[temp_second] = 'null';
-
-        // 描画
-        console.log("deleteLink drawAll");
-        drawAll();
-
-        // リセット
-        $scope.first = second = $scope.focused_index = -1;
-        console.log("deleteLink function ends.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
-    };
 
     // クリップボードにコピー
     $scope.copyToClipboard = function() {
-        console.log("copyToClipboard was called.")
-
         var text = "";
         for (var i = 1; i < $scope.edus.length; i++) {
             text = text + $scope.edus[i].replace("<S>", "").replace("<P>", "");
@@ -486,8 +391,6 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     // 保存
     $scope.saveToFile = function() {
-        console.log("saveToFile was called.")
-
         if ($scope.progress !== 100) {
             ngToast.warning({
                 content: 'WARNING: The discourse dependency structure is incomplete!',
@@ -532,8 +435,6 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     // 例示
     $scope.showRandomSample = function (relation) {
-        console.log("showRandomSample was called.")
-
         // キャンバスのクリア
         var canvas = angular.element('#canvas')[0];
         var ctx = canvas.getContext('2d');
@@ -617,7 +518,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     /************************************************/
     // 談話依存構造アノテーション用
-    // 3. マウスがEDUと重なったとき・外れたときの処理
+    // 3. マウスが重なった (外れた) ときの処理
     /************************************************/
 
     // マウスカーソルが乗っかったときの処理
@@ -680,7 +581,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     /************************************************/
     // 談話依存構造アノテーション用
-    // 4. EDUをクリックしたときの処理
+    // 4. アノテーションメイン
     /************************************************/
 
     // リンク追加処理 (EDUのクリック)
@@ -689,22 +590,22 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
         // 選択されたEDUのindex
         var index = parseInt(id.toString().substr(3));
-        console.log("index: " + index);
+        // console.log("index: " + index);
 
         // headかdependentか
         if ($scope.first === -1) {
             $scope.first = index;
             $scope.focused_index = index;
-            console.log("first: " + $scope.first);
-            console.log("second: " + second);
+            // console.log("first: " + $scope.first);
+            // console.log("second: " + second);
             // 描画
             $scope.mouseOutHandler(id);
         }
         else {
             second = index;
             $scope.focused_index = index;
-            console.log("first: " + $scope.first);
-            console.log("second: " + second);
+            // console.log("first: " + $scope.first);
+            // console.log("second: " + second);
             // 同じEDUが選択されたらタグ付け、異なるEDUなら談話関係と構成素ラベルの付与
             if ($scope.first == second) {
                 popTag();
@@ -715,16 +616,16 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         }
 
         console.log("highLight function ends.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
     };
 
     // タグの付与
     $scope.showAddDialogForTag = false;
     var popTag = function() {
         console.log("popTag function begins.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
 
         var dialog;
 
@@ -733,14 +634,22 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
             console.log("tagCallback function begins.");
             // 依存関係の設定
             temp_tag = angular.element('#selectForTag')[0].options[selectForTag.selectedIndex].text;
-            console.log(selectForTag.selectedIndex);
-            console.log("first: " + $scope.first);
-            console.log("second: " + second);
-            console.log("temp_tag: " + temp_tag);
+            // console.log(selectForTag.selectedIndex);
+            // console.log("first: " + $scope.first);
+            // console.log("second: " + second);
+            // console.log("temp_tag: " + temp_tag);
+            // 選択されたEDUと同一文に属するEDUには同じタグを付与
             $scope.tags[$scope.first] = temp_tag; // NOTE: $scope.first == second
+            var sent_id = $scope.sentence_ids[$scope.first];
+            for (var i = 0; i < $scope.edus.length; ++i) {
+                if ($scope.sentence_ids[i] === sent_id) {
+                    $scope.tags[i] = temp_tag;
+                    console.log("Set a tag, " + temp_tag + ", to EDU#" + i);
+                }
+            }
 
             // 描画
-            console.log("tagCallback drawAll");
+            // console.log("tagCallback drawAll");
             drawAll();
 
             // 初期化
@@ -754,8 +663,8 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
             $scope.$apply();
 
             console.log("tagCallback function ends.");
-            console.log("first: " + $scope.first);
-            console.log("second: " + second);
+            // console.log("first: " + $scope.first);
+            // console.log("second: " + second);
         }
 
         // ダイアログオブジェクト
@@ -780,16 +689,16 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         dialog.dialog("open");
 
         console.log("popTag function ends.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
     };
 
     // 談話関係、構成素ラベルの付与
     $scope.showAddDialogForRel = false;
     var popRelation = function() {
         console.log("popRelation function begins.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
 
         var dialog;
 
@@ -800,19 +709,21 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
             temp_relation = angular.element('#selectForRel')[0].options[selectForRel.selectedIndex].text;
             temp_priority = parseInt(angular.element('#selectForPri')[0].options[selectForPri.selectedIndex].text);
             temp_constituent = angular.element('#selectForCon')[0].options[selectForCon.selectedIndex].text;
-            console.log("selectForRel.selectedIndex: " + selectForRel.selectedIndex);
-            console.log("first: " + $scope.first);
-            console.log("second: " + second);
-            console.log("temp_relation: " + temp_relation);
-            console.log("temp_priority: " + temp_priority);
-            console.log("temp_constituent: " + temp_constituent);
+            // console.log("selectForRel.selectedIndex: " + selectForRel.selectedIndex);
+            // console.log("first: " + $scope.first);
+            // console.log("second: " + second);
+            // console.log("temp_relation: " + temp_relation);
+            // console.log("temp_priority: " + temp_priority);
+            // console.log("temp_constituent: " + temp_constituent);
             $scope.heads[second] = $scope.first;
             $scope.relations[second] = temp_relation;
             $scope.priorities[second] = temp_priority;
             $scope.constituents[second] = temp_constituent;
+            console.log("Set a head, EDU#" + $scope.first + ", to EDU#" + second);
+            console.log("Set labels, " + temp_relation + "#" + temp_priority + "[" + temp_constituent + "]" + ", to EDU#" + $scope.first + "->EDU#" + second);
 
             // 描画
-            console.log("relationCallback drawAll");
+            // console.log("relationCallback drawAll");
             drawAll();
 
             // 初期化
@@ -826,8 +737,8 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
             $scope.$apply();
 
             console.log("relationCallback function ends.");
-            console.log("first: " + $scope.first);
-            console.log("second: " + second);
+            // console.log("first: " + $scope.first);
+            // console.log("second: " + second);
         }
 
         // ダイアログオブジェクト
@@ -854,8 +765,8 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         dialog.dialog("open");
 
         console.log("popRelation function ends.");
-        console.log("first: " + $scope.first);
-        console.log("second: " + second);
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
     };
 
     // head EDUのindexを返す
@@ -867,9 +778,102 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         return $scope.getHead($scope.heads[idx]);
     };
 
+    // ノード解除処理
+    $scope.clearNode = function() {
+        console.log("clearNode function begins.");
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
+
+        $scope.first = second = $scope.focused_index = -1;
+
+        console.log("clearNode function ends.");
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
+    };
+
+    // 談話関係変更処理
+    $scope.changeLabel = function () {
+        console.log("changeLabel function begins.");
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
+
+        // チェック
+        if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
+            ngToast.danger({
+                content: 'Error: Please choose a node!',
+                timeout: 2000
+            });
+            return;
+        }
+        if ($scope.heads[$scope.first] < 0) {
+            ngToast.danger({
+                content: 'Error: The selected node does not have a parent (head)!',
+                timeout: 2000
+            });
+            return;
+        }
+
+        // 談話関係と構成素ラベルの選択
+        var temp_first = $scope.heads[$scope.first];
+        var temp_second = $scope.first;
+        $scope.first = temp_first;
+        second = temp_second;
+        popRelation();
+
+        // 描画
+        // console.log("changeLabel drawAll");
+        drawAll();
+
+        console.log("changeLabel function ends.");
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
+    };
+
+    // リンク削除処理
+    $scope.deleteLink = function () {
+        console.log("deleteLink function begins.");
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
+
+        // チェック
+        if ($scope.first < 0 || $scope.first >= $scope.heads.length) {
+            ngToast.danger({
+                content: 'Error: Please choose a node!',
+                timeout: 2000
+            });
+            return;
+        }
+        if ($scope.heads[$scope.first] < 0) {
+            ngToast.danger({
+                content: 'Error: The selected node does not have a parent (head)!',
+                timeout: 2000
+            });
+            return;
+        }
+
+        // 削除処理
+        var temp_first = $scope.heads[$scope.first];
+        var temp_second = $scope.first;
+        $scope.heads[temp_second] = -1;
+        $scope.relations[temp_second] = 'null';
+        $scope.priorities[temp_second] = -1;
+        $scope.constituents[temp_second] = 'null';
+        $scope.tags[temp_second] = 'null';
+
+        // 描画
+        // console.log("deleteLink drawAll");
+        drawAll();
+
+        // リセット
+        $scope.first = second = $scope.focused_index = -1;
+        console.log("deleteLink function ends.");
+        // console.log("first: " + $scope.first);
+        // console.log("second: " + second);
+    };
+
     /************************************************/
     // 談話依存構造アノテーション用
-    // 5. 描画処理
+    // 5. 描画
     /************************************************/
 
     // クリアして描画
@@ -899,8 +903,8 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
     // タグの描画
     var addTag = function(id, tag, color, fontSize) {
         if (!tag) {
-            console.log("addTag:")
-            console.log("tag: " + tag);
+            // console.log("addTag:")
+            // console.log("tag: " + tag);
             ngToast.danger({
                 content: 'Invalid tag',
                 timeout: 2000
@@ -1016,10 +1020,10 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
     // 談話関係の描画
     var addRelation = function(dep_id, relation, priority, constituent, color, fontSize) {
         if (!relation) {
-            console.log("addRelation:")
-            console.log("relation: " + relation);
-            console.log("priority: " + priority);
-            console.log("constituent: " + constituent);
+            // console.log("addRelation:")
+            // console.log("relation: " + relation);
+            // console.log("priority: " + priority);
+            // console.log("constituent: " + constituent);
             ngToast.danger({
                 content: 'Invalid relation',
                 timeout: 2000
@@ -1056,7 +1060,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     /************************************************/
     // EDU分割用
-    // 1. ファイルアップロード
+    // 1. ファイル読み込み
     /************************************************/
 
     $scope.handleFileSelectForSeg = function ($files) {
@@ -1165,13 +1169,11 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     /************************************************/
     // EDU分割用
-    // 2. 上部のボタンを押したときの処理
+    // 2. コピー、保存、例示
     /************************************************/
 
     // クリップボードにコピー
     $scope.copyToClipboardForSeg = function() {
-        console.log("copyToClipboardForSeg was called.")
-
         var text = "";
         for (var i = 0; i < $scope.edus.length; i++) {
             for (var j = 0; j < $scope.edus[i].length; j++) {
@@ -1202,8 +1204,6 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     // 保存
     $scope.saveToFileForSeg = function() {
-        console.log("saveToFileForSeg was called.")
-
         let lines = [];
         for (var i = 0; i < $scope.edus.length; ++i) {
             const line = $scope.edus[i].join(" ") + "\n"
@@ -1233,8 +1233,6 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     // 例示
     $scope.showRandomSampleForSeg = function () {
-        console.log("showRandomSample was called.")
-
         // JSONファイルを読み込んで描画
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
@@ -1286,7 +1284,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     /************************************************/
     // EDU分割用
-    // 3. マウスがトークンセルと重なったとき・外れたときの処理
+    // 3. マウスが重なった (外れた) ときの処理
     /************************************************/
 
     // マウスカーソルが乗っかったときの処理
@@ -1317,7 +1315,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
 
     /************************************************/
     // EDU分割用
-    // 4. トークンセルをクリックしたときの処理
+    // 4. アノテーションメイン
     /************************************************/
 
     // EDU分割・マージ処理
