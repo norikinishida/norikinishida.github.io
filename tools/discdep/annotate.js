@@ -65,7 +65,7 @@ app.constant('CONSTANTS', {
         "B",
         // "Inv-B",
         "C",
-        "*",
+        "Constituent",
     ],
     // Colors are set according to the palette of The New England Journal of Medicine
     NORMAL_LINK_COLOR: '#0072B5', // NEJM Blue
@@ -80,7 +80,7 @@ app.constant('CONSTANTS', {
     //  全体の横幅
     CANVAS_WIDTH: 1500, // canvas_height will be automatically set.
     // 調整
-    OFFSET_FOR_TAG1: 25,
+    OFFSET_FOR_TAG1: 28,
     OFFSET_FOR_TAG2: 55,
 });
 
@@ -858,7 +858,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         $scope.relations[temp_second] = 'null';
         $scope.priorities[temp_second] = -1;
         $scope.constituents[temp_second] = 'null';
-        $scope.tags[temp_second] = 'null';
+        // $scope.tags[temp_second] = 'null';
 
         // 描画
         // console.log("deleteLink drawAll");
