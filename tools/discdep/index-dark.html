@@ -170,19 +170,8 @@
                 <!-- 各EDU -->
                 <div class="edu">
                     <!-- EDU制御ボタン -->
-                    <div class="edu-buttons1">
-                        <div class="edu-buttons2">
-                            <!-- 選択解除 -->
-                            <button
-                                type="button" class="edu-button"
-                                ng-click="clearNode()"
-                                ng-show="!!inputFile"
-                                ng-style=""
-                                ng-disabled="(focused_index === -1) || (focused_index != $index)">
-                                <img src="images/sozai_batsu_gray_256px_01.png" width="100%" title="Cancel selection">
-                            </button>
-                        </div>
-                        <div class="edu-buttons2">
+                    <div class="edu-buttons-column">
+                        <div class="edu-buttons-row">
                             <!-- ラベル変更 -->
                             <button
                                 type="button" class="edu-button"
@@ -198,6 +187,26 @@
                                 ng-show="!!inputFile"
                                 ng-disabled="(focused_index === -1) || (focused_index != $index)">
                                 <img src="images/sozai_disconnection_gray_256px_01.png" width="100%" title="Remove the dependency">
+                            </button>
+                        </div>
+                        <div class="edu-buttons-row">
+                            <!-- 選択解除 -->
+                            <button
+                                type="button" class="edu-button"
+                                ng-click="clearNode()"
+                                ng-show="!!inputFile"
+                                ng-style=""
+                                ng-disabled="(focused_index === -1) || (focused_index != $index)">
+                                <img src="images/sozai_batsu_gray_256px_01.png" width="100%" title="Cancel selection">
+                            </button>
+                            <!-- EDUコピー -->
+                            <button
+                                type="button" class="edu-button"
+                                ng-click="copyThisEDUToClipboard()"
+                                ng-show="!!inputFile"
+                                ng-style=""
+                                ng-disabled="(focused_index === -1) || (focused_index != $index)">
+                                <img src="images/sozai_copy_gray_256px_01.png" width="100%" title="Copy this EDU to the clipboard">
                             </button>
                         </div>
                     </div>

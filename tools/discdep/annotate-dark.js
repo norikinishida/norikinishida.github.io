@@ -871,6 +871,29 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         // console.log("second: " + second);
     };
 
+    // クリップボードにコピー
+    $scope.copyThisEDUToClipboard = function() {
+        console.log("copyThisEDUToClipboard function begins.");
+ 
+        var text = $scope.edus[$scope.first].replace("<S>", "").replace("<P>", "");
+        var textBox = document.createElement("textarea");
+        textBox.setAttribute("id", "target");
+        textBox.setAttribute("type", "hidden");
+        textBox.textContent = text;
+        document.body.appendChild(textBox);
+        textBox.select();
+        document.execCommand("copy");
+        document.body.removeChild(textBox);
+        console.log("Copied:");
+        console.log(text);
+        ngToast.create({
+            content: 'Copied EDU#' + $scope.first + ' to the clipboard.',
+            timeout: 2000
+        });
+
+        console.log("copyThisEDUToClipboard function ends.");
+    };
+
     /************************************************/
     // 談話依存構造アノテーション用
     // 5. 描画
