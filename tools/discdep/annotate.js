@@ -6,9 +6,8 @@ app.constant('CONSTANTS', {
     // 談話関係
     relationVocab: [
         "Root",
-        // 情報の単純な追加 (掘り下げ subordination、拡げ coordination)
-        "Elaboration", // "Elaboration-Subord"
-        "Extension", // "Elaboration-Coord
+        // 情報の単純な追加
+        "Elaboration",
         // 対比、譲歩、相違性・類似性の強調
         "Comparison",
         // 原因理由、結果、条件、仮定
@@ -27,6 +26,8 @@ app.constant('CONSTANTS', {
         "Discussion",
         // まとめ、結論
         "Summary-Conclusion",
+        // まとめる
+        "Joint",
         // 構文
         "Attribution",
         "Same-Unit",
