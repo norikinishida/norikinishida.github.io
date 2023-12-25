@@ -47,19 +47,17 @@ app.constant('CONSTANTS', {
         "A",
         "R",
         "D",
-        // "C",
         "Tag",
     ],
     // 構成素ラベル
     constituentVocab: [
         "Root",
-        "Inv",
-        "RD",
         "B",
         "A",
         "R",
         "D",
-        // "C",
+        "RD",
+        "Inv",
         "Constituent",
     ],
     // Colors are set according to the palette of The New England Journal of Medicine
