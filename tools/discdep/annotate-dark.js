@@ -867,7 +867,7 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
     // クリップボードにコピー
     $scope.copyThisEDUToClipboard = function() {
         console.log("copyThisEDUToClipboard function begins.");
- 
+
         var text = $scope.edus[$scope.first].replace("<S>", "").replace("<P>", "");
         var textBox = document.createElement("textarea");
         textBox.setAttribute("id", "target");
@@ -885,6 +885,32 @@ app.controller('EDUListController', ['$scope', 'Upload', 'CONSTANTS', 'Utils', '
         });
 
         console.log("copyThisEDUToClipboard function ends.");
+    };
+
+    // 文終了マーカーの挿入
+    $scope.insertEOSMarker = function() {
+        console.log("insertEOSMarker function begins.");
+
+        // 文終了マーカーの挿入
+        $scope.edus[$scope.first] += " <S>";
+
+        // 各EDUの文番号の更新
+        $scope.sentence_ids = [];
+        $scope.sentence_ids.push(0)
+        var sentence_id = 1;
+        for (var i = 1; i < $scope.heads.length; ++i) {
+            $scope.sentence_ids.push(sentence_id);
+            if ($scope.edus[i].includes("<S>")) {
+                sentence_id += 1;
+            }
+        }
+
+        // 描画
+        drawAll();
+
+        // リセット
+        $scope.first = second = $scope.focused_index = -1;
+        console.log("insertEOSMarker function ends.");
     };
 
     /************************************************/

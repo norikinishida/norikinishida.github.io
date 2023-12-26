@@ -72,6 +72,14 @@
                     ng-disabled="focused_index === -1">
                 -->
 
+                <!-- 文終了マーカーの挿入 -->
+                <input type="button" class="btn btn-info"
+                    style="background-color: #98C379; border-color: #98C379; color: #282C34"
+                    value="Insert EOS"
+                    ng-click="insertEOSMarker()"
+                    ng-show="!!inputFile"
+                    ng-disabled="focused_index === -1">
+
                 <!-- コピー -->
                 <input type="button" class="btn btn-info"
                     style="background-color: #98C379; border-color: #98C379; color: #282C34"
