@@ -7662,3 +7662,95 @@ button.close {
     display: none !important;
   }
 }
+
+/* ===== Timeline layout (English) ===== */
+.lang-en .timeline {
+  display: grid;
+  grid-template-columns: 10em 1fr;
+  column-gap: 1em;
+  row-gap: .4rem;
+  margin-left: 1.0em;
+}
+
+.lang-en .timeline dt {
+  font-style: italic;
+  font-weight: normal;
+  text-align: left;
+  white-space: nowrap;
+  position: relative;
+  padding-left: 1em;
+}
+
+.lang-en .timeline dt::before {
+  content: "•";           /* bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.lang-en .timeline dd {
+  margin: 0;
+}
+
+.lang-en .timeline-single {
+  grid-template-columns: 5.5em 1fr; /* ← date列を詰める */
+  column-gap: 1em;
+  row-gap: .4rem;
+  margin-left: 1.0em;
+}
+
+/* ===== Timeline layout (Japanese) ===== */
+.lang-ja .timeline {
+  display: grid;
+  grid-template-columns: 12em 1fr;  /* 年月が長い */
+  column-gap: 0.8em;
+  row-gap: .4rem;
+  margin-left: 1.0em;
+}
+
+.lang-ja .timeline dt {
+  font-style: italic;
+  font-weight: normal;
+  text-align: left;
+  white-space: nowrap;
+  position: relative;
+  padding-left: 1em;
+}
+
+.lang-ja .timeline dt::before {
+  content: "•";           /* bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.lang-ja .timeline dd {
+  margin: 0;
+  line-height: 1.6;                /* 日本語は少し広め */
+}
+
+/* 短い日付（講演など） */
+.lang-ja .timeline-single {
+  grid-template-columns: 7em 1fr;
+  column-gap: 0.8em;
+  row-gap: .4rem;
+  margin-left: 1.0em;
+}
+
+/* ===== Scrollable News ===== */
+.news-scroll {
+  max-height: 12em;     /* 表示したい高さ */
+  overflow-y: auto;
+  padding-right: 0.5em; /* スクロールバー分 */
+}
+
+.news-scroll ul {
+  margin-bottom: 0;
+}
+
+/* ===== Section Divider ===== */
+.section-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 3em 0 2.5em 0;
+}

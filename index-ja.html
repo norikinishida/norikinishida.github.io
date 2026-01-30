@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="lang-ja">
 
     <head>
     <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -23,6 +23,7 @@
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
 </head>
 
 
@@ -30,10 +31,8 @@
 
 <!-- NAV -->
 <nav class="topnav">
-    <a href="./index-ja.html">
-        西田典起
-    </a>
-    <a href="./publications/index-ja.html">論文</a>
+    <a href="./index-ja.html">西田典起</a>
+    <a href="./publications.html">論文</a>
     <a href="./public/norikinishida_cv.pdf">履歴書 (英文; PDF)</a>
     <a href="./index.html">English</a>
 </nav>
@@ -57,15 +56,28 @@
 	    </div>
     </div>
 
+<!-- 自己紹介 -->
+
 <p class="message">
-<a href="https://www.riken.jp/research/labs/aip/index.html", style="text-decoration: none;">理化学研究所革新知能統合研究センター (AIP)</a> 研究員。
+<a href="https://www.riken.jp/research/labs/aip/index.html", style="text-decoration: none;">理化学研究所革新知能統合研究センター（AIP）</a>研究員。
 2020年東京大学大学院情報理工学系研究科博士課程修了。博士（情報理工学）。
-自然言語処理、特に知識獲得（知識の抽出・整理・検索・活用）の研究に従事。
-近年は、特に大規模言語モデルのための外部知識ベースの拡張と管理に注力。
+自然言語処理、特に知識獲得（知識の抽出・構造化・検索・活用）とRetrieval-Augmented Language Modelsの研究に従事。
 また、博士課程以来、（マルチモーダル）談話解析にも継続的に取り組んでいる。
 </p>
 
+<h2>研究テーマ</h2>
+<ul>
+    <li> 自然言語処理 </li>
+    <li> 知識獲得：情報抽出、知識構造化、情報検索、質問応答 </li>
+    <li> Retrieval-Augmented Language Models </li>
+    <li> 談話解析 </li>
+</ul>
+
+<hr class="section-divider">
+<!-- ニュース -->
+
 <h2>ニュース</h2>
+<div class="news-scroll">
 <ul>
     <li><i>2026年1月</i>: 論文 "Better Generalizing to Unseen Concepts: An Evaluation Framework and An LLM-Based Auto-Labeled Pipeline for Biomedical Concept Recognition" (Liu et al.) がEACL 2026に採択されました。</li>
     <li><i>2025年11月</i>: 論文 <a href="https://doi.org/10.1016/j.aiopen.2025.11.003">"LLMKG＋: Systematically improving knowledge quality and coverage in KGs using LLMs - A case study in medical domain"</a> (Feng et al.) がAI Openに採録されました。</li>
@@ -80,100 +92,213 @@
     <li><i>2024年4月</i>: 論文 <a href="https://doi.org/10.5715/jnlp.31.984">"シソーラスの階層的構造を利用した弱教師あり固有表現抽出"</a> (芝原ら) が自然言語処理論文誌に採択されました。</li>
     <li><i>2024年2月</i>: 論文 <a href="https://aclanthology.org/2024.lrec-main.1192">"Recent Trends in Personalized Dialogue Generation: A Review of Datasets, Methogolodies, and Evaluations"</a> (Chen et al.) がLREC-COLING 2024に採択されました。</li>
 </ul>
+</div>
 
-<h2>研究分野</h2>
-<ul>
-    <li> 自然言語処理 </li>
-    <li> 知識獲得（情報抽出、知識ベース構築、情報検索、質問応答など）</li>
-    <li> 大規模言語モデルのための外部知識ベースの拡張・管理 </li>
-    <li>（マルチモーダル）談話解析 </li>
-</ul>
+<hr class="section-divider">
+<!-- 履歴書 -->
 
 <h2>職歴</h2>
-<ul>
-    <li> <i>2023年12月 - 現在</i>: 理化学研究所 革新知能統合研究センター 研究員</li>
-    <li> <i>2022年4月 - 2025年3月</i>: 筑波大学 非常勤講師</li>
-    <li> <i>2020年7月 - 2021年6月</i>: 東京大学 客員研究員</li>
-    <li> <i>2020年4月 - 2023年11月</i>: 理化学研究所 革新知能統合研究センター 特別研究員</li>
-    <li> <i>2018年4月 - 2020年3月</i>: 日本学術振興会 特別研究員 (DC2)</li>
-    <!-- <li> <i>2016年4月 - 2020年3月</i>: 外部協力研究員、産業総合研究所人工知能研究センターPLUグループ</li> -->
-    <li> <i>2014年11月 - 2015年8月</i>: 株式会社ロガリズム パートタイムソフトウェアエンジニア</li>
-</ul>
+<dl class="timeline">
+    <dt>2023年12月 - 現在</dt>
+    <dd>理化学研究所 革新知能統合研究センター 研究員</dd>
+
+    <dt>2022年4月 - 2025年3月</dt>
+    <dd>筑波大学 非常勤講師</dd>
+
+    <dt>2020年7月 - 2021年6月</dt>
+    <dd>東京大学 客員研究員</dd>
+
+    <dt>2020年4月 - 2023年11月</dt>
+    <dd>理化学研究所 革新知能統合研究センター 特別研究員</dd>
+
+    <dt>2018年4月 - 2020年3月</dt>
+    <dd>日本学術振興会 特別研究員 (DC2)</dd>
+
+    <dt>2014年11月 - 2015年8月</dt>
+    <dd>株式会社ロガリズム パートタイムソフトウェアエンジニア</dd>
+</dl>
 
 <h2>学歴</h2>
-<ul>
-    <li>
-        <i>2017年4月 - 2020年3月</i>: 東京大学大学院 情報理工学系研究科 創造情報学専攻 博士課程<br>
+<dl class="timeline">
+    <dt>2017年4月 - 2020年3月</dt>
+    <dd>東京大学大学院 情報理工学系研究科 創造情報学専攻 博士課程<br>
         博論「Unsupervised Induction of Natural Language Discourse Structure Based on Rhetorical Structure Theory」<br>
-        指導教員: 中山英樹
-    </li>
-    <li>
-        <i>2015年4月 - 2017年3月</i>: 東京大学大学院 情報理工学系研究科 創造情報学専攻 修士課程<br>
+        指導教員: 中山英樹</dd>
+
+    <dt>2015年4月 - 2017年3月</dt>
+    <dd>東京大学大学院 情報理工学系研究科 創造情報学専攻 修士課程<br>
         修論「Unsupervised Learning of Syntactically Plausible Word Representations by Solving Word Ordering」<br>
-        指導教員: 中山英樹
-    </li>
-    <li>
-        <i>2013年4月 - 2015年3月</i>: 東京大学 工学部 電子情報工学科<br>
+        指導教員: 中山英樹</dd>
+
+    <dt>20013年4月 - 2015年3月</dt>
+    <dd>東京大学 工学部 電子情報工学科<br>
         卒論「Hand Gesture Recognition Using Recurrent Convolutional Neural Networks」<br>
-        指導教員: 伊庭斉志, 長谷川禎彦
-    </li>
-    <li>
-        <i>2009年4月 - 2013年3月</i>: 東京大学 文科三類
-    </li>
-    <li>
-        <i>2006年4月 - 2009年3月</i>: 京都成章高等学校
-    </li>
-</ul>
+        指導教員: 伊庭斉志, 長谷川禎彦</dd>
 
-<h2>講義</h2>
-<ul>
-    <li> <i>2022年10月 - 2025年3月</i>: 筑波大学「データサイエンス」</li>
-    <li> <i>2022年4月 - 2025年3月</i>: 筑波大学「情報リテラシー (演習)」</li>
-    <li> <i>2017年10月 - 2018年3月</i>: 東京大学大学院 情報理工学系研究科「データサイエンス」(TA)</li>
-    <li> <i>2014年10月 - 2015年3月</i>: 東京大学 工学部「プログラミング基礎演習」(TA)</li>
-</ul>
+    <dt>2009年4月 - 2013年3月</dt>
+    <dd>東京大学 文科三類</dd>
 
-<h2>講演</h2>
+    <dt>2006年4月 - 2009年3月</dt>
+    <dd>京都成章高等学校</dd>
+</dl>
+
+<hr class="section-divider">
+<!-- プロジェクト -->
+
+<h2>主要論文 (Selected Papers)</h2>
+<p class="note">
+詳細な論文一覧は、
+<a href="./publications.html">Publicationsページ</a> (英語) または<a href="https://scholar.google.co.jp/citations?user=sNyxhKgAAAAJ&hl=en", style="text-decoration: none;">Google Scholar</a>をご覧ください。
+</p>
 <ul>
-    <li><i>2025年3月</i>:「この時代に国立研究所で研究するという選択」招待講演 (総研大キャリアパス支援講演会)</li>
-    <li><i>2023年6月</i>:「Standard Supervision vs. In-Context Learning in NLP」ワークショップ発表 (理研AIP)</li>
-    <li><i>2022年5月</i>:「機械学習による科学論文からの知識獲得」招待講演 (日本計量生物学会2022年度年会 特別セッション 機械学習への招待2)</li>
-    <li><i>2018年11月</i>:「教師なし談話構造解析」招待講演 (産業技術総合研究所 人工知能研究センター)</li>
-    <li><i>2016年3月</i>:「画像認識における深層学習の動向」招待講演 (日本音響学会 関西支部談話会)</li>
-    <li><i>2015年9月</i>:「映像認識における深層学習の動向」招待講演 (Prometech Simulation Conference 2015)</li>
+<li>
+    <b>Dissecting GraphRAG: A Modular Analysis of Knowledge Structuring for Factoid Question Answering</b>.<br>
+    <u>Noriki Nishida</u>, Rumana Ferdous Munne, Shanshan Liu, Narumi Tokunaga, Yuki Yamagata, Fei Cheng, Kouji Kozaki, and Yuji Matsumoto.<br>
+    <i>TACL</i>, 採録済 (in press). 2026.<br>
+    [paper (to appear)]
+    [<a href="https://github.com/norikinishida/kapipe">code</a>]
+</li>
+<li>
+    <b>Do Multimodal Large Language Models Truly See What We Point At? Investigating Indexical, Iconic, and Symbolic Gesture Comprehension</b>.<br>
+    <u>Noriki Nishida</u>, Koji Inoue, Hideki Nakayama, Mayumi Bono, and Katsuya Takanashi.<br>
+    In <i>ACL 2025</i>.<br>
+    [<a href="https://aclanthology.org/2025.acl-short.40/">paper</a>]
+    [<a href="https://github.com/norikinishida/mllm-gesture-eval">code</a>]<br>
+</li>
+<li>
+    <b>Mention-Agnostic Information Extraction for Ontological Annotation of Biomedical Articles</b>.<br>
+    Oumaima El Khettari*, <u>Noriki Nishida</u>*, Shanshan Liu, Rumana Ferdous Munne, Yuki Yamagata, Solen Quiniou, Samuel Chaffron, and Yuji Matsumoto.<br>
+    (*: equal contribution)<br>
+    In <i>BioNLP 2024</i>.<br>
+    [<a href="https://aclanthology.org/2024.bionlp-1.37/">paper</a>]
+    <!-- [<a href="https://github.com/sl-633/bio-process-identifier">code (process)</a>] -->
+    [<a href="https://github.com/norikinishida/kapipe">code</a>]
+    [<a href="https://github.com/norikinishida/hoip-dataset">dataset</a>]<br>
+</li>
+<li>
+    <b>Out-of-Domain Discourse Dependency Parsing via Bootstrapping: An Empirical Analysis on Its Effectiveness and Limitation</b>.<br>
+    <u>Noriki Nishida</u> and Yuji Matsumoto.<br>
+    <i>TACL</i>, vol.10, pp. 127-144. 2022. (ACL 2022で発表)<br>
+    [<a href="https://aclanthology.org/2022.tacl-1.8">paper</a>]
+    [<a href="https://github.com/norikinishida/discourse-parsing">code</a>]
+    [<a href="https://github.com/norikinishida/biomedical-discourse-treebanks">dataset</a>]<br>
+</li>
+<li>
+    <b>Unsupervised Discourse Constituency Parsing Using Viterbi EM</b>.<br>
+    <u>Noriki Nishida</u> and Hideki Nakayama.<br>
+    <i>TACL</i>, vol.8, pp. 215-230. 2020. (ACL 2020で発表)<br>
+    [<a href="https://aclanthology.org/2020.tacl-1.15">paper</a>]
+    [<a href="https://github.com/norikinishida/DiscourseConstituencyInduction-ViterbiEM">code</a>]<br>
+</li>
 </ul>
 
 <h2>受賞</h2>
-<ul>
-    <li> <i>2022年12月</i>: Outstanding Reviewers, EMNLP 2022</li>
-    <li> <i>2021年3月</i>: 若手奨励賞, 杉浦昇太 (共著), 言語処理学会第27回年次大会</li>
-    <li> <i>2020年3月</i>: 若手奨励賞, 言語処理学会第26回年次大会</li>
-    <li> <i>2017年9月</i>: 学生奨励賞, 小林佑樹 (共著), 日本ソフトウェア科学会第34回大会</li>
-    <li> <i>2017年7月</i>: 全国大会優秀賞, 人工知能学会第31回全国大会</li>
-</ul>
+<dl class="timeline timeline-single">
+    <dt>2022年12月</dt>
+    <dd>EMNLP 2022 Outstanding Reviewers</dd>
+
+    <dt>2021年3月</dt>
+    <dd>言語処理学会第27回年次大会 若手奨励賞 (共著者 (杉浦昇太) 受賞)</dd>
+
+    <dt>2020年3月</dt>
+    <dd>言語処理学会第26回年次大会 若手奨励賞</dd>
+        
+    <dt>2017年9月</dt>
+    <dd>言語処理学会第26回年次大会 学生奨励賞 (共著者 (小林佑樹) 受賞)</dd>
+
+    <dt>2017年7月</dt>
+    <dd>人工知能学会第31回全国大会 全国大会優秀賞</dd>
+</dl>
 
 <h2>競争的資金等の研究課題</h2>
-<ul>
-    <li> <i>2022年6月 - 2023年3月</i>:「医学・薬学論文からの知識獲得のための談話解析の応用」科学技術振興機構 AIPチャレンジ (研究代表者)</li>
-    <li> <i>2022年5月 - 2025年3月</i>:「マルチモーダル対話翻訳における潜在的構造理解に基づくモダリティ横断」日本学術振興会 科研費 学術変革領域研究 (B) (研究分担者)</li>
-    <li> <i>2021年4月 - 2024年3月</i>:「新たな医療知識の獲得に向けた医学系論文の文脈構造の解析と情報抽出への応用」日本学術振興会 科研費 若手研究 (研究代表者)</li>
-    <li> <i>2018年4月 - 2020年3月</i>:「談話構造と知識に基づく自然言語理解のための深層学習モデルの提案」日本学術振興会 科研費 特別研究員奨励費 (DC2) (研究代表者)</li>
-</ul>
+<dl class="timeline">
+    <dt>2022年6月 - 2023年3月</dt>
+    <dd>科学技術振興機構 AIPチャレンジ 「医学・薬学論文からの知識獲得のための談話解析の応用」(研究代表者)</dd>
+
+    <dt>2022年5月 - 2025年3月</dt>
+    <dd>日本学術振興会 科研費 学術変革領域研究 (B)「マルチモーダル対話翻訳における潜在的構造理解に基づくモダリティ横断」(研究分担者)</dd>
+
+    <dt>2021年4月 - 2024年3月</dt>
+    <dd>日本学術振興会 科研費 若手研究「新たな医療知識の獲得に向けた医学系論文の文脈構造の解析と情報抽出への応用」(研究代表者)</dd>
+
+    <dt>2018年4月 - 2020年3月</dt>
+    <dd>日本学術振興会 科研費 特別研究員奨励費 (DC2)「談話構造と知識に基づく自然言語理解のための深層学習モデルの提案」(研究代表者)</dd>
+</dl>
+
+<hr class="section-divider">
+<!-- プロジェクト以外の活動 -->
+
+<h2>招待講演</h2>
+<dl class="timeline timeline-single">
+    <dt>2025年3月</dt>
+    <dd>総研大キャリアパス支援講演会「この時代に国立研究所で研究するという選択」</dd>
+
+    <dt>2023年6月</dt>
+    <dd>理研AIPジャーナルクラブ「Standard Supervision vs. In-Context Learning in NLP」</dd>
+
+    <dt>2022年5月</dt>
+    <dd>日本計量生物学会2022年度年会 特別セッション 機械学習への招待2「機械学習による科学論文からの知識獲得」</dd>
+
+    <dt>2018年11月</dt>
+    <dd>産業技術総合研究所 人工知能研究センター「教師なし談話構造解析」</dd>
+
+    <dt>2016年3月</dt>
+    <dd>日本音響学会 関西支部談話会「画像認識における深層学習の動向」</dd>
+
+    <dt>2015年9月</dt>
+    <dd>Prometech Simulation Conference 2015「映像認識における深層学習の動向」</dd>
+</dl>
 
 <h2>学会活動等</h2>
-<ul>
-    <li> プログラム委員: 言語処理学会 第31回年次大会 (プログラム編成), EMNLP 2023 (Publicity Chairs), SCIDOCA 2021-2025</li>
-    <li> 論文誌編集委員: 言語処理学会論文誌「自然言語処理」(2023年4月 - 現在)</li>
-    <li> 論文誌査読: Language Resources and Evaluation, ACM Transactions of Asian and Low-Resource Language Information Processing, 言語処理学会論文誌「自然言語処理」</li>
-    <li> 国際会議査読: ACL Rolling Review, ACL, EMNLP, NAACL, EACL, COLING, COLM, AAAI, IJCAI</li>
-</ul>
+<dl class="timeline">
+    <dt>2026年1月 - 現在</dt>
+    <dd>ACL Rolling Review Area Chair</dd>
 
-<h2>スキル</h2>
+    <dt>2025年4月 - 現在</dt>
+    <dd>言語処理学会第32回年次大会 (NLP2026) プログラム委員 (プログラム編成)</dd>
+
+    <dt>2024年4月 - 2025年3月</dt>
+    <dd>言語処理学会第31回年次大会 (NLP2025) プログラム委員 (プログラム編成)</dd>
+
+    <dt>2023年4月 - 現在</dt>
+    <dd>言語処理学会論文誌『自然言語処理』編集委員</dd>
+
+    <dt>2023年1月 - 2023年12月</dt>
+    <dd>EMNLP 2023 プログラム委員 (Publicity Chair)</dd>
+
+    <dt>2021年 - 2025年</dt>
+    <dd>SCIDOCA 2021-2025 プログラム委員</dd>
+
+    <dt>2015年 - 現在</dt>
+    <dd>ジャーナル/会議査読: ACL, EMNLP, NAACL, EACL, COLING, COLM, AAAI, IJCAI, Language Resources and Evaluation, TALLIP, 『自然言語処理』, etc.</dd>
+</dl>
+
+<h2>講義</h2>
+<dl class="timeline">
+    <dt>2022年10月 - 2025年3月</dt>
+    <dd>筑波大学「データサイエンス」</dd>
+
+    <dt>2022年4月 - 2025年3月</dt>
+    <dd>筑波大学「情報リテラシー (演習)」</dd>
+
+    <dt>2017年10月 - 2018年3月</dt>
+    <dd>東京大学大学院 情報理工学系研究科「データサイエンス」(TA)</dd>
+
+    <dt>2014年10月 - 2015年3月</dt>
+    <dd>東京大学 工学部「プログラミング基礎演習」(TA)</dd>
+</dl>
+
+<!-- <h2>スキル</h2>
 <ul>
     <li> 研究: 自然言語処理, 知識獲得, 情報抽出, 文書検索, 文書構造解析, 知識グラフ, オントロジー, マルチモーダル, 機械学習</li>
     <li> プログラミング: Python (NumPy, spaCy, PyTorch, HuggingFace, Transformers), C++, SQL, Neo4j, Docker, Git, Linux</li>
     <li> 言語: 英語 (業務レベル), Japanese (母語)</li>
-</ul>
+</ul> -->
+
+<h2>趣味</h2>
+<p>
+テレビゲーム（特にダークソウル3）、ヘッドホンオーディオ、演劇鑑賞、長距離ウォーキング。
+</p>
 
 </div>
 

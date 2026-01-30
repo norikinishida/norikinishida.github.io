@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en" class="lang-en">
 
     <head>
     <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -23,6 +23,7 @@
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
 </head>
 
 
@@ -30,10 +31,8 @@
 
 <!-- NAV -->
 <nav class="topnav">
-    <a href="./index.html">
-        Noriki Nishida
-    </a>
-    <a href="./publications/index.html">Publications</a>
+    <a href="./index.html">Noriki Nishida</a>
+    <a href="./publications.html">Publications</a>
     <a href="./public/norikinishida_cv.pdf">CV (PDF)</a>
     <a href="./index-ja.html">日本語</a>
 </nav>
@@ -57,16 +56,29 @@
     	</div>
     </div>
 
+<!-- 自己紹介 -->
+
 <p class="message">
 Noriki Nishida is a Research Scientist at <a href="https://www.riken.jp/en/research/labs/aip/index.html", style="text-decoration: none;">RIKEN Center for Advanced Intelligence Project (AIP)</a>, Japan.
-Previously, he received his Ph.D. degree in Information Science and Technology from The University of Tokyo in 2020.
-<br>
+Previously, he received his Ph.D. degree in Information Science and Technology from The University of Tokyo in 2020.<br>
 His research centers on natural language processing, with a particular focus on how knowledge can be extracted, organized, retrieved, and used to solve complex problems.
-Recently, his work has particularly focused on expanding and managing external knowledge systems for large language models.
+Recently, his work has particularly focused on Retrieval-Augmented Language Models.
 He has also maintained a longstanding interest in (multimodal) discourse analysis since his doctoral research.
 </p>
 
+<h2>Research Areas</h2>
+<ul>
+    <li> Natural Language Processing </li>
+    <li> Knowledge Acquisition: information extraction, knowledge structuring, information retrieval, question answering </li>
+    <li> Retrieval-Augmented Language Models </li>
+    <li> Discourse Analysis </li>
+</ul>
+
+<hr class="section-divider">
+<!-- ニュース -->
+
 <h2>News</h2>
+<div class="news-scroll">
 <ul>
     <li><i>2026.1</i>: Our paper titled "Better Generalizing to Unseen Concepts: An Evaluation Framework and An LLM-Based Auto-Labeled Pipeline for Biomedical Concept Recognition" (Liu et al.) has been accepted by EACL 2026.</li>
     <li><i>2025.11</i>: Our paper titled <a href="https://doi.org/10.1016/j.aiopen.2025.11.003">"LLMKG＋: Systematically improving knowledge quality and coverage in KGs using LLMs - A case study in medical domain"</a> (Feng et al.) has been accepted by AI Open.</li>
@@ -80,96 +92,207 @@ He has also maintained a longstanding interest in (multimodal) discourse analysi
     <li><i>2024.4</i>: Our paper titled <a href="https://doi.org/10.5715/jnlp.31.984">"Weakly Supervised Named Entity Recognition Using Thesaurus with Hierarchical Structure"</a> (Shibahara et al.) has been accepted by Journal of Natura Language Processing.</li>
     <li><i>2024.2</i>: Our paper titled <a href="https://aclanthology.org/2024.lrec-main.1192">"Recent Trends in Personalized Dialogue Generation: A Review of Datasets, Methogolodies, and Evaluations"</a> (Chen et al.) has been accepted by LREC-COLING 2024!</li>
 </ul>
+</div>
 
-<h2>Research Interests</h2>
-<ul>
-    <li> natural language processing </li>
-    <li> knowledge acquisition (information extraction, knowledge base organization, information retrieval, question answering, etc.) </li>
-    <li> expansion and management of external knowledge systems for large language models </li>
-    <li> (multimodal) discourse analysis </li>
-</ul>
+<hr class="section-divider">
+<!-- 履歴書 -->
 
 <h2>Employment History</h2>
-<ul>
-    <li> <i>December 2023 - Present</i>: <b>Research Scientist</b>, RIKEN AIP.</li>
-    <li> <i>April 2022 - March 2025</i>: <b>Part-Time Lecturer</b>, University of Tsukuba.</li>
-    <li> <i>July 2020 - June 2021</i>: <b>Visiting Researcher</b>, The University of Tokyo.</li>
-    <li> <i>April 2020 - November 2023</i>: <b>Postdoctoral Researcher</b>, RIKEN AIP.</li>
-    <li> <i>April 2018 - March 2020</i>: <b>Young Research Fellow (DC2)</b>, The Japan Society for the Promotion of Science.</li>
-    <li> <i>November 2014 - August 2015</i>: <b>Part-Time Software Engineer</b>, Logarhythm Inc.</li>
-</ul>
+<dl class="timeline">
+    <dt>Dec 2023 - Present</dt>
+    <dd><b>Research Scientist</b>. RIKEN AIP.</dd>
+
+    <dt>Apr 2022 - Mar 2025</dt>
+    <dd><b>Part-Time Lecturer</b>. University of Tsukuba.</dd>
+
+    <dt>Jul 2020 - Jun 2021</dt>
+    <dd><b>Visiting Researcher</b>. The University of Tokyo.</dd>
+
+    <dt>Apr 2020 - Nov 2023</dt>
+    <dd><b>Postdoctoral Researcher</b>. RIKEN AIP.</dd>
+
+    <dt>Apr 2018 - Mar 2020</dt>
+    <dd><b>Young Research Fellow (DC2)</b>. JSPS.</dd>
+
+    <dt>Nov 2014 - Aug 2015</dt>
+    <dd><b>Part-Time Software Engineer</b>. Logarhythm Inc.</dd>
+</dl>
 
 <h2>Education</h2>
-<ul>
-    <li>
-        <i>March 2020</i>: <b>Ph.D. of Information Science and Technology</b>.<br>
+<dl class="timeline">
+    <dt>Apr 2017 - Mar 2020</dt>
+    <dd><b>Ph.D. of Information Science and Technology</b><br>
         Department of Creative Informatics, Graduate School of Information Science and Technology, The University of Tokyo.<br>
-        Thesis title: "Unsupervised Induction of Natural Language Discourse Structure Based on Rhetorical Structure Theory."<br>
-        Advisor: Hideki Nakayama.
-    </li>
-    <li>
-        <i>March 2017</i>: <b>Master of Information Science and Technology</b>.<br>
+        Thesis: "Unsupervised Induction of Natural Language Discourse Structure Based on Rhetorical Structure Theory."<br>
+        Advisor: Hideki Nakayama.</dd>
+
+    <dt>Apr 2015 - Mar 2017</dt>
+    <dd><b>Master of Information Science and Technology</b><br>
         Department of Creative Informatics, Graduate School of Information Science and Technology, The University of Tokyo.<br>
-        Thesis title: "Unsupervised Learning of Syntactically Plausible Word Representations by Solving Word Ordering."<br>
-        Advisor: Hideki Nakayama.
-    </li>
-    <li>
-        <i>March 2015</i>: <b>Bachelor of Engineering</b>.<br>
+        Thesis: "Unsupervised Learning of Syntactically Plausible Word Representations by Solving Word Ordering."<br>
+        Advisor: Hideki Nakayama.</dd>
+
+    <dt>Apr 2009 - Mar 2015</dt>
+    <dd><b>Bachelor of Engineering</b><br>
         Department of Information and Communication Engineering, Faculty of Engineering, The University of Tokyo.<br>
-        Thesis title: "Hand Gesture Recognition Using Recurrent Convolutional Neural Networks."<br>
-        Advisor: Hitoshi Iba and Yoshihiko Hasegawa.
-    </li>
-</ul>
+        Thesis: "Hand Gesture Recognition Using Recurrent Convolutional Neural Networks."<br>
+        Advisor: Hitoshi Iba and Yoshihiko Hasegawa.</dd>
+</dl>
 
-<h2>Lectures</h2>
-<ul>
-    <li> <i>October 2022 - March 2025</i>: <b>Data Science</b>, University of Tsukuba.</li>
-    <li> <i>April 2022 - March 2025</i>: <b>Information Literacy</b>, University of Tsukuba.</li>
-    <li> <i>October 2017 - March 2018</i>: <b>Data Science</b> (TA), The University of Tokyo.</li>
-    <li> <i>October 2014 - March 2015</i>: <b>Basic Programming Exercise</b> (TA), The University of Tokyo.</li>
-</ul>
+<hr class="section-divider">
+<!-- プロジェクト -->
 
-<h2>Talks</h2>
+<h2>Selected Papers</h2>
+<p class="note">
+For a detailed list of publications, please see the
+<a href="./publications.html">Publicationss page</a> or <a href="https://scholar.google.co.jp/citations?user=sNyxhKgAAAAJ&hl=en", style="text-decoration: none;">Google Scholar profile</a>. 
+</p>
 <ul>
-    <li> <i>March 2025</i>: <b>"Choosing to Conduct Research at a National Research Institute in This Era,"</b> Invited Talk at The SOKENDAI Career Path Support Seminar.</li>
-    <li><i>June 2023</i>: <b>"Standard Supervision vs. In-Context Learning in NLP,"</b> Workshop Presentation at RIKEN AIP.<br></li>
-    <li><i>May 2022</i>: <b>"Machine Learning for Knowledge Acquisition from Scholarly Articles,"</b> Invited Talk at The 2022 Annual Meeting of the Biometric Society of Japan.<br></li>
-    <li><i>November 2018</i>: <b>"Towards Unsupervised Discourse Parsing,"</b> Invited Talk at Artificial Intelligence Research Center (AIRC), Japan.<br></li>
-    <li><i>March 2016</i>: <b>"Deep Learning in Computer Vision,"</b> Invited Talk at Kansai Chapter of the Acoustic Society of Japan.<br></li>
-    <li><i>September 2015</i>: <b>"Deep Learning in Video Recognition,"</b> Invited Talk at Prometech Simulation Conference 2015.</li>
+<li>
+    <b>Dissecting GraphRAG: A Modular Analysis of Knowledge Structuring for Factoid Question Answering</b>.<br>
+    <u>Noriki Nishida</u>, Rumana Ferdous Munne, Shanshan Liu, Narumi Tokunaga, Yuki Yamagata, Fei Cheng, Kouji Kozaki, and Yuji Matsumoto.<br>
+    <i>TACL</i>, in press. 2026.<br>
+    [paper (to appear)]
+    [<a href="https://github.com/norikinishida/kapipe">code</a>]
+</li>
+<li>
+    <b>Do Multimodal Large Language Models Truly See What We Point At? Investigating Indexical, Iconic, and Symbolic Gesture Comprehension</b>.<br>
+    <u>Noriki Nishida</u>, Koji Inoue, Hideki Nakayama, Mayumi Bono, and Katsuya Takanashi.<br>
+    In <i>ACL 2025</i>.<br>
+    [<a href="https://aclanthology.org/2025.acl-short.40/">paper</a>]
+    [<a href="https://github.com/norikinishida/mllm-gesture-eval">code</a>]<br>
+</li>
+<li>
+    <b>Mention-Agnostic Information Extraction for Ontological Annotation of Biomedical Articles</b>.<br>
+    Oumaima El Khettari*, <u>Noriki Nishida</u>*, Shanshan Liu, Rumana Ferdous Munne, Yuki Yamagata, Solen Quiniou, Samuel Chaffron, and Yuji Matsumoto.<br>
+    (*: equal contribution)<br>
+    In <i>BioNLP 2024</i>.<br>
+    [<a href="https://aclanthology.org/2024.bionlp-1.37/">paper</a>]
+    <!-- [<a href="https://github.com/sl-633/bio-process-identifier">code (process)</a>] -->
+    [<a href="https://github.com/norikinishida/kapipe">code</a>]
+    [<a href="https://github.com/norikinishida/hoip-dataset">dataset</a>]<br>
+</li>
+<li>
+    <b>Out-of-Domain Discourse Dependency Parsing via Bootstrapping: An Empirical Analysis on Its Effectiveness and Limitation</b>.<br>
+    <u>Noriki Nishida</u> and Yuji Matsumoto.<br>
+    <i>TACL</i>, vol.10, pp. 127-144. 2022. (Presented at ACL 2022)<br>
+    [<a href="https://aclanthology.org/2022.tacl-1.8">paper</a>]
+    [<a href="https://github.com/norikinishida/discourse-parsing">code</a>]
+    [<a href="https://github.com/norikinishida/biomedical-discourse-treebanks">dataset</a>]<br>
+</li>
+<li>
+    <b>Unsupervised Discourse Constituency Parsing Using Viterbi EM</b>.<br>
+    <u>Noriki Nishida</u> and Hideki Nakayama.<br>
+    <i>TACL</i>, vol.8, pp. 215-230. 2020. (Presented at ACL 2020)<br>
+    [<a href="https://aclanthology.org/2020.tacl-1.15">paper</a>]
+    [<a href="https://github.com/norikinishida/DiscourseConstituencyInduction-ViterbiEM">code</a>]<br>
+</li>
 </ul>
 
 <h2>Awards</h2>
-<ul>
-    <li> <i>December 2022</i>: <b>Outstanding Reviewers</b>, EMNLP 2022.</li>
-    <li> <i>March 2021</i>: <b>Young Researcher Encouragement Award</b>, Shota Sugiura (co-authored), The Annual Meeting of the Association for Natural Language Processing (NLP).</li>
-    <li> <i>March 2020</i>: <b>Young Researcher Encouragement Award</b>, The Annual Meeting of the Association for Natural Language Processing (NLP).</li>
-    <li> <i>September 2017</i>: <b>Student Encouragement Award</b>, Yuki Kobayashi (co-authored), Japan Society for Software Science and Technology.</li>
-    <li> <i>July 2017</i>: <b>Annual Conference Award</b>, The Japanese Society of Artificial Intelligence (JSAI).</li>
-</ul>
+<dl class="timeline timeline-single">
+    <dt>Dec 2022</dt>
+    <dd><b>Outstanding Reviewers</b>. EMNLP 2022.</dd>
+
+    <dt>Mar 2021</dt>
+    <dd><b>Young Researcher Encouragement Award</b>. Shota Sugiura (co-author). The Annual Meeting of the Association for Natural Language Processing (NLP 2021).</dd>
+
+    <dt>Mar 2020</dt>
+    <dd><b>Young Researcher Encouragement Award</b>. The Annual Meeting of the Association for Natural Language Processing (NLP 2020).</dd>
+        
+    <dt>Sep 2017</dt>
+    <dd><b>Student Encouragement Award</b>. Yuki Kobayashi (co-author). Japan Society for Software Science and Technology.</dd>
+
+    <dt>Jul 2017</dt>
+    <dd><b>Annual Conference Award</b>. The Japanese Society of Artificial Intelligence (JSAI 2017).</dd>
+</dl>
 
 <h2>Research Grants</h2>
-<ul>
-    <li> <i>July 2022 - March 2023</i>: <b>"Application of Discourse Analysis for Knowledge Acquisition from Medical and Pharmacological Literature,"</b> JST AIP Challenge Program, Principal Investigator.</li>
-    <li> <i>May 2022 - March 2025</i>: <b>"Modality Crossing Based on Latent Structural Understanding in Multimodal Dialogue Translation,"</b> JSPS KAKENHI Grant-in-Aid for Transformative Research Areas (B), Co-Investigator.</li>
-    <li> <i>April 2021 - March 2024</i>: <b>"Discourse Structure Analysis in Biomedical Literature for Biomedical Knowledge Acquisition,"</b> JSPS KAKENHI Grant-in-Aid for Early-Career Scientists, Principal Investigator.</li>
-    <li> <i>April 2018 - March 2020</i>: <b>"Deep Learning Models for Natural Language Understanding Incorporating Discourse Structure and Knowledge,"</b> JSPS KAKENHI Research Fellowship for Young Scientists (DC2), Principal Investigator.</li>
-</ul>
+<dl class="timeline">
+    <dt>Jul 2022 - Mar 2023</dt>
+    <dd><b>Application of Discourse Analysis for Knowledge Acquisition from Medical and Pharmacological Literature</b>. JST AIP Challenge Program. Principal Investigator.</dd>
+
+    <dt>May 2022 - Mar 2025</dt>
+    <dd><b>Modality Crossing Based on Latent Structural Understanding in Multimodal Dialogue Translation</b>. JSPS KAKENHI Grant-in-Aid for Transformative Research Areas (B). Co-Investigator.</dd>
+
+    <dt>Apr 2021 - Mar 2024</dt>
+    <dd><b>Discourse Structure Analysis in Biomedical Literature for Biomedical Knowledge Acquisition</b>. JSPS KAKENHI Grant-in-Aid for Early-Career Scientists. Principal Investigator.</dd>
+
+    <dt>Apr 2018 - Mar 2020</dt>
+    <dd><b>Deep Learning Models for Natural Language Understanding Incorporating Discourse Structure and Knowledge</b>. JSPS KAKENHI Research Fellowship for Young Scientists (DC2). Principal Investigator.</dd>
+</dl>
+
+<hr class="section-divider">
+<!-- プロジェクト以外の活動 -->
+
+<h2>Talks</h2>
+<dl class="timeline timeline-single">
+    <dt>Mar 2025</dt>
+    <dd><b>Choosing to Conduct Research at a National Research Institute in This Era</b>. The SOKENDAI Career Path Support Seminar.</dd>
+
+    <dt>Jun 2023</dt>
+    <dd><b>Standard Supervision vs. In-Context Learning in NLP</b>. RIKEN AIP.</dd>
+
+    <dt>May 2022</dt>
+    <dd><b>Machine Learning for Knowledge Acquisition from Scholarly Articles</b>. The 2022 Annual Meeting of the Biometric Society of Japan.</dd>
+
+    <dt>Nov 2018</dt>
+    <dd><b>Towards Unsupervised Discourse Parsing</b>. Artificial Intelligence Research Center (AIRC), Japan.</dd>
+
+    <dt>Mar 2016</dt>
+    <dd><b>Deep Learning in Computer Vision</b>. Kansai Chapter of the Acoustic Society of Japan.</dd>
+</dl>
 
 <h2>Academic Activities</h2>
-<ul>
-    <li> Program Committee: EMNLP 2023 (Publicity Chairs), SCIDOCA 2021-2025.</li>
-    <li> Journal Editor: Journal of Natural Language Processing (April 2023 - Present).</li>
-    <li> Journal Reviewer: Language Resources and Evaluation, ACM Transactions of Asian and Low-Resource Language Information Processing, Journal of Natural Language Processing.</li>
-    <li> Conference Reviewer: ACL Rolling Review, ACL, EMNLP, NAACL, EACL, COLING, COLM, AAAI, IJCAI.</li>
-</ul>
+<dl class="timeline">
+    <dt>Jan 2026 - Present</dt>
+    <dd><b>Area Chair</b>. ACL Rolling Review.</dd>
 
-<h2>Skills</h2>
+    <dt>Apr 2025 - Present</dt>
+    <dd><b>Program Committee</b>. The Annual Meeting of the Association for Natural Language Processing (NLP 2026).</dd>
+
+    <dt>Apr 2024 - Mar 2025</dt>
+    <dd><b>Program Committee</b>. The Annual Meeting of the Association for Natural Language Processing (NLP 2025).</dd>
+
+    <dt>Apr 2023 - Present</dt>
+    <dd><b>Journal Editor</b>. Journal of Natural Language Processing.</dd>
+
+    <dt>Jan 2023 - Dec 2023</dt>
+    <dd><b>Program Committee</b> (Publicity Chairs). EMNLP 2023.</dd>
+
+    <dt>2021 - 2025</dt>
+    <dd><b>Program Committee</b>. SCIDOCA 2021-2025.</dd>
+
+    <dt>2015 - Present</dt>
+    <dd><b>Journal/Conference Reviewer</b>: ACL, EMNLP, NAACL, EACL, COLING, COLM, AAAI, IJCAI, Language Resources and Evaluation, TALLIP, Journal of Natural Language Processing, etc.</dd>
+</dl>
+
+<h2>Teaching</h2>
+<dl class="timeline">
+    <dt>Oct 2022 - Mar 2025</dt>
+    <dd><b>Data Science</b>. University of Tsukuba.</dd>
+
+    <dt>Apr 2022 - Mar 2025</dt>
+    <dd><b>Information Literacy</b>. University of Tsukuba.</dd>
+
+    <dt>Oct 2017 - Mar 2018</dt>
+    <dd><b>Data Science</b> (TA). The University of Tokyo.</dd>
+
+    <dt>Oct 2014 - Mar 2015</dt>
+    <dd><b>Basic Programming Exercise</b> (TA). The University of Tokyo.</dd>
+</dl>
+
+<!-- <h2>Skills</h2>
 <ul>
     <li> Research: Natural Language Processing, Knowledge Acquisition, Information Extraction, Document Retrieval, Document Parsing, Knowledge Graph, Ontology, Multimodal, Machine Learning.</li>
     <li> Programming: Python (NumPy, spaCy, PyTorch, HuggingFace, Transformers), C++, SQL, Neo4j, Docker, Git, Linux.</li>
     <li> Languages: English (professional), Japanese (native).</li>
-</ul>
+</ul> -->
+
+<h2>Hobbies</h2>
+<p>
+Video games (especially titles by FromSoftware, such as Dark Souls 3), headphone audio, watching plays, and long-distance walking.
+</p>
 
 </div>
 
