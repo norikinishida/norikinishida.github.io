@@ -50,32 +50,81 @@ html {
  * Navbar
  */
 
-/* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
-  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  gap: 0.2rem;
+  padding: 0 1rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: #2f3335;
+  border-bottom: 3px solid #6a9fb5;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
-  color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  color: #e8ecee;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0.8rem 0.9rem 0.65rem;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 0.9rem;
+  border-radius: 3px 3px 0 0;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.topnav a:hover,
+.topnav a:focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #4CAF50;
-  color: white;
+  color: #fff;
+  box-shadow: inset 0 -3px #8fc1d5;
+}
+
+.topnav .language-switch {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  margin-left: 0.35rem;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+}
+
+.topnav .language-switch.is-disabled {
+  color: rgba(255, 255, 255, 0.45);
+  border-color: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+  user-select: none;
+}
+
+@media (max-width: 30em) {
+  .topnav {
+    gap: 0;
+    padding: 0 0.35rem;
+  }
+
+  .topnav a {
+    padding: 0.7rem 0.35rem 0.55rem;
+    font-size: 0.72rem;
+  }
+
+  .topnav .language-switch {
+    margin-left: 0.15rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.68rem;
+  }
+
+  .nav-home-suffix {
+    display: none;
+  }
+
 }
 
 /* Container
@@ -7663,6 +7712,19 @@ button.close {
   }
 }
 
+/* ===== Profile and selected papers ===== */
+.profile {
+  margin-bottom: 2.5rem;
+}
+
+.paper-list > li {
+  margin-bottom: 1rem;
+}
+
+.paper-list > li:last-child {
+  margin-bottom: 0;
+}
+
 /* ===== Timeline layout (English) ===== */
 .lang-en .timeline {
   display: grid;
@@ -7741,11 +7803,24 @@ button.close {
 .news-scroll {
   max-height: 12em;     /* 表示したい高さ */
   overflow-y: auto;
-  padding-right: 0.5em; /* スクロールバー分 */
+  padding: 0.75em 1em;
+  background-color: #f3f7f9;
+  border: 1px solid #e1eaee;
+  border-radius: 4px;
 }
 
 .news-scroll ul {
   margin-bottom: 0;
+}
+
+.theme-base-0d .content .news-scroll a {
+  color: #3f7389;
+}
+
+.theme-base-0d .content .news-scroll a:hover,
+.theme-base-0d .content .news-scroll a:focus {
+  color: #2f5c6e;
+  text-decoration: underline;
 }
 
 /* ===== Section Divider ===== */
