@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ポケモンスリープ 収穫数計算機</title>
+  <style>
+    /* Define the page palette and responsive layout */
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; font-size: 14px; color: #abb2bf; background: #282c34; accent-color: #61afef; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 1080px; margin: auto; padding: 48px 24px; }
+    header { margin-bottom: 30px; }
+    h1 { font-size: 28px; margin: 10px 0; letter-spacing: -.04em; }
+    h2 { font-size: 18px; margin: 0 0 22px; }
+    p { line-height: 1.8; }
+    .muted, small { color: #9da5b4; font-size: 14px; }
+    .badge { display: inline-block; background: #2c3e55; color: #61afef; padding: 5px 12px; border-radius: 20px; font-size: 14px; font-weight: 700; }
+    .layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start; }
+    .card { background: #21252b; border: 1px solid #3e4451; border-radius: 16px; padding: 26px; }
+    .card + .card { margin-top: 20px; }
+    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    label { display: block; font-size: 14px; }
+    label > span { display: block; margin-bottom: 8px; }
+    input:not([type=checkbox]), select { width: 100%; min-height: 44px; border: 1px solid #4b5263; border-radius: 8px; background: #282c34; color: inherit; padding: 10px; font: inherit; }
+    input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid #61afef; outline-offset: 2px; }
+    button { font: inherit; color: inherit; cursor: pointer; }
+    button:focus-visible { outline: 3px solid #61afef; outline-offset: 2px; }
+    .pokemon-trigger { width: 100%; min-height: 44px; display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #21252b; border: 1px solid #4b5263; border-radius: 8px; text-align: left; }
+    .pokemon-trigger:disabled { cursor: wait; }
+    /* Keep the picker dimensions stable while only its result list scrolls */
+    dialog { width: min(540px, calc(100% - 32px)); height: min(640px, calc(100dvh - 48px)); max-height: none; border: 1px solid #3e4451; border-radius: 16px; padding: 24px; color: inherit; background: #21252b; overflow: hidden; }
+    dialog[open] { display: grid; grid-template-rows: auto auto auto minmax(0, 1fr); }
+    dialog::backdrop { background: #181a1fb3; }
+    .picker-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; gap: 16px; }
+    .picker-heading h2 { margin: 0; }
+    .close-picker { border: 1px solid #4b5263; border-radius: 8px; padding: 6px 12px; background: #21252b; }
+    .pokemon-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; min-height: 0; align-content: start; overflow-y: auto; scrollbar-gutter: stable; margin-top: 16px; padding: 4px; }
+    .pokemon-option { border: 1px solid #3e4451; border-radius: 8px; padding: 12px; background: #282c34; text-align: left; }
+    .pokemon-option:hover, .pokemon-option[aria-pressed=true] { background: #2c3e55; border-color: #61afef; }
+    .full { grid-column: 1 / -1; }
+    fieldset { border: 0; padding: 0; margin: 24px 0 0; }
+    legend { font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+    /* Match the primary setting labels to the section legends */
+    #pokemonLabel, label:has(> #level) > span { font-size: 14px; font-weight: 700; }
+    .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .check { display: flex; align-items: center; gap: 8px; }
+    .check input { width: 17px; height: 17px; margin: 0; }
+    .slot { display: grid; grid-template-columns: 56px 1fr 70px; gap: 10px; align-items: center; margin-top: 12px; }
+    .slot > span { font-size: 14px; color: #9da5b4; }
+    .results { border-top: 4px solid #61afef; }
+    table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+    th, td { padding: 15px 5px; border-bottom: 1px solid #3e4451; text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    th { font-size: 14px; color: #9da5b4; font-weight: 500; }
+    td { font-size: 18px; }
+    td:first-child { font-size: 14px; }
+    td:last-child { color: #61afef; font-weight: 700; }
+    tfoot td { font-size: 14px; }
+    .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0 0; }
+    .metrics div { background: #282c34; padding: 14px; border-radius: 8px; }
+    .metrics dt { font-size: 14px; color: #9da5b4; }
+    .metrics dd { margin: 6px 0 0; font-size: 18px; font-variant-numeric: tabular-nums; }
+    #error { color: #e06c75; font-size: 14px; }
+    .calculation-notes { margin-top: 24px; font-size: 14px; line-height: 1.8; }
+    .calculation-notes h3 { font-size: 14px; }
+    .calculation-notes ul { padding-left: 20px; }
+    .calculation-notes li + li { margin-top: 6px; }
+    a { color: #61afef; }
+    [hidden] { display: none !important; }
+    @media (max-width: 760px) { main { padding: 28px 16px; } .layout { grid-template-columns: 1fr; } .card { padding: 20px; } }
+  </style>
+</head>
+<body>
+<main>
+  <!-- Present the calculator purpose and fixed level -->
+  <header>
+    <h1>1日に、どれだけ集める？</h1>
+    <p class="muted">ポケモンと個体の設定から、きのみ・食材の収穫数を計算する。</p>
+  </header>
+  <div class="layout">
+    <form id="settings">
+      <!-- Collect species values and individual modifiers -->
+      <section class="card">
+        <h2>ポケモンと個体の設定</h2>
+        <div class="fields">
+          <div class="full"><label id="pokemonLabel">ポケモン</label><button id="pokemonTrigger" type="button" class="pokemon-trigger" aria-labelledby="pokemonLabel pokemonName" aria-haspopup="dialog" aria-controls="pokemonPicker" style="margin-top:8px" disabled><span id="pokemonName">読み込み中…</span><span aria-hidden="true">▾</span></button><select id="pokemon" aria-label="選択中のポケモン" hidden disabled></select></div>
+        </div>
+        <!-- Present fixed species values separately from editable individual settings -->
+        <dl id="speciesInfo" class="metrics" hidden><div><dt>得意タイプ</dt><dd id="specialty"></dd></div><div><dt>基礎おてつだい時間</dt><dd id="baseTime"></dd></div><div><dt>基礎食材確率</dt><dd id="baseRate"></dd></div></dl>
+        <div class="fields" style="margin-top:24px">
+          <label class="full"><span>レベル</span><select id="level"><option value="10">10</option><option value="30">30</option><option value="50">50</option><option value="60" selected>60</option><option value="70">70</option></select></label>
+        </div>
+        <fieldset><legend>サブスキル</legend><div class="checks">
+          <label class="check"><input type="checkbox" id="speedS">おてつだいスピードS</label>
+          <label class="check"><input type="checkbox" id="speedM">おてつだいスピードM</label>
+          <label class="check"><input type="checkbox" id="helpingBonus">おてつだいボーナス(本人)</label>
+          <label class="check"><input type="checkbox" id="ingredientS">食材確率アップS</label>
+          <label class="check"><input type="checkbox" id="ingredientM">食材確率アップM</label>
+          <label class="check"><input type="checkbox" id="berryS">きのみの数S</label>
+        </div></fieldset>
+        <fieldset><legend>せいかく</legend><div class="fields">
+          <label><span>おてつだいスピード</span><select id="speedNature"><option value="1">無補正</option><option value="0.9">アップ</option><option value="1.075">ダウン</option></select></label>
+          <label><span>食材おてつだい確率</span><select id="ingredientNature"><option value="1">無補正</option><option value="1.2">アップ</option><option value="0.8">ダウン</option></select></label>
+        </div></fieldset>
+      </section>
+      <!-- Collect one ingredient choice for each unlocked slot -->
+      <section class="card">
+        <h2>食材構成</h2>
+        <p class="muted">各枠で持ってくる食材を選択。右欄は1回の個数。</p>
+        <div id="slots"></div>
+      </section>
+    </form>
+    <!-- Show full-energy harvest counts with automatically updated totals -->
+    <section class="card results">
+      <span class="badge">24時間の期待収穫数</span>
+      <h2 style="margin-top:16px">1日の収穫数</h2>
+      <p id="error" role="alert" hidden></p>
+      <div id="output" aria-live="polite" aria-atomic="true" hidden>
+        <table><thead><tr><th scope="col">収穫物</th><th scope="col">1日の個数<br>げんき100% (0%)</th></tr></thead><tbody id="harvest"></tbody></table>
+        <dl class="metrics"><div><dt>おてつだい時間 / げんき100% (0%)</dt><dd id="helpTime"></dd></div><div><dt>食材おてつだい確率</dt><dd id="helpRate"></dd></div><div><dt>1日のおてつだい回数 / げんき100% (0%)</dt><dd id="helpCount"></dd></div></dl>
+      </div>
+      <p class="muted">括弧内はげんき0%の値。</p>
+      <section class="calculation-notes" aria-labelledby="notesTitle">
+        <h3 id="notesTitle">計算の前提・データ出典</h3>
+        <ul>
+          <li>げんきは常に100%、所持数が満杯にならない条件。<br>括弧内は、げんきが常に0%の場合の値。</li>
+          <li>おてつだいボーナスは本人の分のみ反映する。</li>
+          <li>他メンバーのおてつだいボーナス、スキルによる獲得、どうぐ、イベント、ランダムなおてつだいは含めない。</li>
+          <li>げんき100%でのおてつだい時間は、げんき0%のときの0.45倍として計算する。</li>
+          <li>途中の値は丸めない。</li>
+        </ul>
+        <p>出典：ポケモンスリープ攻略・検証Wiki<br><a href="https://wikiwiki.jp/poke_sleep/ポケモンの一覧/食材確率・スキル発動確率の推定値一覧">基礎食材確率</a> / <a href="https://wikiwiki.jp/poke_sleep/おてつだい/おてつだい時間">おてつだい時間</a></p>
+      </section>
+    </section>
+  </div>
+</main>
+<!-- Open search only while the user is choosing a species -->
+<dialog id="pokemonPicker" aria-labelledby="pickerTitle">
+  <div class="picker-heading"><h2 id="pickerTitle">ポケモンを選択</h2><button id="closePicker" class="close-picker" type="button">閉じる</button></div>
+  <label><span>名前で検索</span><input id="pokemonSearch" type="search" placeholder="ひらがなでも検索可能" aria-controls="pokemonOptions" autocomplete="off"></label>
+  <p id="searchStatus" class="muted" role="status"></p>
+  <div id="pokemonOptions" class="pokemon-options"></div>
+</dialog>
+<script>
+  // Store species data loaded from the external JSON file
+  let presets = {};
+  const element = (id) => document.getElementById(id);
+  const format = (value) => value.toLocaleString('ja-JP', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+  // Initialize the form and recalculate when any setting changes
+  async function main() {
+    element('pokemon').addEventListener('change', loadPokemon);
+    element('level').addEventListener('change', updateLevel);
+    element('pokemonSearch').addEventListener('input', filterPokemon);
+    element('pokemonTrigger').addEventListener('click', () => {
+      element('pokemonSearch').value = '';
+      filterPokemon();
+      element('pokemonPicker').showModal();
+      element('pokemonSearch').focus();
+    });
+    element('closePicker').addEventListener('click', () => element('pokemonPicker').close());
+    element('settings').addEventListener('input', calculate);
+    element('settings').addEventListener('change', calculate);
+    element('settings').addEventListener('submit', (event) => event.preventDefault());
+    // Disable settings until the server-provided species data is ready
+    for (const control of element('settings').elements) control.disabled = true;
+    try {
+      const response = await fetch('./data.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      setPokemonData(await response.json());
+    } catch (error) {
+      element('pokemon').replaceChildren(new Option('読み込みに失敗しました', ''));
+      element('pokemonName').textContent = '読み込みに失敗しました';
+      showError('ポケモンデータの読み込みに失敗。ページの再読み込みが必要。');
+      console.error(error);
+    }
+  }
+
+  // Validate that imported records contain the fields required by the calculator
+  function setPokemonData(data) {
+    if (!data || Array.isArray(data) || typeof data !== 'object' || !Object.keys(data).length) throw new Error('種族データが存在しない。');
+    for (const [id, record] of Object.entries(data)) {
+      if (!record || typeof record.name !== 'string' || !record.name.trim()
+        || !Number.isInteger(record.number) || record.number < 1
+        || !Number.isFinite(record.time) || record.time <= 0
+        || !Number.isFinite(record.rate) || record.rate < 0 || record.rate > 100
+        || typeof record.berrySpecialist !== 'boolean' || typeof record.berry !== 'string'
+        || typeof record.specialty !== 'string' || !record.specialty.trim()
+        || !Array.isArray(record.slots) || record.slots.length !== 3
+        || !record.slots.every((slot) => Array.isArray(slot) && slot.length > 0 && slot.every((item) =>
+          Array.isArray(item) && item.length === 2 && typeof item[0] === 'string' && item[0].trim() && Number.isInteger(item[1]) && item[1] > 0))) {
+        throw new Error(`${id}の種族データが不正。`);
+      }
+    }
+    // Build the selector from imported species names without duplicating data in HTML
+    presets = Object.fromEntries(Object.entries(data).sort((a, b) => a[1].number - b[1].number));
+    element('pokemon').replaceChildren();
+    for (const [id, record] of Object.entries(presets)) element('pokemon').add(new Option(`#${String(record.number).padStart(4, '0')} ${record.name}`, id));
+    for (const control of element('settings').elements) control.disabled = false;
+    loadPokemon();
+  }
+
+  // Filter species names while treating hiragana and katakana as equivalent
+  function filterPokemon() {
+    const normalize = (text) => text.normalize('NFKC').replace(/[ぁ-ゖ]/g, (character) =>
+      String.fromCharCode(character.charCodeAt(0) + 0x60)).toLowerCase().replace(/\s/g, '');
+    const query = normalize(element('pokemonSearch').value);
+    element('pokemonOptions').replaceChildren();
+    let count = 0;
+    for (const [id, record] of Object.entries(presets)) {
+      const number = String(record.number).padStart(4, '0');
+      if (!normalize(record.name).includes(query) && !number.includes(query.replace(/^#/, ''))) continue;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'pokemon-option';
+      button.textContent = `#${number} ${record.name}`;
+      button.setAttribute('aria-pressed', String(id === element('pokemon').value));
+      button.addEventListener('click', () => {
+        element('pokemon').value = id;
+        loadPokemon();
+        element('pokemonPicker').close();
+      });
+      element('pokemonOptions').append(button);
+      count++;
+    }
+    element('pokemonOptions').scrollTop = 0;
+    element('searchStatus').textContent = count ? `${count}件のポケモン` : '該当するポケモンなし。';
+  }
+
+  // Populate the species defaults and rebuild the three ingredient slots
+  function loadPokemon() {
+    const preset = presets[element('pokemon').value];
+    element('pokemonName').textContent = `#${String(preset.number).padStart(4, '0')} ${preset.name}`;
+    element('slots').replaceChildren();
+    element('speciesInfo').hidden = false;
+    element('specialty').textContent = preset.specialty;
+    element('baseTime').textContent = `${preset.time.toLocaleString('ja-JP')} 秒`;
+    element('baseRate').textContent = `${preset.rate} %`;
+    for (let i = 0; i < 3; i++) {
+      const row = document.createElement('div');
+      row.className = 'slot';
+      row.id = `slot${i}`;
+      const label = document.createElement('span');
+      label.textContent = `Lv.${[1, 30, 60][i]}`;
+      const choice = document.createElement('select');
+      choice.id = `food${i}`;
+      choice.setAttribute('aria-label', `Lv.${[1, 30, 60][i]}枠の食材`);
+      choice.required = true;
+      const quantity = document.createElement('input');
+      Object.assign(quantity, { id: `quantity${i}`, type: 'number', min: '1', step: '1', required: true });
+      quantity.setAttribute('aria-label', `Lv.${[1, 30, 60][i]}枠の個数`);
+      for (const [name] of preset.slots[i]) choice.add(new Option(name, name));
+      quantity.value = preset.slots[i][0][1];
+      choice.addEventListener('change', () => {
+        quantity.value = preset.slots[i][choice.selectedIndex][1];
+        calculate();
+      });
+      row.append(label, choice, quantity);
+      element('slots').append(row);
+    }
+    updateLevel();
+  }
+
+  // Enable only unlocked ingredient slots while preserving choices across level changes
+  function updateLevel() {
+    const level = Number(element('level').value);
+    for (let i = 0; i < 3; i++) {
+      const locked = level < [1, 30, 60][i];
+      element(`slot${i}`).hidden = locked;
+      element(`food${i}`).disabled = locked;
+      element(`quantity${i}`).disabled = locked;
+    }
+    calculate();
+  }
+
+  // Apply the agreed formulas without rounding intermediate values
+  function calculate() {
+    // Wait for species data before reading dynamically created ingredient controls
+    if (element('pokemon').disabled) return;
+    const level = Number(element('level').value);
+    const slotCount = level >= 60 ? 3 : level >= 30 ? 2 : 1;
+    const valid = element('settings').checkValidity() && Array.from({ length: slotCount }, (_, i) => element(`food${i}`).value.trim()).every(Boolean);
+    if (!valid) {
+      showError('食材・個数の入力が必要。');
+      return;
+    }
+    const checked = (id) => Number(element(id).checked);
+    const preset = presets[element('pokemon').value];
+    const h = preset.time * (1 - (level - 1) * 0.002)
+      * Number(element('speedNature').value) * (1 - 0.07 * checked('speedS') - 0.14 * checked('speedM') - 0.05 * checked('helpingBonus'));
+    const p = preset.rate / 100 * Number(element('ingredientNature').value)
+      * (1 + 0.18 * checked('ingredientS') + 0.36 * checked('ingredientM'));
+    // Validate that the resulting time and probability are within their valid ranges
+    if (!Number.isFinite(h) || h <= 0 || !Number.isFinite(p) || p < 0 || p > 1) {
+      showError('おてつだい時間は正の値、食材おてつだい確率は0〜100%の範囲で設定する必要がある。');
+      return;
+    }
+    const n = 86400 / (h * 0.45);
+    const berries = n * (1 - p) * (1 + Number(preset.berrySpecialist) + checked('berryS'));
+    const ingredients = new Map();
+    for (let i = 0; i < slotCount; i++) {
+      const name = element(`food${i}`).value.trim();
+      ingredients.set(name, (ingredients.get(name) ?? 0) + n * p * Number(element(`quantity${i}`).value) / slotCount);
+    }
+    // Render ingredient totals by name at constant full energy
+    element('error').hidden = true;
+    element('output').hidden = false;
+    element('harvest').replaceChildren();
+    addResult(element('harvest'), presets[element('pokemon').value]?.berry ?? 'きのみ', berries);
+    for (const [name, count] of ingredients) addResult(element('harvest'), name, count);
+    element('helpTime').textContent = `${format(h * 0.45)} (${format(h)}) 秒`;
+    element('helpRate').textContent = `${format(p * 100)} %`;
+    element('helpCount').textContent = `${format(n)} (${format(n * 0.45)}) 回`;
+  }
+
+  // Hide stale results when the settings cannot be calculated
+  function showError(message) {
+    element('error').textContent = message;
+    element('error').hidden = false;
+    element('output').hidden = true;
+  }
+
+  // Insert user-supplied ingredient names as text and format the final counts
+  function addResult(target, name, count) {
+    const row = document.createElement('tr');
+    // Include the zero-energy estimate in parentheses without rounding intermediate values
+    for (const value of [name, `${format(count)} (${format(count * 0.45)})`]) {
+      const cell = document.createElement('td');
+      cell.textContent = value;
+      row.append(cell);
+    }
+    target.append(row);
+  }
+
+  // Start the standalone calculator after its markup is available
+  main();
+</script>
+</body>
+</html>
